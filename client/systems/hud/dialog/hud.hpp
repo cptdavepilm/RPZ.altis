@@ -95,7 +95,7 @@ class WastelandHud {
 				valign = "middle";
 			};
 		};
-		class WastelandHud_FoodBG: RscPictureGUI
+		class WastelandHud_FoodBG: w_RscPicture
 		{
 			idc = 1901;
 			text = "client\icons\status\status_bg.paa";
@@ -104,7 +104,7 @@ class WastelandHud {
 			w = 0.075;
 			h = 0.10;
 		};
-		class WastelandHud_FoodBorder: RscPictureGUI
+		class WastelandHud_FoodBorder: w_RscPicture
 		{
 			idc = hud_food_border_idc;
 			text = "client\icons\status\status_food_border_ca.paa";
@@ -113,7 +113,7 @@ class WastelandHud {
 			w = 0.075;
 			h = 0.10;
 		};
-		class WastelandHud_BloodBG: RscPictureGUI
+		class WastelandHud_BloodBG: w_RscPicture
 		{
 			idc = 1900;
 			text = "client\icons\status\status_bg.paa";
@@ -122,7 +122,7 @@ class WastelandHud {
 			w = 0.075;
 			h = 0.10;
 		};
-		class WastelandHud_BloodBorder: RscPictureGUI
+		class WastelandHud_BloodBorder: w_RscPicture
 		{
 			idc = hud_blood_border_idc;
 			//text = "client\icons\status\status_blood_border_ca.paa";
@@ -131,7 +131,7 @@ class WastelandHud {
 			w = 0.075;
 			h = 0.10;
 		};
-		class WastelandHud_ThirstBG: RscPictureGUI
+		class WastelandHud_ThirstBG: w_RscPicture
 		{
 			idc = 1902;
 			text = "client\icons\status\status_bg.paa";
@@ -140,7 +140,7 @@ class WastelandHud {
 			w = 0.075;
 			h = 0.10;
 		};
-		class WastelandHud_ThirstBorder: RscPictureGUI
+		class WastelandHud_ThirstBorder: w_RscPicture
 		{
 			idc = hud_thirst_border_idc;
 			text = "client\icons\status\status_thirst_border_ca.paa";
@@ -151,7 +151,7 @@ class WastelandHud {
 		};
 	};
 	class Controls {
-		class WastelandHud_FoodInside: RscPictureGUI
+		class WastelandHud_FoodInside: w_RscPicture
 		{
 			idc = hud_food_inside_idc;
 			//text = "client\icons\status\status_food_inside_ca.paa";
@@ -160,7 +160,7 @@ class WastelandHud {
 			w = 0.075;
 			h = 0.10;
 		};
-		class WastelandHud_BloodInside: RscPictureGUI
+		class WastelandHud_BloodInside: w_RscPicture
 		{
 			idc = hud_blood_inside_idc;
 			//text = "client\icons\status\status_blood_inside_ca.paa";
@@ -169,7 +169,7 @@ class WastelandHud {
 			w = 0.075;
 			h = 0.10;
 		};
-		class WastelandHud_ThirstInside: RscPictureGUI
+		class WastelandHud_ThirstInside: w_RscPicture
 		{
 			idc = hud_thirst_inside_idc;
 			//text = "client\icons\status\status_thirst_inside_ca.paa";
