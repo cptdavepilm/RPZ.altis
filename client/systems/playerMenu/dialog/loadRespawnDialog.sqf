@@ -345,7 +345,7 @@ while {!isNull _display} do
 		_typeAutoSel = true;
 	};
 
-	[_towns, [], {_x call _getPlayerThreshold}, "DESCEND"] call BIS_fnc_sortBy
+	[_towns, [], {_x call _getPlayerThreshold}, "DESCEND"] call BIS_fnc_sortBy;
 
 	_newLocArray = []; // Location, Text, Data, Picture, Enabled
 

@@ -6,7 +6,7 @@
 //	@file Author: AgentRev
 //	@file Created: 22/12/2013 22:04
 
-private ["_unit", "_item", "_side", "_isSniper", "_isDiver", "_defaultVest", "_result"];
+private ["_unit", "_uniforms", "_item", "_side", "_isSniper", "_isDiver", "_defaultVest", "_result"];
 
 _uniforms = [
 	"U_C_Poor_1",
