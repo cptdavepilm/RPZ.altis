@@ -72,8 +72,8 @@ while {true} do
 	GUI_G = 0.63; // -0.63
 	GUI_B = 0.26; // -0.26
 
-	_hudFoodInside ctrlSetTextColor [(GUI_R + (0.3 * (1-_blood))),(GUI_G * _blood),(GUI_B * _blood), 1];
-	_hudBloodInside ctrlSetTextColor [(GUI_R + (0.3 * (1-_food))),(GUI_G * _food),(GUI_B * _food), 1];
+	_hudBloodInside ctrlSetTextColor [(GUI_R + (0.3 * (1-_blood))),(GUI_G * _blood),(GUI_B * _blood), 1];
+	_hudFoodInside ctrlSetTextColor [(GUI_R + (0.3 * (1-_food))),(GUI_G * _food),(GUI_B * _food), 1];
 	_hudThirstInside ctrlSetTextColor [(GUI_R + (0.3 * (1-_thirst))),(GUI_G * _thirst),(GUI_B * _thirst), 1];
 
 	// Icons in bottom right
