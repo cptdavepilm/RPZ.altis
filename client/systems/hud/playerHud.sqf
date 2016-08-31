@@ -11,6 +11,12 @@
 #define hud_vehicle_idc 3601
 #define hud_activity_icon_idc 3602
 #define hud_activity_textbox_idc 3603
+#define hud_food_border_idc 3604
+#define hud_blood_border_idc 3605
+#define hud_thirst_border_idc 3606
+#define hud_food_inside_idc 3607
+#define hud_blood_inside_idc 3608
+#define hud_thirst_inside_idc 3609
 
 scriptName "playerHud";
 
@@ -18,7 +24,6 @@ disableSerialization;
 private ["_lastHealthReading", "_activityIconOrigPos", "_activityTextboxOrigPos", "_dispUnitInfo", "_topLeftBox", "_topLeftBoxPos"];
 
 _lastHealthReading = 100; // Used to flash the health reading when it changes
-
 
 _survivalSystem = ["A3W_survivalSystem"] call isConfigOn;
 _unlimitedStamina = ["A3W_unlimitedStamina"] call isConfigOn;
@@ -29,72 +34,101 @@ _ui = displayNull;
 
 while {true} do
 {
+	sleep 0.1;
+
 	if (isNull _ui) then
 	{
 		1000 cutRsc ["WastelandHud","PLAIN"];
 		_ui = uiNamespace getVariable ["WastelandHud", displayNull];
 	};
 
-	_vitals = _ui displayCtrl hud_status_idc;
+
+	_flash = {
+	if (ctrlShown _this) then {
+			_this ctrlShow false;
+		} else {
+			_this ctrlShow true;
+		};
+	};
+
+	_healthTextColor = "#60A042";
+	
+	//Calculate Health 0 - 100
+	_blood = ((1 - damage player)) max 0;
+	_food = ceil (hungerLevel max 0) / 100.0;
+	_thirst = ceil (thirstLevel max 0) / 100.0;
+
+	_bloodLvl = 6 min (0 max (round(6.0*(_blood))));
+	_thirstLvl = 6 min (0 max (round(6.0*(_food))));
+	_hungerLvl = 6 min (0 max (round(6.0*(_thirst)));
+
 	_hudVehicle = _ui displayCtrl hud_vehicle_idc;
 	_hudActivityIcon = _ui displayCtrl hud_activity_icon_idc;
 	_hudActivityTextbox = _ui displayCtrl hud_activity_textbox_idc;
 
-	//Calculate Health 0 - 100
-	_health = ((1 - damage player) * 100) max 0;
-	_health = if (_health > 1) then { floor _health } else { ceil _health };
+	//Controls
+	_hudFoodBorder = _ui displayCtrl hud_food_border_idc;
+	_hudFoodInside = _ui displayCtrl hud_food_inside_idc;
+	_hudBloodBorder = _ui displayCtrl hud_blood_border_idc;
+	_hudBloodInside = _ui displayCtrl hud_blood_inside_idc;
+	_hudThirstBorder = _ui displayCtrl hud_thirst_border_idc;
+	_hudThirstInside = _ui displayCtrl hud_thirst_inside_idc;
 
-	// Flash the health colour on the HUD according to it going up, down or the same
-	_healthTextColor = "#FFFFFF";
+	_hudFoodBorder ctrlSetTextColor [1,1,1,1];
+	_hudBloodBorder ctrlSetTextColor [1,1,1,1];
+	_hudThirstBorder ctrlSetTextColor [1,1,1,1];
 
-	if (_health != _lastHealthReading) then
-	{
-		// Health change. Up or down?
-		if (_health < _lastHealthReading) then
-		{
-			// Gone down. Red flash
-			_healthTextColor = "#FF1717";
-		}
-		else
-		{
-			// Gone up. Green flash
-			_healthTextColor = "#17FF17";
-			if (!isNil "BIS_HitCC" && {ppEffectEnabled BIS_HitCC}) then { BIS_HitCC ppEffectEnable false }; // fix for permanent red borders due to fire damage
+	GUI_R = 0.38; // 0.7 .38
+	GUI_G = 0.63; // -0.63
+	GUI_B = 0.26; // -0.26
+
+	_hudFoodInside ctrlSetTextColor [(GUI_R + (0.3 * (1-_blood))),(GUI_G * _blood),(GUI_B * _blood), 1];
+	_hudBloodInside ctrlSetTextColor [(GUI_R + (0.3 * (1-_food))),(GUI_G * _food),(GUI_B * _food), 1];
+	_hudThirstInside ctrlSetTextColor [(GUI_R + (0.3 * (1-_thirst))),(GUI_G * _thirst),(GUI_B * _thirst), 1];
+
+	// Icons in bottom right
+	_bloodborderText = "\awaken_medical\gui\status\status_blood_border_CA.paa";
+	_hudFoodBorder ctrlSetText _bloodborderText;
+
+	if (_bloodLvl < 0) then { _bloodLvl = 0 };
+	_bloodInnerText = "\awaken_medical\gui\status\status_blood_inside_" + str(_bloodLvl) + "_ca.paa";
+
+	if (_thirstLvl < 0) then { _thirstLvl = 0 };
+	_thirstInnerText = "\awaken_medical\gui\status\status_thirst_inside_" + str(_thirstLvl) + "_ca.paa";
+
+	if (_foodLvl < 0) then { _foodLvl = 0 };
+	_foodInnerText = "\awaken_medical\gui\status\status_food_inside_" + str(_foodLvl) + "_ca.paa";
+
+	_hudBloodInside ctrlSetText _bloodInnerText;
+	_hudThirstInside ctrlSetText _thirstInnerText;
+	_hudFoodInside ctrlSetText _foodInnerText;
+
+
+	//  Flashing
+	if (_blood < 0.2) then {
+		_hudBloodInside call _flash;
+	} else {
+		if (!ctrlShown _hudBloodInside) then {
+			_hudBloodInside ctrlShow true;
 		};
 	};
 
-	// Make sure we keep a record of the health value from this iteration
-	_lastHealthReading = _health;
-
-	// Icons in bottom right
-
-	_strArray = [];
-
-	if (_survivalSystem) then {
-		_strArray pushBack format ["%1 <img size='0.7' image='client\icons\water.paa'/>", ceil (thirstLevel max 0)];
-		_strArray pushBack format ["%1 <img size='0.7' image='client\icons\food.paa'/>", ceil (hungerLevel max 0)];
+	if (_thirst < 0.2) then {
+		_hudThirstInside call _flash;
+	} else {
+		if (!ctrlShown _hudThirstInside) then {
+			_hudThirstInside ctrlShow true;
+		};
 	};
 
-	if (!_unlimitedStamina) then {
-		_strArray pushBack format ["%1 <img size='0.7' image='client\icons\running_man.paa'/>", 100 - ceil ((getFatigue player) * 100)];
+	if (_food < 0.2) then {
+		_hudFoodInside call _flash;
+	} else {
+		if (!ctrlShown _hudFoodInside) then {
+			_hudFoodInside ctrlShow true;
+		};
 	};
 
-	_strArray pushBack format ["<t color='%1'>%2</t> <img size='0.7' image='client\icons\health.paa'/>", _healthTextColor, _health];
-
-	_str = "";
-
-	{ _str = format ["%1%2<br/>", _str, _x] } forEach _strArray;
-
-	_yOffsetVitals = (count _strArray + 1) * 0.04;
-
-	_vitalsPos = ctrlPosition _vitals;
-	_vitalsPos set [1, safeZoneY + safeZoneH - _yOffsetVitals]; // x
-	_vitalsPos set [3, _yOffsetVitals]; // h
-
-	_vitals ctrlShow alive player;
-	_vitals ctrlSetStructuredText parseText _str;
-	_vitals ctrlSetPosition _vitalsPos;
-	_vitals ctrlCommit 0;
 
 	_tempString = "";
 	_yOffset = _yOffsetVitals + 0.04;
@@ -151,22 +185,6 @@ while {true} do
 		];
 	};
 
-	if (!isNil "A3W_mapDraw_eventCode") then
-	{
-		// Add custom markers and lines to misc map controls
-		{
-			if (isNull (_x select 1)) then
-			{
-				_mapCtrl = call (_x select 0);
-
-				if (!isNull _mapCtrl) then
-				{
-					_mapCtrl ctrlAddEventHandler ["Draw", A3W_mapDraw_eventCode];
-					_x set [1, _mapCtrl];
-				};
-			};
-		} forEach _mapCtrls;
-	};
 
 	// Improve revealing and aimlocking of targetted vehicles
 	{

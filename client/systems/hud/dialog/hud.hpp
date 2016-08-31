@@ -95,5 +95,88 @@ class WastelandHud {
 				valign = "middle";
 			};
 		};
+		class WastelandHud_FoodBG: RscPictureGUI
+		{
+			idc = 1901;
+			text = "client\icons\status\status_bg.paa";
+			x = 0.955313 * safezoneW + safezoneX;
+			y = 0.86 * safezoneH + safezoneY;//2
+			w = 0.075;
+			h = 0.10;
+		};
+		class WastelandHud_FoodBorder: RscPictureGUI
+		{
+			idc = hud_food_border_idc;
+			text = "client\icons\status\status_food_border_ca.paa";
+			x = 0.955313 * safezoneW + safezoneX;
+			y = 0.86 * safezoneH + safezoneY;//2
+			w = 0.075;
+			h = 0.10;
+		};
+		class WastelandHud_BloodBG: RscPictureGUI
+		{
+			idc = 1900;
+			text = "client\icons\status\status_bg.paa";
+			x = 0.955313 * safezoneW + safezoneX;
+			y = 0.79 * safezoneH + safezoneY; //3
+			w = 0.075;
+			h = 0.10;
+		};
+		class WastelandHud_BloodBorder: RscPictureGUI
+		{
+			idc = hud_blood_border_idc;
+			//text = "client\icons\status\status_blood_border_ca.paa";
+			x = 0.955313 * safezoneW + safezoneX;
+			y = 0.79 * safezoneH + safezoneY; //3
+			w = 0.075;
+			h = 0.10;
+		};
+		class WastelandHud_ThirstBG: RscPictureGUI
+		{
+			idc = 1902;
+			text = "client\icons\status\status_bg.paa";
+			x = 0.955313 * safezoneW + safezoneX;
+			y = 0.93 * safezoneH + safezoneY; //1
+			w = 0.075;
+			h = 0.10;
+		};
+		class WastelandHud_ThirstBorder: RscPictureGUI
+		{
+			idc = hud_thirst_border_idc;
+			text = "client\icons\status\status_thirst_border_ca.paa";
+			x = 0.955313 * safezoneW + safezoneX;
+			y = 0.93 * safezoneH + safezoneY; //1
+			w = 0.075;
+			h = 0.10;
+		};
+	};
+	class Controls {
+		class WastelandHud_FoodInside: RscPictureGUI
+		{
+			idc = hud_food_inside_idc;
+			//text = "client\icons\status\status_food_inside_ca.paa";
+			x = 0.955313 * safezoneW + safezoneX;
+			y = 0.86 * safezoneH + safezoneY;
+			w = 0.075;
+			h = 0.10;
+		};
+		class WastelandHud_BloodInside: RscPictureGUI
+		{
+			idc = hud_blood_inside_idc;
+			//text = "client\icons\status\status_blood_inside_ca.paa";
+			x = 0.955313 * safezoneW + safezoneX;
+			y = 0.79 * safezoneH + safezoneY;
+			w = 0.075;
+			h = 0.10;
+		};
+		class WastelandHud_ThirstInside: RscPictureGUI
+		{
+			idc = hud_thirst_inside_idc;
+			//text = "client\icons\status\status_thirst_inside_ca.paa";
+			x = 0.955313 * safezoneW + safezoneX;
+			y = 0.93 * safezoneH + safezoneY;
+			w = 0.075;
+			h = 0.10;
+		};
 	};
 };
