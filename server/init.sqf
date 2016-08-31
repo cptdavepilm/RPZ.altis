@@ -127,7 +127,6 @@ if (isServer) then
 		"A3W_unlimitedStamina",
 		"A3W_bleedingTime",
 		"A3W_teamPlayersMap",
-		"A3W_vehiclePurchaseCooldown",
 		"A3W_disableGlobalVoice",
 		"A3W_antiHackMinRecoil",
 		"A3W_vehicleSaving",

@@ -59,7 +59,7 @@ _objCleanup =
 	}
 	else
 	{
-		if (!isNil "_isStoreCleanup" && _processedDeath <= 0) then
+		if (_processedDeath <= 0) then
 		{
 			_obj setVariable ["processedDeath", call _serverTick];
 		};
