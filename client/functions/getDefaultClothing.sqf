@@ -302,4 +302,6 @@ if (_item == "uniform") then
 if (_item == "headgear") then { _result = "" };
 if (_item == "goggles") then { _result = "" };
 
+
+diag_log format ["%1, should spawn with %2", _item, _result];
 _result
