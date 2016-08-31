@@ -60,7 +60,7 @@ while {true} do
 
 	_bloodLvl = 6 min (0 max (round(6.0*(_blood))));
 	_thirstLvl = 6 min (0 max (round(6.0*(_food))));
-	_hungerLvl = 6 min (0 max (round(6.0*(_thirst)));
+	_hungerLvl = 6 min (0 max (round(6.0*(_thirst))));
 
 	_hudVehicle = _ui displayCtrl hud_vehicle_idc;
 	_hudActivityIcon = _ui displayCtrl hud_activity_icon_idc;
