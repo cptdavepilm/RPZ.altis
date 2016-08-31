@@ -161,7 +161,7 @@ A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";
 [] execVM "addons\camera\functions.sqf";
 [] execVM "addons\UAV_Control\functions.sqf";
 
-call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
+//call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
 [] execVM "client\functions\drawPlayerMarkers.sqf";
 
 inGameUISetEventHandler ["Action", "_this call A3W_fnc_inGameUIActionEvent"];

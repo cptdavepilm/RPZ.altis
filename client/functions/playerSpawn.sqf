@@ -70,7 +70,7 @@ if (isNil "playerData_alive" || !isNil "playerData_resetPos") then
 	9999 cutText ["", "BLACK", 0.01];
 	waitUntil {player setOxygenRemaining 1; !respawnDialogActive};*/
 
-	[nil,[0,nil]] call spawnAction;
+	[nil,[0,nil]] call spawnAction; //Jukki, removed spawn selection menu
 	if (["A3W_playerSaving"] call isConfigOn) then
 	{
 		[] spawn fn_savePlayerData;
