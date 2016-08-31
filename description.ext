@@ -28,7 +28,7 @@ onLoadMission = "Esseker is a forgiving land with its beautiful scenery Can you 
 overviewText = "Esseker is a forgiving land with its beautiful scenery Can you create your dream life withing the Esseker community.";
 overviewTextLocked = "Esseker is a forgiving land with its beautiful scenery Can you create your dream life withing the Esseker community.";
 overviewPicture = "mapConfig\Loading.jpg";
-loadScreen = "mapConfig\waYvRE9.jpg";
+//loadScreen = "mapConfig\background.paa";
 briefing = 0; // if 0, skip Continue button
 
 //Jukki settings
