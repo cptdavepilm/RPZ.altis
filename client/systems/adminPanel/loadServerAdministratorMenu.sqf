@@ -23,7 +23,6 @@ if ([_uid, 3] call isAdmin) then {
 					"Map Markers Log",
 					"Group Leader Markers",
 					"Teleport",
-	                "Money",
 	                "Debug Menu",
 					"Object Search",
 	                "Toggle God-mode"

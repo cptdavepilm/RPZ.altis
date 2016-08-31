@@ -18,15 +18,6 @@ if (_unit == player && (_showWindow || _menuOpen)) then
 			_minDist = ["A3W_remoteBombStoreRadius", 100] call getPublicVar;
 			if (_minDist <= 0) exitWith {};
 
-			_nearbyStores = entities "CAManBase" select {_x getVariable ["storeNPC_setupComplete", false] && {player distance _x < _minDist}};
-
-			if !(_nearbyStores isEqualTo []) exitWith
-			{
-				playSound "FD_CP_Not_Clear_F";
-				[format ["You are not allowed to place explosives within %1m of a store.", _minDist], 5] call mf_notify_client;
-				_handled = true;
-			};
-
 			_nearbyMissions = allMapMarkers select {markerType _x == "Empty" && {[["Mission_","ForestMission_","LandConvoy_"], _x] call fn_startsWith && {player distance markerPos _x < _minDist}}};
 
 			if !(_nearbyMissions isEqualTo []) exitWith

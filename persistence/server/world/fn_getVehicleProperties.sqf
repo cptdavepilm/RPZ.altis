@@ -43,12 +43,6 @@ switch (true) do
 	};
 };
 
-private _resupplyTruck = _veh getVariable ["A3W_resupplyTruck", false];
-
-if (_resupplyTruck) then
-{
-	_variables pushBack ["A3W_resupplyTruck", true];
-};
 
 private _isUav = (round getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") > 0);
 

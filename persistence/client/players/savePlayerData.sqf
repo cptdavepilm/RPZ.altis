@@ -25,13 +25,7 @@ savePlayerHandle = [_this,
 		[
 			["Name", profileName],
 			["LastSide", str playerSide]//,
-			//["BankMoney", player getVariable ["bmoney", 0]] // NOTE: Bank money saving has been moved server-side
 		];
-
-		if (["A3W_privateStorage"] call isConfigOn) then
-		{
-			_info pushBack ["PrivateStorage", player getVariable ["private_storage", []]]; // not expected by server unless A3W_privateStorage = 1, otherwise will cause errors
-		};
 
 		_data = [player] call fn_getPlayerData;
 

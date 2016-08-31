@@ -55,10 +55,6 @@
 #define HUNGER_DECREMENT_INTERVAL 1800
 #define THIRST_DECREMENT_INTERVAL 1200
 
-// Randomize money variables to stop hackers
-//#define cmoney "12345playermoneyvar"
-//#define __MONEYBAG_VAR_NAME__ "ABCDEFbagmoneyvar"
-
 // X-Ray vision
 // Beest says: This needs additional work + UI to make it work with any objects
 // #define __DEBUG_VIEW_CUSTOM_OBJECTS__ 1

@@ -4,7 +4,7 @@
 //	@file Name: dropPlayerItems.sqf
 //	@file Author: AgentRev
 
-params [["_corpse",objNull,[objNull]], ["_money",0,[0]], ["_items",[],[[]]]];
+params [["_corpse",objNull,[objNull]], ["_items",[],[[]]]];
 
 if (isNull _corpse) exitWith {};
 
@@ -31,19 +31,6 @@ if (_veh != _corpse && damage _veh > 0.99) then
 	_targetPos = _targetPos vectorAdd ([[0, _veh call fn_vehSafeDistance, 1], -([_veh, _corpse] call BIS_fnc_dirTo)] call BIS_fnc_rotateVector2D);
 };
 
-if (_money <= 0) then
-{
-	_money = _corpse getVariable ["cmoney", 0];
-};
-
-if (_money > 0) then
-{
-	_m = createVehicle ["Land_Money_F", _targetPos, [], 1, "CAN_COLLIDE"];
-	_m setDir random 360;
-	_m setVariable ["cmoney", _money, true];
-	_m setVariable ["owner", "world", true];
-	_m call A3W_fnc_setItemCleanup;
-};
 
 if (_items isEqualTo []) then
 {

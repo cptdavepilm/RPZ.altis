@@ -63,9 +63,6 @@ publicVariableServer "pvar_playerRespawn";
 //Player setup
 player call playerSetupStart;
 
-// Deal with money here
-_baseMoney = ["A3W_startingMoney", 100] call getPublicVar;
-player setVariable ["cmoney", _baseMoney, true];
 
 // Player saving - load data
 if (["A3W_playerSaving"] call isConfigOn) then
@@ -95,16 +92,6 @@ if (isNil "playerData_alive") then
 
 player call playerSetupEnd;
 
-diag_log format ["Player starting with $%1", (player getVariable ["cmoney", 0]) call fn_numToStr];
-
-[] execVM "territory\client\hideDisabledTerritories.sqf";
-
-// Territory system enabled?
-if (count (["config_territory_markers", []] call getPublicVar) > 0) then
-{
-	A3W_fnc_territoryActivityHandler = "territory\client\territoryActivityHandler.sqf" call mf_compile;
-	[] execVM "territory\client\setupCaptureTriggers.sqf";
-};
 
 //Setup player menu scroll action.
 //[] execVM "client\clientEvents\onMouseWheel.sqf";
@@ -132,25 +119,6 @@ if (["A3W_survivalSystem"] call isConfigOn) then
 	execVM "client\functions\initSurvival.sqf";
 };
 
-[] spawn
-{
-	[] execVM "client\functions\createGunStoreMarkers.sqf";
-
-	if (["A3W_privateParking"] call isConfigOn) then
-	{
-		waitUntil {!isNil "parking_functions_defined"};
-	};
-
-	if (["A3W_privateStorage"] call isConfigOn) then
-	{
-		waitUntil {!isNil "storage_functions_defined"};
-	};
-
-	[] execVM "client\functions\createGeneralStoreMarkers.sqf";
-	[] execVM "client\functions\createVehicleStoreMarkers.sqf";
-	[] execVM "client\functions\createLegendMarkers.sqf";
-};
-
 A3W_clientSetupComplete = compileFinal "true";
 
 [] spawn playerSpawn;
@@ -161,18 +129,8 @@ A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";
 [] execVM "addons\camera\functions.sqf";
 [] execVM "addons\UAV_Control\functions.sqf";
 
-//call compile preprocessFileLineNumbers "client\functions\generateAtmArray.sqf";
 [] execVM "client\functions\drawPlayerMarkers.sqf";
 
 inGameUISetEventHandler ["Action", "_this call A3W_fnc_inGameUIActionEvent"];
 
 { [_x] call fn_remotePlayerSetup } forEach allPlayers;
-
-// update player's spawn beaoon
-{
-	if (_x getVariable ["ownerUID",""] == getPlayerUID player) then
-	{
-		_x setVariable ["ownerName", name player, true];
-		_x setVariable ["side", playerSide, true];
-	};
-} forEach pvar_spawn_beacons;

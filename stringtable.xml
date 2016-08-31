@@ -40,9 +40,6 @@
 		<Key ID="STR_WL_ShopDescriptions_fuelEmpty">
 			<English>Empty fuel can. You can refill it!</English>
 		</Key>
-		<Key ID="STR_WL_ShopDescriptions_spawnBeacon">
-			<English>Choose your spawn location. Disclaimer: you might die after spawn!</English>
-		</Key>
 		<Key ID="STR_WL_ShopDescriptions_SyphonHose">
 			<English>Go forth and Have some fun!</English>
 		</Key>
@@ -53,15 +50,6 @@
 		</Key>
 		<Key ID="STR_WL_Errors_InVehicle">
 			<English>You are currently busy!</English>
-		</Key>
-		<Key ID="STR_WL_Errors_BeaconActive">
-			<English>You already have an active spawn beacon!</English>
-		</Key>
-		<Key ID="STR_WL_Errors_BeaconInVehicle">
-			<English>You cannot enter a vehicle while placing a spawn beacon!</English>
-		</Key>
-		<Key ID="STR_WL_Errors_BeaconTooMany">
-			<English>You cannot take more spawn beacons!</English>
 		</Key>
 	</Package>
 </Project>

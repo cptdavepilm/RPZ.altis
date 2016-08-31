@@ -6,12 +6,9 @@
 
 #include "functions.sqf"
 
-private ["_maxLifetime", "_isWarchestEntry", "_isBeaconEntry", "_worldDir", "_methodDir", "_objCount", "_objects", "_exclObjectIDs"];
+private ["_maxLifetime", "_worldDir", "_methodDir", "_objCount", "_objects", "_exclObjectIDs"];
 
 _maxLifetime = ["A3W_objectLifetime", 0] call getPublicVar;
-
-_isWarchestEntry = { [_variables, "a3w_warchest", false] call fn_getFromPairs };
-_isBeaconEntry = { [_variables, "a3w_spawnBeacon", false] call fn_getFromPairs };
 
 _worldDir = "persistence\server\world";
 _methodDir = format ["%1\%2", _worldDir, call A3W_savingMethodDir];
@@ -36,8 +33,6 @@ _exclObjectIDs = [];
 
 		_allowed = switch (true) do
 		{
-			case (call _isWarchestEntry):       { _warchestSavingOn };
-			case (call _isBeaconEntry):         { _beaconSavingOn };
 			case (_class call _isBox):          { _boxSavingOn };
 			case (_class call _isStaticWeapon): { _staticWeaponSavingOn };
 			default                             { _baseSavingOn };
@@ -125,13 +120,6 @@ _exclObjectIDs = [];
 
 		_unlock = switch (true) do
 		{
-			case (_obj call _isWarchest): { true };
-			case (_obj call _isBeacon):
-			{
-				pvar_spawn_beacons pushBack _obj;
-				publicVariable "pvar_spawn_beacons";
-				true
-			};
 			case (_locked < 1): { true };
 			default { false };
 		};
@@ -197,16 +185,6 @@ _exclObjectIDs = [];
 		_exclObjectIDs pushBack _objectID;
 	};
 } forEach _objects;
-
-if (_warchestMoneySavingOn) then
-{
-	_amounts = call compile preprocessFileLineNumbers format ["%1\getWarchestMoney.sqf", _methodDir];
-
-	pvar_warchest_funds_west = (_amounts select 0) max 0;
-	publicVariable "pvar_warchest_funds_west";
-	pvar_warchest_funds_east = (_amounts select 1) max 0;
-	publicVariable "pvar_warchest_funds_east";
-};
 
 diag_log format ["A3Wasteland - world persistence loaded %1 objects from %2", _objCount, call A3W_savingMethodName];
 

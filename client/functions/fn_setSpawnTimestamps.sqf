@@ -17,10 +17,6 @@ waitUntil {!isNull player};
 
 		if (_timestamp < _serverTime) then
 		{
-			if (_location isEqualType objNull && {_location getVariable ["a3w_spawnBeacon", false]}) then // beacon
-			{
-				_location setVariable ["spawnBeacon_lastUse", TIMESTAMP_LOCAL];
-			};
 			if (_location isEqualType "" && {count _location > 0}) then // town
 			{
 				player setVariable [_location + "_lastSpawn", TIMESTAMP_LOCAL];

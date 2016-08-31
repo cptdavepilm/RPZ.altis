@@ -9,7 +9,6 @@ if (!isServer) exitWith {};
 params ["_UID", "_player"];
 private ["_result", "_data", "_location", "_dataTemp", "_ghostingTimer", "_secs", "_columns", "_pvar", "_pvarG"];
 
-private _moneySaving = ["A3W_moneySaving"] call isConfigOn;
 private _crossMap = ["A3W_extDB_playerSaveCrossMap"] call isConfigOn;
 private _environment = ["A3W_extDB_Environment", "normal"] call getPublicVar;
 private _mapID = call A3W_extDB_MapID;
@@ -19,7 +18,7 @@ _result = ([_query, 2] call extDB_Database_async) param [0,false];
 
 if (!_result) then
 {
-	_data = [["PlayerSaveValid", false]/*, ["BankMoney", _bank]*/];
+	_data = [["PlayerSaveValid", false]];
 
 	// prevent constraint fail on first save
 	private _sqlValues = [[["Name", name _player]], [0,1], false] call extDB_pairsToSQL;
@@ -78,11 +77,6 @@ else
 		_data append _location;
 	};
 
-	if (_moneySaving) then
-	{
-		_data pushBack "Money";
-	};
-
 	_query = [["getPlayerSave", _UID, _mapID], ["getPlayerSaveXMap", _UID, _environment]] select _crossMap;
 	_query pushBack (_data joinString ",");
 	_result = [_query, 2] call extDB_Database_async;
@@ -124,68 +118,17 @@ else
 	};
 
 	_data append _dataTemp;
-	//_data pushBack ["BankMoney", _bank];
 };
 
 private _bank = 0;
 private _bounty = 0;
 private _bountyKills = [];
 
-if (_moneySaving) then
-{
-	_result = ["getPlayerBankMoney:" + _UID, 2] call extDB_Database_async;
-
-	_bank = _result param [0,0];
-};
-
-if (["A3W_atmBounties"] call isConfigOn) then
-{
-	_result = ["getPlayerBounty:" + _UID, 2] call extDB_Database_async;
-
-	_bounty = _result param [0,0];
-	_bountyKills = _result param [1,[]];
-};
-
 _data append
 [
-	["BankMoney", _bank],
 	["Bounty", _bounty],
 	["BountyKills", _bountyKills]
 ];
-
-if (["A3W_privateParking"] call isConfigOn) then
-{
-	_columns = (call fn_getVehicleVars) apply {_x select 0};
-	_result = [["getParkedVehicles", _UID, _environment, _columns joinString ","], 2, true] call extDB_Database_async;
-
-	_columns deleteAt 0; // remove ID col
-	private _vehicles = [];
-	private ["_vehID", "_vehVars"];
-
-	{
-		_vehID = _x deleteAt 0;
-		_vehVars = _x;
-
-		{ _vehVars set [_forEachIndex, [_columns select _forEachIndex, _x]] } forEach _vehVars;
-
-		_vehicles pushBack [_vehID, _vehVars];
-	} forEach _result;
-
-	_player setVariable ["parked_vehicles", _vehicles];
-	_data pushBack ["ParkedVehicles", _vehicles];
-};
-
-if (["A3W_privateStorage"] call isConfigOn) then
-{
-	_columns = ["Weapons", "Magazines", "Items", "Backpacks"];
-	_result = [["getPlayerStorageXMap", _UID, _environment, _columns joinString ","], 2] call extDB_Database_async;
-
-	private _storage = [];
-
-	{ _storage pushBack [_columns select _forEachIndex, _x] } forEach _result;
-
-	_data pushBack ["PrivateStorage", _storage];
-};
 
 // before returning player data, restore global player stats if applicable
 if (["A3W_playerStatsGlobal"] call isConfigOn) then

@@ -16,7 +16,6 @@ disableSerialization;
 if (isNil "showPlayerNames") then { showPlayerNames = false };
 
 A3W_mapDraw_arrIcons = [];
-A3W_mapDraw_arrLines = [];
 A3W_mapDraw_iconPos = [{getPosASLVisual _this}, {DEFAULT_ICON_POS(_this)}] select (difficultyOption "mapContent" > 0);
 A3W_mapDraw_iconPosUAV = {getPosASL _this}; // icon always show regardless of difficulty, so we must mimic the default icon's position
 A3W_mapDraw_eventCode =
@@ -26,7 +25,6 @@ A3W_mapDraw_eventCode =
 	{
 		_x params ["_drawArr", "_unit", "_posCode"];
 
-		// Dynamic icon size (_atmIconSize)
 		_iconSize = _drawArr param [3,0];
 		if (_iconSize isEqualType {}) then
 		{
@@ -43,7 +41,6 @@ A3W_mapDraw_eventCode =
 		_mapCtrl drawIcon _drawArr;
 	} forEach A3W_mapDraw_arrIcons;
 
-	{ _mapCtrl drawLine _x } forEach A3W_mapDraw_arrLines;
 } call mf_compile;
 
 if (!isNil "A3W_mapDraw_thread") then { terminate A3W_mapDraw_thread };
@@ -52,35 +49,10 @@ A3W_mapDraw_thread = [] spawn
 	scriptName "drawPlayerMarkers";
 
 	_showPlayers = ["A3W_teamPlayersMap"] call isConfigOn;
-	_missionAiDrawLines = ["A3W_missionFarAiDrawLines"] call isConfigOn;
-	_drawAtmIcons = ["A3W_atmMapIcons"] call isConfigOn;
-	_atmIcon = (call currMissionDir) + "client\icons\suatmm_icon.paa";
-	_atmIconSize = {(0.3 / ctrlMapScale (_this select 0)) max 6 min 24};
 
 	waitUntil
 	{
 		_newArrayIcons = [];
-
-		if (!isNil "A3W_atmArray" && _drawAtmIcons) then
-		{
-			_deadATMs = [];
-
-			{
-				if (alive _x) then
-				{
-					_newArrayIcons pushBack [[_atmIcon, [1,1,1,1], getPosWorld _x, _atmIconSize, nil, 0], objNull];
-				}
-				else
-				{
-					_deadATMs pushback _x;
-				};
-			} forEach A3W_atmArray;
-
-			if (count _deadATMs > 0) then
-			{
-				_deadATMs spawn { A3W_atmArray = A3W_atmArray - _this };
-			};
-		};
 
 		if (_showPlayers) then
 		{
@@ -164,38 +136,6 @@ A3W_mapDraw_thread = [] spawn
 
 		A3W_mapDraw_arrIcons = _newArrayIcons;
 
-		_newArrayLines = [];
-
-		if (_missionAiDrawLines) then
-		{
-			{
-				if (side _x == CIVILIAN) then
-				{
-					_markerPos = markerPos (_x getVariable ["A3W_missionMarkerName", ""]);
-
-					if !(_markerPos isEqualTo [0,0,0]) then
-					{
-						_vehs = [];
-
-						{
-							_veh = vehicle _x;
-
-							if !(_veh in _vehs) then
-							{
-								if (alive _veh && _veh distance _markerPos > MISSION_AI_FAR_DISTANCE) then
-								{
-									_newArrayLines pushBack [_markerPos, getPosASLVisual _veh, [1,0,0,1]];
-								};
-
-								_vehs pushBack _veh;
-							};
-						} forEach units _x;
-					};
-				};
-			} forEach allGroups;
-		};
-
-		A3W_mapDraw_arrLines = _newArrayLines;
 		false
 	};
 };

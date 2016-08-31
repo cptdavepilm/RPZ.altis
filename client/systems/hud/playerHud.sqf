@@ -15,79 +15,13 @@
 scriptName "playerHud";
 
 disableSerialization;
-private ["_lastHealthReading", "_lastTerritoryName", "_lastTerritoryDescriptiveName", "_territoryCaptureIcon", "_activityIconOrigPos", "_activityTextboxOrigPos", "_dispUnitInfo", "_topLeftBox", "_topLeftBoxPos"];
+private ["_lastHealthReading", "_activityIconOrigPos", "_activityTextboxOrigPos", "_dispUnitInfo", "_topLeftBox", "_topLeftBoxPos"];
 
 _lastHealthReading = 100; // Used to flash the health reading when it changes
 
-// Needed for territory system
-_lastTerritoryName = "";
-_lastTerritoryDescriptiveName = "";
-
-_displayTerritoryActivity =
-{
-	private ['_boldFont', '_descriptiveName', '_configEntry', '_territoryActionText', '_territoryAction', '_seconds', '_minutes'];
-
-	_boldFont = "PuristaBold";
-
-	_descriptiveName = "Unknown territory";
-
-	// Expensive lookup for the HUD, so cache it
-	if (_territoryName != _lastTerritoryName) then
-	{
-		// Look up the descriptive name of this territory
-		_configEntry = [["config_territory_markers", []] call getPublicVar, { _x select 0 == _territoryName }] call BIS_fnc_conditionalSelect;
-		_descriptiveName = (_configEntry select 0) select 1;
-		_lastTerritoryName = _territoryName;
-		_lastTerritoryDescriptiveName = _descriptiveName;
-	}
-	else
-	{
-		_descriptiveName = _lastTerritoryDescriptiveName;
-	};
-
-	_territoryActionText = "";
-	_territoryAction = _territoryActivity select 0;
-
-	switch (_territoryAction) do
-	{
-		case "CAPTURE":
-		{
-			_territoryCaptureCountdown = round (_territoryActivity select 1);
-
-			if (_territoryCaptureCountdown > 60) then
-			{
-				_seconds = _territoryCaptureCountdown % 60;
-				_territoryCaptureCountdown = (_territoryCaptureCountdown - _seconds) / 60;
-				_minutes = _territoryCaptureCountdown % 60;
-
-				_territoryActionText = format["Capturing territory in about <t font='%1'>%2 minutes</t>", _boldFont, _minutes + 1];
-			}
-			else
-			{
-				if (_territoryCaptureCountdown < 5) then
-				{
-					_territoryActionText = "Territory transition in progress...";
-				}
-				else
-				{
-					_territoryActionText = format["Capturing territory in <t font='%1'>%2 seconds</t>", _boldFont, _territoryCaptureCountdown];
-				};
-			};
-		};
-		case "BLOCKEDATTACKER": { _territoryActionText = "Territory capture blocked" };
-		case "BLOCKEDDEFENDER": { _territoryActionText = "Territory under attack" };
-		case "RESET":           { _territoryActionText = "Territory capture started" };
-	};
-
-	_activityMessage = format ["Location: <t font='%1'>%2</t><br/>%3", _boldFont, _descriptiveName, _territoryActionText];
-	_topLeftIconText = format ["<img size='%1' image='territory\client\icons\territory_cap_white.paa'/>", 3 * (0.55 / (getResolution select 5))];
-
-	[_topLeftIconText, _activityMessage]
-};
 
 _survivalSystem = ["A3W_survivalSystem"] call isConfigOn;
 _unlimitedStamina = ["A3W_unlimitedStamina"] call isConfigOn;
-_atmEnabled = ["A3W_atmEnabled"] call isConfigOn;
 _disableUavFeed = ["A3W_disableUavFeed"] call isConfigOn;
 
 private ["_mapCtrls", "_mapCtrl"];
@@ -135,12 +69,6 @@ while {true} do
 	// Icons in bottom right
 
 	_strArray = [];
-
-	if (_atmEnabled) then {
-		_strArray pushBack format ["%1 <img size='0.7' image='client\icons\suatmm_icon.paa'/>", [player getVariable ["bmoney", 0]] call fn_numbersText];
-	};
-
-	_strArray pushBack format ["%1 <img size='0.7' image='client\icons\money.paa'/>", [player getVariable ["cmoney", 0]] call fn_numbersText];
 
 	if (_survivalSystem) then {
 		_strArray pushBack format ["%1 <img size='0.7' image='client\icons\water.paa'/>", ceil (thirstLevel max 0)];
@@ -206,80 +134,6 @@ while {true} do
 	_hudVehicle ctrlSetStructuredText parseText _tempString;
 	_hudVehicle ctrlSetPosition _hudVehiclePos;
 	_hudVehicle ctrlCommit 0;
-
-	// Territory system! Uses two new boxes in the top left of the HUD. We
-	// can extend the system later to encompas other activities
-	//
-	// This does nothing if the system is not enabled, as TERRITORY_ACTIVITY is never set
-	_activityIconStr = "";
-	_activityMessage = "";
-	_activityBackgroundAlpha = 0;
-
-	// Activity does not show when the map or Esc menu is open
-	if (!visibleMap && isNull findDisplay 49) then
-	{
-		// Determine activity. Currently this is territory cap only
-		_territoryActivity = player getVariable ["TERRITORY_ACTIVITY", []];
-		_territoryName = player getVariable ["TERRITORY_OCCUPATION", ""];
-
-		if (count _territoryActivity > 0 && _territoryName != "") then
-		{
-			_activityDetails = [] call _displayTerritoryActivity;
-
-			_activityIconStr = _activityDetails select 0;
-			_activityMessage = _activityDetails select 1;
-		};
-
-		// Show the UI if we have activity
-		if (_activityIconStr != "" && _activityMessage != "") then
-		{
-			if (isNil "_activityIconOrigPos" && isNil "_activityTextboxOrigPos") then
-			{
-				_activityIconOrigPos = ctrlPosition _hudActivityIcon;
-				_activityTextboxOrigPos = ctrlPosition _hudActivityTextbox;
-			};
-
-			_activityBackgroundAlpha = 0.4;
-
-			_dispUnitInfo = uiNamespace getVariable ["RscUnitInfo", displayNull];
-			_topLeftBox = _dispUnitInfo displayCtrl getNumber (configfile >> "RscInGameUI" >> "RscUnitInfo" >> "CA_BackgroundVehicle" >> "idc"); // idc = 1200
-
-			// If top left vehicle info box is displayed, move activity controls a bit to the right
-			if (ctrlShown _topLeftBox && {[_topLeftBox, _activityIconOrigPos] call fn_ctrlOverlapCheck || [_topLeftBox, _activityTextboxOrigPos] call fn_ctrlOverlapCheck}) then
-			{
-				_topLeftBoxPos = ctrlPosition _topLeftBox;
-
-				_hudActivityIcon ctrlSetPosition
-				[
-					(_topLeftBoxPos select 0) + (_topLeftBoxPos select 2) + (_activityIconOrigPos select 0) - safezoneX,
-					_activityIconOrigPos select 1,
-					_activityIconOrigPos select 2,
-					_activityIconOrigPos select 3
-				];
-
-				_hudActivityTextbox ctrlSetPosition
-				[
-					(_topLeftBoxPos select 0) + (_topLeftBoxPos select 2) + (_activityTextboxOrigPos select 0) - safezoneX,
-					_activityTextboxOrigPos select 1,
-					_activityTextboxOrigPos select 2,
-					_activityTextboxOrigPos select 3
-				];
-			}
-			else
-			{
-				_hudActivityIcon ctrlSetPosition _activityIconOrigPos;
-				_hudActivityTextbox ctrlSetPosition _activityTextboxOrigPos;
-			};
-		};
-	};
-
-	_hudActivityIcon ctrlSetBackgroundColor [0, 0, 0, _activityBackgroundAlpha];
-	_hudActivityIcon ctrlSetStructuredText parseText _activityIconStr;
-	_hudActivityIcon ctrlCommit 0;
-
-	_hudActivityTextbox ctrlSetBackgroundColor [0, 0, 0, _activityBackgroundAlpha];
-	_hudActivityTextbox ctrlSetStructuredText parseText _activityMessage;
-	_hudActivityTextbox ctrlCommit 0;
 
 	// Remove unrealistic blur effects
 	if (!isNil "BIS_fnc_feedback_damageBlur" && {ppEffectCommitted BIS_fnc_feedback_damageBlur}) then { ppEffectDestroy BIS_fnc_feedback_damageBlur };

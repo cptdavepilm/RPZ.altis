@@ -115,17 +115,6 @@ class PlayersMenu
 			h = 0.04 * SZ_SCALE_ABS;
 		};
 
-		class PlayerGunText: w_RscText
-		{
-			idc = playerMenuPlayerGun;
-			text = "Money:";
-			sizeEx = 0.030;
-			x = 0.52 * (4/3) * SZ_SCALE_ABS + safezoneX;
-			y = 0.275 * SZ_SCALE_ABS + safezoneY;
-			w = 0.25 * (4/3) * SZ_SCALE_ABS;
-			h = 0.04 * SZ_SCALE_ABS;
-		};
-
 		class PlayerItemsText: w_RscText
 		{
 			idc = playerMenuPlayerItems;
@@ -224,17 +213,6 @@ class PlayersMenu
 			x = 0.255 * (4/3) * SZ_SCALE_ABS + safezoneX;
 			y = 0.748 * SZ_SCALE_ABS + safezoneY;
 			w = 0.11 * (4/3) * SZ_SCALE_ABS;
-			h = 0.04 * SZ_SCALE_ABS;
-		};
-
-		class RemoveAllMoneyButton: w_RscButton
-		{
-			idc = -1;
-			text = "Remove Money";
-			onButtonClick = "[5] execVM 'client\systems\adminPanel\playerSelect.sqf'";
-			x = 0.3705 * (4/3) * SZ_SCALE_ABS + safezoneX;
-			y = 0.70 * SZ_SCALE_ABS + safezoneY;
-			w = 0.105 * (4/3) * SZ_SCALE_ABS;
 			h = 0.04 * SZ_SCALE_ABS;
 		};
 

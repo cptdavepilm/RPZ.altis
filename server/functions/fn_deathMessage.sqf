@@ -57,7 +57,7 @@ if (_mode isEqualTo 0) then
 	};
 
 	private _killerName = if (alive _killer || isPlayer _killer) then { name _killer } else { "" };
-	_aiKiller = (!isNull _killer && !isPlayer _killer && isNil {_killer getVariable "cmoney"});
+	_aiKiller = (!isNull _killer && !isPlayer _killer);
 
 	[1, _victimName, _killerName, _friendlyFire, _aiKiller, _cause] remoteExecCall ["A3W_fnc_deathMessage"];
 }

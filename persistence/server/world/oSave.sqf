@@ -71,11 +71,6 @@ while {true} do
 		diag_log format ["A3W - %1 baseparts and objects have been saved with %2", _objCount, call A3W_savingMethodName];
 	};
 
-	if (_warchestMoneySavingOn) then
-	{
-		call fn_saveWarchestMoney;
-	};
-
 	if ((_timeSavingOn && !isNil "A3W_timeSavingInitDone") || (!_timeSavingOn && _weatherSavingOn)) then
 	{
 		call fn_saveTime;

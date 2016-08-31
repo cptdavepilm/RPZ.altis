@@ -11,7 +11,7 @@ disableSerialization;
 
 _code =
 {
-	private ["_bluforColor", "_opforColor", "_indieColor", "_civColor", "_defColor", "_allPlayers", "_i", "_scoreOrdering", "_players", "_playerCount", "_playerIndex", "_iStart", "_id", "_index", "_entry", "_player", "_isPlayer", "_bgColor", "_entryBG", "_entryTColor", "_textColor", "_entryRank", "_entryName", "_entryPKills", "_entryAIKills", "_entryDeaths", "_entryRevives", "_entryCaptures", "_teams", "_grp", "_side", "_teamCount", "_playerTeam", "_playerTeamIndex", "_team", "_isPlayerTeam", "_isGroup", "_teamName", "_entryTerritories"];
+	private ["_bluforColor", "_opforColor", "_indieColor", "_civColor", "_defColor", "_allPlayers", "_i", "_scoreOrdering", "_players", "_playerCount", "_playerIndex", "_iStart", "_id", "_index", "_entry", "_player", "_isPlayer", "_bgColor", "_entryBG", "_entryTColor", "_textColor", "_entryRank", "_entryName", "_entryPKills", "_entryAIKills", "_entryDeaths", "_entryRevives", "_entryCaptures", "_teams", "_grp", "_side", "_teamCount", "_playerTeam", "_playerTeamIndex", "_team", "_isPlayerTeam", "_isGroup", "_teamName"];
 
 	if (!alive player) then
 	{
@@ -218,10 +218,6 @@ _code =
 				_entryDeaths = _display displayCtrl scoreGUI_TListEntry_Deaths(_id);
 				_entryDeaths ctrlSetText str ([_team, "deathCount"] call fn_getTeamScore);
 				_entryDeaths ctrlSetTextColor _textColor;
-
-				_entryTerritories = _display displayCtrl scoreGUI_TListEntry_Territories(_id);
-				_entryTerritories ctrlSetText str ([_team, "territoryCount"] call fn_getTeamScore);
-				_entryTerritories ctrlSetTextColor _textColor;
 
 				_entry ctrlShow true;
 			}

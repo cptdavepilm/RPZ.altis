@@ -122,30 +122,16 @@ if (isServer) then
 	}
 	forEach
 	[
-	//	"A3W_startingMoney",
-	//	"A3W_showGunStoreStatus",
-	//	"A3W_gunStoreIntruderWarning",
 		"A3W_playerSaving",
 		"A3W_combatAbortDelay",
 		"A3W_unlimitedStamina",
 		"A3W_bleedingTime",
 		"A3W_teamPlayersMap",
-		"A3W_remoteBombStoreRadius",
 		"A3W_vehiclePurchaseCooldown",
 		"A3W_disableGlobalVoice",
 		"A3W_antiHackMinRecoil",
-		"A3W_spawnBeaconCooldown",
-		"A3W_spawnBeaconSpawnHeight",
 		"A3W_vehicleSaving",
 		"A3W_staticWeaponSaving",
-		"A3W_missionFarAiDrawLines",
-		"A3W_atmEnabled",
-		"A3W_atmMaxBalance",
-		"A3W_atmTransferFee",
-		"A3W_atmTransferAllTeams",
-		"A3W_atmEditorPlacedOnly",
-		"A3W_atmMapIcons",
-		"A3W_atmRemoveIfDisabled",
 		"A3W_uavControl",
 		"A3W_disableUavFeed",
 		"A3W_townSpawnCooldown",
@@ -159,10 +145,6 @@ if (isServer) then
 		"A3W_hcObjCleanupID",
 		"A3W_hcObjSaving",
 		"A3W_hcObjSavingID",
-		"A3W_privateStorage",
-		"A3W_privateParking",
-		"A3W_privateParkingLimit",
-		"A3W_privateParkingCost",
 		"A3W_vehicleLocking",
 		"A3W_disableBuiltInThermal",
 		"A3W_customDeathMessages",
@@ -183,14 +165,11 @@ _playerSavingOn = ["A3W_playerSaving"] call isConfigOn;
 _baseSavingOn = ["A3W_baseSaving"] call isConfigOn;
 _boxSavingOn = ["A3W_boxSaving"] call isConfigOn;
 _staticWeaponSavingOn = ["A3W_staticWeaponSaving"] call isConfigOn;
-_warchestSavingOn = ["A3W_warchestSaving"] call isConfigOn;
-_warchestMoneySavingOn = ["A3W_warchestMoneySaving"] call isConfigOn;
-_beaconSavingOn = ["A3W_spawnBeaconSaving"] call isConfigOn;
 _timeSavingOn = ["A3W_timeSaving"] call isConfigOn;
 _weatherSavingOn = ["A3W_weatherSaving"] call isConfigOn;
 _mineSavingOn = ["A3W_mineSaving"] call isConfigOn;
 
-_objectSavingOn = (_baseSavingOn || _boxSavingOn || _staticWeaponSavingOn || _warchestSavingOn || _warchestMoneySavingOn || _beaconSavingOn);
+_objectSavingOn = (_baseSavingOn || _boxSavingOn || _staticWeaponSavingOn);
 _vehicleSavingOn = ["A3W_vehicleSaving"] call isConfigOn;
 _hcObjSavingOn = ["A3W_hcObjSaving"] call isConfigOn;
 
@@ -420,9 +399,6 @@ if (_playerSavingOn || _objectSavingOn || _vehicleSavingOn || _mineSavingOn || _
 			["vehicleSaving", _vehicleSavingOn],
 			["boxSaving", _boxSavingOn],
 			["staticWeaponSaving", _staticWeaponSavingOn],
-			["warchestSaving", _warchestSavingOn],
-			["warchestMoneySaving", _warchestMoneySavingOn],
-			["spawnBeaconSaving", _beaconSavingOn],
 			["timeSaving", _timeSavingOn],
 			["weatherSaving", _weatherSavingOn],
 			["hcObjSaving", _hcObjSavingOn]
@@ -438,12 +414,9 @@ if (isNil "A3W_savingMethod") then
 	publicVariable "A3W_savingMethod";
 };
 
-call compile preprocessFileLineNumbers "server\missions\setupMissionArrays.sqf";
 call compile preprocessFileLineNumbers "server\functions\createTownMarkers.sqf";
 
-_createTriggers = [] spawn compile preprocessFileLineNumbers "territory\server\createCaptureTriggers.sqf"; // scriptDone stays stuck on false when using execVM on Linux
-
-[_setupPlayerDB, _createTriggers] spawn
+[_setupPlayerDB] spawn
 {
 	waitUntil {sleep 0.1; {scriptDone _x} count _this == count _this};
 	A3W_serverSetupComplete = compileFinal "true";
@@ -513,35 +486,6 @@ if (["A3W_serverSpawning"] call isConfigOn) then
 
 A3W_serverSpawningComplete = compileFinal "true";
 publicVariable "A3W_serverSpawningComplete";
-
-if (count (["config_territory_markers", []] call getPublicVar) > 0) then
-{
-	diag_log "[INFO] A3W territory capturing is ENABLED";
-	[] execVM "territory\server\monitorTerritories.sqf";
-}
-else
-{
-	diag_log "[INFO] A3W territory capturing is DISABLED";
-};
-
-// Consolidate all store NPCs in a single group
-[] spawn
-{
-	_storeGroup = createGroup sideLogic;
-	{
-		if (!isPlayer _x && {(toLower ((vehicleVarName _x) select [0,8])) in ["genstore","gunstore","vehstore"]}) then
-		{
-			[_x] joinSilent _storeGroup;
-		};
-	} forEach entities "CAManBase";
-};
-
-//Execute Server Missions.
-if (["A3W_serverMissions"] call isConfigOn) then
-{
-	diag_log "WASTELAND SERVER - Initializing Missions";
-	[] execVM "server\missions\masterController.sqf";
-};
 
 if !(["A3W_hcObjCleanup"] call isConfigOn) then
 {

@@ -14,9 +14,6 @@ if (!isServer && hasInterface) exitWith {};
 
 #define CLEANUP_INTERVAL (5*60) // Interval to run the cleanup
 #define ITEM_CLEANUP_TIME (30*60) // Dropped player items cleanup time
-#define MONEY_CLEANUP_TIME (60*60) // Dropped money cleanup time
-#define STORE_CLEANUP_TIME (30*60) // Dropped store items cleanup time
-#define STORE_CLEANUP_RADIUS 7.5 // Radius in meters to scan near store NPCs for dropped items
 #define DEBRIS_CLEANUP_TIME (10*60) // Vehicle crash crater/debris cleanup time (actual vehicle wreck cleanup is handled through description.ext parameters)
 #define GROUP_CLEANUP_TIME (1*60) // How long a group must have been empty before deleting it
 
@@ -26,7 +23,7 @@ _objCleanup =
 {
 	private _obj = _x;
 	private _processedDeath = _obj getVariable ["processedDeath", 0];
-	private _timeLimit = if (isNil "_timeLimitOverride") then { [ITEM_CLEANUP_TIME, MONEY_CLEANUP_TIME] select (_obj getVariable ["cmoney",0] > 0) } else { _timeLimitOverride };
+	private _timeLimit = if (isNil "_timeLimitOverride") then {ITEM_CLEANUP_TIME} else { _timeLimitOverride };
 
 	if (_isWreck) then
 	{
@@ -142,16 +139,6 @@ _wreckCleanup =
 	call _objCleanup
 };
 
-_storeCleanup =
-{
-	private _isStoreCleanup = true;
-	private _isWreck = false;
-	private _timeLimitOverride = STORE_CLEANUP_TIME;
-	call _objCleanup
-};
-
-
-_storeNPCs = allUnits select {[["GenStore","GunStore","VehStore"], vehicleVarName _x] call fn_startsWith};
 _baseClass = "";
 
 if (!isServer) then
@@ -189,7 +176,6 @@ while {true} do
 	_delQtyO = 0;
 	_entityCleanup forEach ([0,0] nearEntities ["All", 1e11]);
 	{ private _baseClass = _x; _wreckCleanup forEach allMissionObjects _x } forEach ["CraterLong","Ruins","#destructioneffects","UAV_01_base_F"];
-	{ _storeCleanup forEach nearestObjects [_x, ["GroundWeaponHolder"], STORE_CLEANUP_RADIUS] } forEach _storeNPCs;
 	_parachuteCleanup forEach ([0,0] nearEntities ["ParachuteBase", 1e11]); // delete glitched parachutes
 
 	diag_log format ["SERVER CLEANUP: Deleted %1 expired objects", _delQtyO];

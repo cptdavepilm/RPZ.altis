@@ -38,7 +38,7 @@ else
 		// Put player UIDs here
 	];
 
-	// Server Owners: access to everything, including god mode, money, guns, and vehicles
+	// Server Owners: access to everything, including god mode, guns, and vehicles
 	serverOwners = compileFinal str
 	[
 		// Put player UIDs here

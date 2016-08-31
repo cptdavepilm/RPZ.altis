@@ -20,40 +20,6 @@ player addEventHandler ["Take",
 	};
 }];
 
-player addEventHandler ["Put",
-{
-	_vehicle = _this select 1;
-
-	if (_vehicle getVariable ["A3W_storeSellBox", false] && isNil {_vehicle getVariable "A3W_storeSellBox_track"}) then
-	{
-		_vehicle setVariable ["A3W_storeSellBox_track", _vehicle spawn
-		{
-			_vehicle = _this;
-
-			waitUntil {sleep 1; !alive player || player distance _vehicle > 25};
-
-			_sellScript = [_vehicle, player, -1, [true, true]] execVM "client\systems\selling\sellCrateItems.sqf";
-			waitUntil {sleep 0.1; scriptDone _sellScript};
-
-			if (!alive player) then
-			{
-				sleep 0.5;
-
-				if (player getVariable ["cmoney", 0] > 0) then
-				{
-					_m = createVehicle ["Land_Money_F", getPosATL player, [], 0.5, "CAN_COLLIDE"];
-					_m setVariable ["cmoney", player getVariable "cmoney", true];
-					_m setVariable ["owner", "world", true];
-					player setVariable ["cmoney", 0, true];
-					[_m] remoteExec ["A3W_fnc_setItemCleanup", 2];
-				};
-			};
-
-			_vehicle setVariable ["A3W_storeSellBox_track", nil];
-		}];
-	};
-}];
-
 player addEventHandler ["WeaponDisassembled", { _this spawn weaponDisassembledEvent }];
 player addEventHandler ["WeaponAssembled",
 {
@@ -160,35 +126,6 @@ player addEventHandler ["InventoryClosed",
 
 player addEventHandler ["HandleDamage", unitHandleDamage];
 
-if (["A3W_remoteBombStoreRadius", 0] call getPublicVar > 0) then
-{
-	player addEventHandler ["Fired",
-	{
-		// Remove explosives if within 100m of a store
-		if (_this select 1 == "Put") then
-		{
-			_ammo = _this select 4;
-
-			//if ({_ammo isKindOf _x} count ["PipeBombBase", "ClaymoreDirectionalMine_Remote_Ammo"] > 0) then // "touchable" remote explosives only
-			if (_ammo isKindOf "TimeBombCore") then // all explosives
-			{
-				_mag = _this select 5;
-				_bomb = _this select 6;
-				_minDist = ["A3W_remoteBombStoreRadius", 100] call getPublicVar;
-
-				{
-					if (_x getVariable ["storeNPC_setupComplete", false] && {_bomb distance _x < _minDist}) exitWith
-					{
-						deleteVehicle _bomb;
-						[player, _mag] call fn_forceAddItem;
-						playSound "FD_CP_Not_Clear_F";
-						titleText [format ["You are not allowed to place explosives within %1m of a store.\nThe explosive has been re-added to your inventory.", _minDist], "PLAIN DOWN", 0.5];
-					};
-				} forEach entities "CAManBase";
-			};
-		};
-	}];
-};
 
 if (["A3W_combatAbortDelay", 0] call getPublicVar > 0) then
 {

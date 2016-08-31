@@ -16,7 +16,7 @@
 #define ERR_IN_VEHICLE "Packing Camouflage Netting Failed. You can't do this in a vehicle."
 #define ERR_CANCELLED "Packing Camouflage Netting Cancelled"
 
-private ["_beacon", "_error", "_hasFailed", "_success"];
+private ["_error", "_hasFailed", "_success"];
 _netting = [] call mf_items_camo_net_nearest;
 _error = [_netting] call mf_items_camo_net_can_pack;
 if (_error != "") exitWith {[_error, 5] call mf_notify_client};

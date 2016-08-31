@@ -31,29 +31,6 @@ switch (true) do
 	};
 };
 
-switch (true) do
-{
-	case (_obj call _isBox):
-	{
-		_variables pushBack ["cmoney", _obj getVariable ["cmoney", 0]];
-	};
-	case (_obj call _isWarchest):
-	{
-		_variables pushBack ["a3w_warchest", true];
-		_variables pushBack ["R3F_LOG_disabled", true];
-		_variables pushBack ["side", str (_obj getVariable ["side", sideUnknown])];
-	};
-	case (_obj call _isBeacon):
-	{
-		_variables pushBack ["a3w_spawnBeacon", true];
-		_variables pushBack ["R3F_LOG_disabled", true];
-		_variables pushBack ["side", str (_obj getVariable ["side", sideUnknown])];
-		_variables pushBack ["packing", false];
-		_variables pushBack ["groupOnly", _obj getVariable ["groupOnly", false]];
-		_variables pushBack ["ownerName", toArray (_obj getVariable ["ownerName", "[Beacon]"])];
-	};
-};
-
 _owner = _obj getVariable ["ownerUID", ""];
 
 _r3fSide = _obj getVariable "R3F_Side";

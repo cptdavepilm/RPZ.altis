@@ -17,15 +17,9 @@ _value = param [1, "", [0,"",[]]];
 
 switch (toLower _action) do
 {
-	case "money":
-	{
-		if (_value > 0) then
-		{
-			_message = format ["[NOTICE] %1 used the admin menu to obtain $%2", name player, _value];
-		};
-	};
 	case "teleport":
 	{
+		//_message = format ["[NOTICE] %1 used the admin menu to obtain $%2", name player, _value];
 		_value resize 2;
 		{ _value set [_forEachIndex, round _x] } forEach _value;
 	};

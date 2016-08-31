@@ -57,13 +57,6 @@ class playerSettings {
 			w = 0.04 / (4/3); h = 0.04;
 		};
 
-		class moneyIcon : w_RscPicture {
-			idc = -1;
-			text = "client\icons\money.paa";
-			x = 0.022; y = 0.32;
-			w = 0.04 / (4/3); h = 0.04;
-		};
-
 		class waterText : w_RscText {
 			idc = water_text;
 			text = "";
@@ -77,14 +70,6 @@ class playerSettings {
 			sizeEx = 0.03;
 			text = "";
 			x = 0.06; y = 0.254;
-			w = 0.3; h = 0.05;
-		};
-
-		class moneyText : w_RscText {
-			idc = money_text;
-			text = "";
-			sizeEx = 0.03;
-			x = 0.06; y = 0.313;
 			w = 0.3; h = 0.05;
 		};
 
@@ -126,20 +111,6 @@ class playerSettings {
 			text = "Use";
 			onButtonClick = "[0] execVM 'client\systems\playerMenu\itemfnc.sqf'";
 			x = 0.489; y = 0.525;
-			w = 0.116; h = 0.033 * safezoneH;
-		};
-
-		class moneyInput: w_RscCombo {
-			idc = money_value;
-			x = 0.610; y = 0.618;
-			w = .116; h = .030;
-		};
-
-		class DropcButton : w_RscButton {
-			idc = -1;
-			text = "Drop";
-			onButtonClick = "[] execVM 'client\systems\playerMenu\dropMoney.sqf'";
-			x = 0.489; y = 0.60;
 			w = 0.116; h = 0.033 * safezoneH;
 		};
 

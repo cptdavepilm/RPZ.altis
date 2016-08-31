@@ -19,6 +19,3 @@ if ({alive _x} count crew _veh == 0) then
 
 //_veh removeEventHandler ["Dammaged", _veh getVariable ["A3W_dammagedEH", -1]];
 //_veh setVariable ["A3W_dammagedEH", nil];
-
-{ _veh removeAction _x } forEach (_veh getVariable ["A3W_serviceBeaconActions", []]);
-_veh setVariable ["A3W_serviceBeaconActions", nil];

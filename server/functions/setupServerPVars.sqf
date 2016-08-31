@@ -8,12 +8,6 @@ pvar_teamSwitchList = [];
 publicVariable "pvar_teamSwitchList";
 pvar_teamKillList = [];
 publicVariable "pvar_teamKillList";
-pvar_spawn_beacons = [];
-publicVariable "pvar_spawn_beacons";
-pvar_warchest_funds_east = 0;
-publicVariable "pvar_warchest_funds_east";
-pvar_warchest_funds_west = 0;
-publicVariable "pvar_warchest_funds_west";
 currentDate = [];
 publicVariable "currentDate";
 currentInvites = [];
@@ -25,14 +19,10 @@ publicVariable "currentInvites";
 [
 	["PlayerCDeath", { PVAL call server_playerDied }],
 	["pvar_removeNegativeScore", { PVAL call removeNegativeScore }],
-	["pvar_convertTerritoryOwner", { PVAL call convertTerritoryOwner }],
 	["pvar_enableSimulationGlobal", { PVAL call fn_enableSimulationGlobal }],
 	["pvar_enableSimulationServer", { PVAL call fn_enableSimulationServer }],
 	["pvar_parachuteLiftedVehicle", { PVAL spawn parachuteLiftedVehicle }],
-	["pvar_spawnStoreObject", { PVAL call spawnStoreObject }],
 	["pvar_processGroupInvite", { PVAL call processGroupInvite }],
-	["pvar_processMoneyPickup", { PVAL call processMoneyPickup }],
-	["pvar_processTransaction", { PVAL call processTransaction }],
 	["pvar_punishTeamKiller", { PVAL call punishTeamKiller }],
 	["pvar_teamSwitchLock", { PVAL call teamSwitchLock }],
 	["pvar_teamSwitchUnlock", { PVAL call teamSwitchUnlock }],

@@ -28,10 +28,6 @@ spawnActionHandle = (_this select 1) spawn
 
 	if (isNil "playerData_resetPos") then
 	{
-		// Deal with money here
-		_baseMoney = ["A3W_startingMoney", 100] call getPublicVar;
-		player setVariable ["cmoney", _baseMoney, true];
-
 		if (["A3W_survivalSystem"] call isConfigOn) then
 		{
 			[MF_ITEMS_CANNED_FOOD, 1] call mf_inventory_add;
@@ -53,7 +49,6 @@ spawnActionHandle = (_this select 1) spawn
 	switch (_switch) do
 	{
 		case 1: { _data call spawnInTown };
-		case 2: { _data call spawnOnBeacon };
 		default { _data call spawnRandom };
 	};
 

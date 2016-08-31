@@ -28,7 +28,6 @@ _worldDir = "persistence\server\world";
 _methodDir = format ["%1\%2", _worldDir, call A3W_savingMethodDir];
 
 fn_hasInventory = [_worldDir, "fn_hasInventory.sqf"] call mf_compile;
-fn_saveWarchestMoney = [_methodDir, "saveWarchestMoney.sqf"] call mf_compile;
 fn_saveTime = [_methodDir, "saveTime.sqf"] call mf_compile;
 
 if (_objectSavingOn) then

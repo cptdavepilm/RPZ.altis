@@ -10,7 +10,7 @@
 #define adminMenu_option 50001
 disableSerialization;
 
-private ["_panelType","_displayAdmin","_displayDebug","_adminSelect","_debugSelect","_money"];
+private ["_panelType","_displayAdmin","_displayDebug","_adminSelect","_debugSelect"];
 _uid = getPlayerUID player;
 if (_uid call isAdmin) then
 {
@@ -58,23 +58,17 @@ if (_uid call isAdmin) then
 					}] call BIS_fnc_addStackedEventHandler;
 					hint "Click on map to teleport";
 				};
-				case 5: //Money
-				{
-					_money = 5000;
-					player setVariable ["cmoney", (player getVariable ["cmoney",0]) + _money, true];
-					if (!isNil "notifyAdminMenu") then { ["money", _money] call notifyAdminMenu };
-				};
-				case 6: //Debug Menu
+				case 5: //Debug Menu
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\loadDebugMenu.sqf";
 				};
-				case 7: //Object search menu
+				case 6: //Object search menu
 				{
 					closeDialog 0;
 					execVM "client\systems\adminPanel\loadObjectSearch.sqf";
 				};
-				case 8: // toggle God mode
+				case 7: // toggle God mode
 				{
 					execVM "client\systems\adminPanel\toggleGodMode.sqf";
 				};
@@ -86,41 +80,21 @@ if (_uid call isAdmin) then
 
 			switch (lbCurSel _debugSelect) do
 			{
-				case 0: //Access Gun Store
-				{
-					closeDialog 0;
-					[] call loadGunStore;
-				};
-				case 1: //Access General Store
-				{
-					closeDialog 0;
-					[] call loadGeneralStore;
-				};
-				case 2: //Access Vehicle Store
-				{
-					closeDialog 0;
-					[] call loadVehicleStore;
-				};
-				case 3: //Access ATM Dialog
-				{
-					closeDialog 0;
-					call mf_items_atm_access;
-				};
-				case 4: //Access Respawn Dialog
+				case 0: //Access Respawn Dialog
 				{
 					closeDialog 0;
 					true spawn client_respawnDialog;
 				};
-				case 5: //Access Proving Grounds
+				case 1: //Access Proving Grounds
 				{
 					closeDialog 0;
 					createDialog "balca_debug_main";
 				};
-				case 6: //Show server FPS function
+				case 2: //Show server FPS function
 				{
 					hint format["Server FPS: %1",serverFPS];
 				};
-				case 7: //Test Function
+				case 3: //Test Function
 				{
 					_group = createGroup civilian;
 					_leader = _group createunit ["C_man_polo_1_F", getPos player, [], 0.5, "Form"];

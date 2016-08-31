@@ -11,31 +11,6 @@ if (!isServer) exitWith {};
 
 diag_log "WASTELAND SERVER - Initializing Server Compile";
 
-//Factory Compiles
-_path = "server\missions\factoryMethods";
-attemptCompileMissions = [_path, "attemptCompileMissions.sqf"] call mf_compile;
-checkMissionVehicleLock = [_path, "checkMissionVehicleLock.sqf"] call mf_compile;
-cleanLocationObjects = [_path, "cleanLocationObjects.sqf"] call mf_compile;
-createCustomGroup = [_path, "createUnits\customGroup.sqf"] call mf_compile;
-createCustomGroup2 = [_path, "createUnits\customGroup2.sqf"] call mf_compile;
-createLargeDivers = [_path, "createUnits\largeDivers.sqf"] call mf_compile;
-createMissionLocation = [_path, "createMissionLocation.sqf"] call mf_compile;
-createMissionMarker = [_path, "createMissionMarker.sqf"] call mf_compile;
-createMissionVehicle = [_path, "createMissionVehicle.sqf"] call mf_compile;
-createMissionVehicle2 = [_path, "createMissionVehicle2.sqf"] call mf_compile;
-createOutpost = [_path, "createOutpost.sqf"] call mf_compile;
-createRandomSoldier = [_path, "createUnits\createRandomSoldier.sqf"] call mf_compile;
-createRandomSoldierC = [_path, "createUnits\createRandomSoldierC.sqf"] call mf_compile;
-createSmallDivers = [_path, "createUnits\smallDivers.sqf"] call mf_compile;
-generateMissionWeights = [_path, "generateMissionWeights.sqf"] call mf_compile;
-mission_VehicleCapture = "server\missions\mainMissions\mission_VehicleCapture.sqf" call mf_compile;
-missionHint = [_path, "missionHint.sqf"] call mf_compile;
-moveIntoBuildings = [_path, "moveIntoBuildings.sqf"] call mf_compile;
-removeDisabledMissions = [_path, "removeDisabledMissions.sqf"] call mf_compile;
-setLocationObjects = [_path, "setLocationObjects.sqf"] call mf_compile;
-setLocationState = [_path, "setLocationState.sqf"] call mf_compile;
-setMissionState = [_path, "setMissionState.sqf"] call mf_compile;
-
 //Function Compiles
 _path = "server\functions";
 A3W_fnc_checkHackedVehicles = [_path, "checkHackedVehicles.sqf"] call mf_compile;
@@ -47,7 +22,6 @@ A3W_fnc_updateSpawnTimestamp = [_path, "fn_updateSpawnTimestamp.sqf"] call mf_co
 addMilCap = [_path, "addMilCap.sqf"] call mf_compile;
 basePartSetup = [_path, "basePartSetup.sqf"] call mf_compile;
 cleanVehicleWreck = [_path, "cleanVehicleWreck.sqf"] call mf_compile;
-convertTerritoryOwner = "territory\server\convertTerritoryOwner.sqf" call mf_compile;
 defendArea = [_path, "defendArea.sqf"] call mf_compile;
 dropPlayerItems = [_path, "dropPlayerItems.sqf"] call mf_compile;
 findClientPlayer = [_path, "findClientPlayer.sqf"] call mf_compile;
@@ -64,17 +38,12 @@ parachuteLiftedVehicle = [_path, "parachuteLiftedVehicle.sqf"] call mf_compile;
 playerRespawnServer = [_path, "playerRespawnServer.sqf"] call mf_compile;
 processGroupInvite = [_path, "processGroupInvite.sqf"] call mf_compile;
 processItems = [_path, "processItems.sqf"] call mf_compile;
-processMoneyPickup = [_path, "processMoneyPickup.sqf"] call mf_compile;
-processTransaction = [_path, "processTransaction.sqf"] call mf_compile;
 punishTeamKiller = [_path, "punishTeamKiller.sqf"] call mf_compile;
 refillPrimaryAmmo = [_path, "refillPrimaryAmmo.sqf"] call mf_compile;
 respawnEventServer = [_path, "respawnEventServer.sqf"] call mf_compile;
-setMissionSkill = [_path, "setMissionSkill.sqf"] call mf_compile;
-spawnStoreObject = [_path, "spawnStoreObject.sqf"] call mf_compile;
 teamKillUnlock = [_path, "teamKillUnlock.sqf"] call mf_compile;
 teamSwitchLock = [_path, "teamSwitchLock.sqf"] call mf_compile;
 teamSwitchUnlock = [_path, "teamSwitchUnlock.sqf"] call mf_compile;
-updateConnectingClients = "territory\client\updateConnectingClients.sqf" call mf_compile;
 vehicleRepair = [_path, "vehicleRepair.sqf"] call mf_compile;
 vehicleSetup = [_path, "vehicleSetup.sqf"] call mf_compile;
 waitUntilBagTaken = [_path, "waitUntilBagTaken.sqf"] call mf_compile;

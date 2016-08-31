@@ -94,18 +94,7 @@ if (_uid call isAdmin) then
 			publicVariableServer "pvar_teamKillUnlock";
 			["PlayerMgmt_UnlockTeamKill", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
 		};
-		case 5: //Remove All Money
-		{
-			_targetUID = getPlayerUID _target;
-			{
-				if(getPlayerUID _x == _targetUID) exitWith
-				{
-					_x setVariable["cmoney",0,true];
-				};
-			}forEach playableUnits;
-			["PlayerMgmt_RemoveMoney", format ["%1 (%2)", name _target, getPlayerUID _target]] call notifyAdminMenu;
-		};
-		case 6: //Remove All Weapons
+		case 5: //Remove All Weapons
 		{
 			/*_targetUID = getPlayerUID _target;
 			{
@@ -116,7 +105,7 @@ if (_uid call isAdmin) then
 			}forEach playableUnits;*/
 			["This option has been disabled due to having never worked at all in the first place."] spawn BIS_fnc_guiMessage;
 		};
-		case 7: //Check Player Gear
+		case 6: //Check Player Gear
 		{
 			/*_targetUID = getPlayerUID _target;
 			{

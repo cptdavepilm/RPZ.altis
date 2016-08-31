@@ -11,8 +11,3 @@ params [["_player",objNull,[objNull]], ["_jip",true,[false]], ["_hasInterface",t
 if (isNull _player) exitWith {};
 
 _player setVariable ["A3W_joinTickTime", missionNamespace getVariable ["A3W_joinTickTime_" + getPlayerUID _player, diag_tickTime], true];
-
-if (!isNil "currentTerritoryDetails" && _hasInterface) then
-{
-	[_player, _jip] call updateConnectingClients;
-};

@@ -42,10 +42,6 @@ if (_killer == _player) then
 
 if (_player == player) then
 {
-	(findDisplay 2001) closeDisplay 0; // Close Gunstore
-	(findDisplay 2009) closeDisplay 0; // Close Genstore
-	(findDisplay 5285) closeDisplay 0; // Close Vehstore
-	(findDisplay 63211) closeDisplay 0; // Close ATM
 	uiNamespace setVariable ["BIS_fnc_guiMessage_status", false]; // close message boxes
 	closeDialog 0;
 
@@ -77,12 +73,9 @@ _player spawn
 {
 	_player = _this;
 
-	_money = _player getVariable ["cmoney", 0];
-	_player setVariable ["cmoney", 0, true];
-
 	_items = if (_player == player) then { true call mf_inventory_list } else { [] };
 
-	pvar_dropPlayerItems = [_player, _money, _items];
+	pvar_dropPlayerItems = [_player, _items];
 	publicVariableServer "pvar_dropPlayerItems";
 
 	if (_player == player) then

@@ -34,7 +34,6 @@ A3W_fnc_checkPlayerFlag =
 		{
 			_info append
 			[
-				["BankMoney", _player getVariable ["bmoney", 0]],
 				["Bounty", _player getVariable ["bounty", 0]],
 				["BountyKills", _player getVariable ["bountyKills", 0]]
 			];
@@ -70,7 +69,6 @@ A3W_fnc_checkPlayerFlag =
 				_x params ["_var", "_val"];
 				switch (_var) do
 				{
-					case "BankMoney":    { _player setVariable ["bmoney", _val, true] };
 					case "Bounty":       { _player setVariable ["bounty", _val, true] };
 					case "BountyKills":  { _player setVariable ["bountyKills", _val, true] };
 				};
