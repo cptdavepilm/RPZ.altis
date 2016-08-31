@@ -62,14 +62,15 @@ if (isNil "playerData_alive" || !isNil "playerData_resetPos") then
 {
 	[player, "AmovPknlMstpSnonWnonDnon"] call switchMoveGlobal;
 
-	9999 cutText ["Loading...", "BLACK", 0.01];
+	/*9999 cutText ["Loading...", "BLACK", 0.01];
 
 	true spawn client_respawnDialog;
 
 	waitUntil {respawnDialogActive};
 	9999 cutText ["", "BLACK", 0.01];
-	waitUntil {player setOxygenRemaining 1; !respawnDialogActive};
+	waitUntil {player setOxygenRemaining 1; !respawnDialogActive};*/
 
+	[0,nil] call spawnAction;
 	if (["A3W_playerSaving"] call isConfigOn) then
 	{
 		[] spawn fn_savePlayerData;
