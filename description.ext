@@ -31,6 +31,12 @@ overviewPicture = "mapConfig\Loading.jpg";
 loadScreen = "mapConfig\waYvRE9.jpg";
 briefing = 0; // if 0, skip Continue button
 
+//Jukki settings
+skipLobby = 1; //auto assing user slotenabled
+debriefing = 0; //no debrief screen
+enableTeamSwitch = 0; //Manual team switch disabled
+showGroupIndicator = 0;
+
 #include "debugFlag.hpp"
 
 // A3W UI color (default = sky blue)

@@ -17,9 +17,4 @@ player createDiarySubject ["infos", "Infos and Help"];
 player createDiarySubject ["changelog", "Changelog"];
 player createDiarySubject ["credits", "Credits"];
 
-player createDiaryRecord ["changelog",
-[
-"v0.1",
-"
-<br/>  Initial First Awaken release.
-]];
+player createDiaryRecord ["changelog",["v0.1","<br/>  Initial First Awaken release."]]; //Jukki, fixed diary
