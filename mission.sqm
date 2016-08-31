@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=11;
+		nextID=13;
 	};
 	class Camera
 	{
-		pos[]={-122.69283,256.20795,6129.0474};
-		dir[]={-0.18028133,-0.60621345,0.77473342};
-		up[]={-0.13742709,0.79518455,0.5905754};
-		aside[]={0.97406805,-5.0349627e-007,0.22666343};
+		pos[]={1447.8147,736.25061,6644.0474};
+		dir[]={0.657933,-0.52404904,0.54102623};
+		up[]={0.40489936,0.85157436,0.33295205};
+		aside[]={0.63520372,-1.0345539e-006,-0.77246743};
 	};
 };
 binarizationWanted=0;
@@ -35505,7 +35505,7 @@ class Mission
 			dataType="Layer";
 			name="VanillaLayer";
 			id=18010;
-			atlOffset=139.75977;
+			atlOffset=-122.22;
 		};
 		class Item524
 		{
@@ -37937,12 +37937,12 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={-651.1004,210.13324,6132.6641};
-				angles[]={0.23554263,0,0};
+				position[]={-651.09998,210.13356,6132.6641};
+				angles[]={0.23554964,0,0};
 			};
 			id=18590;
 			type="ModuleCurator_F";
-			atlOffset=0.11268616;
+			atlOffset=0.11300659;
 			class CustomAttributes
 			{
 				class Attribute0
