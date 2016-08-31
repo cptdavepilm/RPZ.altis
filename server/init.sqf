@@ -12,7 +12,7 @@
 
 if (!isServer && hasInterface) exitWith {};
 
-externalConfigFolder = "\AwakenRP_settings";
+externalConfigFolder = "\AwakenRP_settings_test";
 
 if (isServer) then
 {
