@@ -14,7 +14,7 @@ _headgear = [_player, "headgear"] call getDefaultClothing;
 _goggles = [_player, "goggles"] call getDefaultClothing;
 
 diag_log format ["Can i wear this? %1", _player isUniformAllowed _uniform];
-if (_uniform != "") then { _player addUniform _uniform };
+if (_uniform != "") then { _player forceAddUniform _uniform };
 if (_headgear != "") then { _player addHeadgear _headgear };
 if (_goggles != "") then { _player addGoggles _goggles };
 
