@@ -11,8 +11,8 @@
 //
 //!!!EVERY building must have only ONE entry here AND been in ONE class!!!
 //-------------------------------------------------------------------------------------
-Buildingstoloot_list =
-[
+Buildingstoloot_list = [];
+/*[
 	//["Land_Addon_01_V1_dam_F", 0],        //not viable
 	//["Land_Airport_center_F", 0],         //no positions
 	//["Land_cargo_addon01_V1_F", 0],       //no positions
@@ -437,4 +437,18 @@ Buildingstoloot_list =
 	["Land_SM_01_shed_F", 1],
 	["Land_Crane_F", 1],
 	["Land_Pier_F", 1]
-];
+];*/
+
+
+
+
+//-------------------------------------------------------------------------------------
+//function only runs once on beginning of mission, not really needs a compile
+//fill Buildingstoloot_list with buildingnames only
+
+_configs = "true" configClasses (missionconfigFile >> "CfgBuildingPos");
+
+{
+	Buildingstoloot_list pushBack (configName _x);
+	diag_log format["-- LOOTSPAWNER DEBUG add to Buildingstoloot_list: %1 ", (configName _x)];
+} forEach _configs;

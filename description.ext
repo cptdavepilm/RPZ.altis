@@ -117,3 +117,5 @@ class CfgRemoteExec // applies only to clients
 		#endif
 	};
 };
+
+#include "addons\Lootspawner\CfgBuildingPos.hpp"

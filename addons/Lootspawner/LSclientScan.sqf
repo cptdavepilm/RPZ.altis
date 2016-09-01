@@ -12,10 +12,6 @@
 //Buildings that can spawn loot go in this list
 #include "LSlootBuildings.sqf"
 
-_spawnBuilding_list = [];
-
-{ _spawnBuilding_list pushBack (_x select 0) } forEach Buildingstoloot_list;
-
 if (hasInterface) then
 {
 	scriptName "LSclientScan";
@@ -40,7 +36,7 @@ if (hasInterface) then
 					};
 
 					sleep 0.01;
-				} forEach nearestObjects [player, _spawnBuilding_list, PLAYER_LOOT_SPAWN_RADIUS];
+				} forEach nearestObjects [player, Buildingstoloot_list, PLAYER_LOOT_SPAWN_RADIUS];
 
 				if (count _buildList > 0) then
 				{

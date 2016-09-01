@@ -23,11 +23,6 @@ if (!hasInterface) exitWith {};
 {
 	waitUntil {!isNull player};
 	[player, didJIP, hasInterface] remoteExecCall ["A3W_fnc_initPlayerServer", 2];
-
-	if !(playerSide in [BLUFOR,OPFOR]) then
-	{
-		1 enableChannel [true, false]; // force disable side voice for indies
-	};
 };
 
 // skip Continue button if briefing = 0 in description.ext, courtesy of Killzone Kid
