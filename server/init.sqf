@@ -443,6 +443,7 @@ if ((isNil "A3W_buildingLoot" && {["A3W_buildingLootWeapons"] call isConfigOn ||
 
 [] execVM "server\functions\serverTimeSync.sqf";
 
+waitUntil {!isNil "A3W_oSaveReady"};
 if (["A3W_serverSpawning"] call isConfigOn) then
 {
 	diag_log "WASTELAND SERVER - Initializing Server Spawning";
@@ -475,11 +476,6 @@ if (["A3W_serverSpawning"] call isConfigOn) then
 	if (["A3W_boxSpawning"] call isConfigOn) then
 	{
 		call compile preprocessFileLineNumbers "server\functions\boxSpawning.sqf";
-	};
-
-	if (["A3W_vehicleSpawning"] call isConfigOn || ["A3W_boatSpawning"] call isConfigOn) then
-	{
-		execVM "server\spawning\vehicleRespawnManager.sqf";
 	};
 };
 

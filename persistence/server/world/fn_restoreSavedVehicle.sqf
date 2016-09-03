@@ -222,3 +222,8 @@ if (!isNil "_repairCargo") then { _veh setRepairCargo _repairCargo };
 
 //reload _veh;
 _veh hideObjectGlobal false;
+
+//add vehicle counter 
+if (isNil "Awaken_TotalVehicles") then { Awaken_TotalVehicles = 0 };
+
+Awaken_TotalVehicles = Awaken_TotalVehicles + 1;

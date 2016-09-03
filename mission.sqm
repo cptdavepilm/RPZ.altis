@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=19040;
+		nextID=19043;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=17;
+		nextID=20;
 	};
 	class Camera
 	{
-		pos[]={9887.4512,22.929768,4821.4946};
-		dir[]={-0.94553339,-0.31535956,0.082244202};
-		up[]={-0.31427726,0.94888479,0.027340103};
-		aside[]={0.086666852,-3.4938421e-006,0.99627405};
+		pos[]={10058.208,43.783455,4862.2847};
+		dir[]={-0.85072297,-0.4811528,0.21217024};
+		up[]={-0.46691865,0.87653261,0.11645293};
+		aside[]={0.24200349,-7.6001743e-007,0.97030026};
 	};
 };
 binarizationWanted=0;
@@ -79,13 +79,14 @@ addons[]=
 	"A3_Ui_F",
 	"A3_Modules_F_Curator_Curator",
 	"A3_Weapons_F_Ammoboxes",
-	"A3_Characters_F"
+	"A3_Characters_F",
+	"A3_Soft_F_MRAP_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=29;
+		items=30;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -255,6 +256,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
+		class Item29
+		{
+			className="A3_Soft_F";
+			name="Arma 3 Alpha - Unarmored Land Vehicles";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
 	};
 };
 randomSeed=7096824;
@@ -284,7 +292,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=607;
+		items=610;
 		class Item0
 		{
 			dataType="Object";
@@ -7819,7 +7827,7 @@ class Mission
 									"SCALAR"
 								};
 							};
-							value=3;
+							value=2;
 						};
 					};
 				};
@@ -41420,6 +41428,59 @@ class Mission
 			};
 			id=17365;
 			type="Land_Cargo_Patrol_V2_F";
+		};
+		class Item607
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10000.813,10.044794,4856.7305};
+				angles[]={0.0004886922,0,0.0032463125};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 1, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=19040;
+			type="B_MRAP_01_F";
+		};
+		class Item608
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9995.752,9.9437046,4890.1929};
+				angles[]={6.2806196,2.900737,6.2795548};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="_nil = [this, 1, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=19041;
+			type="B_MRAP_01_F";
+			atlOffset=-4.7683716e-007;
+		};
+		class Item609
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9985.4912,9.9506102,4874.1333};
+				angles[]={6.2792583,1.5329925,0.0022689279};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				ammo=0.25099596;
+				init="_nil = [this, 1, 1] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+			};
+			id=19042;
+			type="B_MRAP_01_F";
 		};
 	};
 };

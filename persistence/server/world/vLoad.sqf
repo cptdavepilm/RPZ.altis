@@ -19,6 +19,7 @@ _vehicles = call compile preprocessFileLineNumbers format ["%1\getVehicles.sqf",
 
 _exclVehicleIDs = [];
 
+
 {
 	private ["_veh", "_hoursAlive", "_hoursUnused"];
 	private (_x apply {_x select 0});

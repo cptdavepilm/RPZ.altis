@@ -10,5 +10,4 @@ class ServerDir
 	class initPlayerServer {file = "initPlayerServer.sqf";};
 	class setLockState {file = "server\functions\fn_setLockState.sqf";};
 	class setupMissionObject {file = "server\functions\setupMissionObject.sqf";};
-	class takeOwnership {file = "server\functions\fn_takeOwnership.sqf";};
 };

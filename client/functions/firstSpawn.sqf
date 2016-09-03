@@ -39,10 +39,6 @@ player addEventHandler ["WeaponAssembled",
 		if (_obj isKindOf "StaticWeapon") then
 		{
 			[_obj, _player] call fn_forceSaveObject;
-		}
-		else
-		{
-			[_obj, _player] call A3W_fnc_takeOwnership;
 		};
 
 		if (!alive getConnectedUAV _player) then

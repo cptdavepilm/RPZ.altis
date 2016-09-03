@@ -9,18 +9,14 @@
 
 if (!isServer) exitWith {};
 
-params ["_markerPos", ["_vehicleType","",[""]], ["_respawnSettings",nil,[[]]]];
-private ["_pos", "_vehicle", "_hitPoint"];
-
-//_pos = [_markerPos, 2, 25, 5, 0, 60 * (pi / 180), 0, [], [_markerPos]] call BIS_fnc_findSafePos;
-// diabled as a test. might break other features
-_pos = _markerPos;
+params ["_pos", "_dir", ["_vehicleType","",[""]], ["_respawnSettings",nil,[[]]]];
+private ["_vehicle", "_hitPoint"];
 
 //Car Initialization
 _vehicle = createVehicle [_vehicleType, _pos, [], 0, "None"];
 
 _vehicle setPosATL [_pos select 0, _pos select 1, 1.5];
-_vehicle setDir random 360;
+_vehicle setDir _dir;
 _vehicle setVelocity [0,0,0.01];
 
 _vehicle setDamage (random 0.5); // setDamage must always be called before vehicleSetup
@@ -41,9 +37,6 @@ if (!isNil "_respawnSettings") then
 	_vehicle setVariable ["vehicleRespawn_settingsArray", _respawnSettings];
 };
 
-//[_vehicle, _markerPos, 10, 20, 30] call addVehicleRespawn;
-[_vehicle, _markerPos, 15*60, 30*60, 45*60] call addVehicleRespawn;
-
 //Set Vehicle Attributes
 _vehicle setFuel (0.2 + random 0.1);
 
@@ -58,3 +51,5 @@ if (_vehicleType isKindOf "Offroad_01_armed_base_F") then
 //if (_type > 1) then { _vehicle setVehicleAmmo (random 1.0) };
 
 [_vehicle] call randomWeapons;
+
+(netId _vehicle)  call fn_manualVehicleSave;
