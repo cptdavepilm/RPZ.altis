@@ -72,24 +72,40 @@ _begintime = diag_tickTime;
 								//biggest point, all items
 								case 0:
 								{
-									_lootTypeList = [1,2,3,4,5];
+									_lootTypeList = [
+										[1, 2], //rifles
+										[2, 2], //pistols
+										[3, 2], //magazines
+										[4, 2], //items
+										[5, 2],  //backpacks
+										[6, 2]  //wasteland
+									];
 									_magsToGive = floor(random(5));
 								};
 								//medium point, items and pistols
 								case 1:
 								{
-									_lootTypeList = [1,2,3,5];
+									_lootTypeList = [
+										[2, 2], //pistols
+										[3, 2], //magazines
+										[4, 2], //items
+										[6, 2]  //wasteland
+									];
 									_magsToGive = floor(random(3));
 								};
 								//smalles point, only items
 								case 2:
 								{
-									_lootTypeList = [2,3,5];
+									_lootTypeList = [
+										[3, 2], //magazines
+										[4, 2], //items
+										[6, 2]  //wasteland
+									];
 									_magsToGive = floor(random(2));
 								};
 							};
 							//check what type of loot to spawn, get chance for loot every time, so all combos in spawnClassChance_list are viable
-							_lootType = [_lootTypeList, spawnClassChance_list select _lootClass] call fn_selectRandomWeighted;
+							_lootType = _lootTypeList call fn_selectRandomWeightedPairs;
 
 							if (isNil "_lootType") exitWith {};
 
@@ -106,7 +122,19 @@ _begintime = diag_tickTime;
 								//special for weapons
 								case 1:
 								{
-									_loot = ((lootWeapon_list select _lootClass) select 1) call BIS_fnc_selectRandom;
+									_loot = ((lootWeapon_list select _lootClass) select 1) call fn_selectRandomWeightedPairs;
+									_lootholder addWeaponCargoGlobal [_loot, 1];
+									// always spawn 1-3 magazines to use the weapon with, otherwise nobody will take it
+									_mags = getArray (configFile >> "CfgWeapons" >> _loot >> "magazines");
+									if (count _mags > 0) then
+									{
+										_lootholder addMagazineCargoGlobal [_mags select 0, 1 + floor random 3];
+									};
+								};
+								//Pistols
+								case 2:
+								{
+									_loot = ((lootWeaponPistol_list select _lootClass) select 1) call fn_selectRandomWeightedPairs;
 									_lootholder addWeaponCargoGlobal [_loot, 1];
 									// always spawn 1-3 magazines to use the weapon with, otherwise nobody will take it
 									_mags = getArray (configFile >> "CfgWeapons" >> _loot >> "magazines");
@@ -116,30 +144,30 @@ _begintime = diag_tickTime;
 									};
 								};
 								//special for magazines: spawn 1-5
-								case 2:
+								case 3:
 								{
 									_randChance = 1 + _magsToGive;
 									for "_rm" from 1 to _randChance do {
-										_loot = ((lootMagazine_list select _lootClass) select 1) call BIS_fnc_selectRandom;
+										_loot = ((lootMagazine_list select _lootClass) select 1) call fn_selectRandomWeightedPairs;
 										_lootholder addMagazineCargoGlobal [_loot, 1];
 									};
 								};
 								//special for item/cloth/vests
-								case 3:
+								case 4:
 								{
-									_loot = ((lootItem_list select _lootClass) select 1) call BIS_fnc_selectRandom;
+									_loot = ((lootItem_list select _lootClass) select 1) call fn_selectRandomWeightedPairs;
 									_lootholder addItemCargoGlobal [_loot, 1];
 								};
 								//special for backpacks
-								case 4:
+								case 5:
 								{
-									_loot = ((lootBackpack_list select _lootClass) select 1) call BIS_fnc_selectRandom;
+									_loot = ((lootBackpack_list select _lootClass) select 1) call fn_selectRandomWeightedPairs;
 									_lootholder addBackpackCargoGlobal [_loot, 1];
 								};
 								//special for world objects: account for Wasteland and other items
-								case 5:
+								case 6:
 								{
-									_loot = ((lootworldObject_list select _lootClass) select 1) call BIS_fnc_selectRandom;
+									_loot = ((lootworldObject_list select _lootClass) select 1) call fn_selectRandomWeightedPairs;
 
 									if (_loot == "Land_Can_V3_F" && {["A3W_unlimitedStamina"] call isConfigOn} ||
 									{(_loot == "Land_BakedBeans_F" || _loot == "Land_BottlePlastic_V2_F") && !(["A3W_survivalSystem"] call isConfigOn)}) exitWith

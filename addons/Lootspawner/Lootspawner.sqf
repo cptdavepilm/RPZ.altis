@@ -83,7 +83,7 @@ getUsedclasses = {
 	for "_class" from 0 to ((count lootworldObject_list) - 1) do {
 		for "_item" from 0 to ((count ((lootworldObject_list select _class) select 1)) - 1) do {
 			if !((((lootworldObject_list select _class) select 1) select _item) in LSusedclass_list) then {
-				LSusedclass_list pushBack (((lootworldObject_list select _class) select 1) select _item);
+				LSusedclass_list pushBack ((((lootworldObject_list select _class) select 1) select _item) select 0);
 			};
 			sleep 0.001;
 		};
