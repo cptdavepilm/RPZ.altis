@@ -15,7 +15,8 @@ _createRandomVehicle =
 	private ["_pos", "_minrad", "_maxrad", "_counter", "_vehicleType", "_mindist"];
 	_pos = _this select 0;
 	_dir = _this select 1;
-	_unique = _this select 2;
+	_type = _this select 2;
+	_unique = _this select 3;
 	
 	
 	_vehicleType = "";
@@ -28,12 +29,13 @@ _createRandomVehicle =
 	else
 	{
 		_vehicleType =
-		[
-			[A3W_smallVehicles, 0.30],
-			[civilianVehicles, 0.40],
-			[lightMilitaryVehicles, 0.15],
-			[mediumMilitaryVehicles, 0.15]
-		] call fn_selectRandomWeightedPairs call fn_selectRandomNested;
+		([
+			A3W_smallVehicles,
+			civilianVehicles,
+			waterVehicles,
+			lightMilitaryVehicles,
+			mediumMilitaryVehicles
+		] select _type) call fn_selectRandomNested;
 	};
 
 	if (count (nearestObjects [_pos, ["Car","Tank"],4]) == 0) then

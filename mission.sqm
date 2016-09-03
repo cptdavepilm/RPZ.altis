@@ -8,7 +8,7 @@ class EditorData
 	toggles=513;
 	class ItemIDProvider
 	{
-		nextID=19043;
+		nextID=19044;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={10058.208,43.783455,4862.2847};
-		dir[]={-0.85072297,-0.4811528,0.21217024};
-		up[]={-0.46691865,0.87653261,0.11645293};
-		aside[]={0.24200349,-7.6001743e-007,0.97030026};
+		pos[]={10020.099,22.609642,5202.4717};
+		dir[]={-0.71580291,-0.56821573,-0.40602744};
+		up[]={-0.49438682,0.82275879,-0.28043205};
+		aside[]={-0.49341092,-3.4412369e-007,0.86985224};
 	};
 };
 binarizationWanted=0;
@@ -80,13 +80,14 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"A3_Weapons_F_Ammoboxes",
 	"A3_Characters_F",
-	"A3_Soft_F_MRAP_01"
+	"A3_Soft_F_MRAP_01",
+	"A3_Boat_F_Boat_Transport_01"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=30;
+		items=31;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -263,6 +264,13 @@ class AddonsMetaData
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
+		class Item30
+		{
+			className="A3_Boat_F";
+			name="Arma 3 Alpha - Boats and Submersibles";
+			author="Bohemia Interactive";
+			url="http://www.arma3.com";
+		};
 	};
 };
 randomSeed=7096824;
@@ -292,7 +300,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=610;
+		items=611;
 		class Item0
 		{
 			dataType="Object";
@@ -41481,6 +41489,23 @@ class Mission
 			};
 			id=19042;
 			type="B_MRAP_01_F";
+		};
+		class Item610
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={10006.163,1.2447116,5200.6392};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="_nil = [this, 2, 0] execVM ""server\spawning\vehicleSpawnPoint.sqf"";";
+				textures="Rescue";
+			};
+			id=19043;
+			type="B_Lifeboat";
+			atlOffset=3.1340003;
 		};
 	};
 };

@@ -93,13 +93,13 @@ A3W_hcObjSavingID = 1;             // ID of the headless client in charge of obj
 // Server spawn settings
 A3W_serverSpawning = 1;            // Vehicle, object, and loot spawning (0 = no, 1 = yes)
 A3W_vehicleSpawning = 1;           // If serverSpawning = 1, spawn vehicles in towns (0 = no, 1 = yes)
-A3W_vehicleQuantity = 3;         // Approximate number of land vehicles to be spawned in towns
+A3W_vehicleQuantity = 50;         // Approximate number of land vehicles to be spawned in towns
 A3W_boatSpawning = 1;              // If serverSpawning = 1, spawn boats at marked areas near coasts (0 = no, 1 = yes)
 A3W_heliSpawning = 0;              // If serverSpawning = 1, spawn helicopters in some towns and airfields (0 = no, 1 = yes)
 A3W_planeSpawning = 0;             // If serverSpawning = 1, spawn planes at some airfields (0 = no, 1 = yes)
 A3W_boxSpawning = 0;               // If serverSpawning = 1, spawn weapon crates in 50% towns (0 = no, 1 = yes)
-A3W_baseBuilding = 01;              // If serverSpawning = 1, spawn base parts in towns (0 = no, 1 = yes)
-A3W_essentialsSpawning = 1;        // If serverSpawning = 1, spawn essential items (food sacks, water barrels, minor supply crates) in towns (0 = no, 1 = yes)
+A3W_baseBuilding = 0;              // If serverSpawning = 1, spawn base parts in towns (0 = no, 1 = yes)
+A3W_essentialsSpawning = 0;        // If serverSpawning = 1, spawn essential items (food sacks, water barrels, minor supply crates) in towns (0 = no, 1 = yes)
 
 // Loot settings
 A3W_buildingLootWeapons = 1;       // Spawn weapon loot in all buildings (0 = no, 1 = yes)

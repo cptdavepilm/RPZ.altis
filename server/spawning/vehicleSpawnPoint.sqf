@@ -18,11 +18,11 @@ _spawntype = [];
 
 if (_id > 0) then 
 {
-    _spawntype = [_pos, _dir, [typeOf _vehicle, _id]];
+    _spawntype = [_pos, _dir, _type, [typeOf _vehicle, _id]];
 }
 else
 {
-    _spawntype = [_pos, _dir, []];
+    _spawntype = [_pos, _dir, _type, []];
 };
 
 deleteVehicle _vehicle;
