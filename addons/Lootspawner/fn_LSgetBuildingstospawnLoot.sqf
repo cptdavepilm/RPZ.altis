@@ -63,8 +63,33 @@ _begintime = diag_tickTime;
 						//check if position has old loot
 						if ((count (nearestObjects [_spwnPos, LSusedclass_list, 0.5])) == 0) then {
 							sleep 0.001;
+
+							_pointType = _iPos select 0;
+							_lootTypeList = [];
+							_magsToGive = 0;
+							switch (_pointType) do
+							{
+								//biggest point, all items
+								case 0:
+								{
+									_lootTypeList = [1,2,3,4,5];
+									_magsToGive = floor(random(5));
+								};
+								//medium point, items and pistols
+								case 1:
+								{
+									_lootTypeList = [1,2,3,5];
+									_magsToGive = floor(random(3));
+								};
+								//smalles point, only items
+								case 2:
+								{
+									_lootTypeList = [2,3,5];
+									_magsToGive = floor(random(2));
+								};
+							};
 							//check what type of loot to spawn, get chance for loot every time, so all combos in spawnClassChance_list are viable
-							_lootType = [[1,2,3,4,5], spawnClassChance_list select _lootClass] call fn_selectRandomWeighted;
+							_lootType = [_lootTypeList, spawnClassChance_list select _lootClass] call fn_selectRandomWeighted;
 
 							if (isNil "_lootType") exitWith {};
 
@@ -93,7 +118,7 @@ _begintime = diag_tickTime;
 								//special for magazines: spawn 1-5
 								case 2:
 								{
-									_randChance = 1 + floor(random(5));
+									_randChance = 1 + _magsToGive;
 									for "_rm" from 1 to _randChance do {
 										_loot = ((lootMagazine_list select _lootClass) select 1) call BIS_fnc_selectRandom;
 										_lootholder addMagazineCargoGlobal [_loot, 1];
