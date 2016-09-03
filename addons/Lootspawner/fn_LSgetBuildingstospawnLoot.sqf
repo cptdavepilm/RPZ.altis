@@ -59,14 +59,7 @@ _begintime = diag_tickTime;
 					if (/*(floor random 100) < _chpSpot*/ true) then {
 						_iPos = (_buildPosViable_list select 0) select _poscount;
 						_spwnPos = _x modelToWorld (_iPos select 1);
-						//_spwnPos = (_x buildingPos (_pos select 1));
-						_tmpPos = _spwnPos;//[(_spwnPos select 0), (_spwnPos select 1), 60000];
-						/*if ((_spwnPos select 0) == 0 && (_spwnPos select 1) == 0) then {
-							_spwnPos = getPosATL _x;
-							_tmpPos = [(_spwnPos select 0), (_spwnPos select 1), 60000];
-						};*/
-						//generally add 0.1 on z
-						_spwnPos = [_spwnPos select 0, _spwnPos select 1, (_spwnPos select 2) + _genZadjust];
+
 						//check if position has old loot
 						if ((count (nearestObjects [_spwnPos, LSusedclass_list, 0.5])) == 0) then {
 							sleep 0.001;
@@ -79,8 +72,8 @@ _begintime = diag_tickTime;
 
 							if (_lootType < 5) then
 							{
-								_lootholder = createVehicle ["GroundWeaponHolder", _tmpPos, [], 0, "CAN_COLLIDE"];
-								_lootholder setPosATL _tmpPos;
+								_lootholder = createVehicle ["GroundWeaponHolder", _spwnPos, [], 0, "CAN_COLLIDE"];
+								//_lootholder setPosATL _spwnPos;
 							};
 
 							switch (_lootType) do
@@ -129,8 +122,8 @@ _begintime = diag_tickTime;
 										_lootholder = objNull;
 									};
 
-									_lootholder = createVehicle [_loot, _tmpPos, [], 0, "CAN_COLLIDE"];
-									_lootholder setPosATL _tmpPos;
+									_lootholder = createVehicle [_loot, _spwnPos, [], 0, "CAN_COLLIDE"];
+									//_lootholder setPosATL _spwnPos;
 									if(_loot == "Land_CanisterFuel_F") then {
 										_chfullf = (random 100);
 										if (_chfullfuel > _chfullf) then {
@@ -166,25 +159,6 @@ _begintime = diag_tickTime;
 
 							if (!isNull _lootholder) then
 							{
-								_height = getTerrainHeightASL _spwnPos;
-
-								// buildingPos returns ATL over ground and ASL over water
-								if (_height < 0) then {
-									_lootholder setPosASL _spwnPos;
-								} else {
-									_lootholder setPosATL _spwnPos;
-								};
-
-								sleep 0.001;
-								// Fix for wrong height (getPos Z = height above floor under object)
-								_spwnPos set [2, (_spwnPos select 2) - ((getPos _lootholder) select 2)];
-
-								// must be done twice
-								if (_height < 0) then {
-									_lootholder setPosASL _spwnPos;
-								} else {
-									_lootholder setPosATL _spwnPos;
-								};
 
 								_lootholder setdir (random 360);
 
