@@ -120,7 +120,6 @@ else
 	_data append _dataTemp;
 };
 
-private _bank = 0;
 private _bounty = 0;
 private _bountyKills = [];
 

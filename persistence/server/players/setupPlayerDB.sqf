@@ -15,7 +15,6 @@ fn_getPlayerFlag = [_playerFuncs, "getPlayerFlag.sqf"] call mf_compile;
 fn_updateStats = [_playerFuncs, "updateStats.sqf"] call mf_compile;
 fn_logAntihack = [_playerFuncs, "logAntihack.sqf"] call mf_compile;
 fn_logAdminMenu = [_playerFuncs, "logAdminMenu.sqf"] call mf_compile;
-fn_logBankTransfer = [_playerFuncs, "logBankTransfer.sqf"] call mf_compile;
 fn_kickPlayerIfFlagged = "persistence\server\players\fn_kickPlayerIfFlagged.sqf" call mf_compile;
 
 A3W_fnc_checkPlayerFlag =
