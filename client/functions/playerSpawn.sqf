@@ -80,7 +80,22 @@ if (isNil "playerData_alive" || !isNil "playerData_resetPos") then
 //Jukki, added arsenal spawning
 if (isNil "playerData_alive") then
 {
-	["Open",false] spawn BIS_fnc_arsenal;
+	[]spawn
+	{
+		diag_log "Opening arsenal";
+		[ missionNamespace, "arsenalClosed", {
+			arsenalOpened = false;
+		}] call BIS_fnc_addScriptedEventHandler;
+
+		["Open",false] spawn BIS_fnc_arsenal;
+		player setCaptive true;
+		arsenalOpened = true;
+		waitUntil{ !arsenalOpened };
+
+		player setCaptive false;
+		diag_log "Closing arsenal";
+
+	};
 };
 
 playerData_alive = nil;
