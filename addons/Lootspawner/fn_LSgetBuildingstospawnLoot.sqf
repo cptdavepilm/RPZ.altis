@@ -123,25 +123,25 @@ _begintime = diag_tickTime;
 								case 1:
 								{
 									_loot = ((lootWeapon_list select _lootClass) select 1) call fn_selectRandomWeightedPairs;
-									_lootholder addWeaponCargoGlobal [_loot, 1];
 									// always spawn 1-3 magazines to use the weapon with, otherwise nobody will take it
 									_mags = getArray (configFile >> "CfgWeapons" >> _loot >> "magazines");
 									if (count _mags > 0) then
 									{
 										_lootholder addMagazineCargoGlobal [_mags select 0, 1 + floor random 3];
 									};
+									_lootholder addWeaponCargoGlobal [_loot, 1];
 								};
 								//Pistols
 								case 2:
 								{
 									_loot = ((lootWeaponPistol_list select _lootClass) select 1) call fn_selectRandomWeightedPairs;
-									_lootholder addWeaponCargoGlobal [_loot, 1];
 									// always spawn 1-3 magazines to use the weapon with, otherwise nobody will take it
 									_mags = getArray (configFile >> "CfgWeapons" >> _loot >> "magazines");
 									if (count _mags > 0) then
 									{
 										_lootholder addMagazineCargoGlobal [_mags select 0, 1 + floor random 3];
 									};
+									_lootholder addWeaponCargoGlobal [_loot, 1];
 								};
 								//special for magazines: spawn 1-5
 								case 3:
