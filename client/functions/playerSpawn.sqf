@@ -77,6 +77,12 @@ if (isNil "playerData_alive" || !isNil "playerData_resetPos") then
 	};
 };
 
+//Jukki, added arsenal spawning
+if (isNil "playerData_alive") then
+{
+	["Open",false] spawn BIS_fnc_arsenal;
+};
+
 playerData_alive = nil;
 playerData_resetPos = nil;
 

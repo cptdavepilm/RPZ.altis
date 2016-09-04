@@ -46,6 +46,7 @@ A3W_scriptThreads = [];
 //init Wasteland Core
 [] execVM "config.sqf";
 [] execVM "briefing.sqf";
+[] execVM "scripts\arsenal.sqf";//Jukki arsenal
 
 if (!isDedicated) then
 {

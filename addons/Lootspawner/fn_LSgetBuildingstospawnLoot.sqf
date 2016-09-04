@@ -59,7 +59,7 @@ _begintime = diag_tickTime;
 					if (/*(floor random 100) < _chpSpot*/ true) then {
 						_iPos = (_buildPosViable_list select 0) select _poscount;
 						_spwnPos = _x modelToWorld (_iPos select 1);
-
+						_spwnPos = [_spwnPos select 0, _spwnPos select 1, (_spwnPos select 2) + 0.1];
 						//check if position has old loot
 						if ((count (nearestObjects [_spwnPos, LSusedclass_list, 0.5])) == 0) then {
 							sleep 0.001;
