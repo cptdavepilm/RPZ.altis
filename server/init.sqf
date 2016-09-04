@@ -102,17 +102,6 @@ diag_log "WASTELAND SERVER - Server Compile Finished";
 // load default config
 call compile preprocessFileLineNumbers "server\default_config.sqf";
 
-// load external config
-if (loadFile (externalConfigFolder + "\main_config.sqf") != "") then
-{
-	call compile preprocessFileLineNumbers (externalConfigFolder + "\main_config.sqf");
-}
-else
-{
-	diag_log format["[WARNING] A3W configuration file '%1\main_config.sqf' was not found. Using default settings!", externalConfigFolder];
-	diag_log "[WARNING] For more information go to http://forums.a3wasteland.com/";
-};
-
 if (isServer) then
 {
 	// compileFinal & broadcast client config variables
