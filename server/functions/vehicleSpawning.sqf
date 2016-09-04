@@ -30,11 +30,12 @@ _createRandomVehicle =
 	{
 		_vehicleType =
 		([
-			A3W_smallVehicles,
 			civilianVehicles,
-			waterVehicles,
 			lightMilitaryVehicles,
-			mediumMilitaryVehicles
+			mediumMilitaryVehicles,
+			trucksVehicles,
+			A3W_smallVehicles,
+			waterVehicles
 		] select _type) call fn_selectRandomNested;
 	};
 

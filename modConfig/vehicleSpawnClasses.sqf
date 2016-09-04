@@ -7,6 +7,7 @@
 A3W_smallVehicles =
 [
 	"C_Quadbike_01_F",
+	"CUP_B_M1030",
 	["B_Quadbike_01_F", "O_Quadbike_01_F", "I_Quadbike_01_F", "I_G_Quadbike_01_F"]
 ];
 
@@ -17,21 +18,87 @@ civilianVehicles =
 	"C_Hatchback_01_sport_F",
 	"C_SUV_01_F",
 	"C_Offroad_01_F",
+	"CUP_C_Skoda_Blue_CIV",
+	"CUP_C_Skoda_Green_CIV",
+	"CUP_C_Skoda_Red_CIV",
+	"CUP_C_Skoda_White_CIV",
+	"CUP_C_Datsun",
+	"CUP_C_Datsun_4seat",
+	"CUP_C_Datsun_Covered",
+	"CUP_C_Datsun_Plain",
+	"CUP_C_Datsun_Tubeframe",
+	"CUP_C_Golf4_black_Civ",
+	"CUP_C_Golf4_blue_Civ",
+	"CUP_C_Golf4_camo_Civ",
+	"CUP_C_Golf4_camodigital_Civ",
+	"CUP_C_Golf4_camodark_Civ",
+	"CUP_C_Golf4_green_Civ",
+	"CUP_C_Golf4_kitty_Civ",
+	"CUP_C_Golf4_crowe_Civ",
+	"CUP_C_Golf4_red_Civ",
+	"CUP_C_Golf4_reptile_Civ",
+	"CUP_C_Golf4_whiteblood_Civ",
+	"CUP_C_Golf4_yellow_Civ",
+	"C_Hatchback_01_F",
+	"C_Hatchback_01_sport_F",
+	"C_Offroad_01_F",
+	"C_Offroad_01_repair_F",
+	"CUP_C_Octavia_CIV",
+	"C_SUV_01_F",
+	"B_GEN_Offroad_01_gen_F",
 	["C_Van_01_box_F", "C_Van_01_transport_F"]
+];
+
+trucksVehicles =
+[
+	"C_Van_01_fuel_F",
+	"C_Van_01_transport_F",
+	"C_Van_01_box_F",
+	"CUP_C_Ural_Civ_01",
+	"CUP_C_Ural_Open_Civ_01",
+	"CUP_C_Ural_Civ_03",
+	"CUP_C_Ural_Open_Civ_03",
+	"CUP_C_Ural_Civ_02",
+	"CUP_C_Ural_Open_Civ_02",
+	"C_Truck_02_fuel_F",
+	"C_Truck_02_transport_F",
+	"C_Truck_02_covered_F",
+	"CUP_C_V3S_Open_TKC",
+	"CUP_C_V3S_Covered_TKC",
+	"CUP_O_Ural_RU",
+	"CUP_B_MTVR_USMC",
+	"CUP_O_Ural_Open_RU"
 ];
 
 //Light Military Vehicle List - Random Spawns
 lightMilitaryVehicles =
 [
-	["I_G_Offroad_01_F", "I_G_Offroad_01_armed_F"]
+	"CUP_C_SUV_CIV",
+	"CUP_C_LR_Transport_CTK",
+	"CUP_C_UAZ_Unarmed_TK_CIV",
+	"CUP_C_UAZ_Open_TK_CIV",
+	"CUP_O_UAZ_Unarmed_RU",
+	"B_LSV_01_unarmed_F",
+	"CUP_B_HMMWV_Transport_USA",
+	"CUP_B_UAZ_Unarmed_CDF",
+	"CUP_B_UAZ_Open_CDF",
+	"CUP_B_LR_Transport_GB_W",
+	"CUP_O_LR_Transport_TKA",
+	"CUP_O_UAZ_Unarmed_TKA",
+	"CUP_I_UAZ_Unarmed_UN"
 ];
 
 //Medium Military Vehicle List - Random Spawns
 mediumMilitaryVehicles =
 [
-	"B_MRAP_01_F",
-	"O_MRAP_02_F",
-	"I_MRAP_03_F"
+	"CUP_C_SUV_TK",
+	"CUP_O_Datsun_PK",
+	"CUP_O_UAZ_MG_RU",
+	"B_LSV_01_armed_F",
+	"I_G_Offroad_01_armed_F",
+	"CUP_I_Datsun_PK",
+	"CUP_I_Datsun_PK_TK_Random",
+	"CUP_O_UAZ_MG_TKA"
 ];
 
 //Water Vehicles - Random Spawns
