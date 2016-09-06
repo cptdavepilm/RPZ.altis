@@ -13,7 +13,6 @@ _uniform = [_player, "uniform"] call getDefaultClothing;
 _headgear = [_player, "headgear"] call getDefaultClothing;
 _goggles = [_player, "goggles"] call getDefaultClothing;
 
-diag_log format ["Can i wear this? %1", _player isUniformAllowed _uniform];
 if (_uniform != "") then { _player forceAddUniform _uniform };
 if (_headgear != "") then { _player addHeadgear _headgear };
 if (_goggles != "") then { _player addGoggles _goggles };
@@ -34,13 +33,11 @@ if (hmd _player != "") then { _player unlinkItem hmd _player };
 
 //_player addBackpack "B_AssaultPack_rgr";
 
-_player addMagazine "9Rnd_45ACP_Mag";
-_player addWeapon "hgun_ACPC2_F";
-_player addMagazine "9Rnd_45ACP_Mag";
-_player addMagazine "9Rnd_45ACP_Mag";
-_player addMagazine "9Rnd_45ACP_Mag";
 _player addItem "FirstAidKit";
-_player selectWeapon "hgun_ACPC2_F";
+_player linkItem "tf_anprc152";
+
+_player setVariable ["tf_receivingDistanceMultiplicator", 10];
+_player setVariable ["tf_sendingDistanceMultiplicator", 10];
 
 if (_player == player) then
 {

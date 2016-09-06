@@ -34,19 +34,6 @@ if (isNil {_veh getVariable "A3W_engineEH"}) then
 	_veh setVariable ["A3W_engineEH", _veh addEventHandler ["Engine", vehicleEngineEvent]];
 };
 
-// Eject Independents of vehicle if it is already used by another group
-if !(playerSide in [BLUFOR,OPFOR]) then
-{
-	{
-		if (isPlayer _x && alive _x && group _x != group player) exitWith 
-		{
-			moveOut player;
-			["You can't enter vehicles being used by enemy groups.", 5] call mf_notify_client;
-			breakOut "getInVehicle";
-		};
-	} forEach crew _veh;
-};
-
 player setVariable ["lastVehicleRidden", netId _veh];
 
 // FAR injured unit vehicle loading
