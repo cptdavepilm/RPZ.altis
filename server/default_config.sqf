@@ -6,6 +6,8 @@
 // All saving is done via the server's profileNamespace by default; iniDBI will be automatically used if you have if installed
 // if you have any doubts and/or questions about the mission find us at a3wasteland.com
 
+TF_terrain_interception_coefficient = 0.1;
+
 // General settings
 A3W_teamPlayersMap = 0;            // Show all friendly players on the map at all times, regardless of difficulty level (0 = no, 1 = yes)
 A3W_disableGlobalVoice = 1;        // Auto-switch channel to Direct communication whenever broadcasting voice on global, unless being admin (0 = no, 1 = yes)
