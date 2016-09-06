@@ -12,4 +12,6 @@ _group2 = if (_unit2 isEqualType grpNull) then { _unit2 } else { group _unit2 };
 _side1 = side _group1;
 _side2 = side _group2;
 
-(_side1 == _side2 && {_side1 in [BLUFOR,OPFOR] || _group1 == _group2})
+//(_side1 == _side2 && {_side1 in [BLUFOR,OPFOR] || _group1 == _group2}) TODO(Jukki) easy way to hack game in to thinking that everyone is friendly
+
+true
