@@ -205,14 +205,12 @@ lootMagazine_list =
 			["CUP_6Rnd_45ACP_M", 100.0],
 			["CUP_7Rnd_45ACP_1911", 100.0],
 			["hlc_30Rnd_9x19_B_MP5", 60.0],
-			["R3F_7Rnd_ M4S90", 70.0],
+			["R3F_7Rnd_M4S90", 70.0],
 			["CUP_8Rnd_B_Saiga12_74Slug_M", 100.0],
 			["CUP_8Rnd_B_Saiga12_74Pellets_M", 100.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
 			["CUP_8Rnd_B_Beneli_74Pellets", 100.0],
-			["hlc_5rnd_3006_1903", 60.0],
-			["FirstAidKit", 60.0],
-			["CUP_5x_22_LR_17_HMR_M", 30.0]
+			["hlc_5rnd_3006_1903", 60.0]
 		]
 	],
 	[ // MILITARY Low
@@ -231,7 +229,7 @@ lootMagazine_list =
 			["Chemlight_red", 100.0],
 			["Chemlight_yellow", 100.0],
 			["hlc_30Rnd_9x19_B_MP5", 100.0],
-			["R3F_7Rnd_ M4S90", 100.0],
+			["R3F_7Rnd_M4S90", 100.0],
 			["16Rnd_9x21_Mag", 50.0],
 			["CUP_18Rnd_9x19_Phantom", 50.0],
 			["CUP_17Rnd_9x19_glock17", 50.0],
@@ -255,25 +253,7 @@ lootMagazine_list =
 			["CUP_5x_22_LR_17_HMR_M", 30.0],
 			["CUP_20Rnd_B_765x17_Ball_M", 50.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
-			["CUP_8Rnd_B_Beneli_74Pellets", 100.0],
-			["CUP_optic_PSO_1", 10.0],
-			["CUP_optic_PSO_3", 1.0],
-			["CUP_optic_Kobra", 30.0],
-			["CUP_muzzle_PBS4", 10.0],
-			["CUP_muzzle_Bizon", 40.0],
-			["CUP_acc_Glock17_Flashlight", 30.0],
-			["CUP_muzzle_snds_M9", 30.0],
-			["CUP_muzzle_snds_MicroUzi", 30.0],
-			["CUP_SVD_camo_g", 20.0],
-			["CUP_acc_CZ_M3X", 40.0],
-			["optic_Aco", 20.0],
-			["optic_Holosight", 20.0],
-			["acc_flashlight", 40.0],
-			["acc_pointer_IR", 20.0],
-			["FHQ_optic_ACOG", 5.0],
-			["FHQ_optic_AIM", 20.0],
-			["FHQ_optic_MicroCCO", 20.0],
-			["FirstAidKit", 40.0]
+			["CUP_8Rnd_B_Beneli_74Pellets", 100.0]
 		]
 	],
 	[ // MILITARY High
@@ -304,7 +284,7 @@ lootMagazine_list =
 			["CUP_20Rnd_9x39_SP5_VSS_M", 20.0],
 			["CUP_10Rnd_9x39_SP5_VSS_M", 20.0],
 			["hlc_30Rnd_9x19_B_MP5", 100.0],
-			["R3F_7Rnd_ M4S90", 100.0],
+			["R3F_7Rnd_M4S90", 100.0],
 			["16Rnd_9x21_Mag", 50.0],
 			["CUP_18Rnd_9x19_Phantom", 50.0],
 			["CUP_17Rnd_9x19_glock17", 50.0],
@@ -326,25 +306,7 @@ lootMagazine_list =
 			["CUP_7Rnd_45ACP_1911", 100.0],
 			["CUP_20Rnd_B_765x17_Ball_M", 20.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
-			["CUP_8Rnd_B_Beneli_74Pellets", 100.0],
-			["CUP_optic_PSO_1", 20.0],
-			["CUP_optic_PSO_3", 10.0],
-			["CUP_optic_Kobra", 40.0],
-			["CUP_muzzle_PBS4", 20.0],
-			["CUP_muzzle_Bizon", 40.0],
-			["CUP_acc_Glock17_Flashlight", 20.0],
-			["CUP_muzzle_snds_M9", 20.0],
-			["CUP_muzzle_snds_MicroUzi", 20.0],
-			["CUP_SVD_camo_g", 10.0],
-			["CUP_acc_CZ_M3X", 30.0],
-			["optic_Aco", 20.0],
-			["optic_Holosight", 20.0],
-			["acc_flashlight", 40.0],
-			["acc_pointer_IR", 20.0],
-			["FHQ_optic_ACOG", 5.0],
-			["FHQ_optic_AIM", 20.0],
-			["FHQ_optic_MicroCCO", 20.0],
-			["FirstAidKit", 50.0]
+			["CUP_8Rnd_B_Beneli_74Pellets", 100.0]
 		]
 	],
 	[ // INDUSTRIAL
@@ -358,8 +320,7 @@ lootMagazine_list =
 			["CUP_6Rnd_45ACP_M", 100.0],
 			["CUP_7Rnd_45ACP_1911", 100.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
-			["CUP_8Rnd_B_Beneli_74Pellets", 100.0],
-			["ToolKit", 20.0]
+			["CUP_8Rnd_B_Beneli_74Pellets", 100.0]
 		]
 	],
 	[ // RESEARCH
@@ -368,8 +329,7 @@ lootMagazine_list =
 			["Chemlight_blue",100.0],
 			["Chemlight_green",100.0],
 			["Chemlight_red",100.0],
-			["Chemlight_yellow",100.0],
-			["FirstAidKit", 100.0]
+			["Chemlight_yellow",100.0]
 		]
 	]
 ];
@@ -407,7 +367,9 @@ lootItem_list =
 			["H_MilCap_rucamo", 100.0],
 			["H_MilCap_gry", 100.0],
 			["H_MilCap_dgtl", 100.0],
-			["H_MilCap_blue", 100.0]
+			["H_MilCap_blue", 100.0],
+			["FirstAidKit", 60.0],
+			["CUP_5x_22_LR_17_HMR_M", 30.0]
 		]
 	],
 	[ // MILITARY Low
@@ -447,7 +409,25 @@ lootItem_list =
 			["H_MilCap_rucamo", 100.0],
 			["H_MilCap_gry", 100.0],
 			["H_MilCap_dgtl", 100.0],
-			["H_MilCap_blue", 100.0]
+			["H_MilCap_blue", 100.0],
+			["CUP_optic_PSO_1", 10.0],
+			["CUP_optic_PSO_3", 1.0],
+			["CUP_optic_Kobra", 30.0],
+			["CUP_muzzle_PBS4", 10.0],
+			["CUP_muzzle_Bizon", 40.0],
+			["CUP_acc_Glock17_Flashlight", 30.0],
+			["CUP_muzzle_snds_M9", 30.0],
+			["CUP_muzzle_snds_MicroUzi", 30.0],
+			["CUP_SVD_camo_g", 20.0],
+			["CUP_acc_CZ_M3X", 40.0],
+			["optic_Aco", 20.0],
+			["optic_Holosight", 20.0],
+			["acc_flashlight", 40.0],
+			["acc_pointer_IR", 20.0],
+			["FHQ_optic_ACOG", 5.0],
+			["FHQ_optic_AIM", 20.0],
+			["FHQ_optic_MicroCCO", 20.0],
+			["FirstAidKit", 40.0]
 		]
 	],
 	[ // MILITARY High
@@ -487,7 +467,25 @@ lootItem_list =
 			["H_MilCap_rucamo", 100.0],
 			["H_MilCap_gry", 100.0],
 			["H_MilCap_dgtl", 100.0],
-			["H_MilCap_blue", 100.0]
+			["H_MilCap_blue", 100.0],
+			["CUP_optic_PSO_1", 10.0],
+			["CUP_optic_PSO_3", 1.0],
+			["CUP_optic_Kobra", 30.0],
+			["CUP_muzzle_PBS4", 10.0],
+			["CUP_muzzle_Bizon", 40.0],
+			["CUP_acc_Glock17_Flashlight", 30.0],
+			["CUP_muzzle_snds_M9", 30.0],
+			["CUP_muzzle_snds_MicroUzi", 30.0],
+			["CUP_SVD_camo_g", 20.0],
+			["CUP_acc_CZ_M3X", 40.0],
+			["optic_Aco", 20.0],
+			["optic_Holosight", 20.0],
+			["acc_flashlight", 40.0],
+			["acc_pointer_IR", 20.0],
+			["FHQ_optic_ACOG", 5.0],
+			["FHQ_optic_AIM", 20.0],
+			["FHQ_optic_MicroCCO", 20.0],
+			["FirstAidKit", 40.0]
 		]
 	],
 	[ // INDUSTRIAL
@@ -498,13 +496,15 @@ lootItem_list =
 			["V_BandollierB_cbr", 100.0],
 			["V_BandollierB_rgr", 100.0],
 			["V_BandollierB_blk", 100.0],
-			["V_BandollierB_oli", 100.0]
+			["V_BandollierB_oli", 100.0],
+			["ToolKit", 20.0]
 		]
 	],
 	[ // RESEARCH
 		4,
 		[
-			["V_Rangemaster_belt", 100.0]
+			["V_Rangemaster_belt", 100.0],
+			["FirstAidKit", 100.0]
 		]
 	]
 ];
