@@ -95,6 +95,9 @@ if (isNil "playerData_alive") then
 		player setCaptive false;
 		diag_log "Closing arsenal";
 
+
+		player setVariable ["tf_receivingDistanceMultiplicator", 0];
+		player setVariable ["tf_sendingDistanceMultiplicator", 1000];
 	};
 };
 

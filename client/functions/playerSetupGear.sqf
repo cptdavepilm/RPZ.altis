@@ -36,9 +36,6 @@ if (hmd _player != "") then { _player unlinkItem hmd _player };
 _player addItem "FirstAidKit";
 _player linkItem "tf_anprc152";
 
-_player setVariable ["tf_receivingDistanceMultiplicator", 10];
-_player setVariable ["tf_sendingDistanceMultiplicator", 10];
-
 if (_player == player) then
 {
 	thirstLevel = 100;
