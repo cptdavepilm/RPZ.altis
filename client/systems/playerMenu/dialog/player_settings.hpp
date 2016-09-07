@@ -122,7 +122,7 @@ class playerSettings {
 			w = 0.125; h = 0.033 * safezoneH;
 		};
 
-		class GroupsButton : w_RscButton {
+		/*class GroupsButton : w_RscButton {
 			idc = groupButton;
 			text = "Group Management";
 			onButtonClick = "[] execVM 'client\systems\groups\loadGroupManagement.sqf'";
@@ -130,7 +130,7 @@ class playerSettings {
 			w = 0.225; h = 0.033 * safezoneH;
 		};
 
-		/*class btnDistanceNear : w_RscButton {
+		class btnDistanceNear : w_RscButton {
 			idc = -1;
 			text = "Near";
 			onButtonClick = "setViewDistance 1100;";
