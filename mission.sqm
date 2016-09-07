@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=20654;
+		nextID=20657;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=35;
+		nextID=37;
 	};
 	class Camera
 	{
-		pos[]={1947.7411,258.82919,4152.0596};
-		dir[]={0.88278145,-0.46881694,-0.030343629};
-		up[]={0.46854496,0.88329327,-0.016105516};
-		aside[]={-0.034352481,1.5721753e-007,-0.99941736};
+		pos[]={7791.5698,409.40701,3846.3965};
+		dir[]={0.94396603,-0.31070194,-0.11168852};
+		up[]={0.30859184,0.95049065,-0.036511917};
+		aside[]={-0.1175018,2.2339555e-007,-0.99311703};
 	};
 };
 binarizationWanted=0;
@@ -92,14 +92,13 @@ addons[]=
 	"A3_Soft_F_Offroad_01",
 	"A3_Soft_F_Quadbike_01",
 	"CUP_WheeledVehicles_UAZ",
-	"CUP_WheeledVehicles_Datsun",
-	"task_force_radio_items"
+	"CUP_WheeledVehicles_Datsun"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=40;
+		items=39;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -327,13 +326,6 @@ class AddonsMetaData
 			className="CUP_WheeledVehicles_Datsun";
 			name="CUP_WheeledVehicles_Datsun";
 		};
-		class Item39
-		{
-			className="task_force_radio_items";
-			name="task_force_radio_items";
-			author="[TF]Nkey";
-			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
-		};
 	};
 };
 randomSeed=7096824;
@@ -363,7 +355,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=720;
+		items=719;
 		class Item0
 		{
 			dataType="Object";
@@ -44137,154 +44129,6 @@ class Mission
 			};
 			id=20116;
 			type="CUP_B_Ural_CDF";
-		};
-		class Item719
-		{
-			dataType="Logic";
-			class PositionInfo
-			{
-				position[]={-611.78766,186.83698,5786.4834};
-				angles[]={6.2000446,0,0};
-			};
-			id=20649;
-			type="tfar_ModuleTaskForceRadioEnforceUsage";
-			class CustomAttributes
-			{
-				class Attribute0
-				{
-					property="tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_password";
-					expression="_this setVariable ['radio_channel_password',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="123";
-						};
-					};
-				};
-				class Attribute1
-				{
-					property="tfar_ModuleTaskForceRadioEnforceUsage_RiflemanRadio";
-					expression="_this setVariable ['RiflemanRadio',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute2
-				{
-					property="tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_name";
-					expression="_this setVariable ['radio_channel_name',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"STRING"
-								};
-							};
-							value="TaskForceRadio";
-						};
-					};
-				};
-				class Attribute3
-				{
-					property="tfar_ModuleTaskForceRadioEnforceUsage_same_sw_frequencies_for_side";
-					expression="_this setVariable ['same_sw_frequencies_for_side',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute4
-				{
-					property="tfar_ModuleTaskForceRadioEnforceUsage_TeamLeaderRadio";
-					expression="_this setVariable ['TeamLeaderRadio',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=0;
-						};
-					};
-				};
-				class Attribute5
-				{
-					property="tfar_ModuleTaskForceRadioEnforceUsage_same_lr_frequencies_for_side";
-					expression="_this setVariable ['same_lr_frequencies_for_side',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"BOOL"
-								};
-							};
-							value=1;
-						};
-					};
-				};
-				class Attribute6
-				{
-					property="tfar_ModuleTaskForceRadioEnforceUsage_terrain_interception_coefficient";
-					expression="_this setVariable ['terrain_interception_coefficient',_value,true];";
-					class Value
-					{
-						class data
-						{
-							class type
-							{
-								type[]=
-								{
-									"SCALAR"
-								};
-							};
-							value=7;
-						};
-					};
-				};
-				nAttributes=7;
-			};
 		};
 	};
 };

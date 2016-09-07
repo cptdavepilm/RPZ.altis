@@ -96,8 +96,6 @@ if (isNil "playerData_alive") then
 		diag_log "Closing arsenal";
 
 
-		player setVariable ["tf_receivingDistanceMultiplicator", 0];
-		player setVariable ["tf_sendingDistanceMultiplicator", 1000];
 	};
 };
 
@@ -126,3 +124,6 @@ player allowDamage true;
 
 playerSpawning = false;
 player setVariable ["playerSpawning", false, true];
+
+player setVariable ["tf_receivingDistanceMultiplicator", 1.0, true];
+player setVariable ["tf_sendingDistanceMultiplicator", 25.0, true];

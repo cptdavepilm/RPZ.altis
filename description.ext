@@ -80,6 +80,20 @@ class RscTitles
 	//#include "addons\far_revive\revive_gui.hpp"
 };
 
+class CfgPatches
+{
+	class awaken_medical
+	{
+		units[]={};
+		weapons[]={};
+		requiredVersion=0.1;
+		requiredAddons[]=
+		{
+			"cba_main"
+		};
+	};
+};
+
 class CfgFunctions
 {
 	class A3W
