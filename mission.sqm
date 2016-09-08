@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=20657;
+		nextID=20659;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=37;
+		nextID=45;
 	};
 	class Camera
 	{
-		pos[]={7791.5698,409.40701,3846.3965};
-		dir[]={0.94396603,-0.31070194,-0.11168852};
-		up[]={0.30859184,0.95049065,-0.036511917};
-		aside[]={-0.1175018,2.2339555e-007,-0.99311703};
+		pos[]={7596.1289,106.91028,10131.815};
+		dir[]={0.77883404,-0.61776006,-0.10880466};
+		up[]={0.61183208,0.78635538,-0.085473001};
+		aside[]={-0.13835908,-2.1792948e-007,-0.99040407};
 	};
 };
 binarizationWanted=0;
@@ -92,13 +92,14 @@ addons[]=
 	"A3_Soft_F_Offroad_01",
 	"A3_Soft_F_Quadbike_01",
 	"CUP_WheeledVehicles_UAZ",
-	"CUP_WheeledVehicles_Datsun"
+	"CUP_WheeledVehicles_Datsun",
+	"rickB_items"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=39;
+		items=40;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -326,6 +327,11 @@ class AddonsMetaData
 			className="CUP_WheeledVehicles_Datsun";
 			name="CUP_WheeledVehicles_Datsun";
 		};
+		class Item39
+		{
+			className="rickB_items";
+			name="rickB_items";
+		};
 	};
 };
 randomSeed=7096824;
@@ -355,7 +361,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=719;
+		items=720;
 		class Item0
 		{
 			dataType="Object";
@@ -44129,6 +44135,22 @@ class Mission
 			};
 			id=20116;
 			type="CUP_B_Ural_CDF";
+		};
+		class Item719
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={7675.7959,153.01129,8850.7295};
+				angles[]={0,0,0.026290974};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=20658;
+			type="rickB_A3Items";
 		};
 	};
 };

@@ -47,6 +47,7 @@ A3W_scriptThreads = [];
 [] execVM "config.sqf";
 [] execVM "briefing.sqf";
 [] execVM "scripts\arsenal.sqf";//Jukki arsenal
+[] execVM "scripts\ace_z_hack.sqf";
 
 if (!isDedicated) then
 {

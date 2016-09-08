@@ -11,6 +11,12 @@
 #define ERR_CANCELLED "Eating Cancelled";
 #define ANIMATION "AinvPknlMstpSnonWnonDnon_healed_1"
 private ["_checks", "_success","_text"];
+
+
+_item = _this select 0;
+
+ _amount = getNumber( configFile >> "cfgMagazines" >> _item >> "value");
+
 _checks = {
 	private ["_progress","_failed", "_text", "_food"];
 	_progress = _this select 0;
@@ -29,8 +35,10 @@ _checks = {
 
 _success = [5, ANIMATION, _checks, []] call a3w_actions_start;
 if (_success) then {
-	hungerLevel = (hungerLevel + _this) min 100;
+	hungerLevel = (hungerLevel + _amount) min 100;
 	["Your hunger has eased", 5] call mf_notify_client;
 	hint "";
 };
-_success;
+
+awaken_useitem_result = _success;
+_success

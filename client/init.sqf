@@ -93,9 +93,6 @@ if (isNil "playerData_alive") then
 player call playerSetupEnd;
 
 
-//Setup player menu scroll action.
-//[] execVM "client\clientEvents\onMouseWheel.sqf";
-
 // Load custom keys from profile
 call compile preprocessFileLineNumbers "client\clientEvents\customKeys.sqf";
 

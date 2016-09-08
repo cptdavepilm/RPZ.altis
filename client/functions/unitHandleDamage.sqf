@@ -6,6 +6,7 @@
 
 #define IMPACT_DAMAGE_MULTIPLIER 0.5
 
+	diag_log format ["unitHandleDamage %1", _this];
 _unit = _this select 0;
 
 if (_unit getVariable ["playerSpawning", false]) exitWith {0};

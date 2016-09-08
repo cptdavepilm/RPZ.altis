@@ -100,3 +100,5 @@ mf_survival_handle3 = [] spawn
 };
 
 { A3W_scriptThreads pushBack _x } forEach [mf_survival_handle1, mf_survival_handle2, mf_survival_handle3];
+
+[] execVM "scripts\rickb_items_init.sqf";
