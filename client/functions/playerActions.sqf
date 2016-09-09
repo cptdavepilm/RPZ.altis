@@ -28,6 +28,11 @@ if (["A3W_vehicleLocking"] call isConfigOn) then
 	[player, ["<img image='client\icons\r3f_unlock.paa'/> Pick Lock", "addons\scripts\lockPick.sqf", [cursorTarget], 1, false, false, "", "alive cursorTarget && player distance cursorTarget <= (sizeOf typeOf cursorTarget / 3) max 3 && {{cursorTarget isKindOf _x} count ['LandVehicle','Ship','Air'] > 0 && {locked cursorTarget == 2 && !(cursorTarget getVariable ['A3W_lockpickDisabled',false]) && cursorTarget getVariable ['ownerUID','0'] != getPlayerUID player && 'ToolKit' in items player}}"]] call fn_addManagedAction;
 };
 
+// Item actions
+[player, ["<t color='#00FFFF'>Boil water</t>", "client\actions\boilWater.sqf", [], 6, false, true, "", "call canBoilWater"]] call fn_addManagedAction;
+
+
+
 // Hehehe...
 if !(288520 in getDLCs 1) then
 {

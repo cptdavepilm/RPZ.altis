@@ -450,5 +450,5 @@ _configs = "true" configClasses (missionconfigFile >> "CfgBuildingPos");
 
 {
 	Buildingstoloot_list pushBack (configName _x);
-	diag_log format["-- LOOTSPAWNER DEBUG add to Buildingstoloot_list: %1 ", (configName _x)];
+	//diag_log format["-- LOOTSPAWNER DEBUG add to Buildingstoloot_list: %1 ", (configName _x)];
 } forEach _configs;

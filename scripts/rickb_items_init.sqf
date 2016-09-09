@@ -77,17 +77,11 @@ handle = [] spawn {
             //WATER PURIFICATION
             if (_item == "rb_waterpure" AND ("rb_bottledirty" in magazines _unit OR "rb_canteen_dirty" in magazines _unit) ) then {null = [_unit,_item] execVM "rickb_a3items\scripts\actions\purification.sqf";};
 
-            //BOIL WATER
-            if ( (_item == "rb_frantaempty" OR _item == "rb_spiritempty" OR _item == "rb_redgullempty" OR _item == "rb_tacticalbaconempty" OR _item == "rb_bakedbeansempty") AND  inflamed cursortarget AND _unit distance cursortarget < 3) then {null = [_unit,_item] execVM "rickb_a3items\scripts\actions\boilwater.sqf";};
-
             //COOK MEAT
             if ( _item == "rb_meat"  AND  inflamed cursortarget  AND _unit distance cursortarget < 3) then {null = [_unit,_item] execVM "rickb_a3items\scripts\actions\cookmeat.sqf";};			
 
             // CHOP TREE
             if (_item == "rb_axe") then {null = [_unit,_item] execVM "rickb_a3items\scripts\actions\axe.sqf";};
-
-            // BUILD FIRE
-            if (_item == "rb_matches") then {null = [_unit,_item] execVM "rickb_a3items\scripts\actions\buildfire.sqf";};
 
             // CRAFT first aid kit
             if (_item == "rb_bandage" OR _item == "rb_bloodbag") then {null = [_unit,_item] execVM "rickb_a3items\scripts\actions\craftfirstaid.sqf";};

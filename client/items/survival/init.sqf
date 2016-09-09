@@ -11,6 +11,7 @@
 //_this should be the path to this folder
 mf_items_survival_eat = [_this, "eat.sqf"] call mf_compile;
 mf_items_survival_drink = [_this, "drink.sqf"] call mf_compile;
+mf_items_survival_build_fire = [_this, "build_fire.sqf"] call mf_compile;
 _energy_drink = [_this, "energy_drink.sqf"] call mf_compile;
 //mf_items_survival_cook = [_this, "cook.sqf"] call mf_compile;
 //mf_items_survival_cook = [_this, "cookable.sqf"] call mf_compile;

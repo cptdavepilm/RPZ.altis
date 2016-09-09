@@ -25,6 +25,7 @@ A3W_fnc_titleTextMessage = "client\functions\titleTextMessage.sqf" call mf_compi
 addWeaponInventory = "client\functions\addWeaponInventory.sqf" call mf_compile;
 canForceSaveStaticWeapon = "client\functions\canForceSaveStaticWeapon.sqf" call mf_compile;
 canForceSaveVehicle = "client\functions\canForceSaveVehicle.sqf" call mf_compile;
+canBoilWater = "client\functions\canBoilWater.sqf" call mf_compile;
 canPushPlaneBack = "client\functions\canPushPlaneBack.sqf" call mf_compile;
 canPushVehicleOnFoot = "client\functions\canPushVehicleOnFoot.sqf" call mf_compile;
 canPushWatercraft = "client\functions\canPushWatercraft.sqf" call mf_compile;

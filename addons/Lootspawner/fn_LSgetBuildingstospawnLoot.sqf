@@ -30,7 +30,7 @@ _begintime = diag_tickTime;
 	_buildPosViable_list = [];
 	_buildPosZadj_list = [];
 	_lBuildVar = (_x getVariable ["BuildingLoot", [0, 0]]);
-	diag_log format["-- LOOTSPAWNER DEBUG BaP _lBuildVar: v%1v v%2v --", _lBuildVar ,_x];
+	//diag_log format["-- LOOTSPAWNER DEBUG BaP _lBuildVar: v%1v v%2v --", _lBuildVar ,_x];
 
 	if ((_lBuildVar select 0) < 2) then {
 		_timeStamp = _lBuildVar select 1;
@@ -49,7 +49,7 @@ _begintime = diag_tickTime;
 				};
 				sleep 0.001;
 			}forEach Buildingstoloot_list;
-			diag_log format["-- LOOTSPAWNER DEBUG BaP: v%1v%2v :: v%3v --", _BaPname, _lootClass, _buildPosViable_list];
+			//diag_log format["-- LOOTSPAWNER DEBUG BaP: v%1v%2v :: v%3v --", _BaPname, _lootClass, _buildPosViable_list];
 			//get spawn position, here the former _x
 			if (count _buildPosViable_list > 0) then
 			{
