@@ -13,20 +13,17 @@
 #define ERR_IN_VEHICLE "You can't do this while in a vehicle."
 #define ERR_FULL "This vehicle is already full"
 #define ERR_NO_FUEL "You have no full fuel cans"
-#define ITEM_COUNT(ITEMID) ITEMID call mf_inventory_count
 private ["_vehicle", "_error"];
-_vehicle = objNull;
-if (count _this == 0) then { // if array empty
-	_vehicle = call mf_jerrycan_nearest_vehicle;
-} else {
-	_vehicle = _this select 0;
-};
+_vehicle = _this select 0;
+
+_isVehicle = cursorTarget isKindOf "AllVehicles";
 
 _error = "";
 switch (true) do {
-	case (isNull _vehicle): {_error = ERR_NO_VEHICLE};
+	case (!_isVehicle): {_error = ERR_NO_VEHICLE};
 	case (vehicle player != player):{_error = ERR_IN_VEHICLE};
 	case (fuel _vehicle > 0.95): {_error = ERR_FULL};
-	case (ITEM_COUNT(MF_ITEMS_JERRYCAN_FULL) <= 0): {_error = ERR_NO_FUEL};
+	case (!("rb_Fuelcan" in magazines player)): {_error = ERR_NO_FUEL};
 };
-_error;
+
+_error

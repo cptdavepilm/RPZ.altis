@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=20659;
+		nextID=20660;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=46;
+		nextID=50;
 	};
 	class Camera
 	{
-		pos[]={7596.1289,106.91028,10131.815};
-		dir[]={0.77883404,-0.61776006,-0.10880466};
-		up[]={0.61183208,0.78635538,-0.085473001};
-		aside[]={-0.13835908,-2.1792948e-007,-0.99040407};
+		pos[]={7737.9854,85.28302,10156.533};
+		dir[]={0.97851974,-0.15250947,0.13915676};
+		up[]={0.1510583,0.98829108,0.021483002};
+		aside[]={0.14080693,1.4323741e-006,-0.9900977};
 	};
 };
 binarizationWanted=0;
@@ -56,6 +56,7 @@ addons[]=
 	"A3_Structures_F_Mil_BagBunker",
 	"CUP_ibr_plants",
 	"CUP_CAStructures_Mil",
+	"dayzed_buildings",
 	"CUP_StandaloneTerrains_Core_Faction",
 	"A3_Structures_F_Mil_Bunker",
 	"A3_Structures_F_Mil_Barracks",
@@ -99,7 +100,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=40;
+		items=41;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -200,134 +201,139 @@ class AddonsMetaData
 		};
 		class Item17
 		{
+			className="dayzed_buildings";
+			name="dayzed_buildings";
+		};
+		class Item18
+		{
 			className="CUP_StandaloneTerrains_Core_Faction";
 			name="CUP_StandaloneTerrains_Core_Faction";
 		};
-		class Item18
+		class Item19
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item19
+		class Item20
 		{
 			className="A3_Structures_F_Households";
 			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item20
+		class Item21
 		{
 			className="CUP_CWA_Misc";
 			name="CUP_CWA_Misc";
 		};
-		class Item21
+		class Item22
 		{
 			className="CUP_Editor_Plants_Config";
 			name="CUP_Editor_Plants_Config";
 		};
-		class Item22
+		class Item23
 		{
 			className="ryanzombiesfunctions";
 			name="ryanzombiesfunctions";
 			author="Ryan";
 		};
-		class Item23
+		class Item24
 		{
 			className="CUP_CAMP_Armory_Misc_Concrete_Wall";
 			name="CUP_CAMP_Armory_Misc_Concrete_Wall";
 		};
-		class Item24
+		class Item25
 		{
 			className="CUP_Desert2_Config";
 			name="CUP_Desert2_Config";
 		};
-		class Item25
+		class Item26
 		{
 			className="CST_Industrial_Objects_Construction";
 			name="CST_Industrial_Objects_Construction";
 		};
-		class Item26
+		class Item27
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item27
+		class Item28
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item28
+		class Item29
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item29
+		class Item30
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item30
+		class Item31
 		{
 			className="A3_Boat_F";
 			name="Arma 3 Alpha - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item31
+		class Item32
 		{
 			className="CUP_WheeledVehicles_Skoda";
 			name="CUP_WheeledVehicles_Skoda";
 		};
-		class Item32
+		class Item33
 		{
 			className="CUP_WheeledVehicles_Ural";
 			name="CUP_WheeledVehicles_Ural";
 		};
-		class Item33
+		class Item34
 		{
 			className="CUP_Wheeledvehicles_VWGolf";
 			name="CUP_Wheeledvehicles_VWGolf";
 		};
-		class Item34
+		class Item35
 		{
 			className="A3_Soft_F_Kart";
 			name="Arma 3 Karts - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item35
+		class Item36
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item36
+		class Item37
 		{
 			className="CUP_wheeledvehicles_Octaiva";
 			name="CUP_wheeledvehicles_Octaiva";
 		};
-		class Item37
+		class Item38
 		{
 			className="CUP_WheeledVehicles_UAZ";
 			name="CUP_WheeledVehicles_UAZ";
 		};
-		class Item38
+		class Item39
 		{
 			className="CUP_WheeledVehicles_Datsun";
 			name="CUP_WheeledVehicles_Datsun";
 		};
-		class Item39
+		class Item40
 		{
 			className="rickB_items";
 			name="rickB_items";
@@ -361,7 +367,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=720;
+		items=721;
 		class Item0
 		{
 			dataType="Object";
@@ -30451,12 +30457,11 @@ class Mission
 			dataType="Logic";
 			class PositionInfo
 			{
-				position[]={9469.7617,98.541641,7825.707};
-				angles[]={6.2199345,0,0.044977132};
+				position[]={10133.441,66.754417,7921.9585};
+				angles[]={0.0010918301,0,6.2809215};
 			};
 			id=17991;
 			type="RyanZM_ModuleSpawn";
-			atlOffset=0.01499939;
 			class CustomAttributes
 			{
 				class Attribute0
@@ -35548,12 +35553,12 @@ class Mission
 		class Item521
 		{
 			dataType="Marker";
-			position[]={6683.5786,280.8663,3928.5417};
+			position[]={5030.1079,314.16943,3432.5574};
 			name="Town_9";
 			type="Empty";
 			colorName="ColorRed";
 			id=18045;
-			atlOffset=24.596924;
+			atlOffset=55.698761;
 		};
 		class Item522
 		{
@@ -44141,8 +44146,8 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={7675.7959,153.01129,8850.7295};
-				angles[]={0,0,0.026290974};
+				position[]={7678.2773,153.05792,8857.6367};
+				angles[]={0.010506609,0,0.025944043};
 			};
 			side="Empty";
 			flags=4;
@@ -44151,6 +44156,346 @@ class Mission
 			};
 			id=20658;
 			type="rickB_A3Items";
+			atlOffset=-3.0517578e-005;
+		};
+		class Item720
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={9476.5273,99.496002,7839.3711};
+				angles[]={0.0010918301,0,6.2809215};
+			};
+			id=20659;
+			type="RyanZM_ModuleSpawn";
+			atlOffset=0.0068435669;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="RyanZM_ModuleSpawn_Start";
+					expression="_this setVariable ['Start',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=5;
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="RyanZM_ModuleSpawn_Type";
+					expression="_this setVariable ['Type',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=7;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="RyanZM_ModuleSpawn_HordeSize";
+					expression="_this setVariable ['HordeSize',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=10;
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="RyanZM_ModuleSpawn_Frequency";
+					expression="_this setVariable ['Frequency',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=60;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="RyanZM_ModuleSpawn_ActivationRadius";
+					expression="_this setVariable ['ActivationRadius',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=400;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="RyanZM_ModuleSpawn_Delay";
+					expression="_this setVariable ['Delay',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0.5;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="RyanZM_ModuleSpawn_AliveAmount";
+					expression="_this setVariable ['AliveAmount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=20;
+						};
+					};
+				};
+				class Attribute7
+				{
+					property="RyanZM_ModuleSpawn_Activation";
+					expression="_this setVariable ['Activation',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=4;
+						};
+					};
+				};
+				class Attribute8
+				{
+					property="RyanZM_ModuleSpawn_Density";
+					expression="_this setVariable ['Density',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=100;
+						};
+					};
+				};
+				class Attribute9
+				{
+					property="RyanZM_ModuleSpawn_Type2";
+					expression="_this setVariable ['Type2',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute10
+				{
+					property="RyanZM_ModuleSpawn_Type3";
+					expression="_this setVariable ['Type3',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute11
+				{
+					property="RyanZM_ModuleSpawn_Type4";
+					expression="_this setVariable ['Type4',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="[]";
+						};
+					};
+				};
+				class Attribute12
+				{
+					property="RyanZM_ModuleSpawn_Randomize";
+					expression="_this setVariable ['Randomize',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute13
+				{
+					property="RyanZM_ModuleSpawn_Activation2";
+					expression="_this setVariable ['Activation2',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=4;
+						};
+					};
+				};
+				class Attribute14
+				{
+					property="RyanZM_ModuleSpawn_Side";
+					expression="_this setVariable ['Side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=2;
+						};
+					};
+				};
+				class Attribute15
+				{
+					property="RyanZM_ModuleSpawn_TotalAmount";
+					expression="_this setVariable ['TotalAmount',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=100;
+						};
+					};
+				};
+				class Attribute16
+				{
+					property="RyanZM_ModuleSpawn_Activation3";
+					expression="_this setVariable ['Activation3',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=4;
+						};
+					};
+				};
+				nAttributes=17;
+			};
 		};
 	};
 };

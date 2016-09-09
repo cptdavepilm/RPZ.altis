@@ -36,7 +36,6 @@ player switchMove "";
 
 // initialize actions and inventory
 "client\actions" call mf_init;
-"client\inventory" call mf_init;
 "client\items" call mf_init;
 
 //Call client compile list.

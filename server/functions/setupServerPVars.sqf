@@ -23,7 +23,6 @@ publicVariable "currentInvites";
 	["pvar_enableSimulationServer", { PVAL call fn_enableSimulationServer }],
 	["pvar_parachuteLiftedVehicle", { PVAL spawn parachuteLiftedVehicle }],
 	["pvar_processGroupInvite", { PVAL call processGroupInvite }],
-	["pvar_punishTeamKiller", { PVAL call punishTeamKiller }],
 	["pvar_teamSwitchLock", { PVAL call teamSwitchLock }],
 	["pvar_teamSwitchUnlock", { PVAL call teamSwitchUnlock }],
 	["pvar_teamKillUnlock", { PVAL call teamKillUnlock }],
@@ -32,6 +31,5 @@ publicVariable "currentInvites";
 	["pvar_manualObjectDelete", { if (!isNil "fn_manualObjectDelete") then { PVAL call fn_manualObjectDelete } }],
 	["pvar_manualVehicleSave", { if (!isNil "fn_manualVehicleSave") then { PVAL call fn_manualVehicleSave } }],
 	["pvar_playerRespawn", { PVAL spawn playerRespawnServer }],
-	["pvar_waitUntilBagTaken", { PVAL spawn waitUntilBagTaken }],
-	["pvar_dropPlayerItems", { PVAL spawn dropPlayerItems }]
+	["pvar_waitUntilBagTaken", { PVAL spawn waitUntilBagTaken }]
 ];

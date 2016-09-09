@@ -78,11 +78,6 @@ else
 
 		_unit setVariable ["FAR_Player_Unconscious_thread", [_unit, _source] spawn FAR_Player_Unconscious];
 
-		if (_unit == player) then
-		{
-			true call mf_inventory_list;
-		};
-
 		_damage = 0.5;
 	};
 };

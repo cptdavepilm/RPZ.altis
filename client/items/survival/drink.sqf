@@ -15,6 +15,8 @@ private ["_checks", "_hasFailed"];
 _item = _this select 0;
 
  _amount = getNumber( configFile >> "cfgMagazines" >> _item >> "value");
+_giveConf = (configFile >> "cfgMagazines" >> _item >> "give");
+_name = getText(configFile >> "cfgMagazines" >> _item >> "displayName");
 
 _hasFailed = {
 	private ["_progress","_failed", "_text"];
@@ -26,7 +28,7 @@ _hasFailed = {
 		case (doCancelAction): {doCancelAction = false; _text = ERR_CANCELLED;};
 		default {
 			_failed = false;
-			_text = format["Drinking %1%2 Complete", round(100*_progress), "%"];
+			_text = format["Drinking %1 %2%3 Complete", _name, round(100*_progress), "%"];
 		};
 	};
 	[_failed, _text];
@@ -36,8 +38,16 @@ _success = [5, ANIMATION, _hasFailed, []] call a3w_actions_start;
 if (_success) then {
 	thirstLevel = (thirstLevel + _amount) min 100;
 	["Your thirst has eased", 5] call mf_notify_client;
+
+	player removeItem _item;
+
+	if (isText(_giveConf)) then
+	{
+		_give = getText(_giveConf);
+		player addItem _give;
+	};
+
 	hint "";
 };
 
-awaken_useitem_result = _success;
 _success

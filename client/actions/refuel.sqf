@@ -15,7 +15,7 @@
 #define ERR_CANCELLED "Refueling Cancelled!"
 
 private ["_vehicle", "_error"];
-_vehicle = call mf_jerrycan_nearest_vehicle;
+_vehicle = cursorTarget;
 _error = [_vehicle] call mf_jerrycan_can_refuel;
 if (_error != "") exitWith {[_error, 5] call mf_notify_client; false;};
 
@@ -42,8 +42,8 @@ if (_success) then {
 	// the fuel qty is handled by mf_remote_refuel.
 	// will execute locally if _currVehicle is local
 	[netId _vehicle] remoteExec ["mf_remote_refuel", _vehicle];
-	[MF_ITEMS_JERRYCAN_FULL, 1] call mf_inventory_remove;
-	[MF_ITEMS_JERRYCAN_EMPTY, 1] call mf_inventory_add;
+    player removeItem "rb_Fuelcan";
+	player addItem "rb_Fuelcan_empty";
 	["Refueling complete!", 5] call mf_notify_client;
 };
 false;

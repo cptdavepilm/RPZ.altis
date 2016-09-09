@@ -12,9 +12,6 @@
 // Towns and cities array
 cityList = compileFinal preprocessFileLineNumbers "mapConfig\towns.sqf";
 
-config_items_jerrycans_max = compileFinal "1";
-config_items_syphon_hose_max = compileFinal "1";
-
 config_refuel_amount_default = compileFinal "0.25";
 config_refuel_amounts = compileFinal str
 [

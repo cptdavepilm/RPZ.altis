@@ -9,7 +9,7 @@ ace_medical_fnc_handleDamage =
 	_dam = _this select 2;
 	_source = _this select 3;
 	_bullet = _this select 4;
-	_damage = [_target, _selection, _dam, _source, _bullet] call unitHandleDamage;
+	_damage = [_target, "body", damage player + 0.01, _source, _bullet] call unitHandleDamage;
 
 	diag_log format ["ace_medical_fnc_handleDamage damage is %1", _damage];
 	_target setDamage _damage;

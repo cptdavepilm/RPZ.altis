@@ -26,6 +26,7 @@ addWeaponInventory = "client\functions\addWeaponInventory.sqf" call mf_compile;
 canForceSaveStaticWeapon = "client\functions\canForceSaveStaticWeapon.sqf" call mf_compile;
 canForceSaveVehicle = "client\functions\canForceSaveVehicle.sqf" call mf_compile;
 canBoilWater = "client\functions\canBoilWater.sqf" call mf_compile;
+canRefillWater = "client\functions\canRefillWater.sqf" call mf_compile;
 canPushPlaneBack = "client\functions\canPushPlaneBack.sqf" call mf_compile;
 canPushVehicleOnFoot = "client\functions\canPushVehicleOnFoot.sqf" call mf_compile;
 canPushWatercraft = "client\functions\canPushWatercraft.sqf" call mf_compile;
@@ -60,7 +61,6 @@ vehicleSideCfg = "client\functions\vehicleSideCfg.sqf" call mf_compile;
 weaponDisassembledEvent = "client\functions\weaponDisassembledEvent.sqf" call mf_compile;
 
 // Player details and actions
-loadPlayerMenu = "client\systems\playerMenu\init.sqf" call mf_compile;
 playerSpawn = "client\functions\playerSpawn.sqf" call mf_compile;
 playerSetup = "client\functions\playerSetup.sqf" call mf_compile;
 playerSetupStart = "client\functions\playerSetupStart.sqf" call mf_compile;
@@ -69,23 +69,10 @@ playerSetupEnd = "client\functions\playerSetupEnd.sqf" call mf_compile;
 spawnAction = "client\functions\spawnAction.sqf" call mf_compile;
 spawnInTown = "client\functions\spawnInTown.sqf" call mf_compile;
 spawnRandom = "client\functions\spawnRandom.sqf" call mf_compile;
-// refuelVehicle = "client\systems\playerMenu\refuel.sqf" call mf_compile;
-// repairVehicle = "client\systems\playerMenu\repair.sqf" call mf_compile;
 
 // Sync client with server time
 timeSync = "client\functions\clientTimeSync.sqf" call mf_compile;
 
-// Update scripts
-updateTeamKiller = "client\functions\updateTeamKiller.sqf" call mf_compile;
-
-// Team-kill system
-teamkillAction = "client\functions\doTeamKillAction.sqf" call mf_compile;
-teamkillMessage = "client\functions\showTeamKillMessage.sqf" call mf_compile;
-
-// Dialog compiles
-client_respawnDialog = "client\systems\playerMenu\dialog\loadRespawnDialog.sqf" call mf_compile;
-fn_respawnTimer = "client\systems\scoreboard\fn_respawnTimer.sqf" call mf_compile;
-loadScoreboard = "client\systems\scoreboard\loadScoreboard.sqf" call mf_compile;
 
 if (isNil "A3W_fnc_MP") then { A3W_fnc_MP = compile preprocessFileLineNumbers "\A3\functions_f\MP\fn_MP.sqf" };
 if (isNil "A3W_fnc_MPexec") then { A3W_fnc_MPexec = compile preprocessFileLineNumbers "\A3\functions_f\MP\fn_MPexec.sqf" };

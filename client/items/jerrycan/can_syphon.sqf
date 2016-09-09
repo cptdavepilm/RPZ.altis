@@ -15,23 +15,19 @@
 #define ERR_NO_JERRYCAN "You have no empty fuel can"
 #define ERR_NO_SYPHON "You don't have a syphon hose"
 #define ERR_VEHICLE_LOCKED "Vehicle is locked/disabled"
-#define ITEM_COUNT(ITEMID) ITEMID call mf_inventory_count
 private ["_vehicle", "_error"];
-_vehicle = objNull;
-if (count _this == 0) then { // if array empty
-	_vehicle = call mf_jerrycan_nearest_vehicle;
-} else {
-	_vehicle = _this select 0;
-};
+
+_vehicle = _this select 0;
+
+_isVehicle = cursorTarget isKindOf "AllVehicles";
 
 _error = "";
 switch (true) do {
-	case (isNull _vehicle): {_error = ERR_NO_VEHICLE};
+	case (!_isVehicle): {_error = ERR_NO_VEHICLE};
 	case (vehicle player != player):{_error = ERR_IN_VEHICLE};
 	case (player distance _vehicle > (sizeOf typeOf _vehicle / 3) max 2): {_error = ERR_NO_VEHICLE};
 	case (locked _vehicle > 1): {_error = ERR_VEHICLE_LOCKED};
-	case (ITEM_COUNT(MF_ITEMS_JERRYCAN_EMPTY) <= 0): {_error = ERR_NO_JERRYCAN};
-	case (ITEM_COUNT(MF_ITEMS_SYPHON_HOSE) <= 0): {_error = ERR_NO_SYPHON};
+	case (!("rb_Fuelcan_empty" in magazines player)): {_error = ERR_NO_JERRYCAN};
 	case (fuel _vehicle < ([_vehicle] call mf_jerrycan_fuel_amount)): {_error = ERR_EMPTY};
 };
 _error;

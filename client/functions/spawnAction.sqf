@@ -26,17 +26,6 @@ spawnActionHandle = (_this select 1) spawn
 	_switch = _this select 0;
 	_data = [_this select 1, false];
 
-	if (isNil "playerData_resetPos") then
-	{
-		if (["A3W_survivalSystem"] call isConfigOn) then
-		{
-			[MF_ITEMS_CANNED_FOOD, 1] call mf_inventory_add;
-			[MF_ITEMS_WATER, 1] call mf_inventory_add;
-		};
-
-		[MF_ITEMS_REPAIR_KIT, 1] call mf_inventory_add;
-	};
-
 	if (cbChecked ((uiNamespace getVariable "RespawnSelectionDialog") displayCtrl respawn_Preload_Checkbox)) then
 	{
 		_data set [1, true];

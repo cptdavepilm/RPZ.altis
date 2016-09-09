@@ -20,11 +20,6 @@
 			<English>Independent</English>
 		</Key>
 	</Package>
-	<Package name="WelcomeMessage">
-		<Key ID="STR_WL_WelcomeToAwakenRP">
-			<English>&lt;t color='#FF8000' size='2.5' &gt;AwakenRP Esseker v0.1 &lt;/t&gt;</English>
-		</Key>
-	</Package>
 	<Package name="Diary">
 		<Key ID="STR_WL_Diary_RulesContent">
 			<English>&lt;br/&gt;    1. Keep bad language to a minimum. If you have a problem with another player, take it to direct.&lt;br/&gt;  2. Using or spamming with loud\long custom sound commands will cause punishment up to permanent ban</English>

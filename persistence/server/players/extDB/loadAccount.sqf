@@ -64,8 +64,6 @@ else
 		"BackpackItems",
 		"BackpackMagazines",
 
-		"WastelandItems",
-
 		"Hunger",
 		"Thirst"
 	];

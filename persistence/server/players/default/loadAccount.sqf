@@ -71,8 +71,6 @@ _getValue =
 
 ["PartialMagazines", "ARRAY"] call _getValue; // legacy
 
-["WastelandItems", "ARRAY"] call _getValue;
-
 ["Hunger", "NUMBER"] call _getValue;
 ["Thirst", "NUMBER"] call _getValue;
 

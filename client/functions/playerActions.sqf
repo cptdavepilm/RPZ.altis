@@ -11,8 +11,6 @@
 	["Holster Weapon", { player action ["SwitchWeapon", player, player, 100] }, [], -11, false, false, "", "vehicle player == player && currentWeapon player != '' && (stance player != 'CROUCH' || currentWeapon player != handgunWeapon player)"], // A3 v1.58 bug, holstering handgun while crouched causes infinite anim loop
 	["Unholster Primary Weapon", { player action ["SwitchWeapon", player, player, 0] }, [], -11, false, false, "", "vehicle player == player && currentWeapon player == '' && primaryWeapon player != ''"],
 
-	//[format ["<img image='client\icons\playerMenu.paa' color='%1'/> <t color='%1'>[</t>Player Menu<t color='%1'>]</t>", "#FF8000"], "client\systems\playerMenu\init.sqf", [], -10, false], //, false, "", ""],
-
 	["<img image='\a3\Ui_f\data\GUI\Cfg\CommunicationMenu\transport_ca.paa'/> <t color='#FFFFFF'>Cancel Action</t>", { doCancelAction = true }, [], 1, false, false, "", "mutexScriptInProgress"],
 
 	["[0]"] call getPushPlaneAction,
@@ -51,3 +49,27 @@ if (["A3W_savingMethod", "profile"] call getPublicVar == "extDB") then
 		[player, ["<img image='client\icons\save.paa'/> Force Save Turret", { cursorTarget call fn_forceSaveObject }, [], -9.5, false, true, "", "call canForceSaveStaticWeapon"]] call fn_addManagedAction;
 	};
 };
+
+
+
+// Setting up refill action.
+private ["_label1", "_condition1"];
+_label1 = format["<img image='%1'/> Fill Jerry Can", iconJerry];
+_condition1 = format["[cursorObject] call %1 == ''", mf_jerrycan_can_refill];
+
+[player, [_label1, "client\actions\refill.sqf", cursorObject, 1, false, false, "", _condition1]] call fn_addManagedAction;
+
+// setting up refuel action
+private ["_label2", "_condition2"];
+_label2 = format["<img image='%1'/> Refuel Vehicle", iconJerry];
+_condition2 = format["[cursorObject] call %1 == ''", mf_jerrycan_can_refuel];
+
+[player, [_label2, "client\actions\refuel.sqf", cursorObject, 1, false, false, "", _condition2]] call fn_addManagedAction;
+
+
+// setting up syphon action
+private ["_label3", "_condition3"];
+_label3 = format["<img image='%1'/> Syphon Fuel", iconSyphon];
+_condition3 = format["[cursorObject] call %1 == ''", mf_jerrycan_can_syphon];
+
+[player, [_label3, "client\actions\syphon.sqf", cursorObject, 1, false, false, "", _condition3]] call fn_addManagedAction;

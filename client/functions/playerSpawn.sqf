@@ -82,7 +82,6 @@ if (isNil "playerData_alive") then
 {
 	[]spawn
 	{
-		diag_log "Opening arsenal";
 		[ missionNamespace, "arsenalClosed", {
 			arsenalOpened = false;
 		}] call BIS_fnc_addScriptedEventHandler;
@@ -93,8 +92,16 @@ if (isNil "playerData_alive") then
 		waitUntil{ !arsenalOpened };
 
 		player setCaptive false;
-		diag_log "Closing arsenal";
 
+		[] spawn
+		{
+			sleep 1;
+
+			_hour = date select 3;
+			_mins = date select 4;
+
+			[profileName, awaken_townName, format ["%1:%3%2", _hour, _mins, if (_mins < 10) then {"0"} else {""}]] spawn BIS_fnc_infoText;
+		};
 
 	};
 };

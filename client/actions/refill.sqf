@@ -11,11 +11,11 @@
 #define DURATION 5
 #define ANIMATION "AinvPknlMstpSlayWrflDnon_medic"
 #define ERR_IN_VEHICLE "Filling Jerrycan Failed! You can't do that while in a vehicle"
-#define ERR_TOO_FAR_AWAY "Filling Jerrycan Failed! You moved to far away"
 #define ERR_CANCELLED "Filling Jerrycan Cancelled!"
 
 private ["_container", "_error"];
-_container = call mf_jerrycan_nearest_pump;
+_container = cursorTarget;
+
 _error = [_container] call mf_jerrycan_can_refill;
 if (_error != "") exitWith {[_error, 5] call mf_notify_client; false;};
 
@@ -30,7 +30,6 @@ _checks = {
 	switch (true) do {
 		case (!alive player): {}; // player is dead, no need for a notification
 		case (vehicle player != player): {_text = ERR_IN_VEHICLE};
-		case (player distance _container > 5): {_text = ERR_TOO_FAR_AWAY};
 		case (doCancelAction): {_text = ERR_CANCELLED; doCancelAction = false;};
 		default {
 			_text = format["Refilling Jerrycan %1%2 Complete", round(100 * _progress), "%"];
@@ -41,8 +40,8 @@ _checks = {
 };
 _success = [DURATION, ANIMATION, _checks, [_container]] call a3w_actions_start;
 if (_success) then {
-	[MF_ITEMS_JERRYCAN_FULL, 1] call mf_inventory_add;
-	[MF_ITEMS_JERRYCAN_EMPTY, 1] call mf_inventory_remove;
+    player removeItem "rb_Fuelcan_empty";
+	player addItem "rb_Fuelcan";
 	["Refilling Jerrycan Completed!", 5] call mf_notify_client;
 };
 false;

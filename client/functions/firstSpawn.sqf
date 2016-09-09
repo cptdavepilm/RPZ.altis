@@ -8,8 +8,6 @@
 
 client_firstSpawn = true;
 
-[] execVM "client\functions\welcomeMessage.sqf";
-
 player addEventHandler ["Take",
 {
 	_vehicle = _this select 1;

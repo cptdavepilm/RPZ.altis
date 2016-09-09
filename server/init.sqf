@@ -43,7 +43,6 @@ if (isServer) then
 		{
 			if (_unit call A3W_fnc_isUnconscious) then
 			{
-				[_unit] spawn dropPlayerItems;
 				[_uid, "deathCount", 1] call fn_addScore;
 				_unit setVariable ["A3W_handleDisconnect_name", _name];
 				_unit setVariable ["A3W_deathCause_local", ["bleedout"]];
@@ -402,7 +401,6 @@ if (isNil "A3W_savingMethod") then
 	publicVariable "A3W_savingMethod";
 };
 
-call compile preprocessFileLineNumbers "server\functions\createTownMarkers.sqf";
 
 [_setupPlayerDB] spawn
 {

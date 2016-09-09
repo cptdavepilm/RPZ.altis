@@ -163,20 +163,20 @@ drn_fnc_DynamicWeather_SetWeatherLocal = {
 
 	_currentRain = drn_var_DynamicWeather_Rain;
 
-	if (_currentFog isEqualType []) then {
+	/*if (_currentFog isEqualType []) then {
 		_currentFog = _currentFog select 0;
 	};
 
-	/*if (typeName _currentFog == "ARRAY") then {
+	if (typeName _currentFog == "ARRAY") then {
 		_currentFog set [0, (_currentFog select 0) max (_currentRain / 4)];
 	}
 	else {*/
-		_currentFog = (drn_DynamicWeather_minFog max _currentFog min drn_DynamicWeather_maxFog) max (_currentRain / 4);
+		//_currentFog = (drn_DynamicWeather_minFog max _currentFog min drn_DynamicWeather_maxFog) max (_currentRain / 4);
 	//};
 
 	// Set current weather values
 	if (_currentWeatherChange != "OVERCAST") then { 0 setOvercast _currentOvercast };
-	0 setFog [_currentFog, 0.0, 0]; // do not change fog decay/base otherwise the fog level will vary unpredictably
+	//0 setFog [_currentFog, 0.0, 0]; // do not change fog decay/base otherwise the fog level will vary unpredictably
 	//drn_var_DynamicWeather_Rain = _currentRain;
 	setWind [_currentWindX, _currentWindY, true];
 

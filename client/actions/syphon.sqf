@@ -11,11 +11,11 @@
 #define DURATION 15 // seconds
 #define ANIMATION "AinvPknlMstpSlayWrflDnon_medic"
 #define ERR_IN_VEHICLE "Syphoning Failed! You can't do that while in a vehicle"
-#define ERR_TOO_FAR_AWAY "Syphoning Failed! You moved too far away from the vehicle"
 #define ERR_CANCELLED "Refueling Cancelled!"
 
 private ["_vehicle", "_error"];
-_vehicle = call mf_jerrycan_nearest_vehicle;
+_vehicle = cursorTarget;
+
 _error = [_vehicle] call mf_jerrycan_can_syphon;
 if (_error != "") exitWith {[_error, 5] call mf_notify_client; false;};
 
@@ -28,7 +28,6 @@ _checks = {
 	switch (true) do {
 		case (!alive player): {}; //player is dead, no need for a notification
 		case (vehicle player != player): {_text = ERR_IN_VEHICLE};
-		case (player distance _vehicle > (sizeOf typeOf _vehicle / 3) max 2): {_text = ERR_TOO_FAR_AWAY};
 		case (doCancelAction): {_text = ERR_CANCELLED; doCancelAction = false;};
 		default {
 			_text = format["Syphoning fuel %1%2 Complete", round(100 * _progress), "%"];
@@ -42,8 +41,8 @@ if (_success) then {
 	// the fuel qty is handled by mf_remote_refuel.
 	// will execute locally if _currVehicle is local
 	[netId _vehicle] remoteExec ["mf_remote_syphon", _vehicle];
-	[MF_ITEMS_JERRYCAN_EMPTY, 1] call mf_inventory_remove;
-	[MF_ITEMS_JERRYCAN_FULL, 1] call mf_inventory_add;
+    player removeItem "rb_Fuelcan_empty";
+	player addItem "rb_Fuelcan";
 	["Syphoning complete!", 5] call mf_notify_client;
 };
 false;

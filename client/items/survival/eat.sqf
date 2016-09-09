@@ -16,6 +16,8 @@ private ["_checks", "_success","_text"];
 _item = _this select 0;
 
  _amount = getNumber( configFile >> "cfgMagazines" >> _item >> "value");
+_giveConf = (configFile >> "cfgMagazines" >> _item >> "give");
+_name = getText(configFile >> "cfgMagazines" >> _item >> "displayName");
 
 _checks = {
 	private ["_progress","_failed", "_text", "_food"];
@@ -27,7 +29,7 @@ _checks = {
 		case (doCancelAction): {doCancelAction = false; _text = ERR_CANCELLED;};
 		default {
 			_failed = false;
-			_text = format["Eating %1%2 Complete", round(100*_progress), "%"];
+			_text = format["Eating %1 %2%3 Complete", _name, round(100*_progress), "%"];
 		};
 	};
 	[_failed, _text];
@@ -36,9 +38,17 @@ _checks = {
 _success = [5, ANIMATION, _checks, []] call a3w_actions_start;
 if (_success) then {
 	hungerLevel = (hungerLevel + _amount) min 100;
+
+    player removeItem _item;
+
+	if (isText(_giveConf)) then
+	{
+		_give = getText(_giveConf);
+		player addItem _give;
+	};
+
 	["Your hunger has eased", 5] call mf_notify_client;
 	hint "";
 };
 
-awaken_useitem_result = _success;
 _success

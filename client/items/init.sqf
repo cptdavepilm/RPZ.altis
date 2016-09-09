@@ -11,4 +11,3 @@
 [_this, "survival"] call mf_init;
 [_this, "misc"] call mf_init;
 [_this, "jerrycan"] call mf_init;
-[_this, "camonet"] call mf_init;

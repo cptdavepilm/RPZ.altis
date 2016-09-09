@@ -4,7 +4,7 @@
 //	@file Name: getPlayerData.sqf
 //	@file Author: AgentRev
 
-private ["_player", "_saveLocation", "_data", "_hitPoints", "_hpDamage", "_pos", "_loadedMags", "_mag", "_ammo", "_loaded", "_type", "_wastelandItems"];
+private ["_player", "_saveLocation", "_data", "_hitPoints", "_hpDamage", "_pos", "_loadedMags", "_mag", "_ammo", "_loaded", "_type"];
 _player = _this select 0;
 _saveLocation = if (count _this > 1) then { _this select 1 } else { true };
 
@@ -101,17 +101,5 @@ _loadedMags = [];
 	["LoadedMagazines", _loadedMags]
 ];
 
-if (_player == player) then
-{
-	_wastelandItems = [];
-	{
-		if (_x select 1 > 0) then
-		{
-			_wastelandItems pushBack [_x select 0, _x select 1];
-		};
-	} forEach call mf_inventory_all;
-
-	_data pushBack ["WastelandItems", _wastelandItems];
-};
 
 _data

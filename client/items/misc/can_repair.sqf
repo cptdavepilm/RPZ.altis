@@ -14,7 +14,6 @@
 #define ERR_FULL_HEALTH "The vehicle is already fully repaired"
 #define ERR_DESTROYED "The vehicle is too damaged to repair"
 #define ERR_NO_REPAIR_KITS "You have no repair kits"
-#define ITEM_COUNT(ITEMID) ITEMID call mf_inventory_count
 
 private ["_vehicle", "_hitPoints", "_error"];
 _vehicle = objNull;
@@ -33,6 +32,5 @@ switch (true) do {
 	case (player distance _vehicle > (sizeOf typeOf _vehicle / 3) max 2): {_error = ERR_NO_VEHICLE};
 	case (!alive _vehicle): {_error = ERR_DESTROYED};
 	case (damage _vehicle < 0.05 && {{_vehicle getHitPointDamage (configName _x) > 0.05} count _hitPoints == 0}): {_error = ERR_FULL_HEALTH}; // 0.2 is the threshold at which wheel damage causes slower movement
-	case (ITEM_COUNT(MF_ITEMS_REPAIR_KIT) <= 0 || {round getNumber (configFile >> "CfgVehicles" >> typeOf player >> "engineer") > 0 && !("ToolKit" in items player)}): {_error = ERR_NO_REPAIR_KITS};
 };
 _error;

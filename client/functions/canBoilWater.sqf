@@ -1,3 +1,5 @@
+// canBoilWater.sqf
+
 _emptycan = 
 [
 	"rb_frantaempty",

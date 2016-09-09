@@ -13,17 +13,15 @@
 #define ERR_IN_VEHICLE "You can't do this while in a vehicle."
 #define ERR_NO_JERRYCANS "You have no empty Jerrycans."
 private ["_container", "_error"];
-_container = objNull;
-if (count _this == 0) then {
-	_container = call mf_jerrycan_nearest_pump;
-} else {
-	_container = _this select 0;
-};
+
+_pump = _this select 0;
+_isPump = typeOf(_pump) in mf_jerrycan_pumps;
+
 
 _error = "";
 switch (true) do {
-	case (player distance _container > (sizeOf typeOf _container / 3) max 2): {_error = ERR_NO_PUMP};
+	case (!_isPump): {_error = ERR_NO_PUMP};
 	case (vehicle player != player): {_error = ERR_IN_VEHICLE};
-	case ((MF_ITEMS_JERRYCAN_EMPTY call mf_inventory_count) <= 0): {_error = ERR_NO_JERRYCANS};
+	case (!("rb_Fuelcan_empty" in magazines player)): {_error = ERR_NO_JERRYCANS};
 };
 _error;

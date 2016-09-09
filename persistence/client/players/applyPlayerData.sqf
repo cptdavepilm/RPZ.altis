@@ -105,6 +105,5 @@ else
 		case "BackpackItems": { { (backpackContainer player) addItemCargoGlobal _x } forEach _value };
 		case "BackpackMagazines": { [backpackContainer player, _value] call processMagazineCargo };
 		case "PartialMagazines": { { player addMagazine _x } forEach _value };
-		case "WastelandItems": { { [_x select 0, _x select 1, true] call mf_inventory_add } forEach _value };
 	};
 } forEach _data;

@@ -48,7 +48,6 @@ if (_player == player) then
 	// Load scoreboard in render scope
 	["A3W_scoreboard", "onEachFrame",
 	{
-		call loadScoreboard;
 		["A3W_scoreboard", "onEachFrame"] call BIS_fnc_removeStackedEventHandler;
 	}] call BIS_fnc_addStackedEventHandler;
 
@@ -69,20 +68,6 @@ _player setVariable ["FAR_killerVehicle", nil];
 _player setVariable ["FAR_killerAmmo", nil];
 _player setVariable ["FAR_killerSuspects", nil];
 
-_player spawn
-{
-	_player = _this;
-
-	_items = if (_player == player) then { true call mf_inventory_list } else { [] };
-
-	pvar_dropPlayerItems = [_player, _items];
-	publicVariableServer "pvar_dropPlayerItems";
-
-	if (_player == player) then
-	{
-		{ _x call mf_inventory_remove } forEach _items;
-	};
-};
 
 _player spawn fn_removeAllManagedActions;
 removeAllActions _player;

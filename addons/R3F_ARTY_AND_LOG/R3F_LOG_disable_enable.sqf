@@ -8,4 +8,4 @@
  * Pour activer le système logistique, écrivez #define R3F_LOG_enable sans les deux barres obliques.
  */
 
-#define R3F_LOG_enable
+//#define R3F_LOG_enable

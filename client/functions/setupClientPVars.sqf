@@ -12,7 +12,6 @@
 	["currentDate", { [] spawn timeSync }],
 	["messageSystem", { [] spawn serverMessage }],
 
-	["pvar_warnTeamKiller", { PVAL spawn updateTeamKiller }],
 	["pvar_groupNotify", { PVAL spawn groupNotify }],
 	["pvar_disableCollision", { PVAL call fn_disableCollision }],
 	["pvar_notifyClient", { PVAL spawn mf_notify_client }],

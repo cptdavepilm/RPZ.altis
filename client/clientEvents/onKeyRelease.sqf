@@ -21,15 +21,5 @@ if (_key in [219,220]) then
 };
 */
 
-// Scoreboard
-if (_key in actionKeys "NetworkStats") then
-{
-	if (alive player) then
-	{
-		9123 cutRsc ["RscEmpty", "PLAIN"];
-	};
-
-	_handled = true;
-};
 
 _handled

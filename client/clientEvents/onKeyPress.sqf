@@ -26,13 +26,6 @@ switch (true) do
 		execVM "client\systems\adminPanel\checkAdmin.sqf";
 	};
 
-	// Tilde (key above Tab)
-	case (_key in A3W_customKeys_playerMenu):
-	{
-		[] spawn loadPlayerMenu;
-		_handled = true;
-	};
-
 	// Home & Windows keys
 	case (_key in A3W_customKeys_playerNames):
 	{
@@ -104,21 +97,6 @@ if (!_handled && _key in actionKeys "GetOut") then
 	};
 };
 
-// Scoreboard
-if (!_handled && _key in actionKeys "NetworkStats") then
-{
-	if (_key != 25 || // 25 = P
-	   ((!_ctrl || {!(486539289 in actionKeys "NetworkPlayers") && isNil "TFAR_fnc_TaskForceArrowheadRadioInit"}) && // 486539289 = Left Ctrl + P
-	   (!_shift || {!(704643042 in actionKeys "NetworkPlayers")}))) then // 704643042 = Left Shift + P
-	{
-		if (alive player && isNull (uiNamespace getVariable ["ScoreGUI", displayNull])) then
-		{
-			call loadScoreboard;
-		};
-
-		_handled = true;
-	};
-};
 
 // Push-to-talk
 if (!_handled && _key in call A3W_allVoiceChatKeys) then
