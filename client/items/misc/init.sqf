@@ -9,12 +9,10 @@
 //@file Argument: the path of the directory holding this file
 _path = _this;
 
-MF_ITEMS_REPAIR_KIT_RANGE = 5;
 
-
-MF_ITEMS_REPAIR_KIT = "repairkit";
-_repair = [_path, "repair.sqf"] call mf_compile;
-_icon = "client\icons\repair.paa";
+mf_repair_can_repair = [_path, "can_repair.sqf"] call mf_compile;
+mf_repair = [_path, "repair.sqf"] call mf_compile;
+repair_icon = "client\icons\repair.paa";
 
 mf_nearest_vehicle = {
 	private ["_types", "_obj", "_dist"];
@@ -29,7 +27,7 @@ mf_repair_nearest_vehicle = {
 } call mf_compile;
 
 // Setting up repairing action.
-/*mf_repair_can_repair = [_path, "can_repair.sqf"] call mf_compile;
+/*
 private ["_label1", "_execute1", "_condition1", "_action1"];
 _label1 = format["<img image='%1'/> Repair Vehicle", _icon];
 _condition1 = "[] call mf_repair_can_repair == ''";

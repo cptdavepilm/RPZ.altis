@@ -35,8 +35,8 @@ mf_remote_syphon = {
 mf_remote_repair = {
 	private "_vehicle";
 	_vehicle = objectFromNetId (_this select 0);
-	_vehicle setDamage 0;
-	if (_vehicle isKindOf "Boat_Armed_01_base_F" && count (_vehicle magazinesTurret [0]) == 0) then { _vehicle setHitPointDamage ["HitTurret", 1] }; // disable front GMG on speedboats
+	_hitpoint = _this select 1;
+	_vehicle setHitPointDamage [_hitpoint, 0];
 	_vehicle setVariable ["FAR_killerVehicle", nil, true];
 	_vehicle setVariable ["FAR_killerAmmo", nil, true];
 } call mf_compile;

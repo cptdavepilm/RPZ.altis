@@ -62,10 +62,14 @@ showGroupIndicator = 0;
 #include "client\systems\adminPanel\dialog\vehicleManagement.hpp"
 #include "client\systems\adminPanel\dialog\markerLog.hpp"
 #include "client\systems\adminPanel\dialog\objectSearch.hpp"
+#include "client\systems\repairPanel\dialog\repairMenu.hpp"
 #include "addons\proving_ground\PG_config.hpp"
 #include "addons\outlw_magrepack\config.hpp"
 #include "addons\gui\gui.hpp"
 #include "addons\CHVD\dialog.hpp"
+
+
+#include "RepairParts.hpp" //names for all reapir parts. Needs moving to hitpoints
 
 class RscTitles
 {

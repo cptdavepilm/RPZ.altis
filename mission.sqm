@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=20663;
+		nextID=20844;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=51;
+		nextID=52;
 	};
 	class Camera
 	{
-		pos[]={4607.4707,282.88654,3452.5381};
-		dir[]={0.33562565,-0.85860652,0.3875185};
-		up[]={0.56211263,0.51263446,0.64902353};
-		aside[]={0.7559101,-9.4762072e-008,-0.65468657};
+		pos[]={3112.4944,159.95039,4462.8008};
+		dir[]={0.85899919,-0.35210541,-0.37201336};
+		up[]={0.32330644,0.93582916,-0.14001594};
+		aside[]={-0.39744258,-1.8739374e-006,-0.91772652};
 	};
 };
 binarizationWanted=0;
@@ -39,6 +39,7 @@ addons[]=
 	"cba_xeh",
 	"A3_Structures_F_EPB_Civ_Accessories",
 	"A3_Structures_F_Ind_SolarPowerPlant",
+	"101_editor",
 	"CUP_CAStructures_E_Misc_Misc_Construction",
 	"CUP_CAStructures_E_Misc_Misc_Market",
 	"CUP_Misc_e_Config",

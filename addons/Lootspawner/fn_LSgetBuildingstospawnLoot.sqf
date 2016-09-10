@@ -162,6 +162,8 @@ _begintime = diag_tickTime;
 								case 5:
 								{
 									_loot = ((lootBackpack_list select _lootClass) select 1) call fn_selectRandomWeightedPairs;
+
+									diag_log "LOOTSPAWNER: spawning backpack " + str _loot;
 									_lootholder addBackpackCargoGlobal [_loot, 1];
 								};
 								//special for world objects: account for Wasteland and other items

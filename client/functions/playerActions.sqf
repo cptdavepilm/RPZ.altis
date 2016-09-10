@@ -51,6 +51,9 @@ if (["A3W_savingMethod", "profile"] call getPublicVar == "extDB") then
 };
 
 
+//open vehicle menu
+[player, ["<img image='client\icons\repair.paa'/> Repair Vehicle", "client\systems\repairPanel\loadRepairMenu.sqf", [cursorObject], 1.1, false, false, "", "[cursorObject] call mf_repair_can_repair"]] call fn_addManagedAction;
+
 
 // Setting up refill action.
 private ["_label1", "_condition1"];
