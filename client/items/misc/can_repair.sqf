@@ -19,7 +19,6 @@ _vehicle = _this select 0;
 
 _isVehicle = _vehicle isKindOf "AllVehicles";
 
-	diag_log format ["can_repair.sqf %1, %2", _vehicle, player distance _vehicle];
 _error = "";
 switch (true) do {
 	case (!_isVehicle): {_error = ERR_NO_VEHICLE};

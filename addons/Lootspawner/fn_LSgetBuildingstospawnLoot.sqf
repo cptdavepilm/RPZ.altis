@@ -77,8 +77,7 @@ _begintime = diag_tickTime;
 										[2, 2], //pistols
 										[3, 2], //magazines
 										[4, 2], //items
-										[5, 2],  //backpacks
-										[6, 2]  //wasteland
+										[5, 2]  //backpacks
 									];
 									_magsToGive = floor(random(5));
 								};
@@ -88,8 +87,7 @@ _begintime = diag_tickTime;
 									_lootTypeList = [
 										[2, 2], //pistols
 										[3, 2], //magazines
-										[4, 2], //items
-										[6, 2]  //wasteland
+										[4, 2] //items
 									];
 									_magsToGive = floor(random(3));
 								};
@@ -98,8 +96,7 @@ _begintime = diag_tickTime;
 								{
 									_lootTypeList = [
 										[3, 2], //magazines
-										[4, 2], //items
-										[6, 2]  //wasteland
+										[4, 2] //items
 									];
 									_magsToGive = floor(random(2));
 								};
@@ -111,11 +108,7 @@ _begintime = diag_tickTime;
 
 							_lootholder = objNull;
 
-							if (_lootType < 5) then
-							{
-								_lootholder = createVehicle ["GroundWeaponHolder", _spwnPos, [], 0, "CAN_COLLIDE"];
-								//_lootholder setPosATL _spwnPos;
-							};
+							_lootholder = createVehicle ["GroundWeaponHolder", _spwnPos, [], 0, "CAN_COLLIDE"];
 
 							switch (_lootType) do
 							{
@@ -139,7 +132,7 @@ _begintime = diag_tickTime;
 									_mags = getArray (configFile >> "CfgWeapons" >> _loot >> "magazines");
 									if (count _mags > 0) then
 									{
-										_lootholder addMagazineCargoGlobal [_mags select 0, 1 + floor random 3];
+										_lootholder addItemCargoGlobal [_mags select 0, 1 + floor random 3];
 									};
 									_lootholder addWeaponCargoGlobal [_loot, 1];
 								};
@@ -149,7 +142,7 @@ _begintime = diag_tickTime;
 									_randChance = 1 + _magsToGive;
 									for "_rm" from 1 to _randChance do {
 										_loot = ((lootMagazine_list select _lootClass) select 1) call fn_selectRandomWeightedPairs;
-										_lootholder addMagazineCargoGlobal [_loot, 1];
+										_lootholder addItemCargoGlobal [_loot, 1];
 									};
 								};
 								//special for item/cloth/vests
@@ -163,52 +156,7 @@ _begintime = diag_tickTime;
 								{
 									_loot = ((lootBackpack_list select _lootClass) select 1) call fn_selectRandomWeightedPairs;
 
-									diag_log "LOOTSPAWNER: spawning backpack " + str _loot;
 									_lootholder addBackpackCargoGlobal [_loot, 1];
-								};
-								//special for world objects: account for Wasteland and other items
-								case 6:
-								{
-									_loot = ((lootworldObject_list select _lootClass) select 1) call fn_selectRandomWeightedPairs;
-
-									if (_loot == "Land_Can_V3_F" && {["A3W_unlimitedStamina"] call isConfigOn} ||
-									{(_loot == "Land_BakedBeans_F" || _loot == "Land_BottlePlastic_V2_F") && !(["A3W_survivalSystem"] call isConfigOn)}) exitWith
-									{
-										_lootholder = objNull;
-									};
-
-									_lootholder = createVehicle [_loot, _spwnPos, [], 0, "CAN_COLLIDE"];
-									//_lootholder setPosATL _spwnPos;
-									if(_loot == "Land_CanisterFuel_F") then {
-										_chfullf = (random 100);
-										if (_chfullfuel > _chfullf) then {
-											_lootholder setVariable["mf_item_id", "jerrycanfull", true];
-										} else {
-											_lootholder setVariable["mf_item_id", "jerrycanempty", true];
-										};
-									};
-									if(_loot == "Land_CanisterOil_F") then {
-										_lootholder setVariable["mf_item_id", "syphonhose", true];
-									};
-									if(_loot == "Land_Can_V3_F") then {
-										_lootholder setVariable["mf_item_id", "energydrink", true];
-									};
-									if(_loot == "Land_BakedBeans_F") then {
-										_lootholder setVariable["mf_item_id", "cannedfood", true];
-									};
-									if(_loot == "Land_BottlePlastic_V2_F") then {
-										_lootholder setVariable["mf_item_id", "water", true];
-									};
-									if(_loot == "Land_Suitcase_F") then {
-										_lootholder setVariable["mf_item_id", "repairkit", true];
-									};
-									//if container clear its cargo
-									if (({_loot isKindOf _x} count exclcontainer_list) > 0) then {
-										clearWeaponCargoGlobal _lootholder;
-										clearMagazineCargoGlobal _lootholder;
-										clearBackpackCargoGlobal _lootholder;
-										clearItemCargoGlobal _lootholder;
-									};
 								};
 							};
 

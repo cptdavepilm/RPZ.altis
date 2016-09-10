@@ -6,7 +6,6 @@ _type = _this select 1;
 _id = _this select 2;
 
 
-diag_log format["WASTELAND DEBUG - spawn point of  %1",_this];
 if (isNil "Awaken_VehiclePoints") then { Awaken_VehiclePoints = [] };
 
 

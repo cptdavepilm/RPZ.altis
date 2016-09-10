@@ -26,7 +26,6 @@ _checks = {
 	private ["_progress","_failed", "_text"];
 	_progress = _this select 0;
 	_vehicle = _this select 1;
-	diag_log format ["repair.sqf %1, %2", _vehicle, player distance _vehicle];
 	_text = "";
 	_failed = true;
 	switch (true) do {
