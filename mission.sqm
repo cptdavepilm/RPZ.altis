@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=20660;
+		nextID=20663;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=50;
+		nextID=51;
 	};
 	class Camera
 	{
-		pos[]={7737.9854,85.28302,10156.533};
-		dir[]={0.97851974,-0.15250947,0.13915676};
-		up[]={0.1510583,0.98829108,0.021483002};
-		aside[]={0.14080693,1.4323741e-006,-0.9900977};
+		pos[]={4607.4707,282.88654,3452.5381};
+		dir[]={0.33562565,-0.85860652,0.3875185};
+		up[]={0.56211263,0.51263446,0.64902353};
+		aside[]={0.7559101,-9.4762072e-008,-0.65468657};
 	};
 };
 binarizationWanted=0;
@@ -94,13 +94,14 @@ addons[]=
 	"A3_Soft_F_Quadbike_01",
 	"CUP_WheeledVehicles_UAZ",
 	"CUP_WheeledVehicles_Datsun",
-	"rickB_items"
+	"rickB_items",
+	"CUP_CAStructuresHouse_A_Hospital"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=41;
+		items=43;
 		class Item0
 		{
 			className="A3_Structures_F_Mil";
@@ -161,182 +162,192 @@ class AddonsMetaData
 		};
 		class Item9
 		{
+			className="101_editor";
+			name="101_editor";
+		};
+		class Item10
+		{
 			className="CUP_CAStructures_E_Misc_Misc_Construction";
 			name="CUP_CAStructures_E_Misc_Misc_Construction";
 		};
-		class Item10
+		class Item11
 		{
 			className="CUP_CAStructures_E_Misc_Misc_Market";
 			name="CUP_CAStructures_E_Misc_Misc_Market";
 		};
-		class Item11
+		class Item12
 		{
 			className="CUP_Misc_e_Config";
 			name="CUP_Misc_e_Config";
 		};
-		class Item12
+		class Item13
 		{
 			className="SAR_ru_architecture";
 			name="SAR_ru_architecture";
 		};
-		class Item13
+		class Item14
 		{
 			className="CUP_Buildings_Config";
 			name="CUP_Buildings_Config";
 		};
-		class Item14
+		class Item15
 		{
 			className="CUP_WarfareBuildings";
 			name="CUP_WarfareBuildings";
 		};
-		class Item15
+		class Item16
 		{
 			className="CUP_ibr_plants";
 			name="CUP_ibr_plants";
 		};
-		class Item16
+		class Item17
 		{
 			className="CUP_CAStructures_Mil";
 			name="CUP_CAStructures_Mil";
 		};
-		class Item17
+		class Item18
 		{
 			className="dayzed_buildings";
 			name="dayzed_buildings";
 		};
-		class Item18
+		class Item19
 		{
 			className="CUP_StandaloneTerrains_Core_Faction";
 			name="CUP_StandaloneTerrains_Core_Faction";
 		};
-		class Item19
+		class Item20
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item20
+		class Item21
 		{
 			className="A3_Structures_F_Households";
 			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item21
+		class Item22
 		{
 			className="CUP_CWA_Misc";
 			name="CUP_CWA_Misc";
 		};
-		class Item22
+		class Item23
 		{
 			className="CUP_Editor_Plants_Config";
 			name="CUP_Editor_Plants_Config";
 		};
-		class Item23
+		class Item24
 		{
 			className="ryanzombiesfunctions";
 			name="ryanzombiesfunctions";
 			author="Ryan";
 		};
-		class Item24
+		class Item25
 		{
 			className="CUP_CAMP_Armory_Misc_Concrete_Wall";
 			name="CUP_CAMP_Armory_Misc_Concrete_Wall";
 		};
-		class Item25
+		class Item26
 		{
 			className="CUP_Desert2_Config";
 			name="CUP_Desert2_Config";
 		};
-		class Item26
+		class Item27
 		{
 			className="CST_Industrial_Objects_Construction";
 			name="CST_Industrial_Objects_Construction";
 		};
-		class Item27
+		class Item28
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item28
+		class Item29
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item29
+		class Item30
 		{
 			className="A3_Weapons_F";
 			name="Arma 3 Alpha - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item30
+		class Item31
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item31
+		class Item32
 		{
 			className="A3_Boat_F";
 			name="Arma 3 Alpha - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item32
+		class Item33
 		{
 			className="CUP_WheeledVehicles_Skoda";
 			name="CUP_WheeledVehicles_Skoda";
 		};
-		class Item33
+		class Item34
 		{
 			className="CUP_WheeledVehicles_Ural";
 			name="CUP_WheeledVehicles_Ural";
 		};
-		class Item34
+		class Item35
 		{
 			className="CUP_Wheeledvehicles_VWGolf";
 			name="CUP_Wheeledvehicles_VWGolf";
 		};
-		class Item35
+		class Item36
 		{
 			className="A3_Soft_F_Kart";
 			name="Arma 3 Karts - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item36
+		class Item37
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item37
+		class Item38
 		{
 			className="CUP_wheeledvehicles_Octaiva";
 			name="CUP_wheeledvehicles_Octaiva";
 		};
-		class Item38
+		class Item39
 		{
 			className="CUP_WheeledVehicles_UAZ";
 			name="CUP_WheeledVehicles_UAZ";
 		};
-		class Item39
+		class Item40
 		{
 			className="CUP_WheeledVehicles_Datsun";
 			name="CUP_WheeledVehicles_Datsun";
 		};
-		class Item40
+		class Item41
 		{
 			className="rickB_items";
 			name="rickB_items";
+		};
+		class Item42
+		{
+			className="CUP_CAStructuresHouse_A_Hospital";
+			name="CUP_CAStructuresHouse_A_Hospital";
 		};
 	};
 };
@@ -367,7 +378,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=721;
+		items=723;
 		class Item0
 		{
 			dataType="Object";
@@ -44496,6 +44507,40 @@ class Mission
 				};
 				nAttributes=17;
 			};
+		};
+		class Item721
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={9984.6318,17.389187,5738.8374};
+				angles[]={6.2808952,4.5781207,0.0010918301};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+				init="buildingZ = (position this nearestobject 1011178); this setPos [(getPos buildingZ select 0), (getPos buildingZ select 1), 0]; this setDir (getDir buildingZ); buildingZ hideObjectGlobal true;";
+			};
+			id=20661;
+			type="Land_A_Hospital";
+		};
+		class Item722
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={4611.751,252.50516,3456.2781};
+				angles[]={0,0.1547409,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+				init="buildingZ = (position this nearestobject 653454); this setPos [(getPos buildingZ select 0), (getPos buildingZ select 1), 0]; this setDir (getDir buildingZ); buildingZ hideObjectGlobal true;";
+			};
+			id=20662;
+			type="Land_A_Hospital";
+			atlOffset=0.86599731;
 		};
 	};
 };
