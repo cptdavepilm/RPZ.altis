@@ -56,7 +56,7 @@ _begintime = diag_tickTime;
 				for "_poscount" from 0 to (count (_buildPosViable_list select 0) - 1) do
 				{
 					//consider chance per Slot
-					if (/*(floor random 100) < _chpSpot*/ true) then {
+					if ((floor random 60) < _chpSpot) then {
 						_iPos = (_buildPosViable_list select 0) select _poscount;
 						_spwnPos = _x modelToWorld (_iPos select 1);
 						_spwnPos = [_spwnPos select 0, _spwnPos select 1, (_spwnPos select 2) + 0.1];
@@ -73,11 +73,11 @@ _begintime = diag_tickTime;
 								case 0:
 								{
 									_lootTypeList = [
-										[1, 2], //rifles
-										[2, 2], //pistols
-										[3, 2], //magazines
+										[1, 1], //rifles
+										[2, 1.5], //pistols
+										[3, ,5], //magazines
 										[4, 2], //items
-										[5, 2]  //backpacks
+										[5, 1.5]  //backpacks
 									];
 									_magsToGive = floor(random(5));
 								};
@@ -85,8 +85,8 @@ _begintime = diag_tickTime;
 								case 1:
 								{
 									_lootTypeList = [
-										[2, 2], //pistols
-										[3, 2], //magazines
+										[2, 1.4], //pistols
+										[3, 1.5], //magazines
 										[4, 2] //items
 									];
 									_magsToGive = floor(random(3));
@@ -95,7 +95,7 @@ _begintime = diag_tickTime;
 								case 2:
 								{
 									_lootTypeList = [
-										[3, 2], //magazines
+										[3, 1], //magazines
 										[4, 2] //items
 									];
 									_magsToGive = floor(random(2));

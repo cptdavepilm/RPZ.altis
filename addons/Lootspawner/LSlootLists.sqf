@@ -14,15 +14,15 @@ lootWeapon_list =
 	[ // CIVIL
 		0,
 		[
-			["LMG_mas_ww2_bar_F", 5.0],
-			["arifle_mas_ww2_mp40_o", 10.0],
-			["arifle_mas_ww2_mp44", 10.0],
-			["arifle_mas_ww2_ppsh", 10.0],
-			["arifle_mas_ww2_tommy", 10.0],
-			["arifle_mas_ww2_m1g", 10.0],
-			["arifle_mas_ww2_lee", 50.0],
-			["arifle_mas_ww2_kar98", 50.0],
-			["arifle_mas_ww2_ari", 40.0],
+			["LIB_M1918A2_BAR", 5.0],
+			["LIB_MP40", 10.0],
+			["LIB_MP44", 10.0],
+			["LIB_PPSh41_m", 10.0],
+			["LIB_M1A1_Thompson", 10.0],
+			["LIB_M1_Garand", 10.0],
+			["CUP_srifle_LeeEnfield", 50.0],
+			["LIB_K98", 50.0],
+			["LIB_M9130", 100.0],
 			["CUP_srifle_CZ550", 5.0],
 			["hlc_rifle_saiga12k", 30.0],
 			["hlc_rifle_ak74_dirty", 5.0],
@@ -31,12 +31,36 @@ lootWeapon_list =
 			["hlc_smg_mp5a4", 10.0],
 			["hlc_smg_mp5n", 10.0],
 			["hlc_smg_mp5sd5", 10.0],	
-			["hlc_rifle_M1903A1_unertl", 5.0],
-			["hlc_rifle_M1903A1", 40.0]
+			["LIB_SVT_40",	10.0],
+			["LIB_G43", 10.0],
+			["LIB_M1903A4_Springfield", 5.0]
+		]
+	],	
+	[ // MILITARY LOW
+		1,
+		[	
+			["hlc_rifle_ak47", 100.0],
+			["hlc_rifle_ak74", 100.0],
+			["hlc_rifle_ak74m", 50.0],
+			["hlc_rifle_ak74_dirty", 100.0],
+			["hlc_rifle_ak74_dirty2", 100.0],
+			["hlc_rifle_aks74", 100.0],
+			["hlc_rifle_aks74u", 100.0],
+			["hlc_rifle_ak47", 100.0],
+			["hlc_rifle_aek971", 50.0],
+			["hlc_rifle_RK62", 50.0],
+			["hlc_rifle_slr107u", 50.0],
+			["CUP_smg_bizon", 100.0],
+			["hlc_smg_mp5a4", 100.0],
+			["hlc_smg_mp5n", 100.0],
+			["hlc_smg_mp5sd5", 100.0],
+			["hlc_rifle_saiga12k", 100.0],
+			["CUP_sgun_M1014", 100.0],
+			["R3F_M4S90", 100.0]
 		]
 	],
 	[ // MILITARY HIGH (White barracks, vanilla A2 barracks, ATC)
-		1,
+		2,
 		[	
 			["hlc_rifle_FAL5061", 1.0], //highend start
 			["hlc_rifle_g3a3", 1.0],
@@ -69,29 +93,6 @@ lootWeapon_list =
 			["hlc_rifle_RK62", 50.0],
 			["hlc_rifle_slr107u", 50.0],
 			["hlc_rifle_ak74m_gl", 50.0],
-			["CUP_smg_bizon", 100.0],
-			["hlc_smg_mp5a4", 100.0],
-			["hlc_smg_mp5n", 100.0],
-			["hlc_smg_mp5sd5", 100.0],
-			["hlc_rifle_saiga12k", 100.0],
-			["CUP_sgun_M1014", 100.0],
-			["R3F_M4S90", 100.0]
-		]
-	],
-	[ // MILITARY LOW
-		2,
-		[	
-			["hlc_rifle_ak47", 100.0],
-			["hlc_rifle_ak74", 100.0],
-			["hlc_rifle_ak74m", 50.0],
-			["hlc_rifle_ak74_dirty", 100.0],
-			["hlc_rifle_ak74_dirty2", 100.0],
-			["hlc_rifle_aks74", 100.0],
-			["hlc_rifle_aks74u", 100.0],
-			["hlc_rifle_ak47", 100.0],
-			["hlc_rifle_aek971", 50.0],
-			["hlc_rifle_RK62", 50.0],
-			["hlc_rifle_slr107u", 50.0],
 			["CUP_smg_bizon", 100.0],
 			["hlc_smg_mp5a4", 100.0],
 			["hlc_smg_mp5n", 100.0],
@@ -153,13 +154,16 @@ lootWeapon_list =
 	[ // Hunting (Deerstands and barns)
 		6,
 		[
-			["hlc_rifle_M1903A1_unertl", 10.0],
-			["hlc_rifle_M1903A1", 50.0],
+			["LIB_M1903A4_Springfield", 10.0],
 			["CUP_srifle_CZ550", 10.0],
-			["arifle_mas_ww2_m1g", 50.0],
-			["arifle_mas_ww2_lee", 100.0],
-			["arifle_mas_ww2_kar98", 100.0],
-			["arifle_mas_ww2_ari", 80.0],
+			["LIB_M1_Garand", 50.0],
+			["CUP_srifle_LeeEnfield", 100.0],
+			["LIB_K98", 100.0],
+			["LIB_K98ZF39",	50.0],
+			["LIB_M9130", 100.0],
+			["LIB_M9130PU",	50.0],
+			["LIB_SVT_40", 30.0],
+			["LIB_G43", 30.0],
 			["R3F_M4S90", 100.0]
 		]
 	]
@@ -181,7 +185,11 @@ lootWeaponPistol_list =
 			["CUP_hgun_M9", 50.0],
 			["CUP_hgun_Makarov", 100.0],
 			["CUP_hgun_TaurusTracker455", 100.0],
-			["CUP_hgun_Colt1911", 100.0],
+			["LIB_Colt_M1911", 100.0],
+			["LIB_P38", 100.0],
+			["LIB_M1908", 100.0],
+			["LIB_TT33", 100.0],
+			["LIB_M1895", 100.0],
 			["CUP_hgun_SA61", 20.0]
 		]
 	],
@@ -217,7 +225,11 @@ lootWeaponPistol_list =
 		[
 			["Binocular", 100.0],
 			["CUP_hgun_Makarov", 100.0],
-			["CUP_hgun_Colt1911", 100.0],
+			["LIB_Colt_M1911", 100.0],
+			["LIB_P38", 100.0],
+			["LIB_M1908", 100.0],
+			["LIB_TT33", 100.0],
+			["LIB_M1895", 100.0],
 			["CUP_hgun_TaurusTracker455", 100.0]
 		]
 	],
@@ -252,7 +264,11 @@ lootWeaponPistol_list =
 		[
 			["Binocular", 100.0],
 			["CUP_hgun_Makarov", 100.0],
-			["CUP_hgun_Colt1911", 100.0],
+			["LIB_Colt_M1911", 100.0],
+			["LIB_P38", 100.0],
+			["LIB_M1908", 100.0],
+			["LIB_TT33", 100.0],
+			["LIB_M1895", 100.0],
 			["CUP_hgun_TaurusTracker455", 100.0]
 		]
 	]
@@ -274,14 +290,30 @@ lootMagazine_list =
 			["Chemlight_yellow", 100.0],
 			["CUP_8Rnd_9x18_Makarov_M", 100.0],
 			["CUP_6Rnd_45ACP_M", 100.0],
-			["CUP_7Rnd_45ACP_1911", 100.0],
 			["hlc_30Rnd_9x19_B_MP5", 60.0],
 			["R3F_7Rnd_M4S90", 70.0],
 			["hlc_10rnd_12g_slug_S12", 100.0],
 			["hlc_10rnd_12g_buck_S12", 100.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
 			["CUP_8Rnd_B_Beneli_74Pellets", 100.0],
-			["hlc_5rnd_3006_1903", 60.0],
+			["rb_Meatbomb", 50.0],
+			["rb_Meatbombempty", 60.0],
+			["rb_TacticalBacon", 50.0],
+			["rb_TacticalBaconempty", 60.0],
+			["rb_BakedBeans", 50.0],
+			["rb_BakedBeansempty", 60.0],
+			["rb_bottle", 50.0],
+			["rb_bottleclean", 60.0],
+			["rb_Spirit", 50.0],
+			["rb_Spiritempty", 60.0],
+			["rb_franta", 50.0],
+			["rb_frantaempty", 60.0],
+			["rb_oldcan", 100.0],
+			["rb_redgull", 50.0],
+			["rb_redgullempty", 60.0],
+			["rb_RiceBox", 50.0],
+			["rb_canteen", 50.0],
+			["rb_canteen_empty", 60.0],
 			["CUP_5x_22_LR_17_HMR_M", 30.0]
 		]
 	],
@@ -318,11 +350,28 @@ lootMagazine_list =
 			["hlc_VOG25_AK", 20.0],
 			["hlc_60Rnd_545x39_t_rpk", 40.0],
 			["CUP_64Rnd_9x19_Bizon_M", 100.0],
-			["CUP_7Rnd_45ACP_1911", 100.0],
 			["CUP_20Rnd_B_765x17_Ball_M", 50.0],
 			["CUP_5x_22_LR_17_HMR_M", 30.0],
 			["CUP_20Rnd_B_765x17_Ball_M", 50.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
+			["rb_Meatbomb", 50.0],
+			["rb_Meatbombempty", 60.0],
+			["rb_TacticalBacon", 50.0],
+			["rb_TacticalBaconempty", 60.0],
+			["rb_BakedBeans", 50.0],
+			["rb_BakedBeansempty", 60.0],
+			["rb_bottle", 50.0],
+			["rb_bottleclean", 60.0],
+			["rb_Spirit", 50.0],
+			["rb_Spiritempty", 60.0],
+			["rb_franta", 50.0],
+			["rb_frantaempty", 60.0],
+			["rb_oldcan", 100.0],
+			["rb_redgull", 50.0],
+			["rb_redgullempty", 60.0],
+			["rb_RiceBox", 50.0],
+			["rb_canteen", 50.0],
+			["rb_canteen_empty", 60.0],
 			["CUP_8Rnd_B_Beneli_74Pellets", 100.0]
 		]
 	],
@@ -377,9 +426,26 @@ lootMagazine_list =
 			["hlc_GRD_purple", 20.0],
 			["hlc_60Rnd_545x39_t_rpk", 10.0],
 			["CUP_64Rnd_9x19_Bizon_M", 100.0],
-			["CUP_7Rnd_45ACP_1911", 100.0],
 			["CUP_20Rnd_B_765x17_Ball_M", 20.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
+			["rb_Meatbomb", 50.0],
+			["rb_Meatbombempty", 60.0],
+			["rb_TacticalBacon", 50.0],
+			["rb_TacticalBaconempty", 60.0],
+			["rb_BakedBeans", 50.0],
+			["rb_BakedBeansempty", 60.0],
+			["rb_bottle", 50.0],
+			["rb_bottleclean", 60.0],
+			["rb_Spirit", 50.0],
+			["rb_Spiritempty", 60.0],
+			["rb_franta", 50.0],
+			["rb_frantaempty", 60.0],
+			["rb_oldcan", 100.0],
+			["rb_redgull", 50.0],
+			["rb_redgullempty", 60.0],
+			["rb_RiceBox", 50.0],
+			["rb_canteen", 50.0],
+			["rb_canteen_empty", 60.0],
 			["CUP_8Rnd_B_Beneli_74Pellets", 100.0]
 		]
 	],
@@ -392,8 +458,25 @@ lootMagazine_list =
 			["Chemlight_yellow", 100.0],
 			["CUP_8Rnd_9x18_Makarov_M", 100.0],
 			["CUP_6Rnd_45ACP_M", 100.0],
-			["CUP_7Rnd_45ACP_1911", 100.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
+			["rb_Meatbomb", 50.0],
+			["rb_Meatbombempty", 60.0],
+			["rb_TacticalBacon", 50.0],
+			["rb_TacticalBaconempty", 60.0],
+			["rb_BakedBeans", 50.0],
+			["rb_BakedBeansempty", 60.0],
+			["rb_bottle", 50.0],
+			["rb_bottleclean", 60.0],
+			["rb_Spirit", 50.0],
+			["rb_Spiritempty", 60.0],
+			["rb_franta", 50.0],
+			["rb_frantaempty", 60.0],
+			["rb_oldcan", 100.0],
+			["rb_redgull", 50.0],
+			["rb_redgullempty", 60.0],
+			["rb_RiceBox", 50.0],
+			["rb_canteen", 50.0],
+			["rb_canteen_empty", 60.0],
 			["CUP_8Rnd_B_Beneli_74Pellets", 100.0]
 		]
 	],
@@ -403,6 +486,24 @@ lootMagazine_list =
 			["Chemlight_blue", 100.0],
 			["Chemlight_green", 100.0],
 			["Chemlight_red", 100.0],
+			["rb_Meatbomb", 50.0],
+			["rb_Meatbombempty", 60.0],
+			["rb_TacticalBacon", 50.0],
+			["rb_TacticalBaconempty", 60.0],
+			["rb_BakedBeans", 50.0],
+			["rb_BakedBeansempty", 60.0],
+			["rb_bottle", 50.0],
+			["rb_bottleclean", 60.0],
+			["rb_Spirit", 50.0],
+			["rb_Spiritempty", 60.0],
+			["rb_franta", 50.0],
+			["rb_frantaempty", 60.0],
+			["rb_oldcan", 100.0],
+			["rb_redgull", 50.0],
+			["rb_redgullempty", 60.0],
+			["rb_RiceBox", 50.0],
+			["rb_canteen", 50.0],
+			["rb_canteen_empty", 60.0],
 			["Chemlight_yellow", 100.0]
 		]
 	],
@@ -453,20 +554,54 @@ lootMagazine_list =
 			["hlc_GRD_purple", 20.0],
 			["hlc_60Rnd_545x39_t_rpk", 10.0],
 			["CUP_64Rnd_9x19_Bizon_M", 100.0],
-			["CUP_7Rnd_45ACP_1911", 100.0],
 			["CUP_20Rnd_B_765x17_Ball_M", 20.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
 			["hlc_30rnd_556x45_EPR", 10.0],
 			["hlc_30rnd_556x45_SOST", 10.0],
 			["hlc_30rnd_556x45_SPR", 10.0],
+			["rb_Meatbomb", 50.0],
+			["rb_Meatbombempty", 60.0],
+			["rb_TacticalBacon", 50.0],
+			["rb_TacticalBaconempty", 60.0],
+			["rb_BakedBeans", 50.0],
+			["rb_BakedBeansempty", 60.0],
+			["rb_bottle", 50.0],
+			["rb_bottleclean", 60.0],
+			["rb_Spirit", 50.0],
+			["rb_Spiritempty", 60.0],
+			["rb_franta", 50.0],
+			["rb_frantaempty", 60.0],
+			["rb_oldcan", 100.0],
+			["rb_redgull", 50.0],
+			["rb_redgullempty", 60.0],
+			["rb_RiceBox", 50.0],
+			["rb_canteen", 50.0],
+			["rb_canteen_empty", 60.0],
 			["CUP_8Rnd_B_Beneli_74Pellets", 100.0]
 		]
 	],
 	[ // Hunting (Deerstands and barns)
 		6,
 		[
-			["hlc_5rnd_3006_1903", 60.0],
 			["R3F_7Rnd_M4S90", 60.0],
+			["rb_Meatbomb", 50.0],
+			["rb_Meatbombempty", 60.0],
+			["rb_TacticalBacon", 50.0],
+			["rb_TacticalBaconempty", 60.0],
+			["rb_BakedBeans", 50.0],
+			["rb_BakedBeansempty", 60.0],
+			["rb_bottle", 50.0],
+			["rb_bottleclean", 60.0],
+			["rb_Spirit", 50.0],
+			["rb_Spiritempty", 60.0],
+			["rb_franta", 50.0],
+			["rb_frantaempty", 60.0],
+			["rb_oldcan", 100.0],
+			["rb_redgull", 50.0],
+			["rb_redgullempty", 60.0],
+			["rb_RiceBox", 50.0],
+			["rb_canteen", 50.0],
+			["rb_canteen_empty", 60.0],
 			["CUP_5x_22_LR_17_HMR_M", 30.0]
 		]
 	]
@@ -488,11 +623,9 @@ lootItem_list =
 			["V_BandollierB_rgr", 20.0],
 			["V_BandollierB_blk", 20.0],
 			["V_BandollierB_oli", 20.0],
-			["H_Shemag_khk", 80.0],
 			["H_Shemag_tan", 80.0],
 			["H_Shemag_olive", 80.0],
 			["H_Shemag_olive_hs", 80.0],
-			["H_ShemagOpen_khk", 80.0],
 			["H_ShemagOpen_tan", 80.0],
 			["FirstAidKit", 100.0],
 			["H_MilCap_blue", 100.0]
@@ -820,60 +953,55 @@ lootworldObject_list =
 	[ // CIVIL
 		0,
 		[
-			["Land_BakedBeans_F", 100.0], 			// food               
-			["Land_BottlePlastic_V2_F", 100.0],		// water         
-			["Land_Can_V3_F", 100.0]				// energydrink                  
+			["rb_Axe", 100.0],              
+			["rb_matches", 100.0],
+			["rb_WoodPile", 100.0]              
 		]            
 	],
-	[ // MILITARY
+	[ // MILITARY LOW
 		1,
 		[
-			["Land_BakedBeans_F", 100.0], 			// food               
-			["Land_BottlePlastic_V2_F", 100.0],		// water         
-			["Land_Can_V3_F", 100.0]				// energydrink    
+			["rb_Axe", 100.0],              
+			["rb_matches", 100.0]
 		]
 	],
 	[ // MILITARY HIGH (White barracks, vanilla A2 barracks, ATC)
 		2,
 		[
-			["Land_BakedBeans_F", 100.0], 			// food               
-			["Land_BottlePlastic_V2_F", 100.0],		// water         
-			["Land_Can_V3_F", 100.0]				// energydrink    
+			["rb_Axe", 100.0],              
+			["rb_matches", 100.0]
 		]
 	],
 	[ // INDUSTRIAL
 		3,
 		[
-			["Land_BakedBeans_F", 100.0], 			// food               
-			["Land_BottlePlastic_V2_F", 100.0],		// water         
-			["Land_Can_V3_F", 100.0],				// energydrink    
-			["Land_Suitcase_F", 20.0], 				// repairkit                
-			["Land_CanisterOil_F", 20.0], 			// syphon hose             
-			["Land_CanisterFuel_F", 50.0]			// jerrycan
+			["rb_Axe", 100.0],              
+			["rb_matches", 100.0],
+			["rb_WoodPile", 100.0],
+			["rb_tire", 20.0],
+			["rb_Fuelcan_empty", 60.0],
+			["rb_Fuelcan", 50.0]
 		]
 	],
 	[ // RESEARCH
 		4,
-		[
-			["Land_BakedBeans_F", 100.0], 			// food               
-			["Land_BottlePlastic_V2_F", 100.0],		// water         
-			["Land_Can_V3_F", 100.0]				// energydrink    
+		[            
+			["rb_matches", 100.0]
 		]
 	],
 	[ // MILITARY SPECIAL (BLACK TWO STORY BARRACKS ONLY!)
 		5,
 		[
-			["Land_BakedBeans_F", 100.0], 			// food               
-			["Land_BottlePlastic_V2_F", 100.0],		// water         
-			["Land_Can_V3_F", 100.0]				// energydrink    
+			["rb_Axe", 100.0],              
+			["rb_matches", 100.0]
 		]
 	],
 	[ // Hunting (Deerstands and barns)
 		6,
 		[
-			["Land_BakedBeans_F", 100.0], 			// food               
-			["Land_BottlePlastic_V2_F", 100.0],		// water         
-			["Land_Can_V3_F", 100.0]				// energydrink   
+			["rb_Axe", 100.0],              
+			["rb_matches", 100.0],
+			["rb_WoodPile", 100.0]
 		]
 	]
 ];

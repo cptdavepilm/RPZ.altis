@@ -22,11 +22,11 @@ class Header
 	minPlayers=1;
 	maxPlayers=51; // 144 players, 2 headless clients
 };
-author="Cptdavepilm - AwakenRP"; // it would be great if you could keep "A3Wasteland.com" in the name, like "YourName and A3Wasteland.com" :)
+author="AwakenRP - Jukki"; // it would be great if you could keep "A3Wasteland.com" in the name, like "YourName and A3Wasteland.com" :)
 onLoadName = "AwakenRP"; // it would be great if you could keep "A3" in the name, like "ABC A3Wasteland" instead of "ABC Wasteland" :)
-onLoadMission = "Esseker is a forgiving land with its beautiful scenery Can you create your dream life withing the Esseker community.";
-overviewText = "Esseker is a forgiving land with its beautiful scenery Can you create your dream life withing the Esseker community.";
-overviewTextLocked = "Esseker is a forgiving land with its beautiful scenery Can you create your dream life withing the Esseker community.";
+onLoadMission = "AwakenRP is in Alpha stage still, things are subject to change. Please report any issues in forums www.awakenrp.com";
+overviewText = "AwakenRP is in Alpha stage still, things are subject to change. Please report any issues in forums www.awakenrp.com";
+overviewTextLocked = "AwakenRP is in Alpha stage still, things are subject to change. Please report any issues in forums www.awakenrp.com";
 overviewPicture = "mapConfig\Loading.jpg";
 //loadScreen = "mapConfig\background.paa";
 briefing = 0; // if 0, skip Continue button
