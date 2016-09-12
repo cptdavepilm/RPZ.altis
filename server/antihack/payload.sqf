@@ -19,7 +19,7 @@ waitUntil {!isNull player};
 // diag_log "ANTI-HACK starting...";
 
 _cfgPatches = configFile >> "CfgPatches";
-_escCheck = true;
+_escCheck = false;
 
 for "_i" from 0 to (count _cfgPatches - 1) do
 {
