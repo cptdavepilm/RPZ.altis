@@ -80,20 +80,6 @@ LSdeleter = {
 //Loot goes in these lists
 #include "LSlootLists.sqf"
 
-//-------------------------------------------------------------------------------------
-//function only runs once on beginning of mission, not really needs a compile
-//get list of all Lootspawner generatable 'Worldobjects'
-getUsedclasses = {
-	for "_class" from 0 to ((count lootworldObject_list) - 1) do {
-		for "_item" from 0 to ((count ((lootworldObject_list select _class) select 1)) - 1) do {
-			if !((((lootworldObject_list select _class) select 1) select _item) in LSusedclass_list) then {
-				LSusedclass_list pushBack ((((lootworldObject_list select _class) select 1) select _item) select 0);
-			};
-			sleep 0.001;
-		};
-		sleep 0.001;
-	};
-};
 
 //-------------------------------------------------------------------------------------
 //function only runs once on beginning of mission, not really needs a compile
@@ -212,7 +198,6 @@ if ((count Buildingstoloot_list) == 0) then {
 } else {
 
 	_dbgTime = diag_tickTime;
-	call getUsedclasses;
 
 	diag_log format["-- LOOTSPAWNER LSusedclass_list ready, d: %1s", (diag_tickTime - _dbgTime)];
 

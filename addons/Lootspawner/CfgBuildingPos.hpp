@@ -119,12 +119,6 @@ class CfgBuildingPos
         positions[] = {{1, {1.00708, 0.485352, -0.171949}}};
     };
 
-    class BlackhawkWreck
-    {
-        table = 1;
-        positions[] = {{0, {-1.35059, -3.81055, -1.57078}}};
-    };
-
     class Land_Garaz_s_tankem
     {
         table = 1;
