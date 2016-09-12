@@ -27,7 +27,7 @@ if (_fatalHit && !isNull _source && isNil {_unit getVariable "FAR_killerVehicle"
 	[_unit, _source, _ammo] call FAR_setKillerInfo;
 };
 
-//diag_log format ["FAR_HandleDamage_EH %1 - alive: %2", [_unit, _selection, _damage, _source, _ammo], alive _unit];
+diag_log format ["FAR_HandleDamage_EH %1 - alive: %2", [_unit, _selection, _damage, _source, _ammo], alive _unit];
 
 _reviveReady = _unit getVariable ["FAR_reviveModeReady", false];
 _skipRevive = false;

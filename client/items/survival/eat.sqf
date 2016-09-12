@@ -39,6 +39,10 @@ _success = [5, ANIMATION, _checks, []] call a3w_actions_start;
 if (_success) then {
 	hungerLevel = (hungerLevel + _amount) min 100;
 
+	_dam = 0.0 min (_dam - 0.1);
+
+	player setDamage _dam;
+
     player removeItem _item;
 
 	if (isText(_giveConf)) then

@@ -17,23 +17,24 @@ lootWeapon_list =
 			["LIB_M1918A2_BAR", 5.0],
 			["LIB_MP40", 10.0],
 			["LIB_MP44", 10.0],
-			["LIB_PPSh41_m", 10.0],
+			["LIB_PPSh41_m", 50.0],
 			["LIB_M1A1_Thompson", 10.0],
 			["LIB_M1_Garand", 10.0],
-			["CUP_srifle_LeeEnfield", 50.0],
-			["LIB_K98", 50.0],
+			["CUP_srifle_LeeEnfield", 100.0],
+			["LIB_K98", 100.0],
 			["LIB_M9130", 100.0],
 			["CUP_srifle_CZ550", 5.0],
-			["hlc_rifle_saiga12k", 30.0],
+			["hlc_rifle_saiga12k", 60.0],
 			["hlc_rifle_ak74_dirty", 5.0],
 			["hlc_rifle_ak47", 5.0],
-			["CUP_sgun_M1014", 50.0],
+			["CUP_sgun_M1014", 60.0],
 			["hlc_smg_mp5a4", 10.0],
 			["hlc_smg_mp5n", 10.0],
 			["hlc_smg_mp5sd5", 10.0],	
-			["LIB_SVT_40",	10.0],
-			["LIB_G43", 10.0],
-			["LIB_M1903A4_Springfield", 5.0]
+			["LIB_SVT_40",	30.0],
+			["LIB_G43", 30.0],
+			["hlc_rifle_M1903A1", 15.0],
+			["hlc_rifle_M1903A1_unertl", 5.0]
 		]
 	],	
 	[ // MILITARY LOW
@@ -62,19 +63,10 @@ lootWeapon_list =
 	[ // MILITARY HIGH (White barracks, vanilla A2 barracks, ATC)
 		2,
 		[	
-			["hlc_rifle_FAL5061", 1.0], //highend start
-			["hlc_rifle_g3a3", 1.0],
-			["hlc_rifle_m4", 5.0],
-			["CUP_arifle_CZ805_A2", 5.0],
-			["CUP_arifle_CZ805_A1", 5.0],
-			["CUP_srifle_SVD_pso", 2.0],
-			["CUP_srifle_VSSVintorez_pso", 1.0],
-			["CUP_lmg_PKM", 1.0],
-			["CUP_launch_RPG7V", 0.1],	//highend finish		
+	
 			["hlc_rifle_ak47", 100.0],
 			["hlc_rifle_ak74", 100.0],
 			["hlc_rifle_ak74m", 100.0],
-			["hlc_rifle_ak74m_g", 50.0],
 			["hlc_rifle_ak74_dirty", 100.0],
 			["hlc_rifle_ak74_dirty2", 100.0],
 			["hlc_rifle_aks74", 100.0],
@@ -107,8 +99,8 @@ lootWeapon_list =
 		[
 			["hlc_rifle_saiga12k", 100.0],
 			["CUP_sgun_M1014", 100.0],
-			["arifle_mas_ww2_lee", 100.0],
-			["arifle_mas_ww2_kar98", 100.0]
+			["CUP_srifle_LeeEnfield", 100.0],
+			["LIB_M1A1_Thompson", 50.0]
 		]
 	],
 	[ // RESEARCH
@@ -120,43 +112,42 @@ lootWeapon_list =
 	[ // MILITARY SPECIAL (BLACK TWO STORY BARRACKS ONLY!)
 		5,
 		[	
-			["hlc_rifle_FAL5061", 2.0], //highend start
-			["hlc_rifle_g3a3", 2.0],
-			["hlc_rifle_m4", 10.0],
-			["CUP_arifle_CZ805_A2", 10.0],
-			["CUP_arifle_CZ805_A1", 10.0],
+			["hlc_rifle_FAL5061", 1.0], //highend start
+			["hlc_rifle_g3a3", 1.0],
+			["hlc_rifle_m4", 1.0],
+			["CUP_arifle_CZ805_A2", 1.0],
+			["CUP_arifle_CZ805_A1", 1.0],
 			["CUP_srifle_SVD_pso", 4.0],
-			["CUP_srifle_VSSVintorez_pso", 2.0],
-			["CUP_lmg_PKM", 2.0],
-			["CUP_launch_RPG7V", 0.2],	//highend finish		
+			["CUP_srifle_VSSVintorez_pso", 1.0],
+			["CUP_lmg_PKM", 2.0],  //highend finish		
 			["hlc_rifle_ak47", 100.0],
 			["hlc_rifle_ak74", 100.0],
 			["hlc_rifle_ak74m", 100.0],
-			["hlc_rifle_ak74m_g", 50.0],
 			["hlc_rifle_aks74", 100.0],
 			["hlc_rifle_aks74u", 100.0],
 			["hlc_rifle_ak47", 100.0],
 			["hlc_rifle_akm", 100.0],
-			["hlc_rifle_rpk", 50.0],
-			["hlc_rifle_ak12", 50.0],
-			["hlc_rifle_aku12", 50.0],
-			["hlc_rifle_rpk12", 50.0],
-			["hlc_rifle_rpk74n", 50.0],
-			["hlc_rifle_ak12gl", 40.0],
-			["hlc_rifle_akmgl", 50.0],
-			["hlc_rifle_aks74_GL", 50.0],
-			["hlc_rifle_aek971", 50.0],
-			["hlc_rifle_RK62", 50.0],
-			["hlc_rifle_slr107u", 50.0],
-			["hlc_rifle_ak74m_gl", 50.0]
+			["hlc_rifle_rpk", 60.0],
+			["hlc_rifle_ak12", 60.0],
+			["hlc_rifle_aku12", 60.0],
+			["hlc_rifle_rpk12", 60.0],
+			["hlc_rifle_rpk74n", 60.0],
+			["hlc_rifle_ak12gl", 60.0],
+			["hlc_rifle_akmgl", 60.0],
+			["hlc_rifle_aks74_GL", 60.0],
+			["hlc_rifle_aek971", 60.0],
+			["hlc_rifle_RK62", 60.0],
+			["hlc_rifle_slr107u", 60.0],
+			["hlc_rifle_ak74m_gl", 60.0]
 		]
 	],
 	[ // Hunting (Deerstands and barns)
 		6,
 		[
-			["LIB_M1903A4_Springfield", 10.0],
+			["hlc_rifle_M1903A1_unertl", 10.0],
+			["hlc_rifle_M1903A1", 60.0],
 			["CUP_srifle_CZ550", 10.0],
-			["LIB_M1_Garand", 50.0],
+			["LIB_M1_Garand", 40.0],
 			["CUP_srifle_LeeEnfield", 100.0],
 			["LIB_K98", 100.0],
 			["LIB_K98ZF39",	50.0],
@@ -165,6 +156,183 @@ lootWeapon_list =
 			["LIB_SVT_40", 30.0],
 			["LIB_G43", 30.0],
 			["R3F_M4S90", 100.0]
+		]
+	],
+	[ // Crashsite US
+		7,
+		[
+			["hlc_smg_mp5a4", 100.0], //mp5
+			["hlc_smg_mp5n", 100.0],
+			["hlc_smg_mp5sd5", 100.0],
+			["hlc_smg_mp5sd6", 100.0],
+			["hlc_rifle_aug", 50.0], //aug
+			["hlc_rifle_auga1carb", 50.0],
+			["hlc_rifle_aughbar", 50.0],
+			["hlc_rifle_auga2", 50.0],
+			["hlc_rifle_auga2carb", 50.0],
+			["hlc_rifle_auga2lsw", 50.0],
+			["hlc_rifle_augsr", 50.0],
+			["hlc_rifle_augsrcarb", 50.0],
+			["hlc_rifle_augsrhbar", 50.0],
+			["hlc_rifle_auga3", 50.0],
+			["hlc_rifle_auga3_GL", 50.0],
+			["hlc_rifle_G36A1", 50.0], //g36
+			["hlc_rifle_G36A1AG36", 50.0],
+			["hlc_rifle_G36KA1", 50.0],
+			["hlc_rifle_G36C", 50.0],
+			["hlc_rifle_G36E1", 50.0],
+			["hlc_rifle_G36E1AG36", 50.0],
+			["hlc_rifle_G36KE1", 50.0],
+			["hlc_rifle_G36V", 50.0],
+			["hlc_rifle_G36KV", 50.0],
+			["hlc_rifle_G36CV", 50.0],
+			["hlc_rifle_G36VAG36", 50.0],
+			["hlc_rifle_l1a1slr", 15.0], //fn fal
+			["hlc_rifle_SLR", 15.0],
+			["hlc_rifle_STG58F", 15.0],
+			["hlc_rifle_FAL5061", 15.0],
+			["hlc_rifle_c1A1", 15.0],
+			["hlc_rifle_LAR", 15.0],
+			["hlc_rifle_SLRchopmod", 15.0],
+			["hlc_rifle_falosw", 10.0],
+			["hlc_rifle_osw_GL", 10.0],
+			["hlc_lmg_minimipara", 10.0], //fn minimi
+			["hlc_lmg_minimi", 10.0],
+			["hlc_lmg_m249para", 10.0],
+			["hlc_lmg_M249E2", 10.0],
+			["hlc_rifle_RU556", 100.0], //ar15 m16
+			["hlc_rifle_RU5562", 100.0],
+			["hlc_rifle_Colt727", 100.0],
+			["hlc_rifle_Colt727_GL", 100.0],
+			["hlc_rifle_bcmjack", 100.0],
+			["hlc_rifle_Bushmaster300 ", 100.0],
+			["hlc_rifle_vendimus", 100.0],
+			["hlc_rifle_SAMR", 75.0],
+			["hlc_rifle_SAMR_LRPS", 40.0],
+			["hlc_rifle_honeybadger", 100.0],
+			["hlc_rifle_cqbr", 100.0],
+			["hlc_rifle_m4", 100.0],
+			["CUP_arifle_M16A2", 100.0],
+			["CUP_arifle_M16A2_GL", 100.0],
+			["CUP_arifle_M16A4_Base", 100.0],
+			["CUP_arifle_M16A4_GL", 100.0],
+			["hlc_lmg_m60", 10.0], //m60
+			["hlc_rifle_m14sopmod", 10.0], //m14
+			["hlc_rifle_M14_Rail", 10.0],
+			["R3F_Famas_F1", 70.0], // famas
+			["R3F_Famas_F1_HG", 70.0],
+			["R3F_Famas_F1_M203", 70.0],
+			["R3F_Famas_G2", 70.0],
+			["R3F_Famas_G2_HG", 70.0],
+			["R3F_Famas_G2_M203", 70.0],
+			["R3F_Famas_surb_HG", 70.0],
+			["R3F_Famas_surb", 70.0],
+			["R3F_Famas_surb_M203", 70.0],
+			["R3F_Famas_felin", 70.0],
+			["R3F_HK417L", 6.0], // hk417
+			["R3F_HK417L_LRPS", 6.0],
+			["R3F_HK417M", 10.0],
+			["R3F_HK417M_HG", 10.0],
+			["R3F_HK417S_HG", 10.0],
+			["R3F_HK416M", 50.0], // hk416
+			["R3F_HK416M_HG", 50.0],
+			["R3F_HK416M_M203", 50.0],
+			["hlc_rifle_awmagnum_FDE_LRPS", 1.0],  //awm
+			["CUP_srifle_M24_wdl_LeupoldMk4LRT", 20.0], //m24 m40
+			["CUP_srifle_M40A3_LeupoldMk4", 20.0],
+			["CUP_srifle_L129A1", 7.0],  // l129a1 762
+			["CUP_srifle_L129A1_LeupoldMk4", 7.0],
+			["CUP_srifle_L129A1_HG", 7.0],
+			["CUP_arifle_L85A2", 100.0],  // l85
+			["CUP_arifle_L85A2_G", 100.0],
+			["CUP_arifle_L85A2_GL", 100.0],
+			["CUP_arifle_L86A2", 100.0],
+			["CUP_srifle_M110", 10.0],  //M110
+			["CUP_srifle_M110_ANPVS10", 5.0],
+			["CUP_arifle_Mk16_CQC", 50.0],  //mk16
+			["CUP_arifle_Mk16_CQC_FG", 50.0],
+			["CUP_arifle_Mk16_CQC_SFG", 50.0],
+			["CUP_arifle_Mk16_CQC_EGLM", 50.0],
+			["CUP_arifle_Mk16_STD", 50.0],
+			["CUP_arifle_Mk16_STD_FG", 50.0],
+			["CUP_arifle_Mk16_STD_SFG", 50.0],
+			["CUP_arifle_Mk16_STD_EGLM", 50.0],
+			["CUP_arifle_Mk16_SV", 40.0],
+			["CUP_arifle_Mk16_LeupoldMk4MRT", 40.0],
+			["CUP_arifle_Mk17_CQC", 5.0],  //mk17
+			["CUP_arifle_Mk17_CQC_FG", 5.0],
+			["CUP_arifle_Mk17_CQC_SFG", 5.0],
+			["CUP_arifle_Mk17_CQC_EGLM", 5.0],
+			["CUP_arifle_Mk17_STD", 5.0],
+			["CUP_arifle_Mk17_STD_FG", 5.0],
+			["CUP_arifle_Mk17_STD_SFG", 5.0],
+			["CUP_arifle_Mk17_STD_EGLM", 5.0],
+			["CUP_arifle_Mk20", 5.0],
+			["CUP_arifle_Mk20_LeupoldMk4MRT", 5.0],
+			["CUP_arifle_Mk20_SB11420_snds", 5.0],
+			["arifle_TRG21_F", 80.0],  // vanilla weapons
+			["arifle_MXM_RCO_pointer_snds_F", 10.0]
+		]
+	],
+	[ // Crashsite RUS
+		8,
+		[
+			["hlc_rifle_ak74", 100.0],  //AK74 47 varients
+			["hlc_rifle_ak74_MTK", 100.0],
+			["hlc_rifle_ak74_dirty", 100.0],
+			["hlc_rifle_ak74_dirty2", 100.0],
+			["hlc_rifle_aks74", 100.0],
+			["hlc_rifle_aks74_MTK", 100.0],
+			["hlc_rifle_aks74u", 100.0],
+			["hlc_rifle_aks74u_MTK", 100.0],
+			["hlc_rifle_ak47", 100.0],
+			["hlc_rifle_akm", 100.0],
+			["hlc_rifle_akm_MTK", 100.0],
+			["hlc_rifle_rpk", 100.0],
+			["hlc_rifle_ak12", 100.0],
+			["hlc_rifle_aku12", 100.0],
+			["hlc_rifle_rpk12", 100.0],
+			["hlc_rifle_rpk74n", 100.0],
+			["hlc_rifle_ak12gl", 100.0],
+			["hlc_rifle_akmgl", 100.0],
+			["hlc_rifle_aks74_GL", 100.0],
+			["hlc_rifle_saiga12k", 100.0],
+			["hlc_rifle_aek971", 100.0],
+			["hlc_rifle_aek971_mtk", 100.0],
+			["hlc_rifle_RK62", 100.0],
+			["hlc_rifle_slr107u", 100.0],
+			["hlc_rifle_slr107u_MTK", 100.0],
+			["hlc_rifle_ak74m", 100.0],
+			["hlc_rifle_ak74m_gl", 100.0],
+			["hlc_rifle_ak74m_MTK", 100.0],
+			["hlc_rifle_g3sg1", 10.0],  // G3
+			["hlc_rifle_psg1", 10.0],
+			["hlc_rifle_g3a3", 20.0],
+			["hlc_rifle_g3a3ris", 10.0],
+			["hlc_rifle_g3ka4", 20.0],
+			["hlc_rifle_g3ka4_GL", 20.0],
+			["hlc_rifle_psg1A1", 10.0],
+			["hlc_rifle_PSG1A1_RIS", 10.0],
+			["hlc_rifle_g3a3v", 20.0],
+			["hlc_rifle_hk51", 40.0],
+			["hlc_rifle_hk53", 40.0],
+			["hlc_rifle_hk53RAS", 40.0],
+			["hlc_rifle_hk33a2", 40.0],
+			["hlc_rifle_hk33a2RIS", 40.0],
+			["CUP_srifle_CZ750", 40.0], //cz750
+			["CUP_srifle_CZ750_LRPS", 40.0],
+			["CUP_srifle_ksvk_PSO3", 1.0],  //ksvk
+			["CUP_srifle_SVD_pso", 70.0],  //svd
+			["CUP_srifle_SVD_wdl_ghillie", 60.0],
+			["CUP_srifle_VSSVintorez_pso", 70.0],  //vss
+			["CUP_lmg_PKM", 70.0],  //pkm pkp
+			["CUP_lmg_Pecheneg_PScope", 40.0],
+			["CUP_launch_RPG7V", 20.0],  //rpg
+			["CUP_arifle_CZ805_A2", 60.0],  //cz805 556
+			["CUP_arifle_CZ805_A1", 60.0],
+			["CUP_arifle_CZ805_GL", 60.0],
+			["CUP_arifle_CZ805_B_GL", 30.0],  //cz805 762
+			["CUP_arifle_CZ805_B", 30.0]
 		]
 	]
 ];
@@ -217,7 +385,9 @@ lootWeaponPistol_list =
 			["CUP_hgun_glock17_flashlight", 50.0],
 			["CUP_hgun_M9", 100.0],
 			["CUP_hgun_Makarov", 100.0],
+			["CUP_hgun_SA61", 40.0],
 			["hgun_Pistol_heavy_01_MRD_F", 10.0]
+
 		]
 	],
 	[ // INDUSTRIAL
@@ -230,6 +400,7 @@ lootWeaponPistol_list =
 			["LIB_M1908", 100.0],
 			["LIB_TT33", 100.0],
 			["LIB_M1895", 100.0],
+			["CUP_hgun_SA61", 50.0],
 			["CUP_hgun_TaurusTracker455", 100.0]
 		]
 	],
@@ -256,6 +427,8 @@ lootWeaponPistol_list =
 			["CUP_hgun_M9_snds", 25.0],
 			["CUP_hgun_Makarov", 100.0],
 			["CUP_hgun_PB6P9_snds", 50.0],
+			["CUP_hgun_MicroUzi", 00.0],
+			["CUP_hgun_SA61", 50.0],
 			["hgun_Pistol_heavy_01_MRD_F", 20.0]
 		]
 	],
@@ -270,6 +443,50 @@ lootWeaponPistol_list =
 			["LIB_TT33", 100.0],
 			["LIB_M1895", 100.0],
 			["CUP_hgun_TaurusTracker455", 100.0]
+		]
+	],
+	[ // Crashsite US
+		7,
+		[
+			["Binocular", 100.0],
+			["CUP_hgun_Duty", 100.0],
+			["CUP_hgun_Duty_M3X", 50.0],
+			["CUP_hgun_Phantom", 50.0],
+			["CUP_hgun_Phantom_Flashlight", 25.0],
+			["CUP_hgun_Phantom_Flashlight_snds", 50.0],
+			["CUP_hgun_Glock17", 100.0],
+			["CUP_hgun_glock17_flashlight", 50.0],
+			["CUP_hgun_glock17_flashlight_snds", 50.0],
+			["CUP_hgun_M9", 100.0],
+			["CUP_hgun_M9_snds", 25.0],
+			["hgun_Pistol_heavy_01_MRD_F", 40.0],
+			["hgun_Pistol_heavy_01_snds_F", 40.0],
+			["CUP_hgun_MicroUzi", 30.0],
+			["CUP_hgun_MicroUzi_snds", 50.0],
+			["CUP_hgun_TaurusTracker455_gold", 1.0],
+			["LIB_Colt_M1911", 100.0]
+		]
+	],
+	[ // Crashsite RUS
+		8,
+		[
+			["Binocular", 100.0],
+			["CUP_hgun_Duty", 100.0],
+			["CUP_hgun_Duty_M3X", 50.0],
+			["CUP_hgun_Phantom", 50.0],
+			["CUP_hgun_Phantom_Flashlight", 25.0],
+			["CUP_hgun_Phantom_Flashlight_snds", 10.0],
+			["CUP_hgun_Glock17", 100.0],
+			["CUP_hgun_glock17_flashlight", 50.0],
+			["CUP_hgun_glock17_flashlight_snds", 10.0],
+			["CUP_hgun_Makarov", 100.0],
+			["CUP_hgun_PB6P9_snds", 50.0],
+			["hgun_Pistol_heavy_01_MRD_F", 20.0],
+			["hgun_Pistol_heavy_01_snds_F", 00.0],
+			["CUP_hgun_MicroUzi", 30.0],
+			["CUP_hgun_MicroUzi_snds", 50.0],
+			["CUP_hgun_SA61", 60.0],
+			["CUP_hgun_TaurusTracker455_gold", 1.0]
 		]
 	]
 ];
@@ -296,8 +513,8 @@ lootMagazine_list =
 			["hlc_10rnd_12g_buck_S12", 100.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
 			["CUP_8Rnd_B_Beneli_74Pellets", 100.0],
-			["rb_Meatbomb", 50.0],
-			["rb_Meatbombempty", 60.0],
+			// ["rb_Meatbomb", 50.0],
+			// ["rb_Meatbombempty", 60.0],
 			["rb_TacticalBacon", 50.0],
 			["rb_TacticalBaconempty", 60.0],
 			["rb_BakedBeans", 50.0],
@@ -314,6 +531,7 @@ lootMagazine_list =
 			["rb_RiceBox", 50.0],
 			["rb_canteen", 50.0],
 			["rb_canteen_empty", 60.0],
+			["hlc_5rnd_3006_1903",	20.0],
 			["CUP_5x_22_LR_17_HMR_M", 30.0]
 		]
 	],
@@ -354,8 +572,8 @@ lootMagazine_list =
 			["CUP_5x_22_LR_17_HMR_M", 30.0],
 			["CUP_20Rnd_B_765x17_Ball_M", 50.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
-			["rb_Meatbomb", 50.0],
-			["rb_Meatbombempty", 60.0],
+			// ["rb_Meatbomb", 50.0],
+			// ["rb_Meatbombempty", 60.0],
 			["rb_TacticalBacon", 50.0],
 			["rb_TacticalBaconempty", 60.0],
 			["rb_BakedBeans", 50.0],
@@ -428,8 +646,8 @@ lootMagazine_list =
 			["CUP_64Rnd_9x19_Bizon_M", 100.0],
 			["CUP_20Rnd_B_765x17_Ball_M", 20.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
-			["rb_Meatbomb", 50.0],
-			["rb_Meatbombempty", 60.0],
+			// ["rb_Meatbomb", 50.0],
+			// ["rb_Meatbombempty", 60.0],
 			["rb_TacticalBacon", 50.0],
 			["rb_TacticalBaconempty", 60.0],
 			["rb_BakedBeans", 50.0],
@@ -459,8 +677,8 @@ lootMagazine_list =
 			["CUP_8Rnd_9x18_Makarov_M", 100.0],
 			["CUP_6Rnd_45ACP_M", 100.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
-			["rb_Meatbomb", 50.0],
-			["rb_Meatbombempty", 60.0],
+			// ["rb_Meatbomb", 50.0],
+			// ["rb_Meatbombempty", 60.0],
 			["rb_TacticalBacon", 50.0],
 			["rb_TacticalBaconempty", 60.0],
 			["rb_BakedBeans", 50.0],
@@ -486,8 +704,8 @@ lootMagazine_list =
 			["Chemlight_blue", 100.0],
 			["Chemlight_green", 100.0],
 			["Chemlight_red", 100.0],
-			["rb_Meatbomb", 50.0],
-			["rb_Meatbombempty", 60.0],
+			// ["rb_Meatbomb", 50.0],
+			// ["rb_Meatbombempty", 60.0],
 			["rb_TacticalBacon", 50.0],
 			["rb_TacticalBaconempty", 60.0],
 			["rb_BakedBeans", 50.0],
@@ -557,10 +775,8 @@ lootMagazine_list =
 			["CUP_20Rnd_B_765x17_Ball_M", 20.0],
 			["CUP_8Rnd_B_Beneli_74Slug", 100.0],
 			["hlc_30rnd_556x45_EPR", 10.0],
-			["hlc_30rnd_556x45_SOST", 10.0],
-			["hlc_30rnd_556x45_SPR", 10.0],
-			["rb_Meatbomb", 50.0],
-			["rb_Meatbombempty", 60.0],
+			// ["rb_Meatbomb", 50.0],
+			// ["rb_Meatbombempty", 60.0],
 			["rb_TacticalBacon", 50.0],
 			["rb_TacticalBaconempty", 60.0],
 			["rb_BakedBeans", 50.0],
@@ -584,8 +800,8 @@ lootMagazine_list =
 		6,
 		[
 			["R3F_7Rnd_M4S90", 60.0],
-			["rb_Meatbomb", 50.0],
-			["rb_Meatbombempty", 60.0],
+			// ["rb_Meatbomb", 50.0],
+			// ["rb_Meatbombempty", 60.0],
 			["rb_TacticalBacon", 50.0],
 			["rb_TacticalBaconempty", 60.0],
 			["rb_BakedBeans", 50.0],
@@ -602,7 +818,138 @@ lootMagazine_list =
 			["rb_RiceBox", 50.0],
 			["rb_canteen", 50.0],
 			["rb_canteen_empty", 60.0],
+			["hlc_5rnd_3006_1903", 40.0],
+			["CUP_10Rnd_762x51_CZ750", 10.0],
 			["CUP_5x_22_LR_17_HMR_M", 30.0]
+		]
+	],
+	[ // Crashsite US
+		7,
+		[
+			["rb_canteen", 50.0], 
+			["rb_canteen_empty", 60.0],
+			["hlc_30Rnd_9x19_B_MP5", 100.0],  // rifle
+			["hlc_30Rnd_9x19_GD_MP5", 100.0],
+			["hlc_30Rnd_9x19_SD_MP5", 100.0],
+			["hlc_30Rnd_556x45_B_AUG", 60.0],
+			["hlc_30Rnd_556x45_SOST_AUG", 60.0],
+			["hlc_30Rnd_556x45_SPR_AUG", 60.0],
+			["hlc_30Rnd_556x45_T_AUG", 60.0],
+			["hlc_30rnd_556x45_EPR_G36", 60.0],
+			["hlc_30rnd_556x45_SOST_G36", 60.0],
+			["hlc_30rnd_556x45_SPR_G36", 60.0],
+			["hlc_100rnd_556x45_EPR_G36", 60.0],
+			["hlc_5rnd_300WM_FMJ_AWM", 10.0],
+			["hlc_5rnd_300WM_AP_AWM", 10.0],
+			["hlc_5rnd_300WM_BTSP_AWM", 10.0],
+			["hlc_5rnd_300WM_mk248_AWM", 10.0],
+			["hlc_20Rnd_762x51_B_fal", 40.0],
+			["hlc_20Rnd_762x51_t_fal", 40.0],
+			["hlc_200rnd_556x45_M_SAW", 30.0],
+			["hlc_200rnd_556x45_T_SAW", 30.0],
+			["29rnd_300BLK_STANAG", 100.0],
+			["hlc_30rnd_556x45_EPR", 100.0],
+			["hlc_30rnd_556x45_SOST", 100.0],
+			["hlc_30rnd_556x45_SPR", 100.0],
+			["hlc_100Rnd_762x51_M_M60E4", 30.0],
+			["hlc_20Rnd_762x51_B_M14", 30.0],
+			["hlc_20rnd_762x51_T_M14", 30.0],
+			["R3F_25Rnd_556x45_FAMAS", 60.0],
+			["R3F_25Rnd_556x45_TRACER_FAMAS", 60.0],
+			["R3F_30Rnd_556x45_FAMAS", 60.0],
+			["R3F_30Rnd_556x45_TRACER_FAMAS", 60.0],
+			["R3F_20Rnd_762x51_HK417", 40.0],
+			["R3F_20Rnd_762x51_TRACER_HK417", 40.0],
+			["R3F_30Rnd_556x45_HK416", 60.0],
+			["R3F_30Rnd_556x45_TRACER_HK416 ", 60.0],
+			["30Rnd_556x45_Stanag", 100.0],
+			["11Rnd_45ACP_Mag", 50.0],
+			["30Rnd_65x39_caseless_mag", 50.0],
+			["CUP_5Rnd_762x51_M24", 70.0],
+			["CUP_20Rnd_762x51_L129_M", 40.0],
+			["20Rnd_762x51_Mag", 60.0],
+			["CUP_20Rnd_762x51_B_M110", 40.0],
+			["CUP_20Rnd_762x51_B_SCAR", 40.0],
+			["16Rnd_9x21_Mag", 70.0], //pistol
+			["CUP_18Rnd_9x19_Phantom", 70.0],
+			["CUP_17Rnd_9x19_glock17", 70.0],
+			["CUP_15Rnd_9x19_M9", 70.0],
+			["CUP_30Rnd_9x19_UZI", 70.0],
+			["R3F_7Rnd_M4S90", 70.0],  //shotgun
+			["1Rnd_HE_Grenade_shell", 40.0],  //gl
+			["UGL_FlareWhite_F", 50.0],
+			["UGL_FlareGreen_F", 50.0],
+			["UGL_FlareRed_F", 50.0],
+			["UGL_FlareYellow_F", 50.0],
+			["1Rnd_Smoke_Grenade_shell", 50.0],
+			["1Rnd_SmokeRed_Grenade_shell", 50.0],
+			["1Rnd_SmokeGreen_Grenade_shell", 50.0],
+			["1Rnd_SmokeYellow_Grenade_shell", 50.0],
+			["1Rnd_SmokePurple_Grenade_shell", 50.0],
+			["1Rnd_SmokeBlue_Grenade_shell", 50.0],
+			["1Rnd_SmokeOrange_Grenade_shell", 50.0],
+			["HandGrenade", 50.0],
+			["MiniGrenade", 50.0]
+		]
+	],
+	[ // Crashsite RUS
+		8,
+		[
+			["rb_canteen", 50.0],
+			["rb_canteen_empty", 60.0],
+			["hlc_30Rnd_545x39_B_AK", 100.0], //rifle
+			["hlc_30Rnd_545x39_T_AK", 100.0],
+			["hlc_30Rnd_545x39_EP_AK", 100.0],
+			["hlc_45Rnd_545x39_t_rpk", 100.0],
+			["hlc_60Rnd_545x39_t_rpk", 100.0],
+			["hlc_30Rnd_762x39_b_ak", 100.0],
+			["hlc_30Rnd_762x39_t_ak", 100.0],
+			["hlc_45Rnd_762x39_t_rpk", 100.0],
+			["hlc_45Rnd_762x39_m_rpk", 100.0],
+			["hlc_75rnd_762x39_m_rpk", 100.0],
+			["hlc_10rnd_12g_buck_S12", 100.0],
+			["hlc_10rnd_12g_slug_S12", 100.0],
+			["hlc_20Rnd_762x51_B_G3", 50.0],
+			["hlc_20rnd_762x51_T_G3", 50.0],
+			["CUP_10Rnd_762x51_CZ750_Tracer", 50.0],
+			["CUP_10Rnd_762x51_CZ750", 50.0],
+			["CUP_10Rnd_762x54_SVD_M", 70.0],
+			["CUP_5Rnd_127x108_KSVK_M", 20.0],
+			["CUP_10Rnd_9x39_SP5_VSS_M", 20.0],
+			["CUP_20Rnd_9x39_SP5_VSS_M", 20.0],
+			["hlc_30rnd_556x45_EPR", 50.0],
+			["hlc_30rnd_556x45_SOST", 50.0],
+			["hlc_30rnd_556x45_SPR", 50.0],
+			["CUP_100Rnd_TE4_LRT4_762x54_PK_Tracer_Green_M", 50.0],
+			["CUP_PG7V_M", 10.0], //rpg
+			["16Rnd_9x21_Mag", 70.0],  // pistol
+			["CUP_18Rnd_9x19_Phantom", 70.0],
+			["CUP_17Rnd_9x19_glock17", 70.0],
+			["CUP_8Rnd_9x18_Makarov_M", 70.0],
+			["CUP_8Rnd_9x18_MakarovSD_M", 70.0],
+			["CUP_30Rnd_9x19_UZI", 70.0],
+			["CUP_20Rnd_B_765x17_Ball_M", 70.0],
+			["1Rnd_HE_Grenade_shell", 30.0],  //gl
+			["UGL_FlareWhite_F", 50.0],
+			["UGL_FlareGreen_F", 50.0],
+			["UGL_FlareRed_F", 50.0],
+			["UGL_FlareYellow_F", 50.0],
+			["1Rnd_Smoke_Grenade_shell", 50.0],
+			["1Rnd_SmokeRed_Grenade_shell", 50.0],
+			["1Rnd_SmokeGreen_Grenade_shell", 50.0],
+			["1Rnd_SmokeYellow_Grenade_shell", 50.0],
+			["1Rnd_SmokePurple_Grenade_shell", 50.0],
+			["1Rnd_SmokeBlue_Grenade_shell", 50.0],
+			["1Rnd_SmokeOrange_Grenade_shell", 50.0],
+			["HandGrenade", 10.0],
+			["MiniGrenade", 10.0],
+			["hlc_VOG25_AK", 40.0],
+			["hlc_GRD_White", 50.0],
+			["hlc_GRD_red", 50.0],
+			["hlc_GRD_green", 50.0],
+			["hlc_GRD_blue ", 50.0],
+			["hlc_GRD_orange", 50.0],
+			["hlc_GRD_purple ", 50.0]
 		]
 	]
 ];
@@ -628,7 +975,14 @@ lootItem_list =
 			["H_Shemag_olive_hs", 80.0],
 			["H_ShemagOpen_tan", 80.0],
 			["FirstAidKit", 100.0],
-			["H_MilCap_blue", 100.0]
+			["H_MilCap_blue", 100.0],
+			["rb_Axe", 60.0],              
+			["rb_matches", 60.0],
+			["tf_anprc152", 30.0],
+			["ItemWatch", 30.0],
+			["ItemCompass", 30.0],
+			["ItemMap", 30.0],
+			["rb_WoodPile", 30.0]
 		]
 	],
 	[ // MILITARY Low
@@ -687,7 +1041,14 @@ lootItem_list =
 			["FHQ_optic_ACOG", 5.0],
 			["FHQ_optic_AIM", 20.0],
 			["FHQ_optic_MicroCCO", 20.0],
-			["FirstAidKit", 100.0]
+			["bipod_01_F_blk",	30.0],
+			["FirstAidKit", 100.0],
+			["rb_Axe", 60.0],
+			["tf_anprc152", 30.0],
+			["ItemWatch", 30.0],
+			["ItemCompass", 30.0],
+			["ItemMap", 30.0],            
+			["rb_matches", 60.0]
 		]
 	],
 	[ // MILITARY High (White barracks, vanilla A2 barracks, ATC)
@@ -745,27 +1106,49 @@ lootItem_list =
 			["FHQ_optic_ACOG", 5.0],
 			["FHQ_optic_AIM", 20.0],
 			["FHQ_optic_MicroCCO", 20.0],
+			["bipod_01_F_blk",	30.0],
 			["FirstAidKit", 100.0],
-			["H_MilCap_blue", 100.0]
+			["H_MilCap_blue", 100.0],
+			["rb_Axe", 60.0], 
+			["tf_anprc152", 30.0],
+			["ItemWatch", 30.0],
+			["ItemCompass", 30.0],
+			["ItemMap", 30.0],
+			["NVGoggles", 1.0],             
+			["rb_matches", 60.0]
 		]
 	],
 	[ // INDUSTRIAL
 		3,
 		[
-			["V_Rangemaster_belt", 100.0],
-			["V_BandollierB_khk", 100.0],
-			["V_BandollierB_cbr", 100.0],
-			["V_BandollierB_rgr", 100.0],
-			["V_BandollierB_blk", 100.0],
-			["ToolKit", 20.0],
-			["V_BandollierB_oli", 100.0]
+			["V_Rangemaster_belt", 60.0],
+			["V_BandollierB_khk", 60.0],
+			["V_BandollierB_cbr", 60.0],
+			["V_BandollierB_rgr", 60.0],
+			["V_BandollierB_blk", 60.0],
+			["V_BandollierB_oli", 60.0],
+			["rb_Axe", 100.0],              
+			["rb_matches", 100.0],
+			["rb_WoodPile", 100.0],
+			["rb_tire", 70.0],
+			["rb_Fuelcan_empty", 60.0],
+			["tf_anprc152", 30.0],
+			["ItemWatch", 30.0],
+			["ItemCompass", 30.0],
+			["ItemMap", 30.0],
+			["rb_Fuelcan", 50.0]
 		]
 	],
 	[ // RESEARCH
 		4,
 		[
-			["V_Rangemaster_belt", 100.0],
-			["FirstAidKit", 100.0]
+			["V_Rangemaster_belt", 60.0],
+			["FirstAidKit", 100.0],
+			["tf_anprc152", 20.0],
+			["ItemWatch", 20.0],
+			["ItemCompass", 20.0],
+			["ItemMap", 20.0],
+			["rb_matches", 60.0]
 		]
 	],
 	[ // MILITARY SPECIAL (BLACK TWO STORY BARRACKS ONLY!)
@@ -802,7 +1185,15 @@ lootItem_list =
 			["FHQ_optic_ACOG", 5.0],
 			["FHQ_optic_AIM", 20.0],
 			["FHQ_optic_MicroCCO", 20.0],
-			["FirstAidKit", 100.0]
+			["bipod_01_F_blk",	30.0],
+			["FirstAidKit", 100.0],
+			["rb_Axe", 20.0],
+			["tf_anprc152", 30.0],
+			["ItemWatch", 30.0],
+			["ItemCompass", 30.0],
+			["ItemMap", 30.0],
+			["NVGoggles", 1.0],              
+			["rb_matches", 20.0]
 		]
 	],
 	[ // Hunting (Deerstands and barns)
@@ -817,7 +1208,168 @@ lootItem_list =
 			["V_Chestrig_khk", 100.0],
 			["V_Chestrig_rgr", 100.0],
 			["V_Chestrig_blk", 100.0],
-			["V_Chestrig_oli", 100.0]
+			["V_Chestrig_oli", 100.0],
+			["bipod_01_F_blk", 30.0],
+			["rb_Axe", 100.0],              
+			["rb_matches", 100.0],
+			["tf_anprc152", 30.0],
+			["ItemWatch", 30.0],
+			["ItemCompass", 30.0],
+			["ItemMap", 30.0],
+			["rb_WoodPile", 100.0]
+		]
+	],
+	[ // Crashsite US
+		7,
+		[
+			["V_Chestrig_khk", 100.0], //vests
+			["V_Chestrig_rgr", 100.0],
+			["V_Chestrig_blk", 100.0],
+			["V_Chestrig_oli", 100.0],
+			["V_TacVest_khk", 10.0],
+			["V_TacVest_brn", 10.0],
+			["V_TacVest_oli", 10.0],
+			["V_TacVest_blk", 10.0],
+			["V_TacVest_camo", 10.0],
+			["V_TacVestIR_blk", 10.0],
+			["V_TacVestCamo_khk", 10.0],
+			["FHQ_optic_ACOG", 50.0],  //scopes
+			["FHQ_optic_ACOG_tan", 50.0],
+			["FHQ_optic_AIM", 100.0],
+			["FHQ_optic_AIM_tan", 100.0],
+			["FHQ_optic_MicroCCO", 100.0],
+			["FHQ_optic_MicroCCO_tan", 100.0],
+			["FHQ_optic_LeupoldERT", 10.0],
+			["FHQ_optic_LeupoldERT_tan", 10.0],
+			["FHQ_optic_VCOG", 25.0],
+			["FHQ_optic_VCOG_tan", 25.0],
+			["FHQ_optic_AimM_BLK", 100.0],
+			["FHQ_optic_AimM_TAN", 100.0],
+			["FHQ_optic_MCCO_M_BLK", 25.0],
+			["FHQ_optic_MCCO_M_TAN", 25.0],
+			["hlc_optic_PVS4FAL", 10.0],
+			["hlc_optic_suit", 30.0],
+			["optic_Arco", 50.0],
+			["optic_Hamr", 50.0],
+			["optic_Aco", 100.0],
+			["optic_Holosight", 100.0],
+			["optic_SOS", 10.0],
+			["optic_MRCO", 50.0],
+			["optic_DMS", 10.0],
+			["optic_LRPS", 10.0],
+			["CUP_optic_LeupoldMk4", 10.0],
+			["CUP_optic_Leupold_VX3", 10.0],
+			["CUP_optic_AN_PVS_10", 5.0],
+			["CUP_optic_LeupoldM3LR", 10.0],
+			["CUP_optic_LeupoldMk4_MRT_tan", 10.0],
+			["CUP_optic_SB_11_4x20_PM", 50.0],
+			["CUP_optic_ZDDot", 00.0],
+			["CUP_optic_Elcan", 00.0],
+			["CUP_optic_Elcan_reflex", 00.0],
+			["CUP_optic_TrijiconRx01_black", 00.0],
+			["hlc_muzzle_Tundra", 50.0],  //supp
+			["hlc_muzzle_snds_AUG", 50.0],
+			["hlc_muzzle_snds_fal", 20.0],
+			["muzzle_snds_L", 50.0], //9mm
+			["muzzle_snds_M", 20.0], //556
+			["muzzle_snds_B", 5.0], //762
+			["muzzle_snds_acp", 50.0], //45
+			["CUP_muzzle_snds_M9", 50.0],
+			["CUP_muzzle_snds_MicroUzi", 50.0],
+			["CUP_muzzle_snds_L85", 20.0],
+			["CUP_acc_sffh", 40.0],
+			["CUP_muzzle_snds_M110", 10.0],
+			["CUP_muzzle_snds_M16", 30.0],
+			["CUP_muzzle_snds_SCAR_L", 20.0],
+			["CUP_muzzle_mfsup_SCAR_L", 10.0],
+			["CUP_muzzle_snds_SCAR_H", 10.0],
+			["CUP_muzzle_mfsup_SCAR_H", 10.0],
+			["hlc_muzzle_556NATO_KAC", 10.0],
+			["hlc_muzzle_300blk_KAC", 10.0],
+			["hlc_muzzle_snds_M14", 10.0],
+			["R3F_SILENCIEUX_FAMAS", 20.0],
+			["R3F_SILENCIEUX_HK416", 20.0],
+			["R3F_SILENCIEUX_HK417", 10.0],
+			["CUP_Mxx_camo", 30.0], // misc (ghillie wrap)
+			["CUP_Mxx_camo_half", 30.0],
+			["acc_flashlight", 80.0],
+			["bipod_01_F_blk",	80.0],
+			["tf_anprc152", 30.0],
+			["ItemWatch", 30.0],
+			["ItemCompass", 30.0],
+			["ItemMap", 30.0],
+			["NVGoggles", 1.0],
+			["acc_pointer_IR", 80.0]
+		]
+	],
+	[ // Crashsite RUS
+		8,
+		[
+			["V_Chestrig_khk", 100.0],  //vests
+			["V_Chestrig_rgr", 100.0],
+			["V_Chestrig_blk", 100.0],
+			["V_Chestrig_oli", 100.0],
+			["V_TacVest_khk", 10.0],
+			["V_TacVest_brn", 10.0],
+			["V_TacVest_oli", 10.0],
+			["V_TacVest_blk", 10.0],
+			["V_TacVest_camo", 10.0],
+			["V_TacVestIR_blk", 10.0],
+			["V_TacVestCamo_khk", 10.0],
+			["FHQ_optic_ACOG", 50.0],  //scopes
+			["FHQ_optic_ACOG_tan", 50.0],
+			["FHQ_optic_AIM", 100.0],
+			["FHQ_optic_AIM_tan", 100.0],
+			["FHQ_optic_MicroCCO", 100.0],
+			["FHQ_optic_MicroCCO_tan", 100.0],
+			["FHQ_optic_LeupoldERT", 10.0],
+			["FHQ_optic_LeupoldERT_tan", 10.0],
+			["FHQ_optic_VCOG", 25.0],
+			["FHQ_optic_VCOG_tan", 25.0],
+			["FHQ_optic_AimM_BLK", 50.0],
+			["FHQ_optic_AimM_TAN", 50.0],
+			["FHQ_optic_MCCO_M_BLK", 50.0],
+			["FHQ_optic_MCCO_M_TAN", 50.0],
+			["optic_Arco", 50.0],
+			["optic_Hamr", 50.0],
+			["optic_Aco", 100.0],
+			["optic_Holosight", 100.0],
+			["optic_SOS", 10.0],
+			["optic_MRCO", 50.0],
+			["optic_DMS", 10.0],
+			["optic_LRPS", 10.0],
+			["CUP_optic_LeupoldMk4", 10.0],
+			["CUP_optic_Leupold_VX3", 10.0],
+			["CUP_optic_SB_11_4x20_PM", 50.0],
+			["CUP_optic_ZDDot", 25.0],
+			["CUP_optic_Elcan", 25.0],
+			["CUP_optic_Elcan_reflex", 25.0],
+			["HLC_Optic_PSO1", 100.0],
+			["HLC_Optic_1p29", 100.0],
+			["CUP_optic_TrijiconRx01_black", 25.0],
+			["CUP_optic_NSPU", 25.0],
+			["hlc_optic_kobra", 100.0],
+			["HLC_Optic_ZFSG1", 50.0],
+			["hlc_optic_accupoint_g3", 50.0],
+			["hlc_muzzle_Tundra", 20.0],  //supp
+			["muzzle_snds_L", 50.0], //9mm
+			["muzzle_snds_M", 20.0], //556
+			["muzzle_snds_B", 5.0], //762
+			["muzzle_snds_acp", 50.0], //45
+			["CUP_muzzle_snds_MicroUzi", 30.0],
+			["hlc_muzzle_545SUP_AK", 70.0],
+			["hlc_muzzle_762SUP_AK", 70.0],
+			["CUP_muzzle_Bizon", 40.0],
+			["CUP_SVD_camo_g", 50.0], //misc
+			["CUP_SVD_camo_g_half", 50.0],
+			["acc_flashlight", 100.0],
+			["bipod_01_F_blk",	80.0],
+			["tf_anprc152", 30.0],
+			["ItemWatch", 30.0],
+			["ItemCompass", 30.0],
+			["ItemMap", 30.0],
+			["NVGoggles", 1.0],
+			["acc_pointer_IR", 100.0]
 		]
 	]
 ];
@@ -940,68 +1492,47 @@ lootBackpack_list =
 			["B_Bergen_mcamo", 50.0],
 			["B_Bergen_sgg", 50.0]
 		]
-	]
-];
-
-//here place any other objects(ex.: Land_Basket_F, Box_East_Wps_F, Land_Can_V3_F, ...)
-//used with createVehicle directly
-//"lootworldObject_list" array of [class, [objectlist]]
-//                              class       : 0-civil, 1-military, ... (add more as you wish)
-//                              objectlist  : list of worldobject class names
-lootworldObject_list =
-[
-	[ // CIVIL
-		0,
-		[
-			["rb_Axe", 100.0],              
-			["rb_matches", 100.0],
-			["rb_WoodPile", 100.0]              
-		]            
 	],
-	[ // MILITARY LOW
-		1,
+	[ // Crashsite US
+		7,
 		[
-			["rb_Axe", 100.0],              
-			["rb_matches", 100.0]
+			["B_FieldPack_blk", 80.0],
+			["B_FieldPack_cbr", 80.0],
+			["B_FieldPack_khk", 80.0],
+			["B_FieldPack_oucamo", 80.0],
+			["B_Kitbag_cbr", 80.0],
+			["B_Kitbag_rgr", 80.0],
+			["B_Kitbag_mcamo", 80.0],
+			["B_Kitbag_sgg", 80.0],
+			["B_Bergen_blk", 60.0],
+			["B_Bergen_rgr", 60.0],
+			["B_Bergen_mcamo", 60.0],
+			["B_Bergen_sgg", 60.0],
+			["B_Carryall_khk", 20.0],
+			["B_Carryall_mcamo", 20.0],
+			["B_Carryall_oli", 20.0],
+			["B_Carryall_oucamo", 20.0]
 		]
 	],
-	[ // MILITARY HIGH (White barracks, vanilla A2 barracks, ATC)
-		2,
+	[ // Crashsite RUS
+		8,
 		[
-			["rb_Axe", 100.0],              
-			["rb_matches", 100.0]
-		]
-	],
-	[ // INDUSTRIAL
-		3,
-		[
-			["rb_Axe", 100.0],              
-			["rb_matches", 100.0],
-			["rb_WoodPile", 100.0],
-			["rb_tire", 20.0],
-			["rb_Fuelcan_empty", 60.0],
-			["rb_Fuelcan", 50.0]
-		]
-	],
-	[ // RESEARCH
-		4,
-		[            
-			["rb_matches", 100.0]
-		]
-	],
-	[ // MILITARY SPECIAL (BLACK TWO STORY BARRACKS ONLY!)
-		5,
-		[
-			["rb_Axe", 100.0],              
-			["rb_matches", 100.0]
-		]
-	],
-	[ // Hunting (Deerstands and barns)
-		6,
-		[
-			["rb_Axe", 100.0],              
-			["rb_matches", 100.0],
-			["rb_WoodPile", 100.0]
+			["B_FieldPack_blk", 80.0],
+			["B_FieldPack_cbr", 80.0],
+			["B_FieldPack_khk", 80.0],
+			["B_FieldPack_oucamo", 80.0],
+			["B_Kitbag_cbr", 80.0],
+			["B_Kitbag_rgr", 80.0],
+			["B_Kitbag_mcamo", 80.0],
+			["B_Kitbag_sgg", 80.0],
+			["B_Bergen_blk", 60.0],
+			["B_Bergen_rgr", 60.0],
+			["B_Bergen_mcamo", 60.0],
+			["B_Bergen_sgg", 60.0],
+			["B_Carryall_khk", 20.0],
+			["B_Carryall_mcamo", 20.0],
+			["B_Carryall_oli", 20.0],
+			["B_Carryall_oucamo", 20.0]
 		]
 	]
 ];

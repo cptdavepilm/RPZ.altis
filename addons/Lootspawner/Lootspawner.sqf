@@ -67,6 +67,10 @@ fn_getBuildingstospawnLoot = {
 	#include "fn_LSgetBuildingstospawnLoot.sqf"
 } call mf_compile;
 
+fn_spawnLoot = {
+	#include "fn_spawnLoot.sqf"
+} call mf_compile;
+
 LSdeleter = {
 	#include "LSdeleter.sqf"
 } call mf_compile;

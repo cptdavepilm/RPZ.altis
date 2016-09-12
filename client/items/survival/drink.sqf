@@ -41,6 +41,12 @@ if (_success) then {
 
 	player removeItem _item;
 
+	_dam = damage  player;
+
+	_dam = 0.0 min (_dam - 0.05);
+
+	player setDamage _dam;
+
 	if (isText(_giveConf)) then
 	{
 		_give = getText(_giveConf);
