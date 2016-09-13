@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=113;
+		nextID=125;
 	};
 	class Camera
 	{
 		pos[]={4907.6455,316.84576,5042.6445};
-		dir[]={0.32413381,-0.45304739,0.83052009};
-		up[]={0.16472425,0.89147073,0.42206699};
-		aside[]={0.93159747,3.4315235e-007,-0.36358243};
+		dir[]={0.21096963,-0.45320907,0.86612523};
+		up[]={0.10726294,0.89138788,0.44035977};
+		aside[]={0.97162533,3.3117249e-007,-0.23666723};
 	};
 };
 binarizationWanted=0;
@@ -30063,12 +30063,12 @@ class Mission
 		class Item529
 		{
 			dataType="Marker";
-			position[]={1995.2085,239.95624,4138.165};
+			position[]={1995.208,-7.7328752e-037,4138.165};
 			name="Town_1";
 			type="Empty";
 			colorName="ColorRed";
 			id=18074;
-			atlOffset=43.084915;
+			atlOffset=-196.87132;
 		};
 		class Item530
 		{
@@ -44973,302 +44973,302 @@ class Mission
 		class Item730
 		{
 			dataType="Marker";
-			position[]={2531.5701,-3.4005541e-005,2703.968};
+			position[]={2531.5701,4.0083638e+019,2703.968};
 			name="Crash_1";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21155;
-			atlOffset=-325.53189;
+			atlOffset=4.0083638e+019;
 		};
 		class Item731
 		{
 			dataType="Marker";
-			position[]={18651.428,4.6909136e+014,-3626.259};
+			position[]={18651.428,1.3188673e+038,-3626.259};
 			name="Heli_1";
-			type="mil_flag";
+			type="Empty";
 			colorName="ColorWEST";
 			id=21144;
-			atlOffset=4.6909136e+014;
+			atlOffset=1.3188673e+038;
 		};
 		class Item732
 		{
 			dataType="Marker";
-			position[]={6097.4541,4.6909136e+014,-3770.1826};
+			position[]={6097.4541,0.0018568388,-3770.1831};
 			name="Heli_2";
-			type="mil_flag";
+			type="Empty";
 			colorName="ColorWEST";
 			id=21179;
-			atlOffset=4.6909136e+014;
+			atlOffset=-311.35962;
 		};
 		class Item733
 		{
 			dataType="Marker";
-			position[]={-6609.4551,4.6909136e+014,-3758.5488};
+			position[]={-6609.4551,4.0083638e+019,-3758.5491};
 			name="Heli_3";
-			type="mil_flag";
+			type="Empty";
 			colorName="ColorWEST";
 			id=21180;
-			atlOffset=4.6909136e+014;
+			atlOffset=4.0083638e+019;
 		};
 		class Item734
 		{
 			dataType="Marker";
-			position[]={-7400.7285,4.6909136e+014,6132.3623};
+			position[]={-7400.729,1.3188673e+038,6132.3618};
 			name="Heli_4";
-			type="mil_flag";
+			type="Empty";
 			colorName="ColorWEST";
 			id=21181;
-			atlOffset=4.6909136e+014;
+			atlOffset=1.3188673e+038;
 		};
 		class Item735
 		{
 			dataType="Marker";
-			position[]={-7121.4541,4.6909136e+014,16930.908};
+			position[]={-7121.4541,0.0018568388,16930.908};
 			name="Heli_5";
-			type="mil_flag";
+			type="Empty";
 			colorName="ColorWEST";
 			id=21182;
-			atlOffset=4.6909136e+014;
+			atlOffset=-54.358143;
 		};
 		class Item736
 		{
 			dataType="Marker";
-			position[]={5701.8174,4.6909136e+014,17943.273};
+			position[]={5701.8169,4.0083638e+019,17943.273};
 			name="Heli_6";
-			type="mil_flag";
+			type="Empty";
 			colorName="ColorWEST";
 			id=21183;
-			atlOffset=4.6909136e+014;
+			atlOffset=4.0083638e+019;
 		};
 		class Item737
 		{
 			dataType="Marker";
-			position[]={17861.816,4.6909136e+014,17524.363};
+			position[]={17861.816,0.0022631539,17524.363};
 			name="Heli_7";
-			type="mil_flag";
+			type="Empty";
 			colorName="ColorWEST";
 			id=21184;
-			atlOffset=4.6909136e+014;
+			atlOffset=-151.68774;
 		};
 		class Item738
 		{
 			dataType="Marker";
-			position[]={19816.727,4.6909136e+014,7051.6362};
+			position[]={19816.727,1.3188673e+038,7051.6362};
 			name="Heli_8";
-			type="mil_flag";
+			type="Empty";
 			colorName="ColorWEST";
 			id=21185;
-			atlOffset=4.6909136e+014;
+			atlOffset=1.3188673e+038;
 		};
 		class Item739
 		{
 			dataType="Marker";
-			position[]={7707.1816,-58.959076,1517.3086};
+			position[]={7707.1821,0.0022631539,1517.309};
 			name="Crash_2";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21186;
-			atlOffset=-325.6044;
+			atlOffset=-266.64301;
 		};
 		class Item740
 		{
 			dataType="Marker";
-			position[]={1788.4624,-116.43195,4123.8496};
+			position[]={1788.462,1.3188673e+038,4123.8501};
 			name="Crash_3";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21187;
-			atlOffset=-325.4494;
+			atlOffset=1.3188673e+038;
 		};
 		class Item741
 		{
 			dataType="Marker";
-			position[]={4402.2036,-216.66302,4944.6934};
+			position[]={4402.2041,4.0083638e+019,4944.6929};
 			name="Crash_4";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21188;
-			atlOffset=-325.54855;
+			atlOffset=4.0083638e+019;
 		};
 		class Item742
 		{
 			dataType="Marker";
-			position[]={8016.7988,-93.499619,3461.4133};
+			position[]={8016.7988,0.0022631539,3461.4131};
 			name="Crash_5";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21189;
-			atlOffset=-325.49188;
+			atlOffset=-231.98999;
 		};
 		class Item743
 		{
 			dataType="Marker";
-			position[]={9392.0723,-157.22755,2820.5786};
+			position[]={9392.0723,1.3188673e+038,2820.5791};
 			name="Crash_6";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21190;
-			atlOffset=-325.50189;
+			atlOffset=1.3188673e+038;
 		};
 		class Item744
 		{
 			dataType="Marker";
-			position[]={11717.799,-311.10144,4678.2803};
+			position[]={11717.799,0.0018568388,4678.2798};
 			name="Crash_7";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21191;
-			atlOffset=-325.5394;
+			atlOffset=-14.436089;
 		};
 		class Item745
 		{
 			dataType="Marker";
-			position[]={10449.631,-319.4502,4830.4238};
+			position[]={10449.631,4.0083638e+019,4830.4238};
 			name="Crash_8";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21192;
-			atlOffset=-328.03546;
+			atlOffset=4.0083638e+019;
 		};
 		class Item746
 		{
 			dataType="Marker";
-			position[]={9645.0371,-315.28934,5014.7646};
+			position[]={9645.0371,0.0022631539,5014.7651};
 			name="Crash_9";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21193;
-			atlOffset=-325.53476;
+			atlOffset=-10.243167;
 		};
 		class Item747
 		{
 			dataType="Marker";
-			position[]={11767.859,-293.93686,5574.8516};
+			position[]={11767.86,0.0022631539,5574.8521};
 			name="Crash_10";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21194;
-			atlOffset=-325.47604;
+			atlOffset=-31.536993;
 		};
 		class Item748
 		{
 			dataType="Marker";
-			position[]={6399.0044,-170.19748,6653.0786};
+			position[]={6399.0039,4.3694745e+024,6653.0791};
 			name="Crash_11";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21195;
-			atlOffset=-325.4552;
+			atlOffset=4.3694745e+024;
 		};
 		class Item749
 		{
 			dataType="Marker";
-			position[]={2402.4377,-159.68636,7521.8965};
+			position[]={2402.438,4.4953074e+021,7521.896};
 			name="Crash_12";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21196;
-			atlOffset=-325.40436;
+			atlOffset=4.4953074e+021;
 		};
 		class Item750
 		{
 			dataType="Marker";
-			position[]={3315.8115,-150.14937,7838.2354};
+			position[]={3315.812,4.4953074e+021,7838.2349};
 			name="Crash_13";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21197;
-			atlOffset=-325.5719;
+			atlOffset=4.4953074e+021;
 		};
 		class Item751
 		{
 			dataType="Marker";
-			position[]={4541.0688,-188.07375,8662.5};
+			position[]={4541.0688,1.3188673e+038,8662.5};
 			name="Crash_14";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21198;
-			atlOffset=-325.55859;
+			atlOffset=1.3188673e+038;
 		};
 		class Item752
 		{
 			dataType="Marker";
-			position[]={3770.2705,-161.4295,9598.1514};
+			position[]={3770.271,4.0083638e+019,9598.1514};
 			name="Crash_15";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21199;
-			atlOffset=-325.50439;
+			atlOffset=4.0083638e+019;
 		};
 		class Item753
 		{
 			dataType="Marker";
-			position[]={4973.251,-137.59364,9509.042};
+			position[]={4973.251,0.0022631539,9509.042};
 			name="Crash_16";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21200;
-			atlOffset=-325.37018;
+			atlOffset=-187.77426;
 		};
 		class Item754
 		{
 			dataType="Marker";
-			position[]={7517.3311,-254.88921,6871.3975};
+			position[]={7517.3311,1.3188673e+038,6871.397};
 			name="Crash_17";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21201;
-			atlOffset=-325.56525;
+			atlOffset=1.3188673e+038;
 		};
 		class Item755
 		{
 			dataType="Marker";
-			position[]={7722.2827,-175.27257,8733.7891};
+			position[]={7722.2832,0.0018568388,8733.7891};
 			name="Crash_18";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21202;
-			atlOffset=-325.47943;
+			atlOffset=-150.20502;
 		};
 		class Item756
 		{
 			dataType="Marker";
-			position[]={7120.793,-131.75171,9179.3379};
+			position[]={7120.793,4.0083638e+019,9179.3379};
 			name="Crash_19";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21203;
-			atlOffset=-325.54108;
+			atlOffset=4.0083638e+019;
 		};
 		class Item757
 		{
 			dataType="Marker";
-			position[]={8586.6465,-164.51277,8248.1406};
+			position[]={8586.6465,1.3188673e+038,8248.1406};
 			name="Crash_20";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21204;
-			atlOffset=-325.42535;
+			atlOffset=1.3188673e+038;
 		};
 		class Item758
 		{
 			dataType="Marker";
-			position[]={11175.283,-228.73401,8943.1973};
+			position[]={11175.283,0.0018568388,8943.1973};
 			name="Crash_21";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21205;
-			atlOffset=-325.74261;
+			atlOffset=-97.00676;
 		};
 		class Item759
 		{
 			dataType="Marker";
-			position[]={10337.652,-312.52609,9803.1055};
+			position[]={10337.652,0.0022631539,9803.1055};
 			name="Crash_22";
-			type="mil_destroy";
-			colorName="ColorRed";
+			type="Empty";
+			colorName="ColorGreen";
 			id=21206;
-			atlOffset=-325.54437;
+			atlOffset=-13.016015;
 		};
 	};
 };

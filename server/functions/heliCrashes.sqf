@@ -144,23 +144,9 @@ while {true} do {
 		_wp3 setWaypointType "CYCLE";
 		_wp3 setWaypointBehaviour "CARELESS";
 
-        createMarker["myheli",position _crashwreck];
-        "myheli" setMarkerShape "ICON";
-        "myheli" setMarkerType "hd_objective";
-        "myheli" setMarkerColor "ColorGreen";
-        "myheli" setMarkerText "Heli";
-
-        createMarker["mySite",position _landingzone];
-        "mySite" setMarkerShape "ICON";
-        "mySite" setMarkerType "hd_objective";
-        "mySite" setMarkerColor "ColorGreen";
-        "mySite" setMarkerText "Allahu target";
-
 		//Get some more Speed when close to the Crashpoint and go on even if Heli died or hit the ground
 		waituntil
         {
-            "myheli" setMarkerPos (position _crashwreck);
-
             (_crashwreck distance _crashPosition) <= 1000 || not alive _crashwreck || (getPosATL _crashwreck select 2) < 5 || (damage _crashwreck) >= _crashDamage
         };
 			_crashwreck flyInHeight 95;
@@ -212,12 +198,6 @@ while {true} do {
 
 		_crash setVariable ["ObjectID",1,true];
 
-
-        _marker1 = createMarker["myMarker",_pos];
-        "myMarker" setMarkerShape "ICON";
-        "myMarker" setMarkerType "hd_objective";
-        "myMarker" setMarkerColor "ColorGreen";
-        "myMarker" setMarkerText "Crashsite";
 
         sleep 0.5;
 		_smokePos = _crash modelToWorld _smokeOffset;
