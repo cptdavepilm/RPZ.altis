@@ -11,12 +11,13 @@ params
 	["_mode", 0, [0]], // 0 = server-side processing, 1 = broadcast message from server to all clients
 	["_victim", objNull, [objNull,""]], // victim unit or name string
 	["_killer", objNull, [objNull,""]], // killer unit or name string
-	["_friendlyFire", false, [false]], // friendly fire boolean, determines if teamkill message needs to be used
 	["_aiKiller", false, [false]], // AI killer boolean, ignored if mode = 0
 	["_cause", "", [""]] // cause of death string, ignored if mode = 0
 ];
 
 scopeName "fn_deathMessage";
+
+diag_log ["fn_deathMessage logs %1", _this];
 
 if (_mode isEqualTo 0) then
 {
@@ -59,7 +60,7 @@ if (_mode isEqualTo 0) then
 	private _killerName = if (alive _killer || isPlayer _killer) then { name _killer } else { "" };
 	_aiKiller = (!isNull _killer && !isPlayer _killer);
 
-	[1, _victimName, _killerName, _friendlyFire, _aiKiller, _cause] remoteExecCall ["A3W_fnc_deathMessage"];
+	[1, _victimName, _killerName, _aiKiller, _cause] remoteExecCall ["A3W_fnc_deathMessage"];
 }
 else
 {
@@ -96,13 +97,11 @@ else
 				case (_aiKiller):           { format ["%1 was killed by AI", _victim] }; // vehicle destroyed by AI
 				case (_killer != ""): 
 				{
-					if (_friendlyFire) then { format ["%1 teamkilled %2", _killer, _victim] } // destroyed friendly vehicle, crashed vehicle with friendlies on board
-					else                    { format ["%1 killed %2", _killer, _victim] } // destroyed enemy vehicle
+					format ["%1 killed %2", _killer, _victim] // destroyed enemy vehicle
 				};
 				default
 				{
-					if (_friendlyFire) then { format ["%1 was teamkilled", _victim] } // not supposed to happen, but just in case
-					else                    { format ["%1 died", _victim] } // disconnected while bleeding, any other cause not covered above
+					format ["%1 died", _victim] // disconnected while bleeding, any other cause not covered above
 				};
 			}
 		};

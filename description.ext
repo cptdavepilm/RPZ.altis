@@ -53,7 +53,6 @@ showGroupIndicator = 0;
 #include "client\systems\common.hpp"
 #include "client\actions\gui.hpp"
 #include "addons\far_revive\revive_gui.hpp"
-#include "client\systems\groups\dialog\groupManagement.hpp"
 #include "client\systems\adminPanel\dialog\adminMenu.hpp"
 #include "client\systems\adminPanel\dialog\modMenu.hpp"
 #include "client\systems\adminPanel\dialog\serverAdminMenu.hpp"

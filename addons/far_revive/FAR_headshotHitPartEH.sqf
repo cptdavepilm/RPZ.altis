@@ -27,7 +27,7 @@ if (!(_selections arrayIntersect ["head","face_hub"] isEqualTo []) && _direct) t
 		// "_directDmg" is not the actual damage inflicted by the bullet, but rather the default damage value it would inflict without armor
 
 		if ((isPlayer _target || FAR_Debugging) && _directDmg >= 1 &&
-		   {_ammo select [0,2] == "B_" && (!([_shooter, _target] call A3W_fnc_isFriendly) || FAR_Debugging) && !(_target getVariable ["FAR_headshotHitTimeout", false])}) then
+		   {_ammo select [0,2] == "B_" && !(_target getVariable ["FAR_headshotHitTimeout", false])}) then
 		{
 			if (UNCONSCIOUS(_target)) then
 			{

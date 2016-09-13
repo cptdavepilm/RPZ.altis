@@ -8,7 +8,6 @@ params [["_unit",objNull,[objNull]], ["_vehicle",objNull,[objNull]], ["_passenge
 
 if !(alive _vehicle && alive _unit && isNull objectParent _unit) exitWith { false };
 if (locked _vehicle in ([[2],[2,3]] select isPlayer _unit)) exitWith { false };
-if (alive effectiveCommander _vehicle && !([effectiveCommander _vehicle, _unit] call A3W_fnc_isFriendly)) exitWith { false };
 
 scopeName "fn_canGetIn";
 private _found = false;

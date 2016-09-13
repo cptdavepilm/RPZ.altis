@@ -101,7 +101,7 @@ if (isNull _killer) then
 	// if roadkill but driver bailed out or turret kill but gunner bailed out, and the first crewmember is an enemy, award him the kill, otherwise nobody is blamed
 	if (isNull _killer) then
 	{
-		if (_targetSide == sideUnknown || !([_firstCrewGroup, _targetGroup] call A3W_fnc_isFriendly)) then
+		if (_targetSide == sideUnknown) then
 		{
 			_killer = _firstCrew;
 		};

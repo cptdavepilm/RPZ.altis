@@ -227,7 +227,7 @@ FAR_Eject_Injured =
 	params [["_veh",cursorTarget]];
 
 	{
-		if (UNCONSCIOUS(_x) && [_x, player] call A3W_fnc_isFriendly) then
+		if (UNCONSCIOUS(_x)) then
 		{
 			moveOut _x;
 			unassignVehicle _x;
@@ -376,7 +376,7 @@ FAR_Check_Stabilize =
 	private _target = call FAR_FindTarget;
 
 	// do not show Stabilize if Revive is shown, unless target is enemy
-	(!IS_MEDIC(player) || !([player, _target] call A3W_fnc_isFriendly)) && FAR_Check_Dragging && {!STABILIZED(_target) && !(["FirstAidKit","Medikit"] arrayIntersect items player isEqualTo [])}
+	(!IS_MEDIC(player)) && FAR_Check_Dragging && {!STABILIZED(_target) && !(["FirstAidKit","Medikit"] arrayIntersect items player isEqualTo [])}
 }
 call mf_compile;
 
@@ -388,7 +388,7 @@ FAR_Check_Revive =
 	private _target = call FAR_FindTarget;
 
 	// do not show Revive if target is enemy
-	IS_MEDIC(player) && [player, _target] call A3W_fnc_isFriendly && FAR_Check_Dragging
+	IS_MEDIC(player) && FAR_Check_Dragging
 }
 call mf_compile;
 
@@ -399,7 +399,7 @@ FAR_Check_Slay =
 {
 	private _target = if (_this isEqualType []) then { param [0,objNull,[objNull]] } else { call FAR_FindTarget }; // if not array then it's an addAction condition check
 
-	!([_target, player] call A3W_fnc_isFriendly) && FAR_Check_Dragging
+	FAR_Check_Dragging
 }
 call mf_compile;
 
@@ -412,7 +412,7 @@ FAR_Check_Load_Dragged =
 	_veh = cursorTarget;
 	_draggedUnit = player getVariable ["FAR_isDragging", objNull];
 
-	player distance _veh <= (sizeOf typeOf _veh / 3) max 2 && [_draggedUnit, _veh, true] call fn_canGetIn && [_draggedUnit, player] call A3W_fnc_isFriendly
+	player distance _veh <= (sizeOf typeOf _veh / 3) max 2 && [_draggedUnit, _veh, true] call fn_canGetIn
 }
 call mf_compile;
 
@@ -424,7 +424,7 @@ FAR_Check_Eject_Injured =
 	private "_veh";
 	_veh = cursorTarget;
 
-	player distance _veh <= (sizeOf typeOf _veh / 3) max 2 && !(_veh isKindOf "Man") && {{UNCONSCIOUS(_x) && [_x, player] call A3W_fnc_isFriendly} count crew _veh > 0}
+	player distance _veh <= (sizeOf typeOf _veh / 3) max 2 && !(_veh isKindOf "Man") && {{UNCONSCIOUS(_x)} count crew _veh > 0}
 }
 call mf_compile;
 
@@ -434,7 +434,7 @@ call mf_compile;
 ////////////////////////////////////////////////
 FAR_IsFriendlyMedic =
 {
-	IS_MEDIC(_this) && !UNCONSCIOUS(_this) && [_this, player] call A3W_fnc_isFriendly
+	IS_MEDIC(_this) && !UNCONSCIOUS(_this)
 }
 call mf_compile;
 

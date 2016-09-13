@@ -33,7 +33,6 @@ if !(_unit getVariable ["A3W_killScoreRegistered", false]) then
 	};
 
 	if (isNil "_killerGroup") then { _killerGroup = group _killer };
-	private _friendlyFire = [_killerGroup, _unit] call A3W_fnc_isFriendly;
 
 	if (_isPlayer) then
 	{
@@ -43,7 +42,7 @@ if !(_unit getVariable ["A3W_killScoreRegistered", false]) then
 		}
 		else
 		{
-			[0, _unit, _killer, _friendlyFire] call A3W_fnc_deathMessage; // disconnected while injured, broadcast bleedout message
+			[0, _unit, _killer] call A3W_fnc_deathMessage; // disconnected while injured, broadcast bleedout message
 		};
 	};
 
@@ -55,13 +54,13 @@ if !(_unit getVariable ["A3W_killScoreRegistered", false]) then
 
 		if (_isPlayer) then
 		{
-			_scoreColumn = ["playerKills","teamKills"] select _friendlyFire;
+			_scoreColumn = "playerKills";
 			_scoreValue = 1;
 		}
 		else
 		{
 			_scoreColumn = "aiKills";
-			_scoreValue = [1,0] select _friendlyFire;
+			_scoreValue = 1;
 		};
 
 		[_killer, _scoreColumn, _scoreValue] call fn_addScore;
