@@ -40,10 +40,8 @@ if (_success) then {
 	["Your thirst has eased", 5] call mf_notify_client;
 
 	player removeItem _item;
-
 	_dam = damage  player;
-
-	_dam = 0.0 min (_dam - 0.05);
+	_dam = 0.0 max (_dam - 0.05);
 
 	player setDamage _dam;
 
