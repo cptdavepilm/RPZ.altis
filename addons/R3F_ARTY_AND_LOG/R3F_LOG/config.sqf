@@ -39,7 +39,6 @@ R3F_LOG_CFG_objets_remorquables =
 	"Car_F",
 	"Ship_F",
 	"Plane",
-	"UAV_03_base_F",
 	"Heli_Light_01_base_F",
 	"Heli_Light_02_base_F",
 	"Heli_light_03_base_F",
@@ -102,7 +101,6 @@ R3F_LOG_CFG_objets_heliportables =
 	"Car_F",
 	"Ship_F",
 	"Plane",
-	"UAV_03_base_F",
 	"Heli_Light_01_base_F"
 ];
 
@@ -187,7 +185,6 @@ R3F_LOG_CFG_objets_transportables =
 	["Kart_01_Base_F", 5],
 	["Quadbike_01_base_F", 10],
 	["Rubber_duck_base_F", 10],
-	["UAV_01_base_F", 2],
 	["Land_BagBunker_Large_F", 10],
 	["Land_BagBunker_Small_F", 5],
 	["Land_BagBunker_Tower_F", 7],
@@ -244,7 +241,6 @@ R3F_LOG_CFG_objets_deplacables =
 	"Quadbike_01_base_F",
 	"Rubber_duck_base_F",
 	"SDV_01_base_F",
-	"UAV_01_base_F",
 	"Land_BagBunker_Large_F",
 	"Land_BagBunker_Small_F",
 	"Land_BagBunker_Tower_F",

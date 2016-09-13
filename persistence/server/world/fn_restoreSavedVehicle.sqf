@@ -8,12 +8,10 @@
 
 _pos = _pos apply { if (_x isEqualType "") then { parseNumber _x } else { _x } };
 
-private _isUAV = (round getNumber (configFile >> "CfgVehicles" >> _class >> "isUav") > 0);
-
 private ([["_flying"],[]] select isNil "_flying");
 _flying = (!isNil "_flying" && {_flying > 0});
 
-_veh = createVehicle [_class, _pos, [], if (isNil "_safeDistance") then { 0 } else { _safeDistance }, ["","FLY"] select (_isUAV && _flying)];
+_veh = createVehicle [_class, _pos, [], if (isNil "_safeDistance") then { 0 } else { _safeDistance }, ""];
 _veh allowDamage false;
 _veh hideObjectGlobal true;
 
@@ -34,7 +32,6 @@ if (!isNil "_dir") then
 	_veh setVectorDirAndUp _dir;
 };
 
-private _uavSide = if (isNil "_playerSide") then { sideUnknown } else { _playerSide };
 
 {
 	_x params ["_var", "_val"];
@@ -45,45 +42,11 @@ private _uavSide = if (isNil "_playerSide") then { sideUnknown } else { _playerS
 		{
 			if (_val isEqualType []) then { _val = toString _val };
 		};
-		case "uavSide":
-		{
-			if (_uavSide isEqualTo sideUnknown) then { _uavSide = STR_TO_SIDE(_val) };
-		};
 	};
 
 	_veh setVariable [_var, _val, true];
 } forEach _variables;
 
-// UAV AI
-if (_isUAV) then
-{
-	createVehicleCrew _veh;
-
-	if (_flying) then
-	{
-		if (isNil "_vel" || {count _vel < 3}) then
-		{
-			_vel = (vectorDir _veh) vectorMultiply _velMag;
-		};
-
-		_veh setVelocity _vel;
-		_veh flyInHeight (((_veh call fn_getPos3D) select 2) max 500);
-	};
-
-	//assign AI to the vehicle so it can actually be used
-	[_veh, _flying, _uavSide] spawn
-	{
-		params ["_uav", "_flying", "_uavSide"];
-
-		_grp = [_uav, _uavSide] call fn_createCrewUAV;
-
-		if (_flying) then
-		{
-			_wp = (group _uav) addWaypoint [getPosATL _uav, 0];
-			_wp setWaypointType "MOVE";
-		};
-	};
-};
 
 [_veh, false] call vehicleSetup;
 

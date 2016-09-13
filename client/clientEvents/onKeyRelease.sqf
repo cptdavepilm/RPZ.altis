@@ -13,13 +13,5 @@ _alt = _this select 4;
 
 _handled = false;
 
-/*
-// Left & Right Windows keys
-if (_key in [219,220]) then
-{
-	showPlayerNames = false;
-};
-*/
-
 
 _handled

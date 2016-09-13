@@ -121,9 +121,7 @@ A3W_clientSetupComplete = compileFinal "true";
 
 A3W_scriptThreads pushBack execVM "addons\fpsFix\vehicleManager.sqf";
 A3W_scriptThreads pushBack execVM "addons\Lootspawner\LSclientScan.sqf";
-[] execVM "client\functions\drawPlayerIcons.sqf";
 [] execVM "addons\camera\functions.sqf";
-[] execVM "addons\UAV_Control\functions.sqf";
 
 inGameUISetEventHandler ["Action", "_this call A3W_fnc_inGameUIActionEvent"];
 

@@ -40,7 +40,7 @@ _props append
 
 _updateValues = [_props, 0] call extDB_pairsToSQL;
 
-if ({isPlayer _x} count crew _veh > 0 || isPlayer ((uavControl _veh) select 0)) then
+if ({isPlayer _x} count crew _veh > 0) then
 {
 	_lastUse = diag_tickTime;
 	[_veh, "vehSaving_lastUse"] call fn_setTickTime;

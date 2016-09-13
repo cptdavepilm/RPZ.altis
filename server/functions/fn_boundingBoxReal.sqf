@@ -140,8 +140,7 @@ _realBoundingBoxes =
 			["Heli_Transport_02_base_F", [[-9.3,-11.2,-3.6],[9.3,11.2,3.6]]],
 			["Plane_CAS_01_base_F", [[-8.8,-7.8,-2.3],[8.8,7.7,2.2]]],
 			["Plane_CAS_02_base_F", [[-6.5,-8.1,-3],[6.5,7,3]]],
-			["Plane_Fighter_03_base_F", [[-5,-6.4,-2.6],[5.1,6.5,2.5]]],
-			["UAV_02_base_F", [[-5.1,-3.4,-1.6],[5.1,3.2,0.9]]]
+			["Plane_Fighter_03_base_F", [[-5,-6.4,-2.6],[5.1,6.5,2.5]]]
 		]
 	]
 ];
@@ -288,8 +287,7 @@ if (isNil "_boundingBoxReal") then { boundingBoxReal _vehicle } else { _bounding
 		["I_Heli_Transport_02_F", "Heli_Transport_02_base_F"],
 		["B_Plane_CAS_01_F", "Plane_CAS_01_base_F"],
 		["O_Plane_CAS_02_F", "Plane_CAS_02_base_F"],
-		["I_Plane_Fighter_03_CAS_F", "Plane_Fighter_03_base_F"],
-		["B_UAV_02_CAS_F", "UAV_02_base_F"]
+		["I_Plane_Fighter_03_CAS_F", "Plane_Fighter_03_base_F"]
 	];
 
 	_classesBBox = [];

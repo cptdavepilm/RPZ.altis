@@ -15,6 +15,5 @@
 	["pvar_groupNotify", { PVAL spawn groupNotify }],
 	["pvar_disableCollision", { PVAL call fn_disableCollision }],
 	["pvar_notifyClient", { PVAL spawn mf_notify_client }],
-	["pvar_weaponDisassembledEvent", { PVAL spawn weaponDisassembledEvent }],
 	["pvar_ejectCorpse", { PVAL spawn fn_ejectCorpse }]
 ];

@@ -18,43 +18,6 @@ player addEventHandler ["Take",
 	};
 }];
 
-player addEventHandler ["WeaponDisassembled", { _this spawn weaponDisassembledEvent }];
-player addEventHandler ["WeaponAssembled",
-{
-	params ["_player", "_obj"];
-
-	if (round getNumber (configFile >> "CfgVehicles" >> typeOf _obj >> "isUav") > 0) then
-	{
-		// ownerUID handled thru save funcs
-
-		_playerSide = side group _player;
-
-		if (side _obj != _playerSide) then
-		{
-			(crew _obj) joinSilent createGroup _playerSide;
-		};
-
-		if (_obj isKindOf "StaticWeapon") then
-		{
-			[_obj, _player] call fn_forceSaveObject;
-		};
-
-		if (!alive getConnectedUAV _player) then
-		{
-			_player connectTerminalToUAV _obj;
-		};
-
-		if ({_obj isKindOf _x} count ["Static_Designator_01_base_F","Static_Designator_02_base_F"] > 0) then
-		{
-			_obj setAutonomous false; // disable autonomous mode by default on static designators so they stay on target after releasing controls
-		};
-
-		{
-			[_x, ["UAV","",""]] remoteExec ["A3W_fnc_setName", 0, _x]; 
-		} forEach crew _obj;
-	};
-}];
-
 player addEventHandler ["InventoryOpened",
 {
 	_obj = _this select 1;

@@ -12,14 +12,13 @@
 //local to Server Var. "Lootready" time, placed on generated lootobject, needed for removing old loot
 //									time: timestamp of spawn, object is ready for use by player and loot deleter
 //-------------------------------------------------------------------------------------
-private["_begintime","_BaP_list","_spInterval","_chfullfuel","_chpSpot","_genZadjust","_BaPname","_lootClass","_buildPosViable_list","_buildPosZadj_list","_lBuildVar","_timeStamp","_posviablecount","_spwnPos","_lootspawned","_randChance","_lootholder","_selecteditem","_loot","_chfullf","_idx_sBlist","_chperSpot","_tmpPos"];
+private["_begintime","_BaP_list","_spInterval","_chpSpot","_genZadjust","_BaPname","_lootClass","_buildPosViable_list","_buildPosZadj_list","_lBuildVar","_timeStamp","_posviablecount","_spwnPos","_lootspawned","_randChance","_lootholder","_selecteditem","_loot","_chfullf","_idx_sBlist","_chperSpot","_tmpPos"];
 
 //BaP - Buildings around Player
 _BaP_list = _this select 0;
 _spInterval = _this select 1;
-_chfullfuel = _this select 2;
-_genZadjust = _this select 3;
-_chpSpot = _this select 4;
+_genZadjust = _this select 2;
+_chpSpot = _this select 3;
 
 _begintime = diag_tickTime;
 {
@@ -30,7 +29,7 @@ _begintime = diag_tickTime;
 	_buildPosViable_list = [];
 	_buildPosZadj_list = [];
 	_lBuildVar = (_x getVariable ["BuildingLoot", [0, 0]]);
-	//diag_log format["-- LOOTSPAWNER DEBUG BaP _lBuildVar: v%1v v%2v --", _lBuildVar ,_x];
+	diag_log format["-- LOOTSPAWNER DEBUG BaP _lBuildVar: v%1v v%2v --", _lBuildVar ,_x];
 
 	if ((_lBuildVar select 0) < 2) then {
 		_timeStamp = _lBuildVar select 1;

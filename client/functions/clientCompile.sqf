@@ -58,7 +58,6 @@ serverMessage = "client\functions\serverMessage.sqf" call mf_compile;
 uniformConverter = "client\functions\uniformConverter.sqf" call mf_compile;
 unitHandleDamage = "client\functions\unitHandleDamage.sqf" call mf_compile;
 vehicleSideCfg = "client\functions\vehicleSideCfg.sqf" call mf_compile;
-weaponDisassembledEvent = "client\functions\weaponDisassembledEvent.sqf" call mf_compile;
 
 // Player details and actions
 playerSpawn = "client\functions\playerSpawn.sqf" call mf_compile;

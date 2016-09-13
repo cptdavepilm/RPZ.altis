@@ -58,8 +58,6 @@ if (_dead || (_aboutToExplode && isNull _killerVehicle)) then
 	{
 		if (isNull _killerVehicle) then
 		{
-			_uavOwner = (uavControl _vehicle) select 0;
-			if (isPlayer _uavOwner) then { _source = _uavOwner };
 
 			[_vehicle, _source, _ammo] call FAR_setKillerInfo;
 			_vehicle setVariable ["FAR_killerVehicle", _vehicle call FAR_findKiller, true];

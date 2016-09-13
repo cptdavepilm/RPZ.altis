@@ -57,7 +57,7 @@ if (isNil "A3W_network_compileFuncs") then
 	} forEach toArray _checksum;
 	_assignChecksum = _assignChecksum + (str toArray _checksumArray) + "; ";
 
-	_rscList = ["RscDisplayAVTerminal", "RscDisplayCommonHint", "RscDisplayCommonMessage", "RscDisplayCommonMessagePause", "RscDisplayConfigureAction", "RscDisplayConfigureControllers", "RscDisplayControlSchemes", "RscDisplayCustomizeController", "RscDisplayDebriefing", "RscDisplayDiary", "RscDisplayFieldManual", "RscDisplayGameOptions", "RscDisplayGetReady", "RscDisplayInsertMarker", "RscDisplayInterrupt", "RscDisplayInventory", "RscDisplayJoystickSchemes", "RscDisplayLoading", "RscDisplayLoadMission", "RscDisplayMainMap", "RscDisplayMicSensitivityOptions", "RscDisplayOptions", "RscDisplayOptionsAudio", "RscDisplayOptionsLayout", "RscDisplayOptionsVideo", "RscDisplayStart", "RscDisplayVehicleMsgBox", "RscDisplayVoiceChat"];
+	_rscList = ["RscDisplayCommonHint", "RscDisplayCommonMessage", "RscDisplayCommonMessagePause", "RscDisplayConfigureAction", "RscDisplayConfigureControllers", "RscDisplayControlSchemes", "RscDisplayCustomizeController", "RscDisplayDebriefing", "RscDisplayDiary", "RscDisplayFieldManual", "RscDisplayGameOptions", "RscDisplayGetReady", "RscDisplayInsertMarker", "RscDisplayInterrupt", "RscDisplayInventory", "RscDisplayJoystickSchemes", "RscDisplayLoading", "RscDisplayLoadMission", "RscDisplayMainMap", "RscDisplayMicSensitivityOptions", "RscDisplayOptions", "RscDisplayOptionsAudio", "RscDisplayOptionsLayout", "RscDisplayOptionsVideo", "RscDisplayStart", "RscDisplayVehicleMsgBox", "RscDisplayVoiceChat"];
 	_rscParams = [];
 
 	/*{

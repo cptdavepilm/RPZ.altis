@@ -35,26 +35,6 @@ if (_unit == player && (_showWindow || _menuOpen)) then
 			_handled = true;
 		};
 
-		case (_action == "ManualFire"): // use UAV AI to re-align attack heli turret with pilot crosshair when manual fire is enabled with no gunner (thx KK xoxoxo)
-		{
-			private _veh = vehicle player;
-
-			if ({_veh isKindOf _x} count ["Heli_Attack_01_base_F","Heli_Attack_02_base_F","VTOL_02_base_F"] > 0 && isNull gunner _veh) then
-			{
-				_bob = createAgent ["B_UAV_AI", [0,0,0], [], 0, ""];
-				_bob setName ["","",""];
-				_bob moveInGunner _veh;
-
-				[_veh, _bob] spawn
-				{
-					params ["_veh", "_bob"];
-					_time = time;
-					waitUntil {sleep 0.5; (abs (_veh animationSourcePhase "MainTurret") < 0.001 && abs (_veh animationSourcePhase "MainGun") < 0.001) || time - _time > 10};
-					deleteVehicle _bob;
-				};
-			};
-		};
-
 		case (_action select [0,5] == "GetIn"): // Speed up get in vehicle animation since player unit appears idle for other players
 		{
 			0 spawn

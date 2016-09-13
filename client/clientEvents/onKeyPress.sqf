@@ -26,12 +26,6 @@ switch (true) do
 		execVM "client\systems\adminPanel\checkAdmin.sqf";
 	};
 
-	// Home & Windows keys
-	case (_key in A3W_customKeys_playerNames):
-	{
-		showPlayerNames = if (isNil "showPlayerNames") then { true } else { !showPlayerNames };
-	};
-
 	// Earplugs - End Key
 	case (_key in A3W_customKeys_earPlugs):
 	{
@@ -102,15 +96,6 @@ if (!_handled && _key in actionKeys "GetOut") then
 if (!_handled && _key in call A3W_allVoiceChatKeys) then
 {
 	[true] call fn_voiceChatControl;
-};
-
-// UAV feed
-if (!_handled && _key in (actionKeys "UavView" + actionKeys "UavViewToggle")) then
-{
-	if (["A3W_disableUavFeed"] call isConfigOn) then
-	{
-		_handled = true;
-	};
 };
 
 // Override prone reload freeze (ffs BIS)

@@ -27,13 +27,6 @@ _objCleanup =
 
 	if (_isWreck) then
 	{
-		if (_baseClass == "UAV_01_base_F" && {fuel _obj > 0 || !isNull ((uavControl _obj) select 0)}) exitWith
-		{
-			if (_processedDeath > 0) then
-			{
-				_obj setVariable ["processedDeath", nil];
-			};
-		};
 
 		_timeLimit = DEBRIS_CLEANUP_TIME;
 
@@ -175,7 +168,7 @@ while {true} do
 
 	_delQtyO = 0;
 	_entityCleanup forEach ([0,0] nearEntities ["All", 1e11]);
-	{ private _baseClass = _x; _wreckCleanup forEach allMissionObjects _x } forEach ["CraterLong","Ruins","#destructioneffects","UAV_01_base_F"];
+	{ private _baseClass = _x; _wreckCleanup forEach allMissionObjects _x } forEach ["CraterLong","Ruins","#destructioneffects"];
 	_parachuteCleanup forEach ([0,0] nearEntities ["ParachuteBase", 1e11]); // delete glitched parachutes
 
 	diag_log format ["SERVER CLEANUP: Deleted %1 expired objects", _delQtyO];

@@ -17,10 +17,10 @@ if (["A3W_hcObjCaching"] call isConfigOn && {vehicleVarName player == format ["%
 	execVM "addons\fpsFix\vehicleManagerHC.sqf";
 };
 
-if (["A3W_hcObjCleanup"] call isConfigOn && {vehicleVarName player == format ["%1%2", _hcPrefix, ["A3W_hcObjCleanupID", 1] call getPublicVar]}) then
+/*if (["A3W_hcObjCleanup"] call isConfigOn && {vehicleVarName player == format ["%1%2", _hcPrefix, ["A3W_hcObjCleanupID", 1] call getPublicVar]}) then
 {
 	execVM "server\WastelandServClean.sqf";
-};
+};*/
 
 if (["A3W_hcObjSaving"] call isConfigOn && {vehicleVarName player == format ["%1%2", _hcPrefix, ["A3W_hcObjSavingID", 2] call getPublicVar]}) then
 {

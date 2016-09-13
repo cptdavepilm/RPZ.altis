@@ -51,7 +51,6 @@ class A3W_fnc_addMagazineTurretLheli {};
 class A3W_fnc_addMagazineTurretMortar {};
 class A3W_fnc_addMagazineTurretOaheli {};
 class A3W_fnc_addMagazineTurretOcas {};
-class A3W_fnc_addMagazineTurretUav2 {};
 class A3W_fnc_hideObjectGlobal {};
 class A3W_fnc_lock {};
 class A3W_fnc_removeMagazinesTurret {};

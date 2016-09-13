@@ -119,8 +119,6 @@ if (isServer) then
 		"A3W_antiHackMinRecoil",
 		"A3W_vehicleSaving",
 		"A3W_staticWeaponSaving",
-		"A3W_uavControl",
-		"A3W_disableUavFeed",
 		"A3W_townSpawnCooldown",
 		"A3W_survivalSystem",
 		"A3W_extDB_GhostingAdmins",
@@ -422,11 +420,7 @@ if (_timeSavingOn || _weatherSavingOn) then
 	execVM "persistence\server\world\tLoad.sqf";
 };
 
-if ((isNil "A3W_buildingLoot" && {["A3W_buildingLootWeapons"] call isConfigOn || {["A3W_buildingLootSupplies"] call isConfigOn}}) || {["A3W_buildingLoot"] call isConfigOn}) then
-{
-	diag_log "[INFO] A3W loot spawning is ENABLED";
-	execVM "addons\Lootspawner\Lootspawner.sqf";
-};
+execVM "addons\Lootspawner\Lootspawner.sqf";
 
 [] execVM "server\functions\serverTimeSync.sqf";
 
@@ -469,10 +463,10 @@ if (["A3W_serverSpawning"] call isConfigOn) then
 A3W_serverSpawningComplete = compileFinal "true";
 publicVariable "A3W_serverSpawningComplete";
 
-if !(["A3W_hcObjCleanup"] call isConfigOn) then
+/*if !(["A3W_hcObjCleanup"] call isConfigOn) then
 {
 	// Start clean-up loop
 	execVM "server\WastelandServClean.sqf";
-};
+};*/
 
 execVM "server\functions\heliCrashes.sqf";

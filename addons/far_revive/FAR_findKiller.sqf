@@ -19,12 +19,6 @@ if (_vehicle isKindOf "CAManBase") exitWith { _vehicle }; // Killed by infantry
 
 _killer = objNull;
 
-// If killer is UAV, designate owner as killer
-if (isUavConnected _vehicle) then
-{
-	_killer = (uavControl _vehicle) select 0;
-};
-
 _ammo = _target getVariable ["FAR_killerAmmo", ""];
 
 // Chain-reaction tracking

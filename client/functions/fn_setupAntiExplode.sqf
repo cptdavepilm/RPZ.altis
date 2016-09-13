@@ -4,7 +4,7 @@
 //	@file Name: fn_setupAntiExplode.sqf
 //	@file Author: AgentRev
 
-// Attempt at fixing the dreaded explosion bug when you get in heli/planes and when taking control of UAVs
+// Attempt at fixing the dreaded explosion bug when you get in heli/planes
 
 if (isServer) exitWith {};
 

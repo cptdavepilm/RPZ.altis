@@ -79,16 +79,6 @@ else
 				}
 				else
 				{
-					if (["_UavTerminal", _x] call fn_findString != -1) then
-					{
-						_x = switch (playerSide) do
-						{
-							case BLUFOR: { "B_UavTerminal" };
-							case OPFOR:  { "O_UavTerminal" };
-							default      { "I_UavTerminal" };
-						};
-					};
-
 					player linkItem _x;
 				};
 			} forEach _value;

@@ -8,11 +8,11 @@
 
 TF_terrain_interception_coefficient = 0.1;
 
+ryanzombiestotalamount = 2;
+
 // General settings
 A3W_teamPlayersMap = 0;            // Show all friendly players on the map at all times, regardless of difficulty level (0 = no, 1 = yes)
 A3W_disableGlobalVoice = 1;        // Auto-switch channel to Direct communication whenever broadcasting voice on global, unless being admin (0 = no, 1 = yes)
-A3W_uavControl = "group";          // Restrict connection to UAVs based on ownership ("owner", "group", "side")
-A3W_disableUavFeed = 1;            // Force disable UAV PIP feed to prevent thermal camera abuse (0 = no, 1 = yes)
 A3W_disableBuiltInThermal = 1;     // Display a black screen if the player tries to use thermal vision built-in a handheld weapon like Titan launcher (0 = no, 1 = yes)
 
 // Time settings
@@ -104,6 +104,5 @@ A3W_essentialsSpawning = 0;        // If serverSpawning = 1, spawn essential ite
 
 // Loot settings
 A3W_buildingLootWeapons = 1;       // Spawn weapon loot in all buildings (0 = no, 1 = yes)
-A3W_buildingLootSupplies = 1;      // Spawn supply loot (backpacks & player items) in all buildings (0 = no, 1 = yes)
-A3W_buildingLootChances = 45;      // Chance percentage that loot will spawn at each spot in a building (0 to 100)
+A3W_buildingLootChances = 60;      // Chance percentage that loot will spawn at each spot in a building (0 to 100)
 A3W_vehicleLoot = 0;               // Level of loot added to vehicles (0 = none, 1 = weapon OR items, 2 = weapon AND items, 3 = two weapons AND items) - 2 or 3 recommended if buildingLoot = 0

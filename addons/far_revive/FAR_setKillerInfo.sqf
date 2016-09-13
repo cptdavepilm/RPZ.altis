@@ -4,7 +4,7 @@
 //	@file Name: FAR_setKillerInfo.sqf
 //	@file Author: AgentRev
 
-private ["_target", "_source", "_ammo", "_suspects", "_vehicle", "_killerVehicle", "_uavOwner", "_suspect", "_role"];
+private ["_target", "_source", "_ammo", "_suspects", "_vehicle", "_killerVehicle", "_suspect", "_role"];
 
 _target = _this select 0;
 _source = _this select 1;
@@ -24,16 +24,6 @@ if (_vehicle != _target && (isNull _source || _source in [_target, _vehicle])) t
 	};
 
 	//diag_log format ["_vehicle = %1 / source = %2", typeOf _vehicle, typeOf _source];
-};
-
-if (!isNull _source && !isPlayer _source && {getText (configFile >> "CfgVehicles" >> typeOf _source >> "simulation") == "UAVPilot"}) then
-{
-	_uavOwner = (uavControl vehicle _source) select 0;
-
-	if (alive _uavOwner) then
-	{
-		_source = _uavOwner;
-	};
 };
 
 _target setVariable ["FAR_killerVehicle", _source];

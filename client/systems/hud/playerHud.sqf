@@ -22,7 +22,6 @@ private ["_blood", "_food", "_thirst", "_bloodLvl", "_thirstLvl", "_foodLvl", "_
 
 _survivalSystem = ["A3W_survivalSystem"] call isConfigOn;
 _unlimitedStamina = ["A3W_unlimitedStamina"] call isConfigOn;
-_disableUavFeed = ["A3W_disableUavFeed"] call isConfigOn;
 
 private ["_mapCtrls", "_mapCtrl"];
 _ui = displayNull;
@@ -127,15 +126,6 @@ while {true} do
 	// Voice monitoring
 	[false] call fn_voiceChatControl;
 
-	if (isNil "_mapCtrls") then
-	{
-		_mapCtrls =
-		[
-			[{(uiNamespace getVariable ["RscDisplayAVTerminal", displayNull]) displayCtrl 51}, controlNull]/*, // UAV Terminal
-			[{artilleryComputerDisplayGoesHere displayCtrl 500}, controlNull]*/  // Artillery computer - cannot be enabled until this issue is resolved: http://feedback.arma3.com/view.php?id=21546
-		];
-	};
-
 
 	// Improve revealing and aimlocking of targetted vehicles
 	{
@@ -147,11 +137,6 @@ while {true} do
 			};
 		};
 	} forEach [cursorTarget, cursorObject];
-
-	if (_disableUavFeed && shownUavFeed) then
-	{
-		showUavFeed false;
-	};
 
 	if (isNil "A3W_missingMarkersNotice" && visibleMap) then
 	{
