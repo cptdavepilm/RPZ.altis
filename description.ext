@@ -1,7 +1,14 @@
 respawn="BASE";
 respawnDelay=15;
 disabledAI=1;
-disableChannels[] = {{0,false,true}, {2,true,true}}; // 0 = global, 1 = side, 2 = command // new syntax: {{channel<number>, disableText<bool>, disableVoice<bool>}, ...};
+disableChannels[] = {
+	{0,true,true},
+	{1,true,true},
+	{2,true,true},
+	{3,false,true},
+	{4,false,true},
+	{5,true,true}
+}; // 0 = global, 1 = side, 2 = command // new syntax: {{channel<number>, disableText<bool>, disableVoice<bool>}, ...};
 // side chat is disabled for indies in client\preInit.sqf
 joinUnassigned = 0;
 enableItemsDropping = 0;
