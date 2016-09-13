@@ -66,7 +66,8 @@ handle = [] spawn {
 
     while {true} do
     {  
-        waituntil {!(isnull (finddisplay 602))};     
+        waituntil {!(isnull (finddisplay 602))};
+        sleep 0.1;     
 
         ((findDisplay 602) displayCtrl 638) ctrlSetEventHandler ["LBDblClick", "_this call fnc_dbl"];  
         ((findDisplay 602) displayCtrl 633) ctrlSetEventHandler ["LBDblClick", " _this call fnc_dbl"];  

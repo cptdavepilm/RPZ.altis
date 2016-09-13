@@ -35,7 +35,7 @@ _checks = {
 	[_failed, _text];
 };
 
-_success = [5, ANIMATION, _checks, []] call a3w_actions_start;
+_success = [2.5, ANIMATION, _checks, []] call a3w_actions_start;
 if (_success) then {
 	hungerLevel = (hungerLevel + _amount) min 100;
 
