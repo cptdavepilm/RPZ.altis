@@ -11,6 +11,7 @@ _playerFuncs = format ["persistence\server\players\%1", call A3W_savingMethodDir
 fn_deletePlayerSave = [_playerFuncs, "deletePlayerSave.sqf"] call mf_compile;
 fn_loadAccount = [_playerFuncs, "loadAccount.sqf"] call mf_compile;
 fn_saveAccount = [_playerFuncs, "saveAccount.sqf"] call mf_compile;
+fn_loadWhitelist = [_playerFuncs, "loadWhitelist.sqf"] call mf_compile;
 fn_getPlayerFlag = [_playerFuncs, "getPlayerFlag.sqf"] call mf_compile;
 fn_updateStats = [_playerFuncs, "updateStats.sqf"] call mf_compile;
 fn_logAntihack = [_playerFuncs, "logAntihack.sqf"] call mf_compile;
@@ -74,6 +75,28 @@ A3W_fnc_checkPlayerFlag =
 			} forEach _data;
 
 			diag_log format ["pvar_requestPlayerData: %1", [owner _player, _player, objectFromNetId _pNetId]];
+		}] execFSM "call.fsm";
+	};
+};
+
+"pvar_requestPlayerWhitelist" addPublicVariableEventHandler
+{
+	(_this select 1) spawn
+	{
+		params ["_player", "_UID"];
+		_data = [_UID, _player] call fn_loadWhitelist;
+
+		[[_this, _data],
+		{
+			params ["_pVal", "_data"];
+			_pVal params ["_player", "_UID", "_pNetId"];
+
+			_pvarName = "pvar_applyPlayerWhitelist_" + _UID;
+
+			missionNamespace setVariable [_pvarName, _data];
+			(owner _player) publicVariableClient _pvarName;
+
+			diag_log format ["pvar_requestPlayerWhitelist: %1", [owner _player, _player, objectFromNetId _pNetId]];
 		}] execFSM "call.fsm";
 	};
 };

@@ -13,6 +13,15 @@ private _crossMap = ["A3W_extDB_playerSaveCrossMap"] call isConfigOn;
 private _environment = ["A3W_extDB_Environment", "normal"] call getPublicVar;
 private _mapID = call A3W_extDB_MapID;
 
+
+//First check the whitelist
+private _whitelisted = [["checkPlayerWhitelist", _UID]] call extDB_Database_async;
+
+if (!_whitelisted) then
+{
+
+};
+
 private _query = [["checkPlayerSave", _UID, _mapID], ["checkPlayerSaveXMap", _UID, _environment]] select _crossMap;
 _result = ([_query, 2] call extDB_Database_async) param [0,false];
 

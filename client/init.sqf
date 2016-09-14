@@ -18,6 +18,10 @@ waitUntil {!isNil "A3W_serverSetupComplete"};
 
 [] execVM "client\functions\bannedNames.sqf";
 
+[] execVM "client\functions\isWhitelisted.sqf";
+
+
+
 showPlayerIcons = true;
 mutexScriptInProgress = false;
 respawnDialogActive = false;
@@ -67,6 +71,16 @@ player call playerSetupStart;
 if (["A3W_playerSaving"] call isConfigOn) then
 {
 	call compile preprocessFileLineNumbers "persistence\client\players\setupPlayerDB.sqf";
+
+	call fn_requestPlayerWhitelist;
+
+	waitUntil {!isNil "playerData_whitelisted"};
+
+	if (!playerData_whitelisted) then 
+	{
+		_result = ["You are not whitelisted, visit www.awakenrp.com!", "Not whitelisted", true, false] call BIS_fnc_GUImessage;
+	};
+
 	call fn_requestPlayerData;
 
 	waitUntil {!isNil "playerData_loaded"};
