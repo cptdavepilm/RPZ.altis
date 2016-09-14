@@ -78,7 +78,9 @@ if (["A3W_playerSaving"] call isConfigOn) then
 
 	if (!playerData_whitelisted) then 
 	{
-		_result = ["You are not whitelisted, visit www.awakenrp.com!", "Not whitelisted", true, false] call BIS_fnc_GUImessage;
+		["You are not whitelisted, visit www.awakenrp.com!", "Not whitelisted", true, false] call BIS_fnc_GUImessage;
+
+		endMission "END1";
 	};
 
 	call fn_requestPlayerData;

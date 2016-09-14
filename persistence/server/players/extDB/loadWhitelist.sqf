@@ -11,8 +11,9 @@ private ["_result", "_data", "_location", "_dataTemp", "_ghostingTimer", "_secs"
 
 
 //First check the whitelist
-private _whitelisted = [["checkPlayerWhitelist", _UID]] call extDB_Database_async;
+private _whitelisted = [format ["checkPlayerWhitelist:%1", _UID], 2] call extDB_Database_async;
 
 diag_log format ["loadWhitelist %1: %2", _uid, _whitelisted];
 
-_whitelisted
+
+_whitelisted select 0
