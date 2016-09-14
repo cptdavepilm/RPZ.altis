@@ -14,16 +14,10 @@ lootWeapon_list =
 	[ // CIVIL
 		0,
 		[
-			["LIB_M1918A2_BAR", 5.0],
-			["LIB_MP40", 10.0],
-			["LIB_MP44", 10.0],
-			["LIB_PPSh41_m", 50.0],
-			["LIB_M1A1_Thompson", 10.0],
-			["LIB_M1_Garand", 10.0],
 			["CUP_srifle_LeeEnfield", 70.0],
-			["LIB_K98", 70.0],
+			["LIB_K98", 60.0],
 			["LIB_M9130", 100.0],
-			["CUP_srifle_CZ550", 5.0],
+			["CUP_srifle_CZ550", 1.0],
 			["hlc_rifle_saiga12k", 60.0],
 			["hlc_rifle_ak74_dirty", 5.0],
 			["hlc_rifle_ak47", 5.0],
@@ -31,10 +25,7 @@ lootWeapon_list =
 			["hlc_smg_mp5a4", 10.0],
 			["hlc_smg_mp5n", 10.0],
 			["hlc_smg_mp5sd5", 10.0],	
-			["LIB_SVT_40",	30.0],
-			["LIB_G43", 30.0],
 			["hlc_rifle_M1903A1", 15.0],
-			["hlc_rifle_M1903A1_unertl", 5.0]
 		]
 	],	
 	[ // MILITARY LOW
@@ -175,29 +166,30 @@ lootWeapon_list =
 			["hlc_smg_mp5n", 100.0],
 			["hlc_smg_mp5sd5", 100.0],
 			["hlc_smg_mp5sd6", 100.0],
-			["hlc_rifle_aug", 50.0], //aug
-			["hlc_rifle_auga1carb", 50.0],
-			["hlc_rifle_aughbar", 50.0],
-			["hlc_rifle_auga2", 50.0],
-			["hlc_rifle_auga2carb", 50.0],
-			["hlc_rifle_auga2lsw", 50.0],
-			["hlc_rifle_augsr", 50.0],
-			["hlc_rifle_augsrcarb", 50.0],
-			["hlc_rifle_augsrhbar", 50.0],
-			["hlc_rifle_auga3", 50.0],
-			["hlc_rifle_auga3_GL", 50.0],
-			["hlc_rifle_G36A1", 50.0], //g36
-			["hlc_rifle_G36A1AG36", 50.0],
-			["hlc_rifle_G36KA1", 50.0],
-			["hlc_rifle_G36C", 50.0],
-			["hlc_rifle_G36E1", 50.0],
-			["hlc_rifle_G36E1AG36", 50.0],
-			["hlc_rifle_G36KE1", 50.0],
-			["hlc_rifle_G36V", 50.0],
-			["hlc_rifle_G36KV", 50.0],
-			["hlc_rifle_G36CV", 50.0],
-			["hlc_rifle_G36VAG36", 50.0],
+			["hlc_rifle_aug", 60.0], //aug
+			["hlc_rifle_auga1carb", 60.0],
+			["hlc_rifle_aughbar", 60.0],
+			["hlc_rifle_auga2", 60.0],
+			["hlc_rifle_auga2carb", 60.0],
+			["hlc_rifle_auga2lsw", 60.0],
+			["hlc_rifle_augsr", 60.0],
+			["hlc_rifle_augsrcarb", 60.0],
+			["hlc_rifle_augsrhbar", 60.0],
+			["hlc_rifle_auga3", 60.0],
+			["hlc_rifle_auga3_GL", 60.0],
+			["hlc_rifle_G36A1", 60.0], //g36
+			["hlc_rifle_G36A1AG36", 60.0],
+			["hlc_rifle_G36KA1", 60.0],
+			["hlc_rifle_G36C", 60.0],
+			["hlc_rifle_G36E1", 60.0],
+			["hlc_rifle_G36E1AG36", 60.0],
+			["hlc_rifle_G36KE1", 60.0],
+			["hlc_rifle_G36V", 60.0],
+			["hlc_rifle_G36KV", 60.0],
+			["hlc_rifle_G36CV", 60.0],
+			["hlc_rifle_G36VAG36", 60.0],
 			["hlc_rifle_l1a1slr", 15.0], //fn fal
+			["hlc_rifle_L1A1SLR_suit", 10.0],
 			["hlc_rifle_SLR", 15.0],
 			["hlc_rifle_STG58F", 15.0],
 			["hlc_rifle_FAL5061", 15.0],
@@ -215,20 +207,25 @@ lootWeapon_list =
 			["hlc_rifle_Colt727", 100.0],
 			["hlc_rifle_Colt727_GL", 100.0],
 			["hlc_rifle_bcmjack", 100.0],
+			["hlc_rifle_bcmjack_SUP_hamr", 100.0],
 			["hlc_rifle_Bushmaster300 ", 100.0],
+			["hlc_rifle_Bushmaster300_SUP_AIM", 100.0],
 			["hlc_rifle_vendimus", 100.0],
 			["hlc_rifle_SAMR", 75.0],
-			["hlc_rifle_SAMR_LRPS", 40.0],
+			["hlc_rifle_SAMR_LRPS", 30.0],
 			["hlc_rifle_honeybadger", 100.0],
 			["hlc_rifle_cqbr", 100.0],
+			["hlc_rifle_cqbr_SUP_SB_11", 75.0],
 			["hlc_rifle_m4", 100.0],
+			["hlc_rifle_m4_ACOG", 100.0],
 			["CUP_arifle_M16A2", 100.0],
 			["CUP_arifle_M16A2_GL", 100.0],
 			["CUP_arifle_M16A4_Base", 100.0],
 			["CUP_arifle_M16A4_GL", 100.0],
-			["hlc_lmg_m60", 10.0], //m60
-			["hlc_rifle_m14sopmod", 10.0], //m14
-			["hlc_rifle_M14_Rail", 10.0],
+			["hlc_lmg_m60", 6.0], //m60
+			["hlc_rifle_m14sopmod", 7.0], //m14
+			["hlc_rifle_M14DMR_LRT", 5.0],
+			["hlc_rifle_M14_Rail", 7.0],
 			["R3F_Famas_F1", 70.0], // famas
 			["R3F_Famas_F1_HG", 70.0],
 			["R3F_Famas_F1_M203", 70.0],
@@ -239,49 +236,49 @@ lootWeapon_list =
 			["R3F_Famas_surb", 70.0],
 			["R3F_Famas_surb_M203", 70.0],
 			["R3F_Famas_felin", 70.0],
-			["R3F_HK417L", 6.0], // hk417
-			["R3F_HK417L_LRPS", 6.0],
-			["R3F_HK417M", 10.0],
-			["R3F_HK417M_HG", 10.0],
-			["R3F_HK417S_HG", 10.0],
+			["R3F_HK417L", 5.0], // hk417
+			["R3F_HK417L_LRPS", 5.0],
+			["R3F_HK417M", 7.0],
+			["R3F_HK417M_HG", 7.0],
+			["R3F_HK417S_HG", 7.0],
 			["R3F_HK416M", 50.0], // hk416
 			["R3F_HK416M_HG", 50.0],
 			["R3F_HK416M_M203", 50.0],
 			["hlc_rifle_awmagnum_FDE_LRPS", 1.0],  //awm
-			["CUP_srifle_M24_wdl_LeupoldMk4LRT", 20.0], //m24 m40
-			["CUP_srifle_M40A3_LeupoldMk4", 20.0],
-			["CUP_srifle_L129A1", 7.0],  // l129a1 762
-			["CUP_srifle_L129A1_LeupoldMk4", 7.0],
-			["CUP_srifle_L129A1_HG", 7.0],
+			["CUP_srifle_M24_wdl_LeupoldMk4LRT", 25.0], //m24 m40
+			["CUP_srifle_M40A3_LeupoldMk4", 25.0],
+			["CUP_srifle_L129A1", 5.0],  // l129a1 762
+			["CUP_srifle_L129A1_LeupoldMk4", 5.0],
+			["CUP_srifle_L129A1_HG", 5.0],
 			["CUP_arifle_L85A2", 100.0],  // l85
 			["CUP_arifle_L85A2_G", 100.0],
 			["CUP_arifle_L85A2_GL", 100.0],
 			["CUP_arifle_L86A2", 100.0],
-			["CUP_srifle_M110", 10.0],  //M110
-			["CUP_srifle_M110_ANPVS10", 5.0],
-			["CUP_arifle_Mk16_CQC", 50.0],  //mk16
-			["CUP_arifle_Mk16_CQC_FG", 50.0],
-			["CUP_arifle_Mk16_CQC_SFG", 50.0],
-			["CUP_arifle_Mk16_CQC_EGLM", 50.0],
-			["CUP_arifle_Mk16_STD", 50.0],
-			["CUP_arifle_Mk16_STD_FG", 50.0],
-			["CUP_arifle_Mk16_STD_SFG", 50.0],
-			["CUP_arifle_Mk16_STD_EGLM", 50.0],
-			["CUP_arifle_Mk16_SV", 40.0],
-			["CUP_arifle_Mk16_LeupoldMk4MRT", 40.0],
-			["CUP_arifle_Mk17_CQC", 5.0],  //mk17
-			["CUP_arifle_Mk17_CQC_FG", 5.0],
-			["CUP_arifle_Mk17_CQC_SFG", 5.0],
-			["CUP_arifle_Mk17_CQC_EGLM", 5.0],
-			["CUP_arifle_Mk17_STD", 5.0],
-			["CUP_arifle_Mk17_STD_FG", 5.0],
-			["CUP_arifle_Mk17_STD_SFG", 5.0],
-			["CUP_arifle_Mk17_STD_EGLM", 5.0],
-			["CUP_arifle_Mk20", 5.0],
-			["CUP_arifle_Mk20_LeupoldMk4MRT", 5.0],
-			["CUP_arifle_Mk20_SB11420_snds", 5.0],
+			["CUP_srifle_M110", 3.0],  //M110
+			["CUP_srifle_M110_ANPVS10", 3.0],
+			["CUP_arifle_Mk16_CQC", 40.0],  //mk16
+			["CUP_arifle_Mk16_CQC_FG", 40.0],
+			["CUP_arifle_Mk16_CQC_SFG", 40.0],
+			["CUP_arifle_Mk16_CQC_EGLM", 40.0],
+			["CUP_arifle_Mk16_STD", 40.0],
+			["CUP_arifle_Mk16_STD_FG", 40.0],
+			["CUP_arifle_Mk16_STD_SFG", 40.0],
+			["CUP_arifle_Mk16_STD_EGLM", 40.0],
+			["CUP_arifle_Mk16_SV", 30.0],
+			["CUP_arifle_Mk16_LeupoldMk4MRT", 30.0],
+			["CUP_arifle_Mk17_CQC", 3.0],  //mk17
+			["CUP_arifle_Mk17_CQC_FG", 3.0],
+			["CUP_arifle_Mk17_CQC_SFG", 3.0],
+			["CUP_arifle_Mk17_CQC_EGLM", 3.0],
+			["CUP_arifle_Mk17_STD", 3.0],
+			["CUP_arifle_Mk17_STD_FG", 3.0],
+			["CUP_arifle_Mk17_STD_SFG", 3.0],
+			["CUP_arifle_Mk17_STD_EGLM", 3.0],
+			["CUP_arifle_Mk20", 3.0],
+			["CUP_arifle_Mk20_LeupoldMk4MRT", 3.0],
+			["CUP_arifle_Mk20_SB11420_snds", 3.0],
 			["arifle_TRG21_F", 80.0],  // vanilla weapons
-			["arifle_MXM_RCO_pointer_snds_F", 10.0]
+			["arifle_MXM_RCO_pointer_snds_F", 20.0]
 		]
 	],
 	[ // Crashsite RUS
@@ -315,34 +312,37 @@ lootWeapon_list =
 			["hlc_rifle_ak74m", 100.0],
 			["hlc_rifle_ak74m_gl", 100.0],
 			["hlc_rifle_ak74m_MTK", 100.0],
-			["hlc_rifle_g3sg1", 10.0],  // G3
-			["hlc_rifle_psg1", 10.0],
-			["hlc_rifle_g3a3", 20.0],
-			["hlc_rifle_g3a3ris", 10.0],
-			["hlc_rifle_g3ka4", 20.0],
-			["hlc_rifle_g3ka4_GL", 20.0],
-			["hlc_rifle_psg1A1", 10.0],
-			["hlc_rifle_PSG1A1_RIS", 10.0],
-			["hlc_rifle_g3a3v", 20.0],
+			["hlc_rifle_g3sg1", 7.0],  // G3
+			["hlc_rifle_g3sg1_accupoint", 5.0],
+			["hlc_rifle_psg1", 7.0],
+			["hlc_rifle_g3a3", 15.0],
+			["hlc_rifle_g3a3_ZFSG1", 7.0],
+			["hlc_rifle_g3a3ris", 7.0],
+			["hlc_rifle_g3ka4", 15.0],
+			["hlc_rifle_g3ka4_GL", 15.0],
+			["hlc_rifle_psg1A1", 7.0],
+			["hlc_rifle_psg1A1_accupoint", 7.0],
+			["hlc_rifle_PSG1A1_RIS", 7.0],
+			["hlc_rifle_g3a3v", 15.0],
 			["hlc_rifle_hk51", 40.0],
 			["hlc_rifle_hk53", 40.0],
 			["hlc_rifle_hk53RAS", 40.0],
 			["hlc_rifle_hk33a2", 40.0],
 			["hlc_rifle_hk33a2RIS", 40.0],
-			["CUP_srifle_CZ750", 40.0], //cz750
-			["CUP_srifle_CZ750_LRPS", 40.0],
+			["CUP_srifle_CZ750", 30.0], //cz750
+			["CUP_srifle_CZ750_LRPS", 25.0],
 			["CUP_srifle_ksvk_PSO3", 1.0],  //ksvk
 			["CUP_srifle_SVD_pso", 70.0],  //svd
-			["CUP_srifle_SVD_wdl_ghillie", 60.0],
-			["CUP_srifle_VSSVintorez_pso", 70.0],  //vss
-			["CUP_lmg_PKM", 70.0],  //pkm pkp
-			["CUP_lmg_Pecheneg_PScope", 40.0],
-			["CUP_launch_RPG7V", 20.0],  //rpg
-			["CUP_arifle_CZ805_A2", 60.0],  //cz805 556
-			["CUP_arifle_CZ805_A1", 60.0],
-			["CUP_arifle_CZ805_GL", 60.0],
-			["CUP_arifle_CZ805_B_GL", 30.0],  //cz805 762
-			["CUP_arifle_CZ805_B", 30.0],
+			["CUP_srifle_SVD_wdl_ghillie", 50.0],
+			["CUP_srifle_VSSVintorez_pso", 50.0],  //vss
+			["CUP_lmg_PKM", 50.0],  //pkm pkp
+			["CUP_lmg_Pecheneg_PScope", 30.0],
+			["CUP_launch_RPG7V", 15.0],  //rpg
+			["CUP_arifle_CZ805_A2", 50.0],  //cz805 556
+			["CUP_arifle_CZ805_A1", 50.0],
+			["CUP_arifle_CZ805_GL", 50.0],
+			["CUP_arifle_CZ805_B_GL", 10.0],  //cz805 762
+			["CUP_arifle_CZ805_B", 10.0],
 			["hlc_rifle_ak12_HWS", 40.0],  //weapon config
 			["hlc_rifle_ak12_SUP_hamr", 100.0],
 			["hlc_rifle_ak47_PSO1", 100.0],
@@ -406,6 +406,39 @@ lootWeapon_list =
 			["SMG_03C_TR_black", 100.0],
 			["CUP_smg_bizon", 100.0], //bizon
 			["CUP_smg_bizon_snds", 75.0]
+		]
+	],
+	[ // Castle
+		10,
+		[
+			["CUP_srifle_LeeEnfield", 100.0],
+			["LIB_K98", 80.0],
+			["LIB_K98ZF39",	40.0],
+			["LIB_M9130", 100.0],
+			["LIB_M9130PU",	60.0],
+			["hlc_rifle_M1903A1", 80.0],
+			["hlc_rifle_M1903A1_unertl", 30.0],
+			["CUP_srifle_CZ550", 20.0],
+			["LIB_M1_Garand", 30.0],
+			["LIB_G43", 40.0],
+			["LIB_SVT_40",	40.0],
+			["hlc_rifle_saiga12k", 100.0],
+			["R3F_M4S90", 100.0],
+			["hlc_rifle_ak74_dirty", 80.0],  // AK
+			["hlc_rifle_ak74_dirty2", 80.0],
+			["LIB_M1918A2_BAR", 10.0],
+			["LIB_MP40", 20.0],
+			["LIB_MP44", 20.0],
+			["LIB_PPSh41_m", 20.0],
+			["LIB_M1A1_Thompson", 20.0]
+		]
+	],
+	[ // Marketplace/Office
+		11,
+		[
+			["hlc_rifle_saiga12k", 100.0],
+			["R3F_M4S90", 100.0],
+			["hlc_smg_mp5k_PDW", 100.0]
 		]
 	]
 ];
@@ -587,6 +620,28 @@ lootWeaponPistol_list =
 			["CUP_hgun_TaurusTracker455", 80.0],
 			["LIB_Colt_M1911", 100.0]
 		]
+	],
+	[ // Castle
+		10,
+		[
+			["Binocular", 100.0],
+			["CUP_hgun_Makarov", 100.0],
+			["CUP_hgun_TaurusTracker455", 100.0],
+			["LIB_Colt_M1911", 100.0],
+			["LIB_P38", 100.0],
+			["LIB_M1908", 100.0],
+			["LIB_TT33", 100.0],
+			["LIB_M1895", 100.0]
+		]
+	],
+	[ // Marketplace/Office
+		11,
+		[
+			["Binocular", 100.0]
+			["CUP_hgun_Makarov", 30.0],
+			["CUP_hgun_TaurusTracker455", 10.0],
+			["LIB_M1895", 10.0]
+		]
 	]
 ];
 
@@ -629,6 +684,7 @@ lootMagazine_list =
 			["rb_canteen", 50.0],
 			["rb_canteen_empty", 60.0],
 			["hlc_5rnd_3006_1903",	20.0],
+			["CUP_10x_303_M"	70.0],
 			["CUP_5x_22_LR_17_HMR_M", 30.0]
 		]
 	],
@@ -787,6 +843,7 @@ lootMagazine_list =
 			["rb_RiceBox", 50.0],
 			["rb_canteen", 50.0],
 			["rb_canteen_empty", 60.0],
+			["CUP_10x_303_M"	70.0],
 			["R3F_7Rnd_M4S90", 60.0]
 		]
 	],
@@ -910,6 +967,7 @@ lootMagazine_list =
 			["rb_canteen_empty", 60.0],
 			["hlc_5rnd_3006_1903", 40.0],
 			["CUP_10Rnd_762x51_CZ750", 10.0],
+			["CUP_10x_303_M"	70.0],
 			["CUP_5x_22_LR_17_HMR_M", 30.0]
 		]
 	],
@@ -1094,6 +1152,61 @@ lootMagazine_list =
 			["CUP_30Rnd_9x19_UZI", 50.0],
 			["CUP_6Rnd_45ACP_M", 50.0],
 			["CUP_20Rnd_B_765x17_Ball_M", 50.0]
+		]
+	],
+	[ // Castle
+		10,
+		[
+			[""	0.0],
+			["CUP_8Rnd_9x18_Makarov_M", 100.0],
+			["CUP_6Rnd_45ACP_M", 100.0],
+			["hlc_30Rnd_9x19_B_MP5", 60.0],
+			["R3F_7Rnd_M4S90", 70.0],
+			["hlc_10rnd_12g_slug_S12", 100.0],
+			["hlc_10rnd_12g_buck_S12", 100.0],
+			// ["rb_Meatbomb", 50.0],
+			// ["rb_Meatbombempty", 60.0],
+			["rb_TacticalBaconempty", 60.0],
+			["rb_BakedBeans", 50.0],
+			["rb_BakedBeansempty", 60.0],
+			["rb_bottle", 50.0],
+			["rb_bottleclean", 60.0],
+			["rb_Spiritempty", 60.0],
+			["rb_frantaempty", 60.0],
+			["rb_oldcan", 100.0],
+			["rb_redgullempty", 60.0],
+			["rb_RiceBox", 50.0],
+			["rb_canteen", 50.0],
+			["rb_canteen_empty", 60.0],
+			["hlc_5rnd_3006_1903",	20.0],
+			["CUP_5x_22_LR_17_HMR_M", 30.0]
+		]
+	],
+	[ // Marketplace/Office
+		11,
+		[
+			["rb_TacticalBacon", 70.0],
+			["rb_TacticalBaconempty", 60.0],
+			["rb_BakedBeans", 70.0],
+			["rb_BakedBeansempty", 60.0],
+			["rb_bottle", 70.0],
+			["rb_bottleclean", 60.0],
+			["rb_Spirit", 70.0],
+			["rb_Spiritempty", 60.0],
+			["rb_franta", 70.0],
+			["rb_frantaempty", 60.0],
+			["rb_oldcan", 100.0],
+			["rb_redgull", 70.0],
+			["rb_redgullempty", 60.0],
+			["rb_RiceBox", 70.0],
+			["rb_canteen", 50.0],
+			["rb_canteen_empty", 60.0],
+			["CUP_8Rnd_9x18_Makarov_M", 50.0],
+			["CUP_6Rnd_45ACP_M", 50.0],
+			["R3F_7Rnd_M4S90", 50.0],
+			["CUP_10x_303_M"	50.0],
+			["hlc_10rnd_12g_slug_S12", 50.0],
+			["hlc_10rnd_12g_buck_S12", 50.0]
 		]
 	]
 ];
@@ -1570,6 +1683,49 @@ lootItem_list =
 			["FirstAidKit", 100.0],
 			["ItemMap", 60.0]
 		]
+	],
+	[ // Castle
+		10,
+		[
+			["V_Rangemaster_belt", 60.0],
+			["V_BandollierB_khk", 15.0],
+			["V_BandollierB_cbr", 15.0],
+			["V_BandollierB_rgr", 15.0],
+			["V_BandollierB_blk", 15.0],
+			["V_BandollierB_oli", 15.0],
+			["V_LIB_GER_VestKar98"	5.0],
+			["V_LIB_GER_PrivateBelt" 5.0],
+			["V_LIB_GER_OfficerVest" 5.0],
+			["V_LIB_GER_OfficerBelt" 5.0],
+			["V_LIB_WP_MP40Vest" 5.0],
+			["V_LIB_WP_STGVest"	5.0],
+			["V_LIB_WP_Kar98Vest" 5.0],
+			["U_LIB_US_Private"	5.0],
+			["U_LIB_US_Corp" 5.0],
+			["V_LIB_US_Vest_Garand"	5.0],
+			["V_LIB_US_Vest_Thompson" 5.0],
+			["FirstAidKit", 100.0],
+			["tf_anprc152", 20.0],
+			["ItemWatch", 20.0],
+			["ItemCompass", 20.0],
+			["ItemMap", 20.0],
+			["rb_Axe", 40.0], 
+			["rb_matches", 60.0]
+		]
+	],
+	[ // Marketplace/Office
+		11,
+		[
+			["V_Rangemaster_belt", 60.0],
+			["FirstAidKit", 100.0],
+			["tf_anprc152", 20.0],
+			["ItemWatch", 20.0],
+			["ItemCompass", 20.0],
+			["ItemMap", 20.0],
+			["rb_Axe", 40.0], 
+			["rb_matches", 60.0]
+			[""	0.0]
+		]
 	]
 ];
 
@@ -1753,6 +1909,36 @@ lootBackpack_list =
 			["B_Carryall_mcamo", 10.0],
 			["B_Carryall_oli", 10.0],
 			["B_Carryall_oucamo", 10.0]
+		]
+	],
+	[ // Castle
+		10,
+		[
+			["B_FieldPack_oucamo", 100.0],
+			["B_FieldPack_khk", 100.0],
+			["B_FieldPack_cbr", 100.0],
+			["B_FieldPack_blk", 100.0],
+			["B_Kitbag_cbr", 50.0],
+			["B_Kitbag_rgr", 50.0],
+			["B_Kitbag_mcamo", 50.0],
+			["B_Kitbag_sgg", 50.0],
+			["B_Bergen_blk", 50.0],
+			["B_Bergen_rgr", 50.0],
+			["B_Bergen_mcamo", 50.0],
+			["B_Bergen_sgg", 50.0]
+		]
+	],
+	[ // Marketplace/Office
+		11,
+		[
+			["B_FieldPack_oucamo", 100.0],
+			["B_FieldPack_khk", 100.0],
+			["B_FieldPack_cbr", 100.0],
+			["B_FieldPack_blk", 100.0],
+			["B_Kitbag_cbr", 50.0],
+			["B_Kitbag_rgr", 50.0],
+			["B_Kitbag_mcamo", 50.0],
+			["B_Kitbag_sgg", 50.0]
 		]
 	]
 ];
