@@ -21,13 +21,6 @@ fn_requestPlayerData =
 	publicVariableServer "pvar_requestPlayerData";
 } call mf_compile;
 
-fn_requestPlayerWhitelist =
-{
-	playerData_whitelisted = nil;
-	pvar_requestPlayerWhitelist = [player, getPlayerUID player, netId player];
-	publicVariableServer "pvar_requestPlayerWhitelist";
-} call mf_compile;
-
 fn_deletePlayerData =
 {
 	pvar_deletePlayerData = player;
@@ -35,21 +28,6 @@ fn_deletePlayerData =
 	playerData_infoPairs = nil;
 	playerData_savePairs = nil;
 } call mf_compile;
-
-("pvar_applyPlayerWhitelist_" + getPlayerUID player) addPublicVariableEventHandler
-{
-	(_this select 1) spawn
-	{
-		_data = _this;
-
-		if (!_data) then
-		{
-
-		};
-
-		playerData_whitelisted = _data;
-	};
-};
 
 
 ("pvar_applyPlayerData_" + getPlayerUID player) addPublicVariableEventHandler

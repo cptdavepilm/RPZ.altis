@@ -2,6 +2,12 @@
 // * This project is licensed under the GNU Affero GPL v3. Copyright © 2014 A3Wasteland.com *
 // ******************************************************************************************
 
+if (_this) then
+{
+	["You are not whitelisted, visit www.awakenrp.com!", "Not whitelisted", false, false] spawn BIS_fnc_GUImessage;
+
+    sleep 5;
+};
 // soft CTD via missing include
 preprocessFile "client\functions\quit.hpp";
 

@@ -25,7 +25,7 @@ lootWeapon_list =
 			["hlc_smg_mp5a4", 10.0],
 			["hlc_smg_mp5n", 10.0],
 			["hlc_smg_mp5sd5", 10.0],	
-			["hlc_rifle_M1903A1", 15.0],
+			["hlc_rifle_M1903A1", 15.0]
 		]
 	],	
 	[ // MILITARY LOW
@@ -637,7 +637,7 @@ lootWeaponPistol_list =
 	[ // Marketplace/Office
 		11,
 		[
-			["Binocular", 100.0]
+			["Binocular", 100.0],
 			["CUP_hgun_Makarov", 30.0],
 			["CUP_hgun_TaurusTracker455", 10.0],
 			["LIB_M1895", 10.0]
@@ -684,7 +684,7 @@ lootMagazine_list =
 			["rb_canteen", 50.0],
 			["rb_canteen_empty", 60.0],
 			["hlc_5rnd_3006_1903",	20.0],
-			["CUP_10x_303_M"	70.0],
+			["CUP_10x_303_M",	70.0],
 			["CUP_5x_22_LR_17_HMR_M", 30.0]
 		]
 	],
@@ -843,7 +843,7 @@ lootMagazine_list =
 			["rb_RiceBox", 50.0],
 			["rb_canteen", 50.0],
 			["rb_canteen_empty", 60.0],
-			["CUP_10x_303_M"	70.0],
+			["CUP_10x_303_M",	70.0],
 			["R3F_7Rnd_M4S90", 60.0]
 		]
 	],
@@ -967,7 +967,7 @@ lootMagazine_list =
 			["rb_canteen_empty", 60.0],
 			["hlc_5rnd_3006_1903", 40.0],
 			["CUP_10Rnd_762x51_CZ750", 10.0],
-			["CUP_10x_303_M"	70.0],
+			["CUP_10x_303_M",	70.0],
 			["CUP_5x_22_LR_17_HMR_M", 30.0]
 		]
 	],
@@ -1157,7 +1157,6 @@ lootMagazine_list =
 	[ // Castle
 		10,
 		[
-			[""	0.0],
 			["CUP_8Rnd_9x18_Makarov_M", 100.0],
 			["CUP_6Rnd_45ACP_M", 100.0],
 			["hlc_30Rnd_9x19_B_MP5", 60.0],
@@ -1204,7 +1203,7 @@ lootMagazine_list =
 			["CUP_8Rnd_9x18_Makarov_M", 50.0],
 			["CUP_6Rnd_45ACP_M", 50.0],
 			["R3F_7Rnd_M4S90", 50.0],
-			["CUP_10x_303_M"	50.0],
+			["CUP_10x_303_M",	50.0],
 			["hlc_10rnd_12g_slug_S12", 50.0],
 			["hlc_10rnd_12g_buck_S12", 50.0]
 		]
@@ -1693,17 +1692,17 @@ lootItem_list =
 			["V_BandollierB_rgr", 15.0],
 			["V_BandollierB_blk", 15.0],
 			["V_BandollierB_oli", 15.0],
-			["V_LIB_GER_VestKar98"	5.0],
-			["V_LIB_GER_PrivateBelt" 5.0],
-			["V_LIB_GER_OfficerVest" 5.0],
-			["V_LIB_GER_OfficerBelt" 5.0],
-			["V_LIB_WP_MP40Vest" 5.0],
-			["V_LIB_WP_STGVest"	5.0],
-			["V_LIB_WP_Kar98Vest" 5.0],
-			["U_LIB_US_Private"	5.0],
-			["U_LIB_US_Corp" 5.0],
-			["V_LIB_US_Vest_Garand"	5.0],
-			["V_LIB_US_Vest_Thompson" 5.0],
+			["V_LIB_GER_VestKar98",	5.0],
+			["V_LIB_GER_PrivateBelt", 5.0],
+			["V_LIB_GER_OfficerVest", 5.0],
+			["V_LIB_GER_OfficerBelt", 5.0],
+			["V_LIB_WP_MP40Vest", 5.0],
+			["V_LIB_WP_STGVest",	5.0],
+			["V_LIB_WP_Kar98Vest", 5.0],
+			["U_LIB_US_Private",	5.0],
+			["U_LIB_US_Corp", 5.0],
+			["V_LIB_US_Vest_Garand",	5.0],
+			["V_LIB_US_Vest_Thompson", 5.0],
 			["FirstAidKit", 100.0],
 			["tf_anprc152", 20.0],
 			["ItemWatch", 20.0],
@@ -1724,7 +1723,6 @@ lootItem_list =
 			["ItemMap", 20.0],
 			["rb_Axe", 40.0], 
 			["rb_matches", 60.0]
-			[""	0.0]
 		]
 	]
 ];
