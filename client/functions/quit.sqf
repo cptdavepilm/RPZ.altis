@@ -7,9 +7,7 @@ diag_log format ["quit.sqf %1",  _this];
 _this spawn {
     if (_this) then
     {
-        ["You are not whitelisted, visit www.awakenrp.com!", "Not whitelisted", false, false] spawn BIS_fnc_GUImessage;
-
-        sleep 5;
+        ["You are not whitelisted, visit www.awakenrp.com!", "Not whitelisted", true, false] call BIS_fnc_GUImessage;
     };
 
     

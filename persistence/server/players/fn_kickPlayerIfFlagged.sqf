@@ -10,7 +10,7 @@ private _flag = _uid call fn_getPlayerFlag;
 private _whitelisted = _uid call fn_getWhitelist;
 
 diag_log ("fn_kickPlayerIfFlagged " + str _whitelisted);
-if (!isNil "_whitelisted" && {count _whitelisted > 0}) then
+if (!isNil "_whitelisted" && {!(count _whitelisted > 0)}) then
 {
 	{ true call compile preprocessFile "client\functions\quit.sqf" } remoteExecCall ["call", _owner];
 
