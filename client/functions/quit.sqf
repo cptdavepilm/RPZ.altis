@@ -13,10 +13,8 @@ _this spawn {
     };
 
     
-    endMission "CONTINUE";
-/*
     // soft CTD via missing include
-    preprocessFile "client\functions\quit.hpp";
+    //preprocessFile "client\functions\quit.hpp";
 
     // BE kick if soft CTD fails
     _dummyVar = "A3W_fnc_antihackLog_" + str floor random 1e6;
@@ -24,5 +22,5 @@ _this spawn {
     publicVariableServer _dummyVar;
 
     // hard CTD if BE kick fails
-    player setVelocity [0,0,1e38];*/
+    //player setVelocity [0,0,1e38];
 };
