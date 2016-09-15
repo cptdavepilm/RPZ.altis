@@ -6,7 +6,7 @@
 _this spawn {
     if (_this) then
     {
-        ["You are not whitelisted, visit www.awakenrp.com!", "Not whitelisted", true, false] call BIS_fnc_GUImessage;
+        ["You are not whitelisted, visit www.awakenrp.com!", "Not whitelisted", true, false] spawn BIS_fnc_GUImessage;
     };
 
     

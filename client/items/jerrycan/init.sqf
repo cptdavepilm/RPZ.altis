@@ -16,7 +16,7 @@ _path = _this;
 iconJerry = "client\icons\jerrycan.paa";
 iconSyphon = "client\icons\syphonhose.paa";
 
-mf_jerrycan_pumps = ["Land_FuelStation_Feed_F", "Land_MetalBarrel_F", "Land_fs_feed_F", "Land_Tank_rust_F"];
+mf_jerrycan_pumps = ["Land_FuelStation_Feed_F", "Land_MetalBarrel_F", "Land_fs_feed_F", "Land_Tank_rust_F","Land_Ind_TankSmall2","Land_Ind_TankSmall2_EP1","Land_Fuel_tank_stairs","Land_Fuel_tank_big"];
 
 mf_jerrycan_vehicles = ["LandVehicle", "Air", "Ship"];
 

@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=21208;
+		nextID=21209;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=169;
+		nextID=173;
 	};
 	class Camera
 	{
-		pos[]={9598.2568,204.91354,6308.4111};
-		dir[]={-0.83881974,-0.4893167,-0.23916247};
-		up[]={-0.47065344,0.87202108,-0.13418597};
-		aside[]={-0.27421111,-3.9313454e-007,0.96177441};
+		pos[]={3113.8162,117.02502,4480.4146};
+		dir[]={-0.86983401,-0.36963451,-0.32693717};
+		up[]={-0.34605625,0.92915505,-0.1300682};
+		aside[]={-0.35185313,-1.9202707e-007,0.93612164};
 	};
 };
 binarizationWanted=0;
@@ -97,7 +97,8 @@ addons[]=
 	"CUP_WheeledVehicles_UAZ",
 	"CUP_WheeledVehicles_Datsun",
 	"CUP_CAStructuresHouse_A_Hospital",
-	"CST_Misc_Structures"
+	"CST_Misc_Structures",
+	"task_force_radio_items"
 };
 class AddonsMetaData
 {
@@ -164,200 +165,202 @@ class AddonsMetaData
 		};
 		class Item9
 		{
-			className="101_editor";
-			name="101_editor";
-		};
-		class Item10
-		{
 			className="CUP_CAStructures_E_Misc_Misc_Construction";
 			name="CUP_CAStructures_E_Misc_Misc_Construction";
 		};
-		class Item11
+		class Item10
 		{
 			className="CUP_CAStructures_E_Misc_Misc_Market";
 			name="CUP_CAStructures_E_Misc_Misc_Market";
 		};
-		class Item12
+		class Item11
 		{
 			className="CUP_Misc_e_Config";
 			name="CUP_Misc_e_Config";
 		};
-		class Item13
+		class Item12
 		{
 			className="WW2_CA_Core_c";
 			name="WW2_CA_Core_c";
 		};
-		class Item14
+		class Item13
 		{
 			className="SAR_ru_architecture";
 			name="SAR_ru_architecture";
 		};
-		class Item15
+		class Item14
 		{
 			className="CUP_Buildings_Config";
 			name="CUP_Buildings_Config";
 		};
-		class Item16
+		class Item15
 		{
 			className="CUP_WarfareBuildings";
 			name="CUP_WarfareBuildings";
 		};
-		class Item17
+		class Item16
 		{
 			className="CUP_ibr_plants";
 			name="CUP_ibr_plants";
 		};
-		class Item18
+		class Item17
 		{
 			className="CUP_CAStructures_Mil";
 			name="CUP_CAStructures_Mil";
 		};
-		class Item19
+		class Item18
 		{
 			className="dayzed_buildings";
 			name="dayzed_buildings";
 		};
-		class Item20
+		class Item19
 		{
 			className="CUP_StandaloneTerrains_Core_Faction";
 			name="CUP_StandaloneTerrains_Core_Faction";
 		};
-		class Item21
+		class Item20
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item22
+		class Item21
 		{
 			className="A3_Structures_F_Households";
 			name="Arma 3 - Houses";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item23
+		class Item22
 		{
 			className="CUP_CWA_Misc";
 			name="CUP_CWA_Misc";
 		};
-		class Item24
+		class Item23
 		{
 			className="CUP_Editor_Plants_Config";
 			name="CUP_Editor_Plants_Config";
 		};
-		class Item25
+		class Item24
 		{
 			className="ryanzombiesfunctions";
 			name="ryanzombiesfunctions";
 			author="Ryan";
 		};
-		class Item26
+		class Item25
 		{
 			className="CUP_CAMP_Armory_Misc_Concrete_Wall";
 			name="CUP_CAMP_Armory_Misc_Concrete_Wall";
 		};
-		class Item27
+		class Item26
 		{
 			className="CUP_Desert2_Config";
 			name="CUP_Desert2_Config";
 		};
-		class Item28
+		class Item27
 		{
 			className="WW2_Terrains_c_Structures_Buildings_c";
 			name="WW2_Terrains_c_Structures_Buildings_c";
 		};
-		class Item29
+		class Item28
 		{
 			className="CST_Industrial_Objects_Construction";
 			name="CST_Industrial_Objects_Construction";
 		};
-		class Item30
+		class Item29
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item31
+		class Item30
 		{
 			className="WW2_Core_c_Gui_c";
 			name="WW2_Core_c_Gui_c";
 		};
-		class Item32
+		class Item31
 		{
 			className="A3_Modules_F_Curator";
 			name="Arma 3 Zeus Update - Scripted Modules";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item33
+		class Item32
 		{
 			className="A3_Soft_F";
 			name="Arma 3 Alpha - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item34
+		class Item33
 		{
 			className="A3_Boat_F";
 			name="Arma 3 Alpha - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item35
+		class Item34
 		{
 			className="CUP_WheeledVehicles_Skoda";
 			name="CUP_WheeledVehicles_Skoda";
 		};
-		class Item36
+		class Item35
 		{
 			className="CUP_WheeledVehicles_Ural";
 			name="CUP_WheeledVehicles_Ural";
 		};
-		class Item37
+		class Item36
 		{
 			className="CUP_Wheeledvehicles_VWGolf";
 			name="CUP_Wheeledvehicles_VWGolf";
 		};
-		class Item38
+		class Item37
 		{
 			className="A3_Soft_F_Kart";
 			name="Arma 3 Karts - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item39
+		class Item38
 		{
 			className="A3_Soft_F_Gamma";
 			name="Arma 3 - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="http://www.arma3.com";
 		};
-		class Item40
+		class Item39
 		{
 			className="CUP_wheeledvehicles_Octaiva";
 			name="CUP_wheeledvehicles_Octaiva";
 		};
-		class Item41
+		class Item40
 		{
 			className="CUP_WheeledVehicles_UAZ";
 			name="CUP_WheeledVehicles_UAZ";
 		};
-		class Item42
+		class Item41
 		{
 			className="CUP_WheeledVehicles_Datsun";
 			name="CUP_WheeledVehicles_Datsun";
 		};
-		class Item43
+		class Item42
 		{
 			className="CUP_CAStructuresHouse_A_Hospital";
 			name="CUP_CAStructuresHouse_A_Hospital";
 		};
-		class Item44
+		class Item43
 		{
 			className="CST_Misc_Structures";
 			name="CST_Misc_Structures";
+		};
+		class Item44
+		{
+			className="task_force_radio_items";
+			name="task_force_radio_items";
+			author="[TF]Nkey";
+			url="https://github.com/michail-nikolaev/task-force-arma-3-radio";
 		};
 	};
 };
@@ -388,7 +391,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=760;
+		items=761;
 		class Item0
 		{
 			dataType="Object";
@@ -45274,6 +45277,153 @@ class Mission
 			colorName="ColorGreen";
 			id=21206;
 			atlOffset=-13.016015;
+		};
+		class Item760
+		{
+			dataType="Logic";
+			class PositionInfo
+			{
+				position[]={-641.479,192.85522,6599.7388};
+			};
+			id=21208;
+			type="tfar_ModuleTaskForceRadioEnforceUsage";
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_password";
+					expression="_this setVariable ['radio_channel_password',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="topkek";
+						};
+					};
+				};
+				class Attribute1
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_RiflemanRadio";
+					expression="_this setVariable ['RiflemanRadio',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute2
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_radio_channel_name";
+					expression="_this setVariable ['radio_channel_name',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"STRING"
+								};
+							};
+							value="TaskForceRadio";
+						};
+					};
+				};
+				class Attribute3
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_same_sw_frequencies_for_side";
+					expression="_this setVariable ['same_sw_frequencies_for_side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute4
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_TeamLeaderRadio";
+					expression="_this setVariable ['TeamLeaderRadio',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=0;
+						};
+					};
+				};
+				class Attribute5
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_same_lr_frequencies_for_side";
+					expression="_this setVariable ['same_lr_frequencies_for_side',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"BOOL"
+								};
+							};
+							value=1;
+						};
+					};
+				};
+				class Attribute6
+				{
+					property="tfar_ModuleTaskForceRadioEnforceUsage_terrain_interception_coefficient";
+					expression="_this setVariable ['terrain_interception_coefficient',_value,true];";
+					class Value
+					{
+						class data
+						{
+							class type
+							{
+								type[]=
+								{
+									"SCALAR"
+								};
+							};
+							value=7;
+						};
+					};
+				};
+				nAttributes=7;
+			};
 		};
 	};
 };

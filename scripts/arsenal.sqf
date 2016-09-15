@@ -873,7 +873,6 @@ _headgear = [
 	"CUP_H_TKI_Pakol_2_06",
 	"CUP_H_USArmy_Boonie",
 	"CUP_H_USMC_Officer_Cap",
-	"CUP_H_USMC_HelmetWDL",
 	"CUP_H_FR_Cap_Headset_Green",
 	"CUP_H_FR_Cap_Officer_Headset",
 	"CUP_H_FR_BandanaGreen",
