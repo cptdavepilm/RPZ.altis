@@ -17,7 +17,11 @@ params
 
 scopeName "fn_deathMessage";
 
-diag_log ["fn_deathMessage logs %1", _this];
+
+if (isServer) then
+{
+	diag_log ["fn_deathMessage logs %1", _this];
+};
 
 if (_mode isEqualTo 0) then
 {

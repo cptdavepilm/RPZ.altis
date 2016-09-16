@@ -8,7 +8,7 @@
 
 params [["_vals",0]];
 
-diag_log ["FAR_headshotHitPartEH log %1", _this];
+//diag_log ["FAR_headshotHitPartEH log %1", _this];
 if !(_vals isEqualType []) exitWith {}; // is sometimes object
 
 _vals params ["_target", "_shooter", "", "", "", "_selections", "_hit", "", "", "", "_direct"];
