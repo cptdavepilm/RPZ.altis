@@ -11,8 +11,8 @@ private["_useStatic","_crashDamage","_lootRadius","_preWaypointPos","_endTime","
 //_lootTable	= _this select 1;
 _guaranteedLoot = 3; //Number of the guaranteed Loot-Piles at the Crashside
 _randomizedLoot = 4; //Number of the random Loot-Piles at the Crashside 3+(1,2,3 or 4)
-_frequency	= 3; //Fixed-Time (in seconds) between each start of a new Chopper
-_variance	= 3; //Random time (in seconds) added between each start of a new Chopper
+_frequency	= 3000; //Fixed-Time (in seconds) between each start of a new Chopper
+_variance	= 500; //Random time (in seconds) added between each start of a new Chopper
 _spawnChance	= 1; //Spawnchance of the Heli (1 will spawn all possible Choppers, 0.5 only 50% of them)
 _spawnMarker	= 'center'; //Center-Marker for the Random-Crashpoints, for Chernarus this is a point near Stary
 _spawnRadius	= 400; //Radius in Meters from the marker in which the Choppers can crash and get waypoints
