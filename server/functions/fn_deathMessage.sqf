@@ -107,5 +107,5 @@ else
 		};
 	};
 
-	systemChat _message;
+	diag_log _message;
 };

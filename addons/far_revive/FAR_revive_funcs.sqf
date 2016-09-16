@@ -275,7 +275,7 @@ FAR_public_EH =
 			};
 		};
 
-		case "FAR_deathMessage":
+		/*case "FAR_deathMessage":
 		{
 			_value params [["_unit",objNull,[objNull]], ["_unitName",[],[[]]], ["_killerName",[],[[]]], ["_friendlyFire",false,[false]]];
 
@@ -290,7 +290,7 @@ FAR_public_EH =
 					systemChat format ["%1 injured %2%3", toString _killerName, toString _unitName, [""," (friendly fire)"] select _friendlyFire];
 				};
 			};
-		};
+		};*/
 
 		case "FAR_slayTarget":
 		{
