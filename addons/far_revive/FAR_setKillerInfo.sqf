@@ -42,4 +42,4 @@ _target setVariable ["FAR_killerAmmo", _ammo];
 _target setVariable ["FAR_killerSuspects", _suspects];
 
 //systemChat format ["FAR_setKillerInfo: %1", [typeOf _target, name _target, typeOf _source, _ammo, _suspects]];
-//diag_log format ["FAR_setKillerInfo: %1", [typeOf _target, name _target, typeOf _source, _ammo, _suspects]];
+diag_log format ["FAR_setKillerInfo: %1", [typeOf _target, name _target, typeOf _source, _ammo, _suspects]];

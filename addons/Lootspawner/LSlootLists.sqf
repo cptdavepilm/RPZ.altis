@@ -15,7 +15,7 @@ lootWeapon_list =
 		0,
 		[
 			["CUP_srifle_LeeEnfield", 70.0],
-			["LIB_K98", 60.0],
+			["LIB_K98", 50.0],
 			["LIB_M9130", 100.0],
 			["CUP_srifle_CZ550", 1.0],
 			["hlc_rifle_saiga12k", 60.0],
@@ -166,6 +166,7 @@ lootWeapon_list =
 			["hlc_smg_mp5n", 100.0],
 			["hlc_smg_mp5sd5", 100.0],
 			["hlc_smg_mp5sd6", 100.0],
+			["hlc_smg_mp5a2_SUP_AC11704_Grip", 100.0],
 			["hlc_rifle_aug", 60.0], //aug
 			["hlc_rifle_auga1carb", 60.0],
 			["hlc_rifle_aughbar", 60.0],
@@ -198,6 +199,7 @@ lootWeapon_list =
 			["hlc_rifle_SLRchopmod", 15.0],
 			["hlc_rifle_falosw", 10.0],
 			["hlc_rifle_osw_GL", 10.0],
+			["hlc_rifle_c1A1_SUP_PVS4", 5.0],
 			["hlc_lmg_minimipara", 10.0], //fn minimi
 			["hlc_lmg_minimi", 10.0],
 			["hlc_lmg_m249para", 10.0],
@@ -222,10 +224,12 @@ lootWeapon_list =
 			["CUP_arifle_M16A2_GL", 100.0],
 			["CUP_arifle_M16A4_Base", 100.0],
 			["CUP_arifle_M16A4_GL", 100.0],
-			["hlc_lmg_m60", 6.0], //m60
+			["hlc_rifle_M4_SUP_Comp", 80.0],
+			["hlc_lmg_m60", 10.0], //m60
 			["hlc_rifle_m14sopmod", 7.0], //m14
 			["hlc_rifle_M14DMR_LRT", 5.0],
 			["hlc_rifle_M14_Rail", 7.0],
+			["hlc_rifle_M21_SUP_LRT", 3.0],
 			["R3F_Famas_F1", 70.0], // famas
 			["R3F_Famas_F1_HG", 70.0],
 			["R3F_Famas_F1_M203", 70.0],
@@ -236,24 +240,33 @@ lootWeapon_list =
 			["R3F_Famas_surb", 70.0],
 			["R3F_Famas_surb_M203", 70.0],
 			["R3F_Famas_felin", 70.0],
+			["R3F_Famas_G2_Yorris", 70.0],
+			["R3F_Famas_surb_SUP_J4", 50.0],
 			["R3F_HK417L", 5.0], // hk417
 			["R3F_HK417L_LRPS", 5.0],
 			["R3F_HK417M", 7.0],
 			["R3F_HK417M_HG", 7.0],
 			["R3F_HK417S_HG", 7.0],
+			["R3F_HK417M_J4_bipod", 7.0],
 			["R3F_HK416M", 50.0], // hk416
 			["R3F_HK416M_HG", 50.0],
 			["R3F_HK416M_M203", 50.0],
+			["R3F_HK416M_SUP_Hamr_bipod", 40.0],
 			["hlc_rifle_awmagnum_FDE_LRPS", 1.0],  //awm
+			["hlc_rifle_awcovert_FDE_LRPS", 1.0],
+			["R3F_PGM_Hecate_II_POLY_NF42", 1.0],
 			["CUP_srifle_M24_wdl_LeupoldMk4LRT", 25.0], //m24 m40
 			["CUP_srifle_M40A3_LeupoldMk4", 25.0],
 			["CUP_srifle_L129A1", 5.0],  // l129a1 762
 			["CUP_srifle_L129A1_LeupoldMk4", 5.0],
 			["CUP_srifle_L129A1_HG", 5.0],
+			["CUP_srifle_L129A1_SUP_ACOG_bipod", 4.0],
 			["CUP_arifle_L85A2", 100.0],  // l85
 			["CUP_arifle_L85A2_G", 100.0],
 			["CUP_arifle_L85A2_GL", 100.0],
 			["CUP_arifle_L86A2", 100.0],
+			["CUP_arifle_L85A2_SUP_SUSAT", 80.0],
+			["CUP_arifle_L86A2_FH_SUSAT", 100.0],
 			["CUP_srifle_M110", 3.0],  //M110
 			["CUP_srifle_M110_ANPVS10", 3.0],
 			["CUP_arifle_Mk16_CQC", 40.0],  //mk16
@@ -284,6 +297,11 @@ lootWeapon_list =
 	[ // Crashsite RUS
 		8,
 		[
+			["hlc_smg_mp5a4", 100.0], //mp5
+			["hlc_smg_mp5n", 100.0],
+			["hlc_smg_mp5sd5", 100.0],
+			["hlc_smg_mp5sd6", 100.0],
+			["hlc_smg_mp5a2_SUP_AC11704_Grip", 100.0],
 			["hlc_rifle_ak74", 100.0],  //AK74 47 varients
 			["hlc_rifle_ak74_MTK", 100.0],
 			["hlc_rifle_ak74_dirty", 100.0],
@@ -393,6 +411,7 @@ lootWeapon_list =
 			["hlc_smg_mp5k_PDW", 100.0],
 			["hlc_smg_mp5a2", 100.0],
 			["hlc_smg_mp5a3", 100.0],
+			["hlc_smg_mp5a2_SUP_AC11704_Grip", 30.0],
 			["hlc_rifle_hk51", 5.0],  //g3 varient
 			["hlc_rifle_hk53", 5.0],
 			["hlc_rifle_hk53RAS", 5.0],
@@ -404,6 +423,7 @@ lootWeapon_list =
 			["SMG_03_TR_black", 100.0],
 			["SMG_03C_black", 100.0],
 			["SMG_03C_TR_black", 100.0],
+			["SMG_03_TR_black_SUP_ACO_FL", 40.0],
 			["CUP_smg_bizon", 100.0], //bizon
 			["CUP_smg_bizon_snds", 75.0]
 		]
@@ -483,6 +503,7 @@ lootWeaponPistol_list =
 		2,
 		[
 			["Binocular", 100.0],
+			["NVGoggles_INDEP", 10.0],
 			["CUP_hgun_Duty", 100.0],
 			["CUP_hgun_Duty_M3X", 50.0],
 			["CUP_hgun_Phantom", 50.0],
@@ -521,6 +542,8 @@ lootWeaponPistol_list =
 		5,
 		[
 			["Binocular", 100.0],
+			["CUP_Binocular_Vector", 1.0],
+			["NVGoggles_INDEP", 25.0],
 			["CUP_hgun_Duty", 100.0],
 			["CUP_hgun_Duty_M3X", 50.0],
 			["CUP_hgun_Phantom", 50.0],
@@ -542,6 +565,8 @@ lootWeaponPistol_list =
 		6,
 		[
 			["Binocular", 100.0],
+			["CUP_Binocular_Vector", 1.0],
+			["NVGoggles_INDEP", 1.0],
 			["CUP_hgun_Makarov", 100.0],
 			["LIB_Colt_M1911", 100.0],
 			["LIB_P38", 100.0],
@@ -555,6 +580,8 @@ lootWeaponPistol_list =
 		7,
 		[
 			["Binocular", 100.0],
+			["CUP_Binocular_Vector", 15.0],
+			["NVGoggles_INDEP", 40.0],
 			["CUP_hgun_Duty", 100.0],
 			["CUP_hgun_Duty_M3X", 50.0],
 			["CUP_hgun_Phantom", 50.0],
@@ -577,6 +604,8 @@ lootWeaponPistol_list =
 		8,
 		[
 			["Binocular", 100.0],
+			["CUP_Binocular_Vector", 15.0],
+			["NVGoggles_INDEP", 40.0],
 			["CUP_hgun_Duty", 100.0],
 			["CUP_hgun_Duty_M3X", 50.0],
 			["CUP_hgun_Phantom", 50.0],
@@ -599,6 +628,8 @@ lootWeaponPistol_list =
 		9,
 		[
 			["Binocular", 100.0],
+			["CUP_Binocular_Vector", 5.0],
+			["NVGoggles_INDEP", 10.0],
 			["CUP_hgun_Duty", 100.0],
 			["CUP_hgun_Duty_M3X", 50.0],
 			["CUP_hgun_Phantom", 75.0],
@@ -684,7 +715,22 @@ lootMagazine_list =
 			["rb_canteen", 50.0],
 			["rb_canteen_empty", 60.0],
 			["hlc_5rnd_3006_1903",	20.0],
-			["CUP_10x_303_M",	70.0],
+			["CUP_10x_303_M", 70.0],
+			["LIB_10Rnd_792x57", 10.0],
+			["LIB_20Rnd_762x63", 5.0],
+			["LIB_5Rnd_792x57", 50.0],
+			["LIB_15Rnd_762x33", 15.0],
+			["LIB_8Rnd_762x63", 20.0],
+			["LIB_30Rnd_45ACP", 20.0],
+			["LIB_5Rnd_762x54", 100.0],
+			["LIB_32Rnd_9x19", 20.0],
+			["LIB_30Rnd_792x33", 20.0],
+			["LIB_35Rnd_762x25", 20.0],
+			["LIB_10Rnd_762x54", 50.0],
+			["LIB_7Rnd_45ACP", 100.0],
+			["LIB_7Rnd_762x38", 100.0],
+			["LIB_8Rnd_762x25", 100.0],
+			["LIB_8Rnd_9x19", 100.0],
 			["CUP_5x_22_LR_17_HMR_M", 30.0]
 		]
 	],
@@ -843,35 +889,51 @@ lootMagazine_list =
 			["rb_RiceBox", 50.0],
 			["rb_canteen", 50.0],
 			["rb_canteen_empty", 60.0],
-			["CUP_10x_303_M",	70.0],
+			["CUP_10x_303_M", 70.0],
+			["LIB_10Rnd_792x57", 10.0],
+			["LIB_20Rnd_762x63", 5.0],
+			["LIB_5Rnd_792x57", 50.0],
+			["LIB_15Rnd_762x33", 15.0],
+			["LIB_8Rnd_762x63", 20.0],
+			["LIB_30Rnd_45ACP", 20.0],
+			["LIB_5Rnd_762x54", 100.0],
+			["LIB_32Rnd_9x19", 20.0],
+			["LIB_30Rnd_792x33", 20.0],
+			["LIB_35Rnd_762x25", 20.0],
+			["LIB_10Rnd_762x54", 50.0],
+			["LIB_7Rnd_45ACP", 100.0],
+			["LIB_7Rnd_762x38", 100.0],
+			["LIB_8Rnd_762x25", 100.0],
+			["LIB_8Rnd_9x19", 100.0],
 			["R3F_7Rnd_M4S90", 60.0]
 		]
 	],
 	[ // RESEARCH
 		4,
 		[
-			["Chemlight_blue", 100.0],
-			["Chemlight_green", 100.0],
-			["Chemlight_red", 100.0],
+			["Chemlight_blue", 20.0],
+			["Chemlight_green", 20.0],
+			["Chemlight_red", 20.0],
 			// ["rb_Meatbomb", 50.0],
 			// ["rb_Meatbombempty", 60.0],
-			["rb_TacticalBacon", 50.0],
-			["rb_TacticalBaconempty", 60.0],
-			["rb_BakedBeans", 50.0],
-			["rb_BakedBeansempty", 60.0],
-			["rb_bottle", 50.0],
-			["rb_bottleclean", 60.0],
-			["rb_Spirit", 50.0],
-			["rb_Spiritempty", 60.0],
-			["rb_franta", 50.0],
-			["rb_frantaempty", 60.0],
-			["rb_oldcan", 100.0],
-			["rb_redgull", 50.0],
-			["rb_redgullempty", 60.0],
-			["rb_RiceBox", 50.0],
-			["rb_canteen", 50.0],
-			["rb_canteen_empty", 60.0],
-			["Chemlight_yellow", 100.0]
+			["rb_TacticalBacon", 30.0],
+			["rb_TacticalBaconempty", 40.0],
+			["rb_BakedBeans", 30.0],
+			["rb_BakedBeansempty", 40.0],
+			["rb_bottle", 30.0],
+			["rb_bottleclean", 40.0],
+			["rb_Spirit", 30.0],
+			["rb_Spiritempty", 40.0],
+			["rb_franta", 30.0],
+			["rb_frantaempty", 40.0],
+			["rb_oldcan", 30.0],
+			["rb_redgull", 30.0],
+			["rb_redgullempty", 40.0],
+			["rb_RiceBox", 30.0],
+			["rb_canteen", 30.0],
+			["rb_canteen_empty", 40.0],
+			["FirstAidKit", 100.0],
+			["Chemlight_yellow", 20.0]
 		]
 	],
 	[ // MILITARY SPECIAL (BLACK TWO STORY BARRACKS ONLY!)
@@ -967,7 +1029,22 @@ lootMagazine_list =
 			["rb_canteen_empty", 60.0],
 			["hlc_5rnd_3006_1903", 40.0],
 			["CUP_10Rnd_762x51_CZ750", 10.0],
-			["CUP_10x_303_M",	70.0],
+			["CUP_10x_303_M", 70.0],
+			["LIB_10Rnd_792x57", 10.0],
+			["LIB_20Rnd_762x63", 5.0],
+			["LIB_5Rnd_792x57", 50.0],
+			["LIB_15Rnd_762x33", 15.0],
+			["LIB_8Rnd_762x63", 20.0],
+			["LIB_30Rnd_45ACP", 20.0],
+			["LIB_5Rnd_762x54", 100.0],
+			["LIB_32Rnd_9x19", 20.0],
+			["LIB_30Rnd_792x33", 20.0],
+			["LIB_35Rnd_762x25", 20.0],
+			["LIB_10Rnd_762x54", 50.0],
+			["LIB_7Rnd_45ACP", 100.0],
+			["LIB_7Rnd_762x38", 100.0],
+			["LIB_8Rnd_762x25", 100.0],
+			["LIB_8Rnd_9x19", 100.0],
 			["CUP_5x_22_LR_17_HMR_M", 30.0]
 		]
 	],
@@ -1036,6 +1113,8 @@ lootMagazine_list =
 			["1Rnd_SmokePurple_Grenade_shell", 50.0],
 			["1Rnd_SmokeBlue_Grenade_shell", 50.0],
 			["1Rnd_SmokeOrange_Grenade_shell", 50.0],
+			["R3F_7Rnd_127x99_PEI_PGM", 5.0],
+			["R3F_7Rnd_127x99_PGM", 10.0],
 			["HandGrenade", 50.0],
 			["MiniGrenade", 50.0]
 		]
@@ -1143,6 +1222,20 @@ lootMagazine_list =
 			["hlc_30Rnd_10mm_B_MP5", 100.0],
 			["hlc_30Rnd_10mm_JHP_MP5", 100.0],
 			["CUP_64Rnd_9x19_Bizon_M", 100.0],
+			["hlc_5rnd_300WM_FMJ_AWM", 5.0],
+			["hlc_5rnd_300WM_AP_AWM", 5.0],
+			["hlc_5rnd_300WM_BTSP_AWM", 5.0],
+			["hlc_5rnd_300WM_mk248_AWM", 5.0],
+			["R3F_7Rnd_127x99_PEI_PGM", 1.0],
+			["R3F_7Rnd_127x99_PGM", 3.0],
+			["R3F_20Rnd_762x51_HK417", 6.0],
+			["hlc_20Rnd_762x51_B_M14", 6.0],
+			["CUP_20Rnd_762x51_B_M110", 6.0],
+			["CUP_20Rnd_762x51_B_SCAR", 6.0],
+			["CUP_5Rnd_762x51_M24", 6.0],
+			["CUP_20Rnd_762x51_L129_M", 6.0],
+			["30Rnd_65x39_caseless_mag", 6.0],
+			["20Rnd_762x51_Mag", 6.0],
 			["16Rnd_9x21_Mag", 50.0],  //pistol ammo
 			["CUP_18Rnd_9x19_Phantom", 50.0],
 			["CUP_17Rnd_9x19_glock17", 50.0],
@@ -1151,12 +1244,27 @@ lootMagazine_list =
 			["CUP_8Rnd_9x18_MakarovSD_M", 50.0],
 			["CUP_30Rnd_9x19_UZI", 50.0],
 			["CUP_6Rnd_45ACP_M", 50.0],
+			["LIB_10Rnd_792x57", 10.0],
+			["LIB_20Rnd_762x63", 5.0],
+			["LIB_5Rnd_792x57", 50.0],
+			["LIB_15Rnd_762x33", 15.0],
+			["LIB_8Rnd_762x63", 20.0],
+			["LIB_30Rnd_45ACP", 20.0],
+			["LIB_5Rnd_762x54", 100.0],
+			["LIB_32Rnd_9x19", 20.0],
+			["LIB_30Rnd_792x33", 20.0],
+			["LIB_35Rnd_762x25", 20.0],
+			["LIB_10Rnd_762x54", 50.0],
+			["LIB_7Rnd_45ACP", 100.0],
+			["LIB_7Rnd_762x38", 100.0],
+			["LIB_8Rnd_762x25", 100.0],
+			["LIB_8Rnd_9x19", 100.0],
 			["CUP_20Rnd_B_765x17_Ball_M", 50.0]
 		]
 	],
 	[ // Castle
 		10,
-		[
+		[ 
 			["CUP_8Rnd_9x18_Makarov_M", 100.0],
 			["CUP_6Rnd_45ACP_M", 100.0],
 			["hlc_30Rnd_9x19_B_MP5", 60.0],
@@ -1178,6 +1286,21 @@ lootMagazine_list =
 			["rb_canteen", 50.0],
 			["rb_canteen_empty", 60.0],
 			["hlc_5rnd_3006_1903",	20.0],
+			["LIB_10Rnd_792x57", 10.0],
+			["LIB_20Rnd_762x63", 5.0],
+			["LIB_5Rnd_792x57", 50.0],
+			["LIB_15Rnd_762x33", 15.0],
+			["LIB_8Rnd_762x63", 20.0],
+			["LIB_30Rnd_45ACP", 20.0],
+			["LIB_5Rnd_762x54", 100.0],
+			["LIB_32Rnd_9x19", 20.0],
+			["LIB_30Rnd_792x33", 20.0],
+			["LIB_35Rnd_762x25", 20.0],
+			["LIB_10Rnd_762x54", 50.0],
+			["LIB_7Rnd_45ACP", 100.0],
+			["LIB_7Rnd_762x38", 100.0],
+			["LIB_8Rnd_762x25", 100.0],
+			["LIB_8Rnd_9x19", 100.0],
 			["CUP_5x_22_LR_17_HMR_M", 30.0]
 		]
 	],
@@ -1203,7 +1326,22 @@ lootMagazine_list =
 			["CUP_8Rnd_9x18_Makarov_M", 50.0],
 			["CUP_6Rnd_45ACP_M", 50.0],
 			["R3F_7Rnd_M4S90", 50.0],
-			["CUP_10x_303_M",	50.0],
+			["CUP_10x_303_M", 50.0],
+			["LIB_10Rnd_792x57", 10.0],
+			["LIB_20Rnd_762x63", 5.0],
+			["LIB_5Rnd_792x57", 50.0],
+			["LIB_15Rnd_762x33", 15.0],
+			["LIB_8Rnd_762x63", 20.0],
+			["LIB_30Rnd_45ACP", 20.0],
+			["LIB_5Rnd_762x54", 100.0],
+			["LIB_32Rnd_9x19", 20.0],
+			["LIB_30Rnd_792x33", 20.0],
+			["LIB_35Rnd_762x25", 20.0],
+			["LIB_10Rnd_762x54", 50.0],
+			["LIB_7Rnd_45ACP", 100.0],
+			["LIB_7Rnd_762x38", 100.0],
+			["LIB_8Rnd_762x25", 100.0],
+			["LIB_8Rnd_9x19", 100.0],
 			["hlc_10rnd_12g_slug_S12", 50.0],
 			["hlc_10rnd_12g_buck_S12", 50.0]
 		]
@@ -1261,7 +1399,6 @@ lootItem_list =
 			["V_TacVest_camo", 1.0],
 			["V_TacVestIR_blk", 1.0],
 			["V_TacVestCamo_khk", 1.0],
-			["H_Shemag_khk", 100.0],
 			["H_Shemag_tan", 100.0],
 			["H_Shemag_olive", 100.0],
 			["H_Shemag_olive_hs", 100.0],
@@ -1327,7 +1464,6 @@ lootItem_list =
 			["V_TacVest_camo", 10.0],
 			["V_TacVestIR_blk", 10.0],
 			["V_TacVestCamo_khk", 10.0],
-			["H_Shemag_khk", 100.0],
 			["H_Shemag_tan", 100.0],
 			["H_Shemag_olive", 100.0],
 			["H_Shemag_olive_hs", 100.0],
@@ -1398,13 +1534,13 @@ lootItem_list =
 	[ // RESEARCH
 		4,
 		[
-			["V_Rangemaster_belt", 60.0],
+			["V_Rangemaster_belt", 20.0],
 			["FirstAidKit", 100.0],
 			["tf_anprc152", 20.0],
 			["ItemWatch", 20.0],
 			["ItemCompass", 20.0],
 			["ItemMap", 20.0],
-			["rb_matches", 60.0]
+			["rb_matches", 20.0]
 		]
 	],
 	[ // MILITARY SPECIAL (BLACK TWO STORY BARRACKS ONLY!)
@@ -1697,11 +1833,11 @@ lootItem_list =
 			["V_LIB_GER_OfficerVest", 5.0],
 			["V_LIB_GER_OfficerBelt", 5.0],
 			["V_LIB_WP_MP40Vest", 5.0],
-			["V_LIB_WP_STGVest",	5.0],
+			["V_LIB_WP_STGVest", 5.0],
 			["V_LIB_WP_Kar98Vest", 5.0],
-			["U_LIB_US_Private",	5.0],
+			["U_LIB_US_Private", 5.0],
 			["U_LIB_US_Corp", 5.0],
-			["V_LIB_US_Vest_Garand",	5.0],
+			["V_LIB_US_Vest_Garand", 5.0],
 			["V_LIB_US_Vest_Thompson", 5.0],
 			["FirstAidKit", 100.0],
 			["tf_anprc152", 20.0],

@@ -54,7 +54,7 @@ while {true} do
 	_thirstLvl = 4 min (0 max (round(4.0*(_thirst))));
 	_foodLvl = 4 min (0 max (round(4.0*(_food))));
 
-	hint format ["Blood: %1 (%2), Hunger: %3 (%4), Thirst: %5 (%6)", _blood, _bloodLvl, _food, _foodLvl, _thirst, _thirstLvl];
+	//hint format ["Blood: %1 (%2), Hunger: %3 (%4), Thirst: %5 (%6)", _blood, _bloodLvl, _food, _foodLvl, _thirst, _thirstLvl];
 	//Controls
 	_hudFoodBorder = _ui displayCtrl hud_food_border_idc;
 	_hudFoodInside = _ui displayCtrl hud_food_inside_idc;
