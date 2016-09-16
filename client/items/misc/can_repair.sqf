@@ -18,10 +18,11 @@ private ["_vehicle", "_hitPoints", "_error"];
 _vehicle = _this select 0;
 
 _isVehicle = _vehicle isKindOf "AllVehicles";
+_isMan = _vehicle isKindOf "Man";
 
 _error = "";
 switch (true) do {
-	case (!_isVehicle): {_error = ERR_NO_VEHICLE};
+	case (!_isVehicle || _isMan): {_error = ERR_NO_VEHICLE};
 	case (vehicle player != player):{_error = ERR_IN_VEHICLE};
 	case (player distance _vehicle >  4): {_error = ERR_NO_VEHICLE};
 	case (!alive _vehicle): {_error = ERR_DESTROYED};

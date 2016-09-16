@@ -397,7 +397,8 @@ call mf_compile;
 ////////////////////////////////////////////////
 FAR_Check_Slay =
 {
-	private _target = if (_this isEqualType []) then { param [0,objNull,[objNull]] } else { call FAR_FindTarget }; // if not array then it's an addAction condition check
+	private _target = call FAR_FindTarget; // if not array then it's an addAction condition check
+
 
 	FAR_Check_Dragging
 }
